@@ -841,7 +841,7 @@ END GROUP
                 0x00000800                ee_size = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?(CY_EE_SIZE / CY_APPL_MAX):CY_EE_SIZE
                 [!provide]                PROVIDE (CY_ECC_OFFSET, ecc_offset)
 
-.text           0x00000000     0x27ee
+.text           0x00000000     0x27f6
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -925,412 +925,411 @@ END GROUP
                 0x00000a64       0x70 .\CortexM3\ARM_GCC_541\Debug\main.o
                 0x00000a64                Functsk_tft
  .text.Functsk_uart
-                0x00000ad4       0x7c .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000ad4       0x84 .\CortexM3\ARM_GCC_541\Debug\main.o
                 0x00000ad4                Functsk_uart
  .text.Functsk_background
-                0x00000b50        0x4 .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x00000b50                Functsk_background
+                0x00000b58        0x4 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000b58                Functsk_background
  .text.ISR2_systick_handler
-                0x00000b54        0xc .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x00000b54                ISR2_systick_handler
+                0x00000b5c        0xc .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000b5c                ISR2_systick_handler
  .text.systick_handler
-                0x00000b60       0x98 .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x00000b60                systick_handler
+                0x00000b68       0x98 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000b68                systick_handler
  .text.ISR2_isr_uartRX
-                0x00000bf8       0x48 .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x00000bf8                ISR2_isr_uartRX
+                0x00000c00       0x48 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000c00                ISR2_isr_uartRX
  .text.isr_uartRX
-                0x00000c40       0x98 .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x00000c40                isr_uartRX
+                0x00000c48       0x98 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000c48                isr_uartRX
  .text.streamRB_init
-                0x00000cd8       0x14 .\CortexM3\ARM_GCC_541\Debug\comms.o
-                0x00000cd8                streamRB_init
+                0x00000ce0       0x14 .\CortexM3\ARM_GCC_541\Debug\comms.o
+                0x00000ce0                streamRB_init
  .text.streamRB_write
-                0x00000cec       0x40 .\CortexM3\ARM_GCC_541\Debug\comms.o
-                0x00000cec                streamRB_write
+                0x00000cf4       0x40 .\CortexM3\ARM_GCC_541\Debug\comms.o
+                0x00000cf4                streamRB_write
  .text.streamRB_read_byte
-                0x00000d2c       0x3c .\CortexM3\ARM_GCC_541\Debug\comms.o
-                0x00000d2c                streamRB_read_byte
+                0x00000d34       0x3c .\CortexM3\ARM_GCC_541\Debug\comms.o
+                0x00000d34                streamRB_read_byte
  .text.streamRB_read_message
-                0x00000d68       0x64 .\CortexM3\ARM_GCC_541\Debug\comms.o
-                0x00000d68                streamRB_read_message
+                0x00000d70       0x64 .\CortexM3\ARM_GCC_541\Debug\comms.o
+                0x00000d70                streamRB_read_message
  .text.streamRB_flush
-                0x00000dcc       0x24 .\CortexM3\ARM_GCC_541\Debug\comms.o
-                0x00000dcc                streamRB_flush
+                0x00000dd4       0x24 .\CortexM3\ARM_GCC_541\Debug\comms.o
+                0x00000dd4                streamRB_flush
  .text.dynRB_init
-                0x00000df0       0x18 .\CortexM3\ARM_GCC_541\Debug\comms.o
-                0x00000df0                dynRB_init
+                0x00000df8       0x18 .\CortexM3\ARM_GCC_541\Debug\comms.o
+                0x00000df8                dynRB_init
  .text.dynRB_send
-                0x00000e08       0x84 .\CortexM3\ARM_GCC_541\Debug\comms.o
-                0x00000e08                dynRB_send
+                0x00000e10       0x84 .\CortexM3\ARM_GCC_541\Debug\comms.o
+                0x00000e10                dynRB_send
  .text.dynRB_receive
-                0x00000e8c       0x60 .\CortexM3\ARM_GCC_541\Debug\comms.o
-                0x00000e8c                dynRB_receive
+                0x00000e94       0x60 .\CortexM3\ARM_GCC_541\Debug\comms.o
+                0x00000e94                dynRB_receive
  .text.dynRB_flush
-                0x00000eec       0x28 .\CortexM3\ARM_GCC_541\Debug\comms.o
-                0x00000eec                dynRB_flush
+                0x00000ef4       0x28 .\CortexM3\ARM_GCC_541\Debug\comms.o
+                0x00000ef4                dynRB_flush
  .text.RB_flush_all
-                0x00000f14       0x24 .\CortexM3\ARM_GCC_541\Debug\comms.o
-                0x00000f14                RB_flush_all
+                0x00000f1c       0x24 .\CortexM3\ARM_GCC_541\Debug\comms.o
+                0x00000f1c                RB_flush_all
  .text.UART_LOG_PutInt
-                0x00000f38       0x7c .\CortexM3\ARM_GCC_541\Debug\comms.o
-                0x00000f38                UART_LOG_PutInt
+                0x00000f40       0x7c .\CortexM3\ARM_GCC_541\Debug\comms.o
+                0x00000f40                UART_LOG_PutInt
  .text.CyClockStartupError
-                0x00000fb4        0x4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000fbc        0x4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.cfg_write_bytes32
-                0x00000fb8       0x34 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000fc0       0x34 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.AnalogSetDefault
-                0x00000fec       0x28 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000ff4       0x28 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.CYMEMZERO
-                0x00001014        0xc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x0000101c        0xc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.ClockSetup
-                0x00001020       0xd0 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00001028       0xd0 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.CYCONFIGCPY
-                0x000010f0        0x8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x000010f8        0x8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.cyfitter_cfg
-                0x000010f8      0x110 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
-                0x000010f8                cyfitter_cfg
+                0x00001100      0x110 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00001100                cyfitter_cfg
  .text.IntDefaultHandler
-                0x00001208       0x10 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x00001208                IntDefaultHandler
- .text.Start_c  0x00001218       0x4c .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x00001218                Start_c
+                0x00001210       0x10 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00001210                IntDefaultHandler
+ .text.Start_c  0x00001220       0x4c .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00001220                Start_c
  .text.initialize_psoc
-                0x00001264       0x68 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x00001264                initialize_psoc
+                0x0000126c       0x68 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x0000126c                initialize_psoc
  .text.TFT_SPI_Enable
-                0x000012cc       0x34 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
-                0x000012cc                TFT_SPI_Enable
+                0x000012d4       0x34 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
+                0x000012d4                TFT_SPI_Enable
  .text.TFT_SPI_ReadTxStatus
-                0x00001300        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
-                0x00001300                TFT_SPI_ReadTxStatus
+                0x00001308        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
+                0x00001308                TFT_SPI_ReadTxStatus
  .text.TFT_SPI_ReadRxStatus
-                0x0000130c        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
-                0x0000130c                TFT_SPI_ReadRxStatus
+                0x00001314        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
+                0x00001314                TFT_SPI_ReadRxStatus
  .text.TFT_SPI_WriteTxData
-                0x00001318       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
-                0x00001318                TFT_SPI_WriteTxData
+                0x00001320       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
+                0x00001320                TFT_SPI_WriteTxData
  .text.TFT_SPI_ClearFIFO
-                0x00001330       0x3c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
-                0x00001330                TFT_SPI_ClearFIFO
+                0x00001338       0x3c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
+                0x00001338                TFT_SPI_ClearFIFO
  .text.TFT_SPI_Init
-                0x0000136c       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
-                0x0000136c                TFT_SPI_Init
+                0x00001374       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
+                0x00001374                TFT_SPI_Init
  .text.TFT_SPI_Start
-                0x00001394       0x1c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
-                0x00001394                TFT_SPI_Start
+                0x0000139c       0x1c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
+                0x0000139c                TFT_SPI_Start
  .text.TFT_DC_Write
-                0x000013b0       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_DC.o)
-                0x000013b0                TFT_DC_Write
+                0x000013b8       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_DC.o)
+                0x000013b8                TFT_DC_Write
  .text.TFT_RES_Write
-                0x000013c8       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_RES.o)
-                0x000013c8                TFT_RES_Write
+                0x000013d0       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_RES.o)
+                0x000013d0                TFT_RES_Write
  .text.TFT_BackLight_Enable
-                0x000013e0       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
-                0x000013e0                TFT_BackLight_Enable
+                0x000013e8       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
+                0x000013e8                TFT_BackLight_Enable
  .text.TFT_BackLight_WritePeriod
-                0x00001408        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
-                0x00001408                TFT_BackLight_WritePeriod
+                0x00001410        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
+                0x00001410                TFT_BackLight_WritePeriod
  .text.TFT_BackLight_WriteCompare
-                0x00001414        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
-                0x00001414                TFT_BackLight_WriteCompare
+                0x0000141c        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
+                0x0000141c                TFT_BackLight_WriteCompare
  .text.TFT_BackLight_SetInterruptMode
-                0x00001420        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
-                0x00001420                TFT_BackLight_SetInterruptMode
+                0x00001428        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
+                0x00001428                TFT_BackLight_SetInterruptMode
  .text.TFT_BackLight_Init
-                0x0000142c       0x74 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
-                0x0000142c                TFT_BackLight_Init
+                0x00001434       0x74 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
+                0x00001434                TFT_BackLight_Init
  .text.TFT_BackLight_Start
-                0x000014a0       0x1c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
-                0x000014a0                TFT_BackLight_Start
+                0x000014a8       0x1c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
+                0x000014a8                TFT_BackLight_Start
  .text.UART_LOG_Init
-                0x000014bc       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
-                0x000014bc                UART_LOG_Init
+                0x000014c4       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
+                0x000014c4                UART_LOG_Init
  .text.UART_LOG_Enable
-                0x000014e4       0x38 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
-                0x000014e4                UART_LOG_Enable
+                0x000014ec       0x38 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
+                0x000014ec                UART_LOG_Enable
  .text.UART_LOG_Start
-                0x0000151c       0x1c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
-                0x0000151c                UART_LOG_Start
+                0x00001524       0x1c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
+                0x00001524                UART_LOG_Start
  .text.UART_LOG_ReadRxData
-                0x00001538        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
-                0x00001538                UART_LOG_ReadRxData
+                0x00001540        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
+                0x00001540                UART_LOG_ReadRxData
  .text.UART_LOG_ReadRxStatus
-                0x00001544       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
-                0x00001544                UART_LOG_ReadRxStatus
+                0x0000154c       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
+                0x0000154c                UART_LOG_ReadRxStatus
  .text.UART_LOG_GetByte
-                0x00001554       0x14 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
-                0x00001554                UART_LOG_GetByte
+                0x0000155c       0x14 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
+                0x0000155c                UART_LOG_GetByte
  .text.UART_LOG_PutChar
-                0x00001568       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
-                0x00001568                UART_LOG_PutChar
+                0x00001570       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
+                0x00001570                UART_LOG_PutChar
  .text.UART_LOG_PutString
-                0x00001580       0x24 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
-                0x00001580                UART_LOG_PutString
+                0x00001588       0x24 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
+                0x00001588                UART_LOG_PutString
  .text.EE_oo_ActivateTask
-                0x000015a4       0xe8 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_activate.o)
-                0x000015a4                EE_oo_ActivateTask
+                0x000015ac       0xe8 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_activate.o)
+                0x000015ac                EE_oo_ActivateTask
  .text.EE_oo_handle_action_callback
-                0x0000168c        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
+                0x00001694        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
  .text.EE_oo_handle_action_task
-                0x00001698       0x4c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
+                0x000016a0       0x4c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
  .text.EE_oo_handle_action_event
-                0x000016e4       0x60 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
+                0x000016ec       0x60 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
  .text.EE_oo_handle_action
-                0x00001744       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
+                0x0000174c       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
  .text.EE_oo_counter_object_insert
-                0x0000176c       0x9c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
-                0x0000176c                EE_oo_counter_object_insert
+                0x00001774       0x9c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
+                0x00001774                EE_oo_counter_object_insert
  .text.EE_oo_IncrementCounterImplementation
-                0x00001808      0x100 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
-                0x00001808                EE_oo_IncrementCounterImplementation
+                0x00001810      0x100 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
+                0x00001810                EE_oo_IncrementCounterImplementation
  .text.EE_oo_IncrementCounter
-                0x00001908       0xb0 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
-                0x00001908                EE_oo_IncrementCounter
+                0x00001910       0xb0 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
+                0x00001910                EE_oo_IncrementCounter
  .text.EE_oo_ClearEvent
-                0x000019b8       0x5c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evclear.o)
-                0x000019b8                EE_oo_ClearEvent
+                0x000019c0       0x5c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evclear.o)
+                0x000019c0                EE_oo_ClearEvent
  .text.EE_oo_GetEvent
-                0x00001a14       0x40 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evget.o)
-                0x00001a14                EE_oo_GetEvent
+                0x00001a1c       0x40 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evget.o)
+                0x00001a1c                EE_oo_GetEvent
  .text.EE_oo_SetEvent
-                0x00001a54      0x100 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evset.o)
-                0x00001a54                EE_oo_SetEvent
+                0x00001a5c      0x100 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evset.o)
+                0x00001a5c                EE_oo_SetEvent
  .text.EE_oo_WaitEvent
-                0x00001b54      0x124 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evwait.o)
-                0x00001b54                EE_oo_WaitEvent
+                0x00001b5c      0x124 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evwait.o)
+                0x00001b5c                EE_oo_WaitEvent
  .text.EE_IRQ_run_next_task
-                0x00001c78       0x30 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
+                0x00001c80       0x30 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
  .text.EE_IRQ_release_all_items
-                0x00001ca8       0x38 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
+                0x00001cb0       0x38 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
  .text.EE_oo_assign_TID_to_ISR2
-                0x00001ce0       0x44 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
-                0x00001ce0                EE_oo_assign_TID_to_ISR2
+                0x00001ce8       0x44 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
+                0x00001ce8                EE_oo_assign_TID_to_ISR2
  .text.EE_IRQ_end_instance
-                0x00001d24       0x68 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
-                0x00001d24                EE_IRQ_end_instance
+                0x00001d2c       0x68 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
+                0x00001d2c                EE_IRQ_end_instance
  .text.EE_IRQ_end_post_stub
-                0x00001d8c       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
-                0x00001d8c                EE_IRQ_end_post_stub
+                0x00001d94       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
+                0x00001d94                EE_IRQ_end_post_stub
  .text.EE_oo_GetResource
-                0x00001da4       0xfc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lockres.o)
-                0x00001da4                EE_oo_GetResource
+                0x00001dac       0xfc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lockres.o)
+                0x00001dac                EE_oo_GetResource
  .text.EE_rq2stk_exchange
-                0x00001ea0       0x88 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_exchg.o)
-                0x00001ea0                EE_rq2stk_exchange
+                0x00001ea8       0x88 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_exchg.o)
+                0x00001ea8                EE_rq2stk_exchange
  .text.EE_rq_queryfirst
-                0x00001f28       0x44 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_first.o)
-                0x00001f28                EE_rq_queryfirst
+                0x00001f30       0x44 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_first.o)
+                0x00001f30                EE_rq_queryfirst
  .text.EE_rq_insert
-                0x00001f6c       0x74 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_inser.o)
-                0x00001f6c                EE_rq_insert
+                0x00001f74       0x74 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_inser.o)
+                0x00001f74                EE_rq_insert
  .text.compute_task_tid
-                0x00001fe0       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
+                0x00001fe8       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
  .text.EE_oo_start_os
-                0x00001ff0        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
+                0x00001ff8        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
  .text.EE_oo_autostart_tasks
-                0x00001ffc       0x60 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
+                0x00002004       0x60 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
  .text.EE_oo_autostart_os
-                0x0000205c        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
+                0x00002064        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
  .text.EE_oo_StartOS
-                0x00002068       0x8c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
-                0x00002068                EE_oo_StartOS
+                0x00002070       0x8c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
+                0x00002070                EE_oo_StartOS
  .text.EE_oo_TerminateTask
-                0x000020f4       0x50 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_terminat.o)
-                0x000020f4                EE_oo_TerminateTask
+                0x000020fc       0x50 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_terminat.o)
+                0x000020fc                EE_oo_TerminateTask
  .text.EE_oo_release_all_resources
-                0x00002144       0x64 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockallres.o)
-                0x00002144                EE_oo_release_all_resources
+                0x0000214c       0x64 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockallres.o)
+                0x0000214c                EE_oo_release_all_resources
  .text.EE_oo_ReleaseResource
-                0x000021a8      0x174 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockres.o)
-                0x000021a8                EE_oo_ReleaseResource
+                0x000021b0      0x174 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockres.o)
+                0x000021b0                EE_oo_ReleaseResource
  .text.EE_system_init
-                0x0000231c       0x48 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_utils.o)
-                0x0000231c                EE_system_init
+                0x00002324       0x48 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_utils.o)
+                0x00002324                EE_system_init
  .text.TFT_SPI_IntClock_Start
-                0x00002364       0x1c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI_IntClock.o)
-                0x00002364                TFT_SPI_IntClock_Start
+                0x0000236c       0x1c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI_IntClock.o)
+                0x0000236c                TFT_SPI_IntClock_Start
  .text.UART_LOG_IntClock_Start
-                0x00002380       0x1c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG_IntClock.o)
-                0x00002380                UART_LOG_IntClock_Start
- .text.CyHalt   0x0000239c        0x4 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
-                0x0000239c                CyHalt
- .text.CyDelay  0x000023a0       0x2c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
-                0x000023a0                CyDelay
+                0x00002388       0x1c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG_IntClock.o)
+                0x00002388                UART_LOG_IntClock_Start
+ .text.CyHalt   0x000023a4        0x4 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
+                0x000023a4                CyHalt
+ .text.CyDelay  0x000023a8       0x2c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
+                0x000023a8                CyDelay
  .text.CyIntSetPriority
-                0x000023cc       0x30 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
-                0x000023cc                CyIntSetPriority
+                0x000023d4       0x30 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
+                0x000023d4                CyIntSetPriority
  .text.isr_uartRX_ClearPending
-                0x000023fc        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(isr_uartRX.o)
-                0x000023fc                isr_uartRX_ClearPending
- .text          0x00002408       0x7c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_change_context_isr.o)
-                0x00002408                EE_set_switch_context_pri
-                0x00002422                EE_switch_context
-                0x0000242c                EE_cortex_mx_pendsv_ISR
-                0x00002468                EE_cortex_mx_svc_ISR
- .text          0x00002484       0x24 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_irq_stack.o)
-                0x00002484                EE_cortex_mx_change_IRQ_stack
-                0x00002496                EE_cortex_mx_change_IRQ_stack_back
- .text          0x000024a8       0x68 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_multi_context.o)
-                0x000024a8                EE_cortex_mx_change_context
- .text          0x00002510       0x80 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_oo.o)
-                0x00002510                EE_hal_terminate_savestk
-                0x0000255a                EE_hal_terminate_task
- .text          0x00002590       0x20 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyBootAsmGnu.o)
-                0x00002590                CyDelayCycles
-                0x000025a0                CyEnterCriticalSection
-                0x000025a8                CyExitCriticalSection
+                0x00002404        0xc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(isr_uartRX.o)
+                0x00002404                isr_uartRX_ClearPending
+ .text          0x00002410       0x7c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_change_context_isr.o)
+                0x00002410                EE_set_switch_context_pri
+                0x0000242a                EE_switch_context
+                0x00002434                EE_cortex_mx_pendsv_ISR
+                0x00002470                EE_cortex_mx_svc_ISR
+ .text          0x0000248c       0x24 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_irq_stack.o)
+                0x0000248c                EE_cortex_mx_change_IRQ_stack
+                0x0000249e                EE_cortex_mx_change_IRQ_stack_back
+ .text          0x000024b0       0x68 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_multi_context.o)
+                0x000024b0                EE_cortex_mx_change_context
+ .text          0x00002518       0x80 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_oo.o)
+                0x00002518                EE_hal_terminate_savestk
+                0x00002562                EE_hal_terminate_task
+ .text          0x00002598       0x20 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyBootAsmGnu.o)
+                0x00002598                CyDelayCycles
+                0x000025a8                CyEnterCriticalSection
+                0x000025b0                CyExitCriticalSection
  .text.EE_thread_not_terminated
-                0x000025b0       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tnterm.o)
-                0x000025b0                EE_thread_not_terminated
+                0x000025b8       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tnterm.o)
+                0x000025b8                EE_thread_not_terminated
  .text.EE_oo_thread_stub
-                0x000025c8       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tstub.o)
-                0x000025c8                EE_oo_thread_stub
+                0x000025d0       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tstub.o)
+                0x000025d0                EE_oo_thread_stub
  .text.EE_std_run_task_code
-                0x000025d8       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_context.o)
-                0x000025d8                EE_std_run_task_code
+                0x000025e0       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_context.o)
+                0x000025e0                EE_std_run_task_code
  .text.EE_std_need_context_change
-                0x000025f0       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_context.o)
-                0x000025f0                EE_std_need_context_change
+                0x000025f8       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_context.o)
+                0x000025f8                EE_std_need_context_change
  .text.EE_thread_rnact_max
-                0x00002618       0x20 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
+                0x00002620       0x20 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
  .text.EE_thread_endcycle_next
-                0x00002638       0x30 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
+                0x00002640       0x30 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
  .text.EE_thread_end_instance
-                0x00002668      0x108 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
-                0x00002668                EE_thread_end_instance
- .text.__errno  0x00002770        0xc c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
-                0x00002770                __errno
+                0x00002670      0x108 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
+                0x00002670                EE_thread_end_instance
+ .text.__errno  0x00002778        0xc c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x00002778                __errno
  .text.__libc_init_array
-                0x0000277c       0x4c c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
-                0x0000277c                __libc_init_array
- .text.memcpy   0x000027c8       0x16 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
-                0x000027c8                memcpy
- .text.memset   0x000027de       0x10 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
-                0x000027de                memset
+                0x00002784       0x4c c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x00002784                __libc_init_array
+ .text.memcpy   0x000027d0       0x16 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+                0x000027d0                memcpy
+ .text.memset   0x000027e6       0x10 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x000027e6                memset
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
- .glue_7t       0x000027ee        0x0 linker stubs
+ .glue_7t       0x000027f6        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x000027ee        0x0 linker stubs
+ .glue_7        0x000027f6        0x0 linker stubs
  *(.vfp11_veneer)
- .vfp11_veneer  0x000027ee        0x0 linker stubs
+ .vfp11_veneer  0x000027f6        0x0 linker stubs
  *(.bootloader)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x000027f0        0x0
- .v4_bx         0x000027f0        0x0 linker stubs
+.v4_bx          0x000027f8        0x0
+ .v4_bx         0x000027f8        0x0 linker stubs
 
-.iplt           0x000027f0        0x0
- .iplt          0x000027f0        0x0 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.iplt           0x000027f8        0x0
+ .iplt          0x000027f8        0x0 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x000027f0        0x4
+.eh_frame       0x000027f8        0x4
  *(.eh_frame)
- .eh_frame      0x000027f0        0x0 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
- .eh_frame      0x000027f0        0x4 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ .eh_frame      0x000027f8        0x0 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .eh_frame      0x000027f8        0x4 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
                 [!provide]                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000027f4                __exidx_end = .
+                0x000027fc                __exidx_end = .
 
-.rodata         0x000027f4      0x8d4
+.rodata         0x000027fc      0x8d4
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x000027f4      0x558 .\CortexM3\ARM_GCC_541\Debug\tft.o
+ .rodata        0x000027fc      0x558 .\CortexM3\ARM_GCC_541\Debug\tft.o
  .rodata.str1.4
-                0x00002d4c       0x16 .\CortexM3\ARM_GCC_541\Debug\tft.o
- *fill*         0x00002d62        0x2 
+                0x00002d54       0x16 .\CortexM3\ARM_GCC_541\Debug\tft.o
+ *fill*         0x00002d6a        0x2 
  .rodata.str1.4
-                0x00002d64       0x18 .\CortexM3\ARM_GCC_541\Debug\logging.o
+                0x00002d6c       0x18 .\CortexM3\ARM_GCC_541\Debug\logging.o
  .rodata.str1.4
-                0x00002d7c        0x8 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00002d84        0xc .\CortexM3\ARM_GCC_541\Debug\main.o
  .rodata.str1.4
-                0x00002d84       0x19 .\CortexM3\ARM_GCC_541\Debug\comms.o
+                0x00002d90       0x19 .\CortexM3\ARM_GCC_541\Debug\comms.o
                                  0x1e (size before relaxing)
- *fill*         0x00002d9d        0x3 
- .rodata        0x00002da0       0x78 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .rodata        0x00002e18      0x100 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lookup.o)
-                0x00002e18                EE_rq_lookup
- .rodata        0x00002f18       0xfc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_eecfg.o)
-                0x00002f18                EE_oo_autostart_task_data
-                0x00002f24                EE_oo_action_ROM
-                0x00002f38                EE_oo_counter_object_ROM
-                0x00002f44                EE_ALARM_ID
-                0x00002f48                EE_alarm_ROM
-                0x00002f4c                EE_counter_ROM
-                0x00002f58                EE_resource_isr2_ceiling
-                0x00002f60                EE_resource_isr2_priority
-                0x00002f68                EE_resource_ceiling
-                0x00002f70                EE_th_is_extended
-                0x00002f84                EE_th_rnact_max
-                0x00002f98                EE_th_dispatch_prio
-                0x00002fac                EE_EVENT_ID
-                0x00002fb8                EE_RESOURCE_ID
-                0x00002fc0                EE_th_ready_prio
-                0x00002fd4                EE_terminate_real_th_body
-                0x00002fe8                EE_hal_thread_body
-                0x00002ffc                EE_std_thread_tos
+ *fill*         0x00002da9        0x3 
+ .rodata        0x00002dac       0x78 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .rodata        0x00002e24      0x100 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lookup.o)
+                0x00002e24                EE_rq_lookup
+ .rodata        0x00002f24       0xfc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_eecfg.o)
+                0x00002f24                EE_oo_autostart_task_data
+                0x00002f30                EE_oo_action_ROM
+                0x00002f44                EE_oo_counter_object_ROM
+                0x00002f50                EE_ALARM_ID
+                0x00002f54                EE_alarm_ROM
+                0x00002f58                EE_counter_ROM
+                0x00002f64                EE_resource_isr2_ceiling
+                0x00002f6c                EE_resource_isr2_priority
+                0x00002f74                EE_resource_ceiling
+                0x00002f7c                EE_th_is_extended
+                0x00002f90                EE_th_rnact_max
+                0x00002fa4                EE_th_dispatch_prio
+                0x00002fb8                EE_EVENT_ID
+                0x00002fc4                EE_RESOURCE_ID
+                0x00002fcc                EE_th_ready_prio
+                0x00002fe0                EE_terminate_real_th_body
+                0x00002ff4                EE_hal_thread_body
+                0x00003008                EE_std_thread_tos
  .rodata.str1.4
-                0x00003014       0x78 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_eecfg.o)
+                0x00003020       0x78 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_eecfg.o)
                                  0x75 (size before relaxing)
  .rodata.str1.1
-                0x0000308c        0x2 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
-                0x00003090                . = ALIGN (0x4)
- *fill*         0x0000308e        0x2 
+                0x00003098        0x2 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x0000309c                . = ALIGN (0x4)
+ *fill*         0x0000309a        0x2 
  *(.init)
- .init          0x00003090        0x4 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
-                0x00003090                _init
- .init          0x00003094        0x8 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
-                0x0000309c                . = ALIGN (0x4)
-                0x0000309c                __preinit_array_start = .
+ .init          0x0000309c        0x4 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x0000309c                _init
+ .init          0x000030a0        0x8 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+                0x000030a8                . = ALIGN (0x4)
+                0x000030a8                __preinit_array_start = .
  *(.preinit_array)
-                0x0000309c                __preinit_array_end = .
-                0x0000309c                . = ALIGN (0x4)
-                0x0000309c                __init_array_start = .
+                0x000030a8                __preinit_array_end = .
+                0x000030a8                . = ALIGN (0x4)
+                0x000030a8                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x0000309c        0x4 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
- .init_array    0x000030a0        0x4 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x000030a4                __init_array_end = .
-                0x000030a4                . = ALIGN (0x4)
- *(.fini)
- .fini          0x000030a4        0x4 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
-                0x000030a4                _fini
- .fini          0x000030a8        0x8 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+ .init_array    0x000030a8        0x4 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .init_array    0x000030ac        0x4 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x000030b0                __init_array_end = .
                 0x000030b0                . = ALIGN (0x4)
-                0x000030b0                __fini_array_start = .
+ *(.fini)
+ .fini          0x000030b0        0x4 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x000030b0                _fini
+ .fini          0x000030b4        0x8 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+                0x000030bc                . = ALIGN (0x4)
+                0x000030bc                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x000030b0        0x4 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .fini_array    0x000030bc        0x4 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x000030b4                __fini_array_end = .
-                0x000030b4                . = ALIGN (0x4)
+                0x000030c0                __fini_array_end = .
+                0x000030c0                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x000030b4                . = ALIGN (0x4)
+                0x000030c0                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x000030b4                . = ALIGN (0x4)
-                0x000030b4                __cy_regions = .
-                0x000030b4        0x4 LONG 0x30c8 __cy_region_init_ram
-                0x000030b8        0x4 LONG 0x1fff80c8 __cy_region_start_data
-                0x000030bc        0x4 LONG 0x1e8 __cy_region_init_size_ram
-                0x000030c0        0x4 LONG 0x20a0 __cy_region_zero_size_ram
-                0x000030c4                __cy_regions_end = .
-                0x000030c8                . = ALIGN (0x8)
- *fill*         0x000030c4        0x4 
-                0x000030c8                _etext = .
+                0x000030c0                . = ALIGN (0x4)
+                0x000030c0                __cy_regions = .
+                0x000030c0        0x4 LONG 0x30d0 __cy_region_init_ram
+                0x000030c4        0x4 LONG 0x1fff80c8 __cy_region_start_data
+                0x000030c8        0x4 LONG 0x1e8 __cy_region_init_size_ram
+                0x000030cc        0x4 LONG 0x20a0 __cy_region_zero_size_ram
+                0x000030d0                __cy_regions_end = .
+                0x000030d0                . = ALIGN (0x8)
+                0x000030d0                _etext = .
 
 .cy_checksum_exclude
-                0x000030c8        0x0
+                0x000030d0        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x1fff8000       0xc0
@@ -1344,7 +1343,7 @@ END GROUP
  .noinit        0x1fff80c0        0x1 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
                 0x1fff80c0                CyResetStatus
 
-.data           0x1fff80c8      0x1e8 load address 0x000030c8
+.data           0x1fff80c8      0x1e8 load address 0x000030d0
                 0x1fff80c8                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x1fff80c8        0x0 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
@@ -1390,10 +1389,10 @@ END GROUP
  *(.ram)
                 0x1fff82b0                _edata = .
 
-.igot.plt       0x1fff82b0        0x0 load address 0x000032b0
+.igot.plt       0x1fff82b0        0x0 load address 0x000032b8
  .igot.plt      0x1fff82b0        0x0 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
-.bss            0x1fff82b0     0x20a0 load address 0x000032b0
+.bss            0x1fff82b0     0x20a0 load address 0x000032b8
                 0x1fff82b0                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
@@ -1446,11 +1445,11 @@ END GROUP
                 0x1fffa350                __end = .
                 0x1fffa350                PROVIDE (end, .)
                 0x1fffa350                PROVIDE (__bss_end__, .)
-                0x000030c8                __cy_region_init_ram = LOADADDR (.data)
+                0x000030d0                __cy_region_init_ram = LOADADDR (.data)
                 0x000001e8                __cy_region_init_size_ram = (_edata - ADDR (.data))
                 0x000020a0                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x1fffa350       0x80 load address 0x000032b0
+.heap           0x1fffa350       0x80 load address 0x000032b8
                 0x1fffa350                . = _end
                 0x1fffa3d0                . = (. + 0x80)
  *fill*         0x1fffa350       0x80 
@@ -1501,8 +1500,8 @@ END GROUP
  .cymeta        0x90500000        0xc .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
                 0x90500000                cy_metadata
 
-.rel.dyn        0x000032b0        0x0 load address 0x9050000c
- .rel.iplt      0x000032b0        0x0 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.rel.dyn        0x000032b8        0x0 load address 0x9050000c
+ .rel.iplt      0x000032b8        0x0 c:/h_da softwares & projects/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
 .stab
  *(.stab)
@@ -1624,158 +1623,158 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000    0x1408c
+.debug_info     0x00000000    0x140cd
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000     0x27e6 .\CortexM3\ARM_GCC_541\Debug\tft.o
  .debug_info    0x000027e6      0x3b5 .\CortexM3\ARM_GCC_541\Debug\logging.o
  .debug_info    0x00002b9b      0x3a5 .\CortexM3\ARM_GCC_541\Debug\ringbuffer.o
- .debug_info    0x00002f40      0xdb5 .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_info    0x00003cf5      0x849 .\CortexM3\ARM_GCC_541\Debug\comms.o
- .debug_info    0x0000453e      0x5a8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_info    0x00004ae6      0x136 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_info    0x00004c1c      0x3bb .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_info    0x00004fd7      0x4bb .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
- .debug_info    0x00005492      0x11f .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_DC.o)
- .debug_info    0x000055b1      0x11f .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_RES.o)
- .debug_info    0x000056d0      0x27e .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
- .debug_info    0x0000594e      0x60c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
- .debug_info    0x00005f5a      0x819 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_activate.o)
- .debug_info    0x00006773      0xc47 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
- .debug_info    0x000073ba      0x5b3 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evclear.o)
- .debug_info    0x0000796d      0x4d6 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evget.o)
- .debug_info    0x00007e43      0x7cf .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evset.o)
- .debug_info    0x00008612      0x876 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evwait.o)
- .debug_info    0x00008e88      0x6a1 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
- .debug_info    0x00009529      0x830 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lockres.o)
- .debug_info    0x00009d59      0x3dc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lookup.o)
- .debug_info    0x0000a135      0x47b .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_exchg.o)
- .debug_info    0x0000a5b0      0x42d .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_first.o)
- .debug_info    0x0000a9dd      0x481 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_inser.o)
- .debug_info    0x0000ae5e     0x204c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
- .debug_info    0x0000ceaa      0x5b1 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_terminat.o)
- .debug_info    0x0000d45b      0x505 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockallres.o)
- .debug_info    0x0000d960      0x9d4 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockres.o)
- .debug_info    0x0000e334      0x51f .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_utils.o)
- .debug_info    0x0000e853      0x3d7 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_common_ee_hal_structs.o)
- .debug_info    0x0000ec2a      0xa53 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_eecfg.o)
- .debug_info    0x0000f67d      0x283 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI_IntClock.o)
- .debug_info    0x0000f900      0x283 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG_IntClock.o)
- .debug_info    0x0000fb83     0x1374 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
- .debug_info    0x00010ef7      0xa2a .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(cyPm.o)
- .debug_info    0x00011921      0x2d2 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(isr_uartRX.o)
- .debug_info    0x00011bf3       0xcf .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_change_context_isr.o)
- .debug_info    0x00011cc2       0xc6 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_irq_stack.o)
- .debug_info    0x00011d88       0xca .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_multi_context.o)
- .debug_info    0x00011e52       0xbf .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_oo.o)
- .debug_info    0x00011f11       0xba .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyBootAsmGnu.o)
- .debug_info    0x00011fcb      0x47f .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tnterm.o)
- .debug_info    0x0001244a      0x493 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tstub.o)
- .debug_info    0x000128dd      0x50d .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_context.o)
- .debug_info    0x00012dea      0x64d .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyFlash.o)
- .debug_info    0x00013437      0x550 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CySpc.o)
- .debug_info    0x00013987      0x705 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
+ .debug_info    0x00002f40      0xdf0 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_info    0x00003d30      0x84f .\CortexM3\ARM_GCC_541\Debug\comms.o
+ .debug_info    0x0000457f      0x5a8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_info    0x00004b27      0x136 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_info    0x00004c5d      0x3bb .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_info    0x00005018      0x4bb .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
+ .debug_info    0x000054d3      0x11f .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_DC.o)
+ .debug_info    0x000055f2      0x11f .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_RES.o)
+ .debug_info    0x00005711      0x27e .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
+ .debug_info    0x0000598f      0x60c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
+ .debug_info    0x00005f9b      0x819 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_activate.o)
+ .debug_info    0x000067b4      0xc47 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
+ .debug_info    0x000073fb      0x5b3 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evclear.o)
+ .debug_info    0x000079ae      0x4d6 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evget.o)
+ .debug_info    0x00007e84      0x7cf .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evset.o)
+ .debug_info    0x00008653      0x876 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evwait.o)
+ .debug_info    0x00008ec9      0x6a1 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
+ .debug_info    0x0000956a      0x830 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lockres.o)
+ .debug_info    0x00009d9a      0x3dc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lookup.o)
+ .debug_info    0x0000a176      0x47b .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_exchg.o)
+ .debug_info    0x0000a5f1      0x42d .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_first.o)
+ .debug_info    0x0000aa1e      0x481 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_inser.o)
+ .debug_info    0x0000ae9f     0x204c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
+ .debug_info    0x0000ceeb      0x5b1 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_terminat.o)
+ .debug_info    0x0000d49c      0x505 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockallres.o)
+ .debug_info    0x0000d9a1      0x9d4 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockres.o)
+ .debug_info    0x0000e375      0x51f .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_utils.o)
+ .debug_info    0x0000e894      0x3d7 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_common_ee_hal_structs.o)
+ .debug_info    0x0000ec6b      0xa53 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_eecfg.o)
+ .debug_info    0x0000f6be      0x283 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI_IntClock.o)
+ .debug_info    0x0000f941      0x283 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG_IntClock.o)
+ .debug_info    0x0000fbc4     0x1374 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
+ .debug_info    0x00010f38      0xa2a .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(cyPm.o)
+ .debug_info    0x00011962      0x2d2 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(isr_uartRX.o)
+ .debug_info    0x00011c34       0xcf .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_change_context_isr.o)
+ .debug_info    0x00011d03       0xc6 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_irq_stack.o)
+ .debug_info    0x00011dc9       0xca .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_multi_context.o)
+ .debug_info    0x00011e93       0xbf .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_oo.o)
+ .debug_info    0x00011f52       0xba .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyBootAsmGnu.o)
+ .debug_info    0x0001200c      0x47f .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tnterm.o)
+ .debug_info    0x0001248b      0x493 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tstub.o)
+ .debug_info    0x0001291e      0x50d .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_context.o)
+ .debug_info    0x00012e2b      0x64d .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyFlash.o)
+ .debug_info    0x00013478      0x550 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CySpc.o)
+ .debug_info    0x000139c8      0x705 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
 
-.debug_abbrev   0x00000000     0x4990
+.debug_abbrev   0x00000000     0x4a15
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x2bf .\CortexM3\ARM_GCC_541\Debug\tft.o
  .debug_abbrev  0x000002bf      0x14a .\CortexM3\ARM_GCC_541\Debug\logging.o
  .debug_abbrev  0x00000409      0x116 .\CortexM3\ARM_GCC_541\Debug\ringbuffer.o
- .debug_abbrev  0x0000051f      0x2cd .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_abbrev  0x000007ec      0x20a .\CortexM3\ARM_GCC_541\Debug\comms.o
- .debug_abbrev  0x000009f6      0x20d .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_abbrev  0x00000c03       0x77 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_abbrev  0x00000c7a      0x1e8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_abbrev  0x00000e62      0x146 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
- .debug_abbrev  0x00000fa8       0x90 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_DC.o)
- .debug_abbrev  0x00001038       0x90 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_RES.o)
- .debug_abbrev  0x000010c8      0x12d .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
- .debug_abbrev  0x000011f5      0x175 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
- .debug_abbrev  0x0000136a      0x284 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_activate.o)
- .debug_abbrev  0x000015ee      0x362 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
- .debug_abbrev  0x00001950      0x1e0 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evclear.o)
- .debug_abbrev  0x00001b30      0x150 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evget.o)
- .debug_abbrev  0x00001c80      0x27f .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evset.o)
- .debug_abbrev  0x00001eff      0x25d .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evwait.o)
- .debug_abbrev  0x0000215c      0x201 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
- .debug_abbrev  0x0000235d      0x237 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lockres.o)
- .debug_abbrev  0x00002594       0xcf .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lookup.o)
- .debug_abbrev  0x00002663       0xfc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_exchg.o)
- .debug_abbrev  0x0000275f       0xed .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_first.o)
- .debug_abbrev  0x0000284c      0x109 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_inser.o)
- .debug_abbrev  0x00002955      0x4a7 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
- .debug_abbrev  0x00002dfc      0x1de .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_terminat.o)
- .debug_abbrev  0x00002fda      0x150 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockallres.o)
- .debug_abbrev  0x0000312a      0x2af .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockres.o)
- .debug_abbrev  0x000033d9      0x1e3 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_utils.o)
- .debug_abbrev  0x000035bc       0xcf .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_common_ee_hal_structs.o)
- .debug_abbrev  0x0000368b      0x130 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_eecfg.o)
- .debug_abbrev  0x000037bb      0x139 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI_IntClock.o)
- .debug_abbrev  0x000038f4      0x139 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG_IntClock.o)
- .debug_abbrev  0x00003a2d      0x254 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
- .debug_abbrev  0x00003c81      0x1ab .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(cyPm.o)
- .debug_abbrev  0x00003e2c      0x173 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(isr_uartRX.o)
- .debug_abbrev  0x00003f9f       0x14 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_change_context_isr.o)
- .debug_abbrev  0x00003fb3       0x14 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_irq_stack.o)
- .debug_abbrev  0x00003fc7       0x14 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_multi_context.o)
- .debug_abbrev  0x00003fdb       0x14 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_oo.o)
- .debug_abbrev  0x00003fef       0x14 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyBootAsmGnu.o)
- .debug_abbrev  0x00004003      0x190 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tnterm.o)
- .debug_abbrev  0x00004193      0x143 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tstub.o)
- .debug_abbrev  0x000042d6      0x156 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_context.o)
- .debug_abbrev  0x0000442c      0x1a7 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyFlash.o)
- .debug_abbrev  0x000045d3      0x194 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CySpc.o)
- .debug_abbrev  0x00004767      0x229 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
+ .debug_abbrev  0x0000051f      0x334 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_abbrev  0x00000853      0x228 .\CortexM3\ARM_GCC_541\Debug\comms.o
+ .debug_abbrev  0x00000a7b      0x20d .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_abbrev  0x00000c88       0x77 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_abbrev  0x00000cff      0x1e8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_abbrev  0x00000ee7      0x146 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
+ .debug_abbrev  0x0000102d       0x90 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_DC.o)
+ .debug_abbrev  0x000010bd       0x90 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_RES.o)
+ .debug_abbrev  0x0000114d      0x12d .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
+ .debug_abbrev  0x0000127a      0x175 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
+ .debug_abbrev  0x000013ef      0x284 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_activate.o)
+ .debug_abbrev  0x00001673      0x362 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
+ .debug_abbrev  0x000019d5      0x1e0 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evclear.o)
+ .debug_abbrev  0x00001bb5      0x150 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evget.o)
+ .debug_abbrev  0x00001d05      0x27f .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evset.o)
+ .debug_abbrev  0x00001f84      0x25d .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evwait.o)
+ .debug_abbrev  0x000021e1      0x201 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
+ .debug_abbrev  0x000023e2      0x237 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lockres.o)
+ .debug_abbrev  0x00002619       0xcf .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lookup.o)
+ .debug_abbrev  0x000026e8       0xfc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_exchg.o)
+ .debug_abbrev  0x000027e4       0xed .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_first.o)
+ .debug_abbrev  0x000028d1      0x109 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_inser.o)
+ .debug_abbrev  0x000029da      0x4a7 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
+ .debug_abbrev  0x00002e81      0x1de .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_terminat.o)
+ .debug_abbrev  0x0000305f      0x150 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockallres.o)
+ .debug_abbrev  0x000031af      0x2af .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockres.o)
+ .debug_abbrev  0x0000345e      0x1e3 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_utils.o)
+ .debug_abbrev  0x00003641       0xcf .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_common_ee_hal_structs.o)
+ .debug_abbrev  0x00003710      0x130 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_eecfg.o)
+ .debug_abbrev  0x00003840      0x139 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI_IntClock.o)
+ .debug_abbrev  0x00003979      0x139 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG_IntClock.o)
+ .debug_abbrev  0x00003ab2      0x254 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
+ .debug_abbrev  0x00003d06      0x1ab .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(cyPm.o)
+ .debug_abbrev  0x00003eb1      0x173 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(isr_uartRX.o)
+ .debug_abbrev  0x00004024       0x14 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_change_context_isr.o)
+ .debug_abbrev  0x00004038       0x14 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_irq_stack.o)
+ .debug_abbrev  0x0000404c       0x14 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_multi_context.o)
+ .debug_abbrev  0x00004060       0x14 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_oo.o)
+ .debug_abbrev  0x00004074       0x14 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00004088      0x190 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tnterm.o)
+ .debug_abbrev  0x00004218      0x143 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tstub.o)
+ .debug_abbrev  0x0000435b      0x156 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_context.o)
+ .debug_abbrev  0x000044b1      0x1a7 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyFlash.o)
+ .debug_abbrev  0x00004658      0x194 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CySpc.o)
+ .debug_abbrev  0x000047ec      0x229 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
 
-.debug_line     0x00000000     0x6256
+.debug_line     0x00000000     0x625f
  *(.debug_line)
  .debug_line    0x00000000      0x8f6 .\CortexM3\ARM_GCC_541\Debug\tft.o
  .debug_line    0x000008f6      0x25d .\CortexM3\ARM_GCC_541\Debug\logging.o
  .debug_line    0x00000b53      0x2b4 .\CortexM3\ARM_GCC_541\Debug\ringbuffer.o
- .debug_line    0x00000e07      0x57b .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_line    0x00001382      0x399 .\CortexM3\ARM_GCC_541\Debug\comms.o
- .debug_line    0x0000171b      0x1f4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_line    0x0000190f      0x13d .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_line    0x00001a4c      0x230 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_line    0x00001c7c      0x249 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
- .debug_line    0x00001ec5       0x93 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_DC.o)
- .debug_line    0x00001f58       0x94 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_RES.o)
- .debug_line    0x00001fec      0x13b .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
- .debug_line    0x00002127      0x2c4 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
- .debug_line    0x000023eb      0x1e6 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_activate.o)
- .debug_line    0x000025d1      0x2f1 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
- .debug_line    0x000028c2      0x1c1 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evclear.o)
- .debug_line    0x00002a83      0x14b .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evget.o)
- .debug_line    0x00002bce      0x1e3 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evset.o)
- .debug_line    0x00002db1      0x1f1 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evwait.o)
- .debug_line    0x00002fa2      0x1d2 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
- .debug_line    0x00003174      0x208 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lockres.o)
- .debug_line    0x0000337c      0x129 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lookup.o)
- .debug_line    0x000034a5      0x14b .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_exchg.o)
- .debug_line    0x000035f0      0x142 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_first.o)
- .debug_line    0x00003732      0x146 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_inser.o)
- .debug_line    0x00003878      0x3e2 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
- .debug_line    0x00003c5a      0x1b0 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_terminat.o)
- .debug_line    0x00003e0a      0x183 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockallres.o)
- .debug_line    0x00003f8d      0x237 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockres.o)
- .debug_line    0x000041c4      0x174 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_utils.o)
- .debug_line    0x00004338       0xed .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_common_ee_hal_structs.o)
- .debug_line    0x00004425      0x12c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_eecfg.o)
- .debug_line    0x00004551      0x17f .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI_IntClock.o)
- .debug_line    0x000046d0      0x180 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG_IntClock.o)
- .debug_line    0x00004850      0x816 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
- .debug_line    0x00005066      0x367 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(cyPm.o)
- .debug_line    0x000053cd      0x137 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(isr_uartRX.o)
- .debug_line    0x00005504       0xac .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_change_context_isr.o)
- .debug_line    0x000055b0       0x72 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_irq_stack.o)
- .debug_line    0x00005622       0x9b .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_multi_context.o)
- .debug_line    0x000056bd       0x97 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_oo.o)
- .debug_line    0x00005754       0x66 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyBootAsmGnu.o)
- .debug_line    0x000057ba      0x171 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tnterm.o)
- .debug_line    0x0000592b      0x160 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tstub.o)
- .debug_line    0x00005a8b      0x19a .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_context.o)
- .debug_line    0x00005c25      0x21a .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyFlash.o)
- .debug_line    0x00005e3f      0x260 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CySpc.o)
- .debug_line    0x0000609f      0x1b7 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
+ .debug_line    0x00000e07      0x583 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_line    0x0000138a      0x39a .\CortexM3\ARM_GCC_541\Debug\comms.o
+ .debug_line    0x00001724      0x1f4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_line    0x00001918      0x13d .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_line    0x00001a55      0x230 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_line    0x00001c85      0x249 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
+ .debug_line    0x00001ece       0x93 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_DC.o)
+ .debug_line    0x00001f61       0x94 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_RES.o)
+ .debug_line    0x00001ff5      0x13b .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
+ .debug_line    0x00002130      0x2c4 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
+ .debug_line    0x000023f4      0x1e6 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_activate.o)
+ .debug_line    0x000025da      0x2f1 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
+ .debug_line    0x000028cb      0x1c1 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evclear.o)
+ .debug_line    0x00002a8c      0x14b .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evget.o)
+ .debug_line    0x00002bd7      0x1e3 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evset.o)
+ .debug_line    0x00002dba      0x1f1 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evwait.o)
+ .debug_line    0x00002fab      0x1d2 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
+ .debug_line    0x0000317d      0x208 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lockres.o)
+ .debug_line    0x00003385      0x129 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lookup.o)
+ .debug_line    0x000034ae      0x14b .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_exchg.o)
+ .debug_line    0x000035f9      0x142 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_first.o)
+ .debug_line    0x0000373b      0x146 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_inser.o)
+ .debug_line    0x00003881      0x3e2 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
+ .debug_line    0x00003c63      0x1b0 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_terminat.o)
+ .debug_line    0x00003e13      0x183 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockallres.o)
+ .debug_line    0x00003f96      0x237 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockres.o)
+ .debug_line    0x000041cd      0x174 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_utils.o)
+ .debug_line    0x00004341       0xed .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_common_ee_hal_structs.o)
+ .debug_line    0x0000442e      0x12c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_eecfg.o)
+ .debug_line    0x0000455a      0x17f .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI_IntClock.o)
+ .debug_line    0x000046d9      0x180 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG_IntClock.o)
+ .debug_line    0x00004859      0x816 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
+ .debug_line    0x0000506f      0x367 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(cyPm.o)
+ .debug_line    0x000053d6      0x137 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(isr_uartRX.o)
+ .debug_line    0x0000550d       0xac .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_change_context_isr.o)
+ .debug_line    0x000055b9       0x72 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_irq_stack.o)
+ .debug_line    0x0000562b       0x9b .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_multi_context.o)
+ .debug_line    0x000056c6       0x97 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_gnu_oo.o)
+ .debug_line    0x0000575d       0x66 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyBootAsmGnu.o)
+ .debug_line    0x000057c3      0x171 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tnterm.o)
+ .debug_line    0x00005934      0x160 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tstub.o)
+ .debug_line    0x00005a94      0x19a .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_context.o)
+ .debug_line    0x00005c2e      0x21a .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyFlash.o)
+ .debug_line    0x00005e48      0x260 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CySpc.o)
+ .debug_line    0x000060a8      0x1b7 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
 
 .debug_frame    0x00000000     0x25ec
  *(.debug_frame)
@@ -1913,90 +1912,90 @@ END GROUP
  .debug_str     0x000047c8       0x60 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
                                 0x788 (size before relaxing)
 
-.debug_loc      0x00000000     0x556a
+.debug_loc      0x00000000     0x556b
  *(.debug_loc)
  .debug_loc     0x00000000     0x19ce .\CortexM3\ARM_GCC_541\Debug\tft.o
  .debug_loc     0x000019ce       0x4d .\CortexM3\ARM_GCC_541\Debug\logging.o
  .debug_loc     0x00001a1b      0x1ac .\CortexM3\ARM_GCC_541\Debug\ringbuffer.o
- .debug_loc     0x00001bc7      0x204 .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_loc     0x00001dcb      0x3d7 .\CortexM3\ARM_GCC_541\Debug\comms.o
- .debug_loc     0x000021a2      0x289 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_loc     0x0000242b      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_loc     0x0000256f       0xfe .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
- .debug_loc     0x0000266d       0x42 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_DC.o)
- .debug_loc     0x000026af       0x42 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_RES.o)
- .debug_loc     0x000026f1       0x13 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
- .debug_loc     0x00002704      0x258 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
- .debug_loc     0x0000295c      0x12d .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_activate.o)
- .debug_loc     0x00002a89      0x46c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
- .debug_loc     0x00002ef5       0xbc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evclear.o)
- .debug_loc     0x00002fb1       0xa4 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evget.o)
- .debug_loc     0x00003055      0x16b .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evset.o)
- .debug_loc     0x000031c0      0x158 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evwait.o)
- .debug_loc     0x00003318       0x82 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
- .debug_loc     0x0000339a      0x17e .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lockres.o)
- .debug_loc     0x00003518       0x4a .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_exchg.o)
- .debug_loc     0x00003562       0x36 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_first.o)
- .debug_loc     0x00003598       0x1e .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_inser.o)
- .debug_loc     0x000035b6      0x1d8 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
- .debug_loc     0x0000378e       0x50 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_terminat.o)
- .debug_loc     0x000037de       0x88 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockallres.o)
- .debug_loc     0x00003866      0x1f9 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockres.o)
- .debug_loc     0x00003a5f       0x13 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_utils.o)
- .debug_loc     0x00003a72      0x12c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI_IntClock.o)
- .debug_loc     0x00003b9e      0x128 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG_IntClock.o)
- .debug_loc     0x00003cc6      0xa11 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
- .debug_loc     0x000046d7      0x1e4 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(cyPm.o)
- .debug_loc     0x000048bb       0x56 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(isr_uartRX.o)
- .debug_loc     0x00004911       0xc5 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_context.o)
- .debug_loc     0x000049d6      0x3b2 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyFlash.o)
- .debug_loc     0x00004d88      0x705 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CySpc.o)
- .debug_loc     0x0000548d       0xdd .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
+ .debug_loc     0x00001bc7      0x205 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_loc     0x00001dcc      0x3d7 .\CortexM3\ARM_GCC_541\Debug\comms.o
+ .debug_loc     0x000021a3      0x289 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_loc     0x0000242c      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_loc     0x00002570       0xfe .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
+ .debug_loc     0x0000266e       0x42 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_DC.o)
+ .debug_loc     0x000026b0       0x42 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_RES.o)
+ .debug_loc     0x000026f2       0x13 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
+ .debug_loc     0x00002705      0x258 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
+ .debug_loc     0x0000295d      0x12d .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_activate.o)
+ .debug_loc     0x00002a8a      0x46c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
+ .debug_loc     0x00002ef6       0xbc .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evclear.o)
+ .debug_loc     0x00002fb2       0xa4 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evget.o)
+ .debug_loc     0x00003056      0x16b .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evset.o)
+ .debug_loc     0x000031c1      0x158 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evwait.o)
+ .debug_loc     0x00003319       0x82 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
+ .debug_loc     0x0000339b      0x17e .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lockres.o)
+ .debug_loc     0x00003519       0x4a .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_exchg.o)
+ .debug_loc     0x00003563       0x36 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_first.o)
+ .debug_loc     0x00003599       0x1e .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_inser.o)
+ .debug_loc     0x000035b7      0x1d8 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
+ .debug_loc     0x0000378f       0x50 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_terminat.o)
+ .debug_loc     0x000037df       0x88 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockallres.o)
+ .debug_loc     0x00003867      0x1f9 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockres.o)
+ .debug_loc     0x00003a60       0x13 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_utils.o)
+ .debug_loc     0x00003a73      0x12c .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI_IntClock.o)
+ .debug_loc     0x00003b9f      0x128 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG_IntClock.o)
+ .debug_loc     0x00003cc7      0xa11 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
+ .debug_loc     0x000046d8      0x1e4 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(cyPm.o)
+ .debug_loc     0x000048bc       0x56 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(isr_uartRX.o)
+ .debug_loc     0x00004912       0xc5 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_context.o)
+ .debug_loc     0x000049d7      0x3b2 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyFlash.o)
+ .debug_loc     0x00004d89      0x705 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CySpc.o)
+ .debug_loc     0x0000548e       0xdd .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
 
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0xd70
+.debug_ranges   0x00000000      0xd58
  *(.debug_ranges)
  .debug_ranges  0x00000000      0x170 .\CortexM3\ARM_GCC_541\Debug\tft.o
  .debug_ranges  0x00000170       0x18 .\CortexM3\ARM_GCC_541\Debug\logging.o
  .debug_ranges  0x00000188       0x48 .\CortexM3\ARM_GCC_541\Debug\ringbuffer.o
- .debug_ranges  0x000001d0       0x88 .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_ranges  0x00000258       0x60 .\CortexM3\ARM_GCC_541\Debug\comms.o
- .debug_ranges  0x000002b8       0x48 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_ranges  0x00000300       0x38 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_ranges  0x00000338       0xc8 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
- .debug_ranges  0x00000400       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_DC.o)
- .debug_ranges  0x00000428       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_RES.o)
- .debug_ranges  0x00000450       0x68 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
- .debug_ranges  0x000004b8       0xe0 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
- .debug_ranges  0x00000598       0x40 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_activate.o)
- .debug_ranges  0x000005d8       0x78 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
- .debug_ranges  0x00000650       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evclear.o)
- .debug_ranges  0x00000678       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evget.o)
- .debug_ranges  0x00000688       0x40 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evset.o)
- .debug_ranges  0x000006c8       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evwait.o)
- .debug_ranges  0x000006d8       0x30 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
- .debug_ranges  0x00000708       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lockres.o)
- .debug_ranges  0x00000718       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_exchg.o)
- .debug_ranges  0x00000728       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_first.o)
- .debug_ranges  0x00000738       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_inser.o)
- .debug_ranges  0x00000748       0x30 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
- .debug_ranges  0x00000778       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_terminat.o)
- .debug_ranges  0x00000788       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockallres.o)
- .debug_ranges  0x00000798       0x40 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockres.o)
- .debug_ranges  0x000007d8       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_utils.o)
- .debug_ranges  0x000007e8       0x60 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI_IntClock.o)
- .debug_ranges  0x00000848       0x60 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG_IntClock.o)
- .debug_ranges  0x000008a8      0x290 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
- .debug_ranges  0x00000b38       0x88 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(cyPm.o)
- .debug_ranges  0x00000bc0       0x70 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(isr_uartRX.o)
- .debug_ranges  0x00000c30       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tnterm.o)
- .debug_ranges  0x00000c40       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tstub.o)
- .debug_ranges  0x00000c50       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_context.o)
- .debug_ranges  0x00000c68       0x78 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyFlash.o)
- .debug_ranges  0x00000ce0       0x70 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CySpc.o)
- .debug_ranges  0x00000d50       0x20 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
+ .debug_ranges  0x000001d0       0x70 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_ranges  0x00000240       0x60 .\CortexM3\ARM_GCC_541\Debug\comms.o
+ .debug_ranges  0x000002a0       0x48 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_ranges  0x000002e8       0x38 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_ranges  0x00000320       0xc8 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI.o)
+ .debug_ranges  0x000003e8       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_DC.o)
+ .debug_ranges  0x00000410       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_RES.o)
+ .debug_ranges  0x00000438       0x68 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_BackLight.o)
+ .debug_ranges  0x000004a0       0xe0 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG.o)
+ .debug_ranges  0x00000580       0x40 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_activate.o)
+ .debug_ranges  0x000005c0       0x78 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_altick.o)
+ .debug_ranges  0x00000638       0x28 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evclear.o)
+ .debug_ranges  0x00000660       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evget.o)
+ .debug_ranges  0x00000670       0x40 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evset.o)
+ .debug_ranges  0x000006b0       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_evwait.o)
+ .debug_ranges  0x000006c0       0x30 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_irqendin.o)
+ .debug_ranges  0x000006f0       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_lockres.o)
+ .debug_ranges  0x00000700       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_exchg.o)
+ .debug_ranges  0x00000710       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_first.o)
+ .debug_ranges  0x00000720       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_rq_inser.o)
+ .debug_ranges  0x00000730       0x30 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_startos.o)
+ .debug_ranges  0x00000760       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_terminat.o)
+ .debug_ranges  0x00000770       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockallres.o)
+ .debug_ranges  0x00000780       0x40 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_ulockres.o)
+ .debug_ranges  0x000007c0       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_utils.o)
+ .debug_ranges  0x000007d0       0x60 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(TFT_SPI_IntClock.o)
+ .debug_ranges  0x00000830       0x60 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(UART_LOG_IntClock.o)
+ .debug_ranges  0x00000890      0x290 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyLib.o)
+ .debug_ranges  0x00000b20       0x88 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(cyPm.o)
+ .debug_ranges  0x00000ba8       0x70 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(isr_uartRX.o)
+ .debug_ranges  0x00000c18       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tnterm.o)
+ .debug_ranges  0x00000c28       0x10 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_tstub.o)
+ .debug_ranges  0x00000c38       0x18 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_cortex_mx_ee_context.o)
+ .debug_ranges  0x00000c50       0x78 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CyFlash.o)
+ .debug_ranges  0x00000cc8       0x70 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(CySpc.o)
+ .debug_ranges  0x00000d38       0x20 .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a(ErikaOS_ee_thendin.o)
 
 .comment        0x00000000       0x6e
  .comment       0x00000000       0x6e .\CortexM3\ARM_GCC_541\Debug\tft.o
