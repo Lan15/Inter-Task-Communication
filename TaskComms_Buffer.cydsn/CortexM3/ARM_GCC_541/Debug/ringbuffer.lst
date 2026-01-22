@@ -1,0 +1,1820 @@
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"ringbuffer.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.RB_init,"ax",%progbits
+  20              		.align	2
+  21              		.global	RB_init
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	RB_init, %function
+  25              	RB_init:
+  26              	.LFB110:
+  27              		.file 1 "source\\bsw\\services\\ringbuffer.c"
+   1:source\bsw\services/ringbuffer.c **** /**
+   2:source\bsw\services/ringbuffer.c **** * \file ringbuffer.c
+   3:source\bsw\services/ringbuffer.c **** * \author V.S. Agilan
+   4:source\bsw\services/ringbuffer.c **** * \date 28.12.25
+   5:source\bsw\services/ringbuffer.c **** *
+   6:source\bsw\services/ringbuffer.c **** * \brief Ringbuffer
+   7:source\bsw\services/ringbuffer.c **** *
+   8:source\bsw\services/ringbuffer.c **** * Copyright YOUR COMPANY, THE YEAR
+   9:source\bsw\services/ringbuffer.c **** * All Rights Reserved
+  10:source\bsw\services/ringbuffer.c **** * UNPUBLISHED, LICENSED SOFTWARE.
+  11:source\bsw\services/ringbuffer.c **** *
+  12:source\bsw\services/ringbuffer.c **** * CONFIDENTIAL AND PROPRIETARY INFORMATION
+  13:source\bsw\services/ringbuffer.c **** * WHICH IS THE PROPERTY OF your company.
+  14:source\bsw\services/ringbuffer.c **** *
+  15:source\bsw\services/ringbuffer.c **** * ========================================
+  16:source\bsw\services/ringbuffer.c **** */
+  17:source\bsw\services/ringbuffer.c **** 
+  18:source\bsw\services/ringbuffer.c **** /*****************************************************************************/
+  19:source\bsw\services/ringbuffer.c **** /* Include files                                                             */
+  20:source\bsw\services/ringbuffer.c **** /*****************************************************************************/
+  21:source\bsw\services/ringbuffer.c **** #include <project.h>
+  22:source\bsw\services/ringbuffer.c **** #include "global.h"
+  23:source\bsw\services/ringbuffer.c **** #include "ringbuffer.h"
+  24:source\bsw\services/ringbuffer.c **** 
+  25:source\bsw\services/ringbuffer.c **** /*****************************************************************************/
+  26:source\bsw\services/ringbuffer.c **** /* API functions                                                             */
+  27:source\bsw\services/ringbuffer.c **** /*****************************************************************************/
+  28:source\bsw\services/ringbuffer.c **** 
+  29:source\bsw\services/ringbuffer.c **** /**
+  30:source\bsw\services/ringbuffer.c ****  * \brief initializes a ringbuffer handle / Clearing of a ringbuffer
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 2
+
+
+  31:source\bsw\services/ringbuffer.c ****  * @param RB_t * const me : IN/OUT - pointer to ringbuffer object 
+  32:source\bsw\services/ringbuffer.c ****  * @return RC_SUCCESS or error code
+  33:source\bsw\services/ringbuffer.c ****  */
+  34:source\bsw\services/ringbuffer.c **** RC_t RB_init(RB_t* const me)
+  35:source\bsw\services/ringbuffer.c **** {
+  28              		.loc 1 35 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              	.LVL0:
+  36:source\bsw\services/ringbuffer.c ****     if (NULL_PTR == me)
+  34              		.loc 1 36 0
+  35 0000 0146     		mov	r1, r0
+  36 0002 78B1     		cbz	r0, .L5
+  37:source\bsw\services/ringbuffer.c ****     {
+  38:source\bsw\services/ringbuffer.c ****         return RC_ERROR_NULL;
+  39:source\bsw\services/ringbuffer.c ****     }
+  40:source\bsw\services/ringbuffer.c ****     
+  41:source\bsw\services/ringbuffer.c ****     me->m_fillLevel     = 0;
+  37              		.loc 1 41 0
+  38 0004 0023     		movs	r3, #0
+  39 0006 C0F8D030 		str	r3, [r0, #208]
+  42:source\bsw\services/ringbuffer.c ****     me->m_readIndex     = 0;
+  40              		.loc 1 42 0
+  41 000a C0F8C830 		str	r3, [r0, #200]
+  43:source\bsw\services/ringbuffer.c ****     me->m_writeIndex    = 0;
+  42              		.loc 1 43 0
+  43 000e C0F8CC30 		str	r3, [r0, #204]
+  44              	.LVL1:
+  45              	.LBB2:
+  44:source\bsw\services/ringbuffer.c ****     
+  45:source\bsw\services/ringbuffer.c ****     for (uint16_t i = 0; i < RB_SIZE; i++)
+  46              		.loc 1 45 0
+  47 0012 03E0     		b	.L3
+  48              	.LVL2:
+  49              	.L4:
+  46:source\bsw\services/ringbuffer.c ****     {
+  47:source\bsw\services/ringbuffer.c ****         me->m_buffer[i] = 0;
+  50              		.loc 1 47 0 discriminator 3
+  51 0014 0022     		movs	r2, #0
+  52 0016 CA54     		strb	r2, [r1, r3]
+  45:source\bsw\services/ringbuffer.c ****     {
+  53              		.loc 1 45 0 discriminator 3
+  54 0018 0133     		adds	r3, r3, #1
+  55              	.LVL3:
+  56 001a 9BB2     		uxth	r3, r3
+  57              	.LVL4:
+  58              	.L3:
+  45:source\bsw\services/ringbuffer.c ****     {
+  59              		.loc 1 45 0 is_stmt 0 discriminator 1
+  60 001c C72B     		cmp	r3, #199
+  61 001e F9D9     		bls	.L4
+  62              	.LBE2:
+  48:source\bsw\services/ringbuffer.c ****     }
+  49:source\bsw\services/ringbuffer.c ****     
+  50:source\bsw\services/ringbuffer.c ****     return RC_SUCCESS;
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 3
+
+
+  63              		.loc 1 50 0 is_stmt 1
+  64 0020 0020     		movs	r0, #0
+  65              	.LVL5:
+  66              	.LBB3:
+  67 0022 7047     		bx	lr
+  68              	.LVL6:
+  69              	.L5:
+  70              	.LBE3:
+  38:source\bsw\services/ringbuffer.c ****     }
+  71              		.loc 1 38 0
+  72 0024 6FF00100 		mvn	r0, #1
+  73              	.LVL7:
+  51:source\bsw\services/ringbuffer.c **** }
+  74              		.loc 1 51 0
+  75 0028 7047     		bx	lr
+  76              		.cfi_endproc
+  77              	.LFE110:
+  78              		.size	RB_init, .-RB_init
+  79 002a 00BF     		.section	.text.RB_write,"ax",%progbits
+  80              		.align	2
+  81              		.global	RB_write
+  82              		.thumb
+  83              		.thumb_func
+  84              		.type	RB_write, %function
+  85              	RB_write:
+  86              	.LFB111:
+  52:source\bsw\services/ringbuffer.c **** 
+  53:source\bsw\services/ringbuffer.c **** /**
+  54:source\bsw\services/ringbuffer.c ****  * Write one element to the ringbuffer
+  55:source\bsw\services/ringbuffer.c ****  * @param RB_t * const me : IN/OUT - pointer to ringbuffer object 
+  56:source\bsw\services/ringbuffer.c ****  * @param RB_buffer_t const * const data : IN - Data to be written
+  57:source\bsw\services/ringbuffer.c ****  * @return RC_SUCCESS or error code
+  58:source\bsw\services/ringbuffer.c ****  */
+  59:source\bsw\services/ringbuffer.c **** RC_t RB_write(RB_t* const me, RB_buffer_t const * const data)
+  60:source\bsw\services/ringbuffer.c **** {
+  87              		.loc 1 60 0
+  88              		.cfi_startproc
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91              		@ link register save eliminated.
+  92              	.LVL8:
+  93 0000 10B4     		push	{r4}
+  94              		.cfi_def_cfa_offset 4
+  95              		.cfi_offset 4, -4
+  61:source\bsw\services/ringbuffer.c ****     //GetResource(rb->erika_ressource);
+  62:source\bsw\services/ringbuffer.c ****     
+  63:source\bsw\services/ringbuffer.c ****     //we check if there is enough memory left to store the new data
+  64:source\bsw\services/ringbuffer.c ****     if (me->m_fillLevel == RB_SIZE)
+  96              		.loc 1 64 0
+  97 0002 D0F8D040 		ldr	r4, [r0, #208]
+  98 0006 C82C     		cmp	r4, #200
+  99 0008 16D0     		beq	.L8
+  65:source\bsw\services/ringbuffer.c ****     {
+  66:source\bsw\services/ringbuffer.c ****         return RC_ERROR_BUFFER_FULL;
+  67:source\bsw\services/ringbuffer.c ****     } else if (me->m_fillLevel < RB_SIZE)
+ 100              		.loc 1 67 0
+ 101 000a C72C     		cmp	r4, #199
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 4
+
+
+ 102 000c 17D8     		bhi	.L9
+  68:source\bsw\services/ringbuffer.c ****     {
+  69:source\bsw\services/ringbuffer.c ****         me->m_buffer[me->m_writeIndex++] = *data;
+ 103              		.loc 1 69 0
+ 104 000e D0F8CC20 		ldr	r2, [r0, #204]
+ 105 0012 531C     		adds	r3, r2, #1
+ 106 0014 C0F8CC30 		str	r3, [r0, #204]
+ 107 0018 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 108              	.LVL9:
+ 109 001a 8154     		strb	r1, [r0, r2]
+  70:source\bsw\services/ringbuffer.c ****         me->m_writeIndex %= RB_SIZE;
+ 110              		.loc 1 70 0
+ 111 001c 094A     		ldr	r2, .L11
+ 112 001e A2FB0312 		umull	r1, r2, r2, r3
+ 113 0022 9209     		lsrs	r2, r2, #6
+ 114 0024 C821     		movs	r1, #200
+ 115 0026 01FB1233 		mls	r3, r1, r2, r3
+ 116 002a C0F8CC30 		str	r3, [r0, #204]
+  71:source\bsw\services/ringbuffer.c ****         me->m_fillLevel++;
+ 117              		.loc 1 71 0
+ 118 002e 0134     		adds	r4, r4, #1
+ 119 0030 C0F8D040 		str	r4, [r0, #208]
+  72:source\bsw\services/ringbuffer.c ****         
+  73:source\bsw\services/ringbuffer.c ****         return RC_SUCCESS;
+ 120              		.loc 1 73 0
+ 121 0034 0020     		movs	r0, #0
+ 122              	.LVL10:
+ 123 0036 03E0     		b	.L7
+ 124              	.LVL11:
+ 125              	.L8:
+  66:source\bsw\services/ringbuffer.c ****     } else if (me->m_fillLevel < RB_SIZE)
+ 126              		.loc 1 66 0
+ 127 0038 6FF00700 		mvn	r0, #7
+ 128              	.LVL12:
+ 129 003c 00E0     		b	.L7
+ 130              	.LVL13:
+ 131              	.L9:
+  74:source\bsw\services/ringbuffer.c ****     }
+  75:source\bsw\services/ringbuffer.c ****     
+  76:source\bsw\services/ringbuffer.c ****     //ReleaseResource(rb->erika_ressource);
+  77:source\bsw\services/ringbuffer.c ****     
+  78:source\bsw\services/ringbuffer.c ****     return RC_SUCCESS;
+ 132              		.loc 1 78 0
+ 133 003e 0020     		movs	r0, #0
+ 134              	.LVL14:
+ 135              	.L7:
+  79:source\bsw\services/ringbuffer.c **** }
+ 136              		.loc 1 79 0
+ 137 0040 10BC     		pop	{r4}
+ 138              		.cfi_restore 4
+ 139              		.cfi_def_cfa_offset 0
+ 140 0042 7047     		bx	lr
+ 141              	.L12:
+ 142              		.align	2
+ 143              	.L11:
+ 144 0044 1F85EB51 		.word	1374389535
+ 145              		.cfi_endproc
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 5
+
+
+ 146              	.LFE111:
+ 147              		.size	RB_write, .-RB_write
+ 148              		.section	.text.RB_read,"ax",%progbits
+ 149              		.align	2
+ 150              		.global	RB_read
+ 151              		.thumb
+ 152              		.thumb_func
+ 153              		.type	RB_read, %function
+ 154              	RB_read:
+ 155              	.LFB112:
+  80:source\bsw\services/ringbuffer.c **** 
+  81:source\bsw\services/ringbuffer.c **** /**
+  82:source\bsw\services/ringbuffer.c ****  * Read one element from the ringbuffer
+  83:source\bsw\services/ringbuffer.c ****  * @param RB_t * const me : IN/OUT - pointer to ringbuffer object 
+  84:source\bsw\services/ringbuffer.c ****  * @param RB_buffer_t * const data : OUT - Data read
+  85:source\bsw\services/ringbuffer.c ****  * @return RC_SUCCESS or error code
+  86:source\bsw\services/ringbuffer.c ****  */
+  87:source\bsw\services/ringbuffer.c **** RC_t RB_read(RB_t* const me, RB_buffer_t * const data)
+  88:source\bsw\services/ringbuffer.c **** {
+ 156              		.loc 1 88 0
+ 157              		.cfi_startproc
+ 158              		@ args = 0, pretend = 0, frame = 0
+ 159              		@ frame_needed = 0, uses_anonymous_args = 0
+ 160              		@ link register save eliminated.
+ 161              	.LVL15:
+  89:source\bsw\services/ringbuffer.c ****     //GetResource(rb->erika_ressource);
+  90:source\bsw\services/ringbuffer.c ****     
+  91:source\bsw\services/ringbuffer.c ****     //we check if the requested size is actually present in the buffer
+  92:source\bsw\services/ringbuffer.c ****     if (me->m_fillLevel == 0)
+ 162              		.loc 1 92 0
+ 163 0000 D0F8D030 		ldr	r3, [r0, #208]
+ 164 0004 CBB1     		cbz	r3, .L15
+  93:source\bsw\services/ringbuffer.c ****     {
+  94:source\bsw\services/ringbuffer.c ****         return RC_ERROR_BUFFER_EMTPY;
+  95:source\bsw\services/ringbuffer.c ****     } else if (me->m_fillLevel > 0)
+ 165              		.loc 1 95 0
+ 166 0006 DBB1     		cbz	r3, .L16
+  96:source\bsw\services/ringbuffer.c ****     {
+  97:source\bsw\services/ringbuffer.c ****         *data = me->m_buffer[me->m_readIndex++];
+ 167              		.loc 1 97 0
+ 168 0008 D0F8C830 		ldr	r3, [r0, #200]
+ 169 000c 5A1C     		adds	r2, r3, #1
+ 170 000e C0F8C820 		str	r2, [r0, #200]
+ 171 0012 C35C     		ldrb	r3, [r0, r3]	@ zero_extendqisi2
+ 172 0014 0B70     		strb	r3, [r1]
+  98:source\bsw\services/ringbuffer.c ****         
+  99:source\bsw\services/ringbuffer.c ****         me->m_readIndex %= RB_SIZE;
+ 173              		.loc 1 99 0
+ 174 0016 D0F8C830 		ldr	r3, [r0, #200]
+ 175 001a 0A4A     		ldr	r2, .L17
+ 176 001c A2FB0312 		umull	r1, r2, r2, r3
+ 177              	.LVL16:
+ 178 0020 9209     		lsrs	r2, r2, #6
+ 179 0022 C821     		movs	r1, #200
+ 180 0024 01FB1233 		mls	r3, r1, r2, r3
+ 181 0028 C0F8C830 		str	r3, [r0, #200]
+ 100:source\bsw\services/ringbuffer.c ****         me->m_fillLevel--;
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 6
+
+
+ 182              		.loc 1 100 0
+ 183 002c D0F8D030 		ldr	r3, [r0, #208]
+ 184 0030 013B     		subs	r3, r3, #1
+ 185 0032 C0F8D030 		str	r3, [r0, #208]
+ 101:source\bsw\services/ringbuffer.c ****         
+ 102:source\bsw\services/ringbuffer.c ****         return RC_SUCCESS;
+ 186              		.loc 1 102 0
+ 187 0036 0020     		movs	r0, #0
+ 188              	.LVL17:
+ 189 0038 7047     		bx	lr
+ 190              	.LVL18:
+ 191              	.L15:
+  94:source\bsw\services/ringbuffer.c ****     } else if (me->m_fillLevel > 0)
+ 192              		.loc 1 94 0
+ 193 003a 6FF00800 		mvn	r0, #8
+ 194              	.LVL19:
+ 195 003e 7047     		bx	lr
+ 196              	.LVL20:
+ 197              	.L16:
+ 103:source\bsw\services/ringbuffer.c ****     }
+ 104:source\bsw\services/ringbuffer.c ****     
+ 105:source\bsw\services/ringbuffer.c ****     //ReleaseResource(rb->erika_ressource);
+ 106:source\bsw\services/ringbuffer.c ****     
+ 107:source\bsw\services/ringbuffer.c ****     return RC_SUCCESS;
+ 198              		.loc 1 107 0
+ 199 0040 0020     		movs	r0, #0
+ 200              	.LVL21:
+ 108:source\bsw\services/ringbuffer.c **** }
+ 201              		.loc 1 108 0
+ 202 0042 7047     		bx	lr
+ 203              	.L18:
+ 204              		.align	2
+ 205              	.L17:
+ 206 0044 1F85EB51 		.word	1374389535
+ 207              		.cfi_endproc
+ 208              	.LFE112:
+ 209              		.size	RB_read, .-RB_read
+ 210              		.section	.text.RB_getCapacity,"ax",%progbits
+ 211              		.align	2
+ 212              		.global	RB_getCapacity
+ 213              		.thumb
+ 214              		.thumb_func
+ 215              		.type	RB_getCapacity, %function
+ 216              	RB_getCapacity:
+ 217              	.LFB113:
+ 109:source\bsw\services/ringbuffer.c **** 
+ 110:source\bsw\services/ringbuffer.c **** /**
+ 111:source\bsw\services/ringbuffer.c ****  * Provide available space in buffer
+ 112:source\bsw\services/ringbuffer.c ****  * @param RB_t * const me : IN/OUT - pointer to ringbuffer object 
+ 113:source\bsw\services/ringbuffer.c ****  * @return Available number of elements to be stored
+ 114:source\bsw\services/ringbuffer.c ****  */
+ 115:source\bsw\services/ringbuffer.c **** uint16_t RB_getCapacity(RB_t * const me)
+ 116:source\bsw\services/ringbuffer.c **** {
+ 218              		.loc 1 116 0
+ 219              		.cfi_startproc
+ 220              		@ args = 0, pretend = 0, frame = 0
+ 221              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 7
+
+
+ 222              		@ link register save eliminated.
+ 223              	.LVL22:
+ 117:source\bsw\services/ringbuffer.c ****     //Todo: No error handling considered, assume all other functions work as intended
+ 118:source\bsw\services/ringbuffer.c ****     return RB_SIZE - me->m_fillLevel;
+ 224              		.loc 1 118 0
+ 225 0000 D0F8D000 		ldr	r0, [r0, #208]
+ 226              	.LVL23:
+ 227 0004 C0F1C800 		rsb	r0, r0, #200
+ 119:source\bsw\services/ringbuffer.c **** }
+ 228              		.loc 1 119 0
+ 229 0008 80B2     		uxth	r0, r0
+ 230 000a 7047     		bx	lr
+ 231              		.cfi_endproc
+ 232              	.LFE113:
+ 233              		.size	RB_getCapacity, .-RB_getCapacity
+ 234              		.section	.text.RB_getNumberOfStoredElements,"ax",%progbits
+ 235              		.align	2
+ 236              		.global	RB_getNumberOfStoredElements
+ 237              		.thumb
+ 238              		.thumb_func
+ 239              		.type	RB_getNumberOfStoredElements, %function
+ 240              	RB_getNumberOfStoredElements:
+ 241              	.LFB114:
+ 120:source\bsw\services/ringbuffer.c **** 
+ 121:source\bsw\services/ringbuffer.c **** /**
+ 122:source\bsw\services/ringbuffer.c ****  * Check how much data is stored
+ 123:source\bsw\services/ringbuffer.c ****  * @param RB_t * const me : IN/OUT - pointer to ringbuffer object 
+ 124:source\bsw\services/ringbuffer.c ****  * @return number of byte stored
+ 125:source\bsw\services/ringbuffer.c ****  */
+ 126:source\bsw\services/ringbuffer.c **** uint16_t RB_getNumberOfStoredElements(RB_t * const me)
+ 127:source\bsw\services/ringbuffer.c **** {
+ 242              		.loc 1 127 0
+ 243              		.cfi_startproc
+ 244              		@ args = 0, pretend = 0, frame = 0
+ 245              		@ frame_needed = 0, uses_anonymous_args = 0
+ 246              		@ link register save eliminated.
+ 247              	.LVL24:
+ 128:source\bsw\services/ringbuffer.c ****     return me->m_fillLevel;
+ 129:source\bsw\services/ringbuffer.c **** }
+ 248              		.loc 1 129 0
+ 249 0000 B0F8D000 		ldrh	r0, [r0, #208]
+ 250              	.LVL25:
+ 251 0004 7047     		bx	lr
+ 252              		.cfi_endproc
+ 253              	.LFE114:
+ 254              		.size	RB_getNumberOfStoredElements, .-RB_getNumberOfStoredElements
+ 255 0006 00BF     		.text
+ 256              	.Letext0:
+ 257              		.file 2 "c:\\h_da softwares & projects\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.1\\
+ 258              		.file 3 "c:\\h_da softwares & projects\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.1\\
+ 259              		.file 4 "Generated_Source\\PSoC5/ErikaOS_common_ee_types.inc"
+ 260              		.file 5 "Generated_Source\\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc"
+ 261              		.file 6 ".\\source\\bsw/global.h"
+ 262              		.file 7 "source\\bsw\\services\\ringbuffer.h"
+ 263              		.file 8 "Generated_Source\\PSoC5/ErikaOS_ee_oo_intfunc.inc"
+ 264              		.file 9 "Generated_Source\\PSoC5/ErikaOS_cortex_mx_ee_context.inc"
+ 265              		.file 10 "Generated_Source\\PSoC5/ErikaOS_common_ee_primitives.inc"
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 8
+
+
+ 266              		.file 11 "Generated_Source\\PSoC5/core_cm3.h"
+ 267              		.section	.debug_info,"",%progbits
+ 268              	.Ldebug_info0:
+ 269 0000 A1030000 		.4byte	0x3a1
+ 270 0004 0400     		.2byte	0x4
+ 271 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 272 000a 04       		.byte	0x4
+ 273 000b 01       		.uleb128 0x1
+ 274 000c D3020000 		.4byte	.LASF73
+ 275 0010 0C       		.byte	0xc
+ 276 0011 74000000 		.4byte	.LASF74
+ 277 0015 0A040000 		.4byte	.LASF75
+ 278 0019 18000000 		.4byte	.Ldebug_ranges0+0x18
+ 279 001d 00000000 		.4byte	0
+ 280 0021 00000000 		.4byte	.Ldebug_line0
+ 281 0025 02       		.uleb128 0x2
+ 282 0026 01       		.byte	0x1
+ 283 0027 06       		.byte	0x6
+ 284 0028 50020000 		.4byte	.LASF0
+ 285 002c 03       		.uleb128 0x3
+ 286 002d E1010000 		.4byte	.LASF3
+ 287 0031 02       		.byte	0x2
+ 288 0032 1D       		.byte	0x1d
+ 289 0033 37000000 		.4byte	0x37
+ 290 0037 02       		.uleb128 0x2
+ 291 0038 01       		.byte	0x1
+ 292 0039 08       		.byte	0x8
+ 293 003a 31020000 		.4byte	.LASF1
+ 294 003e 02       		.uleb128 0x2
+ 295 003f 02       		.byte	0x2
+ 296 0040 05       		.byte	0x5
+ 297 0041 47000000 		.4byte	.LASF2
+ 298 0045 03       		.uleb128 0x3
+ 299 0046 D8000000 		.4byte	.LASF4
+ 300 004a 02       		.byte	0x2
+ 301 004b 2B       		.byte	0x2b
+ 302 004c 50000000 		.4byte	0x50
+ 303 0050 02       		.uleb128 0x2
+ 304 0051 02       		.byte	0x2
+ 305 0052 07       		.byte	0x7
+ 306 0053 C0020000 		.4byte	.LASF5
+ 307 0057 03       		.uleb128 0x3
+ 308 0058 87040000 		.4byte	.LASF6
+ 309 005c 02       		.byte	0x2
+ 310 005d 3F       		.byte	0x3f
+ 311 005e 62000000 		.4byte	0x62
+ 312 0062 02       		.uleb128 0x2
+ 313 0063 04       		.byte	0x4
+ 314 0064 05       		.byte	0x5
+ 315 0065 B8010000 		.4byte	.LASF7
+ 316 0069 03       		.uleb128 0x3
+ 317 006a 0E020000 		.4byte	.LASF8
+ 318 006e 02       		.byte	0x2
+ 319 006f 41       		.byte	0x41
+ 320 0070 74000000 		.4byte	0x74
+ 321 0074 02       		.uleb128 0x2
+ 322 0075 04       		.byte	0x4
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 9
+
+
+ 323 0076 07       		.byte	0x7
+ 324 0077 D7030000 		.4byte	.LASF9
+ 325 007b 02       		.uleb128 0x2
+ 326 007c 08       		.byte	0x8
+ 327 007d 05       		.byte	0x5
+ 328 007e 7E010000 		.4byte	.LASF10
+ 329 0082 02       		.uleb128 0x2
+ 330 0083 08       		.byte	0x8
+ 331 0084 07       		.byte	0x7
+ 332 0085 5C020000 		.4byte	.LASF11
+ 333 0089 04       		.uleb128 0x4
+ 334 008a 04       		.byte	0x4
+ 335 008b 05       		.byte	0x5
+ 336 008c 696E7400 		.ascii	"int\000"
+ 337 0090 02       		.uleb128 0x2
+ 338 0091 04       		.byte	0x4
+ 339 0092 07       		.byte	0x7
+ 340 0093 7C020000 		.4byte	.LASF12
+ 341 0097 03       		.uleb128 0x3
+ 342 0098 EA000000 		.4byte	.LASF13
+ 343 009c 03       		.byte	0x3
+ 344 009d 18       		.byte	0x18
+ 345 009e 2C000000 		.4byte	0x2c
+ 346 00a2 03       		.uleb128 0x3
+ 347 00a3 97020000 		.4byte	.LASF14
+ 348 00a7 03       		.byte	0x3
+ 349 00a8 24       		.byte	0x24
+ 350 00a9 45000000 		.4byte	0x45
+ 351 00ad 03       		.uleb128 0x3
+ 352 00ae 7B030000 		.4byte	.LASF15
+ 353 00b2 03       		.byte	0x3
+ 354 00b3 2C       		.byte	0x2c
+ 355 00b4 57000000 		.4byte	0x57
+ 356 00b8 03       		.uleb128 0x3
+ 357 00b9 73020000 		.4byte	.LASF16
+ 358 00bd 03       		.byte	0x3
+ 359 00be 30       		.byte	0x30
+ 360 00bf 69000000 		.4byte	0x69
+ 361 00c3 02       		.uleb128 0x2
+ 362 00c4 04       		.byte	0x4
+ 363 00c5 04       		.byte	0x4
+ 364 00c6 46010000 		.4byte	.LASF17
+ 365 00ca 02       		.uleb128 0x2
+ 366 00cb 08       		.byte	0x8
+ 367 00cc 04       		.byte	0x4
+ 368 00cd E9030000 		.4byte	.LASF18
+ 369 00d1 02       		.uleb128 0x2
+ 370 00d2 01       		.byte	0x1
+ 371 00d3 08       		.byte	0x8
+ 372 00d4 61030000 		.4byte	.LASF19
+ 373 00d8 02       		.uleb128 0x2
+ 374 00d9 08       		.byte	0x8
+ 375 00da 04       		.byte	0x4
+ 376 00db 25020000 		.4byte	.LASF20
+ 377 00df 02       		.uleb128 0x2
+ 378 00e0 04       		.byte	0x4
+ 379 00e1 07       		.byte	0x7
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 10
+
+
+ 380 00e2 6B000000 		.4byte	.LASF21
+ 381 00e6 05       		.uleb128 0x5
+ 382 00e7 04       		.byte	0x4
+ 383 00e8 03       		.uleb128 0x3
+ 384 00e9 B7020000 		.4byte	.LASF22
+ 385 00ed 04       		.byte	0x4
+ 386 00ee 53       		.byte	0x53
+ 387 00ef 89000000 		.4byte	0x89
+ 388 00f3 03       		.uleb128 0x3
+ 389 00f4 CE000000 		.4byte	.LASF23
+ 390 00f8 04       		.byte	0x4
+ 391 00f9 54       		.byte	0x54
+ 392 00fa 90000000 		.4byte	0x90
+ 393 00fe 03       		.uleb128 0x3
+ 394 00ff 02040000 		.4byte	.LASF24
+ 395 0103 05       		.byte	0x5
+ 396 0104 4D       		.byte	0x4d
+ 397 0105 F3000000 		.4byte	0xf3
+ 398 0109 03       		.uleb128 0x3
+ 399 010a A3000000 		.4byte	.LASF25
+ 400 010e 05       		.byte	0x5
+ 401 010f 4F       		.byte	0x4f
+ 402 0110 F3000000 		.4byte	0xf3
+ 403 0114 03       		.uleb128 0x3
+ 404 0115 E3000000 		.4byte	.LASF26
+ 405 0119 05       		.byte	0x5
+ 406 011a 78       		.byte	0x78
+ 407 011b E8000000 		.4byte	0xe8
+ 408 011f 03       		.uleb128 0x3
+ 409 0120 3F000000 		.4byte	.LASF27
+ 410 0124 06       		.byte	0x6
+ 411 0125 BA       		.byte	0xba
+ 412 0126 E6000000 		.4byte	0xe6
+ 413 012a 06       		.uleb128 0x6
+ 414 012b 01       		.byte	0x1
+ 415 012c 25000000 		.4byte	0x25
+ 416 0130 06       		.byte	0x6
+ 417 0131 CF       		.byte	0xcf
+ 418 0132 D3010000 		.4byte	0x1d3
+ 419 0136 07       		.uleb128 0x7
+ 420 0137 20000000 		.4byte	.LASF28
+ 421 013b 00       		.byte	0
+ 422 013c 08       		.uleb128 0x8
+ 423 013d BC040000 		.4byte	.LASF29
+ 424 0141 7F       		.sleb128 -1
+ 425 0142 08       		.uleb128 0x8
+ 426 0143 A0020000 		.4byte	.LASF30
+ 427 0147 7E       		.sleb128 -2
+ 428 0148 08       		.uleb128 0x8
+ 429 0149 95000000 		.4byte	.LASF31
+ 430 014d 7D       		.sleb128 -3
+ 431 014e 08       		.uleb128 0x8
+ 432 014f C5040000 		.4byte	.LASF32
+ 433 0153 7C       		.sleb128 -4
+ 434 0154 08       		.uleb128 0x8
+ 435 0155 37010000 		.4byte	.LASF33
+ 436 0159 7B       		.sleb128 -5
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 11
+
+
+ 437 015a 08       		.uleb128 0x8
+ 438 015b 76040000 		.4byte	.LASF34
+ 439 015f 7A       		.sleb128 -6
+ 440 0160 08       		.uleb128 0x8
+ 441 0161 C1010000 		.4byte	.LASF35
+ 442 0165 79       		.sleb128 -7
+ 443 0166 08       		.uleb128 0x8
+ 444 0167 66030000 		.4byte	.LASF36
+ 445 016b 78       		.sleb128 -8
+ 446 016c 08       		.uleb128 0x8
+ 447 016d ED040000 		.4byte	.LASF37
+ 448 0171 77       		.sleb128 -9
+ 449 0172 08       		.uleb128 0x8
+ 450 0173 D3010000 		.4byte	.LASF38
+ 451 0177 76       		.sleb128 -10
+ 452 0178 08       		.uleb128 0x8
+ 453 0179 08050000 		.4byte	.LASF39
+ 454 017d 75       		.sleb128 -11
+ 455 017e 08       		.uleb128 0x8
+ 456 017f 89020000 		.4byte	.LASF40
+ 457 0183 74       		.sleb128 -12
+ 458 0184 08       		.uleb128 0x8
+ 459 0185 F0030000 		.4byte	.LASF41
+ 460 0189 73       		.sleb128 -13
+ 461 018a 08       		.uleb128 0x8
+ 462 018b 0D000000 		.4byte	.LASF42
+ 463 018f 72       		.sleb128 -14
+ 464 0190 08       		.uleb128 0x8
+ 465 0191 2B000000 		.4byte	.LASF43
+ 466 0195 71       		.sleb128 -15
+ 467 0196 08       		.uleb128 0x8
+ 468 0197 EB010000 		.4byte	.LASF44
+ 469 019b 70       		.sleb128 -16
+ 470 019c 08       		.uleb128 0x8
+ 471 019d AB000000 		.4byte	.LASF45
+ 472 01a1 6F       		.sleb128 -17
+ 473 01a2 08       		.uleb128 0x8
+ 474 01a3 56000000 		.4byte	.LASF46
+ 475 01a7 6E       		.sleb128 -18
+ 476 01a8 08       		.uleb128 0x8
+ 477 01a9 94010000 		.4byte	.LASF47
+ 478 01ad 6D       		.sleb128 -19
+ 479 01ae 08       		.uleb128 0x8
+ 480 01af 8F030000 		.4byte	.LASF48
+ 481 01b3 6C       		.sleb128 -20
+ 482 01b4 08       		.uleb128 0x8
+ 483 01b5 FC010000 		.4byte	.LASF49
+ 484 01b9 6B       		.sleb128 -21
+ 485 01ba 08       		.uleb128 0x8
+ 486 01bb 91040000 		.4byte	.LASF50
+ 487 01bf 6A       		.sleb128 -22
+ 488 01c0 08       		.uleb128 0x8
+ 489 01c1 F2000000 		.4byte	.LASF51
+ 490 01c5 69       		.sleb128 -23
+ 491 01c6 08       		.uleb128 0x8
+ 492 01c7 A7010000 		.4byte	.LASF52
+ 493 01cb 68       		.sleb128 -24
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 12
+
+
+ 494 01cc 08       		.uleb128 0x8
+ 495 01cd 65010000 		.4byte	.LASF53
+ 496 01d1 67       		.sleb128 -25
+ 497 01d2 00       		.byte	0
+ 498 01d3 03       		.uleb128 0x3
+ 499 01d4 03050000 		.4byte	.LASF54
+ 500 01d8 06       		.byte	0x6
+ 501 01d9 EA       		.byte	0xea
+ 502 01da 2A010000 		.4byte	0x12a
+ 503 01de 03       		.uleb128 0x3
+ 504 01df 83030000 		.4byte	.LASF55
+ 505 01e3 07       		.byte	0x7
+ 506 01e4 24       		.byte	0x24
+ 507 01e5 97000000 		.4byte	0x97
+ 508 01e9 09       		.uleb128 0x9
+ 509 01ea D4       		.byte	0xd4
+ 510 01eb 07       		.byte	0x7
+ 511 01ec 2B       		.byte	0x2b
+ 512 01ed 22020000 		.4byte	0x222
+ 513 01f1 0A       		.uleb128 0xa
+ 514 01f2 AE020000 		.4byte	.LASF56
+ 515 01f6 07       		.byte	0x7
+ 516 01f7 2C       		.byte	0x2c
+ 517 01f8 22020000 		.4byte	0x222
+ 518 01fc 00       		.byte	0
+ 519 01fd 0A       		.uleb128 0xa
+ 520 01fe A3040000 		.4byte	.LASF57
+ 521 0202 07       		.byte	0x7
+ 522 0203 2D       		.byte	0x2d
+ 523 0204 B8000000 		.4byte	0xb8
+ 524 0208 C8       		.byte	0xc8
+ 525 0209 0A       		.uleb128 0xa
+ 526 020a 00000000 		.4byte	.LASF58
+ 527 020e 07       		.byte	0x7
+ 528 020f 2E       		.byte	0x2e
+ 529 0210 B8000000 		.4byte	0xb8
+ 530 0214 CC       		.byte	0xcc
+ 531 0215 0A       		.uleb128 0xa
+ 532 0216 19020000 		.4byte	.LASF59
+ 533 021a 07       		.byte	0x7
+ 534 021b 2F       		.byte	0x2f
+ 535 021c B8000000 		.4byte	0xb8
+ 536 0220 D0       		.byte	0xd0
+ 537 0221 00       		.byte	0
+ 538 0222 0B       		.uleb128 0xb
+ 539 0223 DE010000 		.4byte	0x1de
+ 540 0227 32020000 		.4byte	0x232
+ 541 022b 0C       		.uleb128 0xc
+ 542 022c DF000000 		.4byte	0xdf
+ 543 0230 C7       		.byte	0xc7
+ 544 0231 00       		.byte	0
+ 545 0232 03       		.uleb128 0x3
+ 546 0233 51000000 		.4byte	.LASF60
+ 547 0237 07       		.byte	0x7
+ 548 0238 30       		.byte	0x30
+ 549 0239 E9010000 		.4byte	0x1e9
+ 550 023d 0D       		.uleb128 0xd
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 13
+
+
+ 551 023e 8C010000 		.4byte	.LASF61
+ 552 0242 01       		.byte	0x1
+ 553 0243 22       		.byte	0x22
+ 554 0244 D3010000 		.4byte	0x1d3
+ 555 0248 00000000 		.4byte	.LFB110
+ 556 024c 2A000000 		.4byte	.LFE110-.LFB110
+ 557 0250 01       		.uleb128 0x1
+ 558 0251 9C       		.byte	0x9c
+ 559 0252 78020000 		.4byte	0x278
+ 560 0256 0E       		.uleb128 0xe
+ 561 0257 6D6500   		.ascii	"me\000"
+ 562 025a 01       		.byte	0x1
+ 563 025b 22       		.byte	0x22
+ 564 025c 7E020000 		.4byte	0x27e
+ 565 0260 00000000 		.4byte	.LLST0
+ 566 0264 0F       		.uleb128 0xf
+ 567 0265 00000000 		.4byte	.Ldebug_ranges0+0
+ 568 0269 10       		.uleb128 0x10
+ 569 026a 6900     		.ascii	"i\000"
+ 570 026c 01       		.byte	0x1
+ 571 026d 2D       		.byte	0x2d
+ 572 026e A2000000 		.4byte	0xa2
+ 573 0272 34000000 		.4byte	.LLST1
+ 574 0276 00       		.byte	0
+ 575 0277 00       		.byte	0
+ 576 0278 11       		.uleb128 0x11
+ 577 0279 04       		.byte	0x4
+ 578 027a 32020000 		.4byte	0x232
+ 579 027e 12       		.uleb128 0x12
+ 580 027f 78020000 		.4byte	0x278
+ 581 0283 0D       		.uleb128 0xd
+ 582 0284 3F020000 		.4byte	.LASF62
+ 583 0288 01       		.byte	0x1
+ 584 0289 3B       		.byte	0x3b
+ 585 028a D3010000 		.4byte	0x1d3
+ 586 028e 00000000 		.4byte	.LFB111
+ 587 0292 48000000 		.4byte	.LFE111-.LFB111
+ 588 0296 01       		.uleb128 0x1
+ 589 0297 9C       		.byte	0x9c
+ 590 0298 BA020000 		.4byte	0x2ba
+ 591 029c 0E       		.uleb128 0xe
+ 592 029d 6D6500   		.ascii	"me\000"
+ 593 02a0 01       		.byte	0x1
+ 594 02a1 3B       		.byte	0x3b
+ 595 02a2 7E020000 		.4byte	0x27e
+ 596 02a6 5E000000 		.4byte	.LLST2
+ 597 02aa 13       		.uleb128 0x13
+ 598 02ab A2030000 		.4byte	.LASF63
+ 599 02af 01       		.byte	0x1
+ 600 02b0 3B       		.byte	0x3b
+ 601 02b1 C5020000 		.4byte	0x2c5
+ 602 02b5 B1000000 		.4byte	.LLST3
+ 603 02b9 00       		.byte	0
+ 604 02ba 11       		.uleb128 0x11
+ 605 02bb 04       		.byte	0x4
+ 606 02bc C0020000 		.4byte	0x2c0
+ 607 02c0 12       		.uleb128 0x12
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 14
+
+
+ 608 02c1 DE010000 		.4byte	0x1de
+ 609 02c5 12       		.uleb128 0x12
+ 610 02c6 BA020000 		.4byte	0x2ba
+ 611 02ca 0D       		.uleb128 0xd
+ 612 02cb 48020000 		.4byte	.LASF64
+ 613 02cf 01       		.byte	0x1
+ 614 02d0 57       		.byte	0x57
+ 615 02d1 D3010000 		.4byte	0x1d3
+ 616 02d5 00000000 		.4byte	.LFB112
+ 617 02d9 48000000 		.4byte	.LFE112-.LFB112
+ 618 02dd 01       		.uleb128 0x1
+ 619 02de 9C       		.byte	0x9c
+ 620 02df 01030000 		.4byte	0x301
+ 621 02e3 0E       		.uleb128 0xe
+ 622 02e4 6D6500   		.ascii	"me\000"
+ 623 02e7 01       		.byte	0x1
+ 624 02e8 57       		.byte	0x57
+ 625 02e9 7E020000 		.4byte	0x27e
+ 626 02ed EB000000 		.4byte	.LLST4
+ 627 02f1 13       		.uleb128 0x13
+ 628 02f2 A2030000 		.4byte	.LASF63
+ 629 02f6 01       		.byte	0x1
+ 630 02f7 57       		.byte	0x57
+ 631 02f8 07030000 		.4byte	0x307
+ 632 02fc 3E010000 		.4byte	.LLST5
+ 633 0300 00       		.byte	0
+ 634 0301 11       		.uleb128 0x11
+ 635 0302 04       		.byte	0x4
+ 636 0303 DE010000 		.4byte	0x1de
+ 637 0307 12       		.uleb128 0x12
+ 638 0308 01030000 		.4byte	0x301
+ 639 030c 0D       		.uleb128 0xd
+ 640 030d BF000000 		.4byte	.LASF65
+ 641 0311 01       		.byte	0x1
+ 642 0312 73       		.byte	0x73
+ 643 0313 A2000000 		.4byte	0xa2
+ 644 0317 00000000 		.4byte	.LFB113
+ 645 031b 0C000000 		.4byte	.LFE113-.LFB113
+ 646 031f 01       		.uleb128 0x1
+ 647 0320 9C       		.byte	0x9c
+ 648 0321 34030000 		.4byte	0x334
+ 649 0325 0E       		.uleb128 0xe
+ 650 0326 6D6500   		.ascii	"me\000"
+ 651 0329 01       		.byte	0x1
+ 652 032a 73       		.byte	0x73
+ 653 032b 7E020000 		.4byte	0x27e
+ 654 032f 6A010000 		.4byte	.LLST6
+ 655 0333 00       		.byte	0
+ 656 0334 0D       		.uleb128 0xd
+ 657 0335 BA030000 		.4byte	.LASF66
+ 658 0339 01       		.byte	0x1
+ 659 033a 7E       		.byte	0x7e
+ 660 033b A2000000 		.4byte	0xa2
+ 661 033f 00000000 		.4byte	.LFB114
+ 662 0343 06000000 		.4byte	.LFE114-.LFB114
+ 663 0347 01       		.uleb128 0x1
+ 664 0348 9C       		.byte	0x9c
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 15
+
+
+ 665 0349 5C030000 		.4byte	0x35c
+ 666 034d 0E       		.uleb128 0xe
+ 667 034e 6D6500   		.ascii	"me\000"
+ 668 0351 01       		.byte	0x1
+ 669 0352 7E       		.byte	0x7e
+ 670 0353 7E020000 		.4byte	0x27e
+ 671 0357 8B010000 		.4byte	.LLST7
+ 672 035b 00       		.byte	0
+ 673 035c 14       		.uleb128 0x14
+ 674 035d D5040000 		.4byte	.LASF67
+ 675 0361 08       		.byte	0x8
+ 676 0362 40       		.byte	0x40
+ 677 0363 FE000000 		.4byte	0xfe
+ 678 0367 14       		.uleb128 0x14
+ 679 0368 4C010000 		.4byte	.LASF68
+ 680 036c 08       		.byte	0x8
+ 681 036d 47       		.byte	0x47
+ 682 036e 09010000 		.4byte	0x109
+ 683 0372 14       		.uleb128 0x14
+ 684 0373 A7030000 		.4byte	.LASF69
+ 685 0377 08       		.byte	0x8
+ 686 0378 4A       		.byte	0x4a
+ 687 0379 FE000000 		.4byte	0xfe
+ 688 037d 14       		.uleb128 0x14
+ 689 037e 1E010000 		.4byte	.LASF70
+ 690 0382 09       		.byte	0x9
+ 691 0383 48       		.byte	0x48
+ 692 0384 14010000 		.4byte	0x114
+ 693 0388 14       		.uleb128 0x14
+ 694 0389 09010000 		.4byte	.LASF71
+ 695 038d 0A       		.byte	0xa
+ 696 038e 44       		.byte	0x44
+ 697 038f FE000000 		.4byte	0xfe
+ 698 0393 15       		.uleb128 0x15
+ 699 0394 AF040000 		.4byte	.LASF72
+ 700 0398 0B       		.byte	0xb
+ 701 0399 1207     		.2byte	0x712
+ 702 039b 9F030000 		.4byte	0x39f
+ 703 039f 16       		.uleb128 0x16
+ 704 03a0 AD000000 		.4byte	0xad
+ 705 03a4 00       		.byte	0
+ 706              		.section	.debug_abbrev,"",%progbits
+ 707              	.Ldebug_abbrev0:
+ 708 0000 01       		.uleb128 0x1
+ 709 0001 11       		.uleb128 0x11
+ 710 0002 01       		.byte	0x1
+ 711 0003 25       		.uleb128 0x25
+ 712 0004 0E       		.uleb128 0xe
+ 713 0005 13       		.uleb128 0x13
+ 714 0006 0B       		.uleb128 0xb
+ 715 0007 03       		.uleb128 0x3
+ 716 0008 0E       		.uleb128 0xe
+ 717 0009 1B       		.uleb128 0x1b
+ 718 000a 0E       		.uleb128 0xe
+ 719 000b 55       		.uleb128 0x55
+ 720 000c 17       		.uleb128 0x17
+ 721 000d 11       		.uleb128 0x11
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 16
+
+
+ 722 000e 01       		.uleb128 0x1
+ 723 000f 10       		.uleb128 0x10
+ 724 0010 17       		.uleb128 0x17
+ 725 0011 00       		.byte	0
+ 726 0012 00       		.byte	0
+ 727 0013 02       		.uleb128 0x2
+ 728 0014 24       		.uleb128 0x24
+ 729 0015 00       		.byte	0
+ 730 0016 0B       		.uleb128 0xb
+ 731 0017 0B       		.uleb128 0xb
+ 732 0018 3E       		.uleb128 0x3e
+ 733 0019 0B       		.uleb128 0xb
+ 734 001a 03       		.uleb128 0x3
+ 735 001b 0E       		.uleb128 0xe
+ 736 001c 00       		.byte	0
+ 737 001d 00       		.byte	0
+ 738 001e 03       		.uleb128 0x3
+ 739 001f 16       		.uleb128 0x16
+ 740 0020 00       		.byte	0
+ 741 0021 03       		.uleb128 0x3
+ 742 0022 0E       		.uleb128 0xe
+ 743 0023 3A       		.uleb128 0x3a
+ 744 0024 0B       		.uleb128 0xb
+ 745 0025 3B       		.uleb128 0x3b
+ 746 0026 0B       		.uleb128 0xb
+ 747 0027 49       		.uleb128 0x49
+ 748 0028 13       		.uleb128 0x13
+ 749 0029 00       		.byte	0
+ 750 002a 00       		.byte	0
+ 751 002b 04       		.uleb128 0x4
+ 752 002c 24       		.uleb128 0x24
+ 753 002d 00       		.byte	0
+ 754 002e 0B       		.uleb128 0xb
+ 755 002f 0B       		.uleb128 0xb
+ 756 0030 3E       		.uleb128 0x3e
+ 757 0031 0B       		.uleb128 0xb
+ 758 0032 03       		.uleb128 0x3
+ 759 0033 08       		.uleb128 0x8
+ 760 0034 00       		.byte	0
+ 761 0035 00       		.byte	0
+ 762 0036 05       		.uleb128 0x5
+ 763 0037 0F       		.uleb128 0xf
+ 764 0038 00       		.byte	0
+ 765 0039 0B       		.uleb128 0xb
+ 766 003a 0B       		.uleb128 0xb
+ 767 003b 00       		.byte	0
+ 768 003c 00       		.byte	0
+ 769 003d 06       		.uleb128 0x6
+ 770 003e 04       		.uleb128 0x4
+ 771 003f 01       		.byte	0x1
+ 772 0040 0B       		.uleb128 0xb
+ 773 0041 0B       		.uleb128 0xb
+ 774 0042 49       		.uleb128 0x49
+ 775 0043 13       		.uleb128 0x13
+ 776 0044 3A       		.uleb128 0x3a
+ 777 0045 0B       		.uleb128 0xb
+ 778 0046 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 17
+
+
+ 779 0047 0B       		.uleb128 0xb
+ 780 0048 01       		.uleb128 0x1
+ 781 0049 13       		.uleb128 0x13
+ 782 004a 00       		.byte	0
+ 783 004b 00       		.byte	0
+ 784 004c 07       		.uleb128 0x7
+ 785 004d 28       		.uleb128 0x28
+ 786 004e 00       		.byte	0
+ 787 004f 03       		.uleb128 0x3
+ 788 0050 0E       		.uleb128 0xe
+ 789 0051 1C       		.uleb128 0x1c
+ 790 0052 0B       		.uleb128 0xb
+ 791 0053 00       		.byte	0
+ 792 0054 00       		.byte	0
+ 793 0055 08       		.uleb128 0x8
+ 794 0056 28       		.uleb128 0x28
+ 795 0057 00       		.byte	0
+ 796 0058 03       		.uleb128 0x3
+ 797 0059 0E       		.uleb128 0xe
+ 798 005a 1C       		.uleb128 0x1c
+ 799 005b 0D       		.uleb128 0xd
+ 800 005c 00       		.byte	0
+ 801 005d 00       		.byte	0
+ 802 005e 09       		.uleb128 0x9
+ 803 005f 13       		.uleb128 0x13
+ 804 0060 01       		.byte	0x1
+ 805 0061 0B       		.uleb128 0xb
+ 806 0062 0B       		.uleb128 0xb
+ 807 0063 3A       		.uleb128 0x3a
+ 808 0064 0B       		.uleb128 0xb
+ 809 0065 3B       		.uleb128 0x3b
+ 810 0066 0B       		.uleb128 0xb
+ 811 0067 01       		.uleb128 0x1
+ 812 0068 13       		.uleb128 0x13
+ 813 0069 00       		.byte	0
+ 814 006a 00       		.byte	0
+ 815 006b 0A       		.uleb128 0xa
+ 816 006c 0D       		.uleb128 0xd
+ 817 006d 00       		.byte	0
+ 818 006e 03       		.uleb128 0x3
+ 819 006f 0E       		.uleb128 0xe
+ 820 0070 3A       		.uleb128 0x3a
+ 821 0071 0B       		.uleb128 0xb
+ 822 0072 3B       		.uleb128 0x3b
+ 823 0073 0B       		.uleb128 0xb
+ 824 0074 49       		.uleb128 0x49
+ 825 0075 13       		.uleb128 0x13
+ 826 0076 38       		.uleb128 0x38
+ 827 0077 0B       		.uleb128 0xb
+ 828 0078 00       		.byte	0
+ 829 0079 00       		.byte	0
+ 830 007a 0B       		.uleb128 0xb
+ 831 007b 01       		.uleb128 0x1
+ 832 007c 01       		.byte	0x1
+ 833 007d 49       		.uleb128 0x49
+ 834 007e 13       		.uleb128 0x13
+ 835 007f 01       		.uleb128 0x1
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 18
+
+
+ 836 0080 13       		.uleb128 0x13
+ 837 0081 00       		.byte	0
+ 838 0082 00       		.byte	0
+ 839 0083 0C       		.uleb128 0xc
+ 840 0084 21       		.uleb128 0x21
+ 841 0085 00       		.byte	0
+ 842 0086 49       		.uleb128 0x49
+ 843 0087 13       		.uleb128 0x13
+ 844 0088 2F       		.uleb128 0x2f
+ 845 0089 0B       		.uleb128 0xb
+ 846 008a 00       		.byte	0
+ 847 008b 00       		.byte	0
+ 848 008c 0D       		.uleb128 0xd
+ 849 008d 2E       		.uleb128 0x2e
+ 850 008e 01       		.byte	0x1
+ 851 008f 3F       		.uleb128 0x3f
+ 852 0090 19       		.uleb128 0x19
+ 853 0091 03       		.uleb128 0x3
+ 854 0092 0E       		.uleb128 0xe
+ 855 0093 3A       		.uleb128 0x3a
+ 856 0094 0B       		.uleb128 0xb
+ 857 0095 3B       		.uleb128 0x3b
+ 858 0096 0B       		.uleb128 0xb
+ 859 0097 27       		.uleb128 0x27
+ 860 0098 19       		.uleb128 0x19
+ 861 0099 49       		.uleb128 0x49
+ 862 009a 13       		.uleb128 0x13
+ 863 009b 11       		.uleb128 0x11
+ 864 009c 01       		.uleb128 0x1
+ 865 009d 12       		.uleb128 0x12
+ 866 009e 06       		.uleb128 0x6
+ 867 009f 40       		.uleb128 0x40
+ 868 00a0 18       		.uleb128 0x18
+ 869 00a1 9742     		.uleb128 0x2117
+ 870 00a3 19       		.uleb128 0x19
+ 871 00a4 01       		.uleb128 0x1
+ 872 00a5 13       		.uleb128 0x13
+ 873 00a6 00       		.byte	0
+ 874 00a7 00       		.byte	0
+ 875 00a8 0E       		.uleb128 0xe
+ 876 00a9 05       		.uleb128 0x5
+ 877 00aa 00       		.byte	0
+ 878 00ab 03       		.uleb128 0x3
+ 879 00ac 08       		.uleb128 0x8
+ 880 00ad 3A       		.uleb128 0x3a
+ 881 00ae 0B       		.uleb128 0xb
+ 882 00af 3B       		.uleb128 0x3b
+ 883 00b0 0B       		.uleb128 0xb
+ 884 00b1 49       		.uleb128 0x49
+ 885 00b2 13       		.uleb128 0x13
+ 886 00b3 02       		.uleb128 0x2
+ 887 00b4 17       		.uleb128 0x17
+ 888 00b5 00       		.byte	0
+ 889 00b6 00       		.byte	0
+ 890 00b7 0F       		.uleb128 0xf
+ 891 00b8 0B       		.uleb128 0xb
+ 892 00b9 01       		.byte	0x1
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 19
+
+
+ 893 00ba 55       		.uleb128 0x55
+ 894 00bb 17       		.uleb128 0x17
+ 895 00bc 00       		.byte	0
+ 896 00bd 00       		.byte	0
+ 897 00be 10       		.uleb128 0x10
+ 898 00bf 34       		.uleb128 0x34
+ 899 00c0 00       		.byte	0
+ 900 00c1 03       		.uleb128 0x3
+ 901 00c2 08       		.uleb128 0x8
+ 902 00c3 3A       		.uleb128 0x3a
+ 903 00c4 0B       		.uleb128 0xb
+ 904 00c5 3B       		.uleb128 0x3b
+ 905 00c6 0B       		.uleb128 0xb
+ 906 00c7 49       		.uleb128 0x49
+ 907 00c8 13       		.uleb128 0x13
+ 908 00c9 02       		.uleb128 0x2
+ 909 00ca 17       		.uleb128 0x17
+ 910 00cb 00       		.byte	0
+ 911 00cc 00       		.byte	0
+ 912 00cd 11       		.uleb128 0x11
+ 913 00ce 0F       		.uleb128 0xf
+ 914 00cf 00       		.byte	0
+ 915 00d0 0B       		.uleb128 0xb
+ 916 00d1 0B       		.uleb128 0xb
+ 917 00d2 49       		.uleb128 0x49
+ 918 00d3 13       		.uleb128 0x13
+ 919 00d4 00       		.byte	0
+ 920 00d5 00       		.byte	0
+ 921 00d6 12       		.uleb128 0x12
+ 922 00d7 26       		.uleb128 0x26
+ 923 00d8 00       		.byte	0
+ 924 00d9 49       		.uleb128 0x49
+ 925 00da 13       		.uleb128 0x13
+ 926 00db 00       		.byte	0
+ 927 00dc 00       		.byte	0
+ 928 00dd 13       		.uleb128 0x13
+ 929 00de 05       		.uleb128 0x5
+ 930 00df 00       		.byte	0
+ 931 00e0 03       		.uleb128 0x3
+ 932 00e1 0E       		.uleb128 0xe
+ 933 00e2 3A       		.uleb128 0x3a
+ 934 00e3 0B       		.uleb128 0xb
+ 935 00e4 3B       		.uleb128 0x3b
+ 936 00e5 0B       		.uleb128 0xb
+ 937 00e6 49       		.uleb128 0x49
+ 938 00e7 13       		.uleb128 0x13
+ 939 00e8 02       		.uleb128 0x2
+ 940 00e9 17       		.uleb128 0x17
+ 941 00ea 00       		.byte	0
+ 942 00eb 00       		.byte	0
+ 943 00ec 14       		.uleb128 0x14
+ 944 00ed 34       		.uleb128 0x34
+ 945 00ee 00       		.byte	0
+ 946 00ef 03       		.uleb128 0x3
+ 947 00f0 0E       		.uleb128 0xe
+ 948 00f1 3A       		.uleb128 0x3a
+ 949 00f2 0B       		.uleb128 0xb
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 20
+
+
+ 950 00f3 3B       		.uleb128 0x3b
+ 951 00f4 0B       		.uleb128 0xb
+ 952 00f5 49       		.uleb128 0x49
+ 953 00f6 13       		.uleb128 0x13
+ 954 00f7 3F       		.uleb128 0x3f
+ 955 00f8 19       		.uleb128 0x19
+ 956 00f9 3C       		.uleb128 0x3c
+ 957 00fa 19       		.uleb128 0x19
+ 958 00fb 00       		.byte	0
+ 959 00fc 00       		.byte	0
+ 960 00fd 15       		.uleb128 0x15
+ 961 00fe 34       		.uleb128 0x34
+ 962 00ff 00       		.byte	0
+ 963 0100 03       		.uleb128 0x3
+ 964 0101 0E       		.uleb128 0xe
+ 965 0102 3A       		.uleb128 0x3a
+ 966 0103 0B       		.uleb128 0xb
+ 967 0104 3B       		.uleb128 0x3b
+ 968 0105 05       		.uleb128 0x5
+ 969 0106 49       		.uleb128 0x49
+ 970 0107 13       		.uleb128 0x13
+ 971 0108 3F       		.uleb128 0x3f
+ 972 0109 19       		.uleb128 0x19
+ 973 010a 3C       		.uleb128 0x3c
+ 974 010b 19       		.uleb128 0x19
+ 975 010c 00       		.byte	0
+ 976 010d 00       		.byte	0
+ 977 010e 16       		.uleb128 0x16
+ 978 010f 35       		.uleb128 0x35
+ 979 0110 00       		.byte	0
+ 980 0111 49       		.uleb128 0x49
+ 981 0112 13       		.uleb128 0x13
+ 982 0113 00       		.byte	0
+ 983 0114 00       		.byte	0
+ 984 0115 00       		.byte	0
+ 985              		.section	.debug_loc,"",%progbits
+ 986              	.Ldebug_loc0:
+ 987              	.LLST0:
+ 988 0000 00000000 		.4byte	.LVL0
+ 989 0004 22000000 		.4byte	.LVL5
+ 990 0008 0100     		.2byte	0x1
+ 991 000a 50       		.byte	0x50
+ 992 000b 22000000 		.4byte	.LVL5
+ 993 000f 24000000 		.4byte	.LVL6
+ 994 0013 0100     		.2byte	0x1
+ 995 0015 51       		.byte	0x51
+ 996 0016 24000000 		.4byte	.LVL6
+ 997 001a 28000000 		.4byte	.LVL7
+ 998 001e 0100     		.2byte	0x1
+ 999 0020 50       		.byte	0x50
+ 1000 0021 28000000 		.4byte	.LVL7
+ 1001 0025 2A000000 		.4byte	.LFE110
+ 1002 0029 0100     		.2byte	0x1
+ 1003 002b 51       		.byte	0x51
+ 1004 002c 00000000 		.4byte	0
+ 1005 0030 00000000 		.4byte	0
+ 1006              	.LLST1:
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 21
+
+
+ 1007 0034 12000000 		.4byte	.LVL1
+ 1008 0038 14000000 		.4byte	.LVL2
+ 1009 003c 0200     		.2byte	0x2
+ 1010 003e 30       		.byte	0x30
+ 1011 003f 9F       		.byte	0x9f
+ 1012 0040 14000000 		.4byte	.LVL2
+ 1013 0044 1A000000 		.4byte	.LVL3
+ 1014 0048 0100     		.2byte	0x1
+ 1015 004a 53       		.byte	0x53
+ 1016 004b 1C000000 		.4byte	.LVL4
+ 1017 004f 24000000 		.4byte	.LVL6
+ 1018 0053 0100     		.2byte	0x1
+ 1019 0055 53       		.byte	0x53
+ 1020 0056 00000000 		.4byte	0
+ 1021 005a 00000000 		.4byte	0
+ 1022              	.LLST2:
+ 1023 005e 00000000 		.4byte	.LVL8
+ 1024 0062 36000000 		.4byte	.LVL10
+ 1025 0066 0100     		.2byte	0x1
+ 1026 0068 50       		.byte	0x50
+ 1027 0069 36000000 		.4byte	.LVL10
+ 1028 006d 38000000 		.4byte	.LVL11
+ 1029 0071 0400     		.2byte	0x4
+ 1030 0073 F3       		.byte	0xf3
+ 1031 0074 01       		.uleb128 0x1
+ 1032 0075 50       		.byte	0x50
+ 1033 0076 9F       		.byte	0x9f
+ 1034 0077 38000000 		.4byte	.LVL11
+ 1035 007b 3C000000 		.4byte	.LVL12
+ 1036 007f 0100     		.2byte	0x1
+ 1037 0081 50       		.byte	0x50
+ 1038 0082 3C000000 		.4byte	.LVL12
+ 1039 0086 3E000000 		.4byte	.LVL13
+ 1040 008a 0400     		.2byte	0x4
+ 1041 008c F3       		.byte	0xf3
+ 1042 008d 01       		.uleb128 0x1
+ 1043 008e 50       		.byte	0x50
+ 1044 008f 9F       		.byte	0x9f
+ 1045 0090 3E000000 		.4byte	.LVL13
+ 1046 0094 40000000 		.4byte	.LVL14
+ 1047 0098 0100     		.2byte	0x1
+ 1048 009a 50       		.byte	0x50
+ 1049 009b 40000000 		.4byte	.LVL14
+ 1050 009f 48000000 		.4byte	.LFE111
+ 1051 00a3 0400     		.2byte	0x4
+ 1052 00a5 F3       		.byte	0xf3
+ 1053 00a6 01       		.uleb128 0x1
+ 1054 00a7 50       		.byte	0x50
+ 1055 00a8 9F       		.byte	0x9f
+ 1056 00a9 00000000 		.4byte	0
+ 1057 00ad 00000000 		.4byte	0
+ 1058              	.LLST3:
+ 1059 00b1 00000000 		.4byte	.LVL8
+ 1060 00b5 1A000000 		.4byte	.LVL9
+ 1061 00b9 0100     		.2byte	0x1
+ 1062 00bb 51       		.byte	0x51
+ 1063 00bc 1A000000 		.4byte	.LVL9
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 22
+
+
+ 1064 00c0 38000000 		.4byte	.LVL11
+ 1065 00c4 0400     		.2byte	0x4
+ 1066 00c6 F3       		.byte	0xf3
+ 1067 00c7 01       		.uleb128 0x1
+ 1068 00c8 51       		.byte	0x51
+ 1069 00c9 9F       		.byte	0x9f
+ 1070 00ca 38000000 		.4byte	.LVL11
+ 1071 00ce 40000000 		.4byte	.LVL14
+ 1072 00d2 0100     		.2byte	0x1
+ 1073 00d4 51       		.byte	0x51
+ 1074 00d5 40000000 		.4byte	.LVL14
+ 1075 00d9 48000000 		.4byte	.LFE111
+ 1076 00dd 0400     		.2byte	0x4
+ 1077 00df F3       		.byte	0xf3
+ 1078 00e0 01       		.uleb128 0x1
+ 1079 00e1 51       		.byte	0x51
+ 1080 00e2 9F       		.byte	0x9f
+ 1081 00e3 00000000 		.4byte	0
+ 1082 00e7 00000000 		.4byte	0
+ 1083              	.LLST4:
+ 1084 00eb 00000000 		.4byte	.LVL15
+ 1085 00ef 38000000 		.4byte	.LVL17
+ 1086 00f3 0100     		.2byte	0x1
+ 1087 00f5 50       		.byte	0x50
+ 1088 00f6 38000000 		.4byte	.LVL17
+ 1089 00fa 3A000000 		.4byte	.LVL18
+ 1090 00fe 0400     		.2byte	0x4
+ 1091 0100 F3       		.byte	0xf3
+ 1092 0101 01       		.uleb128 0x1
+ 1093 0102 50       		.byte	0x50
+ 1094 0103 9F       		.byte	0x9f
+ 1095 0104 3A000000 		.4byte	.LVL18
+ 1096 0108 3E000000 		.4byte	.LVL19
+ 1097 010c 0100     		.2byte	0x1
+ 1098 010e 50       		.byte	0x50
+ 1099 010f 3E000000 		.4byte	.LVL19
+ 1100 0113 40000000 		.4byte	.LVL20
+ 1101 0117 0400     		.2byte	0x4
+ 1102 0119 F3       		.byte	0xf3
+ 1103 011a 01       		.uleb128 0x1
+ 1104 011b 50       		.byte	0x50
+ 1105 011c 9F       		.byte	0x9f
+ 1106 011d 40000000 		.4byte	.LVL20
+ 1107 0121 42000000 		.4byte	.LVL21
+ 1108 0125 0100     		.2byte	0x1
+ 1109 0127 50       		.byte	0x50
+ 1110 0128 42000000 		.4byte	.LVL21
+ 1111 012c 48000000 		.4byte	.LFE112
+ 1112 0130 0400     		.2byte	0x4
+ 1113 0132 F3       		.byte	0xf3
+ 1114 0133 01       		.uleb128 0x1
+ 1115 0134 50       		.byte	0x50
+ 1116 0135 9F       		.byte	0x9f
+ 1117 0136 00000000 		.4byte	0
+ 1118 013a 00000000 		.4byte	0
+ 1119              	.LLST5:
+ 1120 013e 00000000 		.4byte	.LVL15
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 23
+
+
+ 1121 0142 20000000 		.4byte	.LVL16
+ 1122 0146 0100     		.2byte	0x1
+ 1123 0148 51       		.byte	0x51
+ 1124 0149 20000000 		.4byte	.LVL16
+ 1125 014d 3A000000 		.4byte	.LVL18
+ 1126 0151 0400     		.2byte	0x4
+ 1127 0153 F3       		.byte	0xf3
+ 1128 0154 01       		.uleb128 0x1
+ 1129 0155 51       		.byte	0x51
+ 1130 0156 9F       		.byte	0x9f
+ 1131 0157 3A000000 		.4byte	.LVL18
+ 1132 015b 48000000 		.4byte	.LFE112
+ 1133 015f 0100     		.2byte	0x1
+ 1134 0161 51       		.byte	0x51
+ 1135 0162 00000000 		.4byte	0
+ 1136 0166 00000000 		.4byte	0
+ 1137              	.LLST6:
+ 1138 016a 00000000 		.4byte	.LVL22
+ 1139 016e 04000000 		.4byte	.LVL23
+ 1140 0172 0100     		.2byte	0x1
+ 1141 0174 50       		.byte	0x50
+ 1142 0175 04000000 		.4byte	.LVL23
+ 1143 0179 0C000000 		.4byte	.LFE113
+ 1144 017d 0400     		.2byte	0x4
+ 1145 017f F3       		.byte	0xf3
+ 1146 0180 01       		.uleb128 0x1
+ 1147 0181 50       		.byte	0x50
+ 1148 0182 9F       		.byte	0x9f
+ 1149 0183 00000000 		.4byte	0
+ 1150 0187 00000000 		.4byte	0
+ 1151              	.LLST7:
+ 1152 018b 00000000 		.4byte	.LVL24
+ 1153 018f 04000000 		.4byte	.LVL25
+ 1154 0193 0100     		.2byte	0x1
+ 1155 0195 50       		.byte	0x50
+ 1156 0196 04000000 		.4byte	.LVL25
+ 1157 019a 06000000 		.4byte	.LFE114
+ 1158 019e 0400     		.2byte	0x4
+ 1159 01a0 F3       		.byte	0xf3
+ 1160 01a1 01       		.uleb128 0x1
+ 1161 01a2 50       		.byte	0x50
+ 1162 01a3 9F       		.byte	0x9f
+ 1163 01a4 00000000 		.4byte	0
+ 1164 01a8 00000000 		.4byte	0
+ 1165              		.section	.debug_aranges,"",%progbits
+ 1166 0000 3C000000 		.4byte	0x3c
+ 1167 0004 0200     		.2byte	0x2
+ 1168 0006 00000000 		.4byte	.Ldebug_info0
+ 1169 000a 04       		.byte	0x4
+ 1170 000b 00       		.byte	0
+ 1171 000c 0000     		.2byte	0
+ 1172 000e 0000     		.2byte	0
+ 1173 0010 00000000 		.4byte	.LFB110
+ 1174 0014 2A000000 		.4byte	.LFE110-.LFB110
+ 1175 0018 00000000 		.4byte	.LFB111
+ 1176 001c 48000000 		.4byte	.LFE111-.LFB111
+ 1177 0020 00000000 		.4byte	.LFB112
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 24
+
+
+ 1178 0024 48000000 		.4byte	.LFE112-.LFB112
+ 1179 0028 00000000 		.4byte	.LFB113
+ 1180 002c 0C000000 		.4byte	.LFE113-.LFB113
+ 1181 0030 00000000 		.4byte	.LFB114
+ 1182 0034 06000000 		.4byte	.LFE114-.LFB114
+ 1183 0038 00000000 		.4byte	0
+ 1184 003c 00000000 		.4byte	0
+ 1185              		.section	.debug_ranges,"",%progbits
+ 1186              	.Ldebug_ranges0:
+ 1187 0000 12000000 		.4byte	.LBB2
+ 1188 0004 20000000 		.4byte	.LBE2
+ 1189 0008 22000000 		.4byte	.LBB3
+ 1190 000c 24000000 		.4byte	.LBE3
+ 1191 0010 00000000 		.4byte	0
+ 1192 0014 00000000 		.4byte	0
+ 1193 0018 00000000 		.4byte	.LFB110
+ 1194 001c 2A000000 		.4byte	.LFE110
+ 1195 0020 00000000 		.4byte	.LFB111
+ 1196 0024 48000000 		.4byte	.LFE111
+ 1197 0028 00000000 		.4byte	.LFB112
+ 1198 002c 48000000 		.4byte	.LFE112
+ 1199 0030 00000000 		.4byte	.LFB113
+ 1200 0034 0C000000 		.4byte	.LFE113
+ 1201 0038 00000000 		.4byte	.LFB114
+ 1202 003c 06000000 		.4byte	.LFE114
+ 1203 0040 00000000 		.4byte	0
+ 1204 0044 00000000 		.4byte	0
+ 1205              		.section	.debug_line,"",%progbits
+ 1206              	.Ldebug_line0:
+ 1207 0000 B0020000 		.section	.debug_str,"MS",%progbits,1
+ 1207      02002202 
+ 1207      00000201 
+ 1207      FB0E0D00 
+ 1207      01010101 
+ 1208              	.LASF58:
+ 1209 0000 6D5F7772 		.ascii	"m_writeIndex\000"
+ 1209      69746549 
+ 1209      6E646578 
+ 1209      00
+ 1210              	.LASF42:
+ 1211 000d 52435F45 		.ascii	"RC_ERROR_READ_ONLY\000"
+ 1211      52524F52 
+ 1211      5F524541 
+ 1211      445F4F4E 
+ 1211      4C5900
+ 1212              	.LASF28:
+ 1213 0020 52435F53 		.ascii	"RC_SUCCESS\000"
+ 1213      55434345 
+ 1213      535300
+ 1214              	.LASF43:
+ 1215 002b 52435F45 		.ascii	"RC_ERROR_WRITE_ONLY\000"
+ 1215      52524F52 
+ 1215      5F575249 
+ 1215      54455F4F 
+ 1215      4E4C5900 
+ 1216              	.LASF27:
+ 1217 003f 70766F69 		.ascii	"pvoid_t\000"
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 25
+
+
+ 1217      645F7400 
+ 1218              	.LASF2:
+ 1219 0047 73686F72 		.ascii	"short int\000"
+ 1219      7420696E 
+ 1219      7400
+ 1220              	.LASF60:
+ 1221 0051 52425F74 		.ascii	"RB_t\000"
+ 1221      00
+ 1222              	.LASF46:
+ 1223 0056 52435F45 		.ascii	"RC_ERROR_WRITE_FAILS\000"
+ 1223      52524F52 
+ 1223      5F575249 
+ 1223      54455F46 
+ 1223      41494C53 
+ 1224              	.LASF21:
+ 1225 006b 73697A65 		.ascii	"sizetype\000"
+ 1225      74797065 
+ 1225      00
+ 1226              	.LASF74:
+ 1227 0074 736F7572 		.ascii	"source\\bsw\\services\\ringbuffer.c\000"
+ 1227      63655C62 
+ 1227      73775C73 
+ 1227      65727669 
+ 1227      6365735C 
+ 1228              	.LASF31:
+ 1229 0095 52435F45 		.ascii	"RC_ERROR_ZERO\000"
+ 1229      52524F52 
+ 1229      5F5A4552 
+ 1229      4F00
+ 1230              	.LASF25:
+ 1231 00a3 45455F46 		.ascii	"EE_FREG\000"
+ 1231      52454700 
+ 1232              	.LASF45:
+ 1233 00ab 52435F45 		.ascii	"RC_ERROR_READ_FAILS\000"
+ 1233      52524F52 
+ 1233      5F524541 
+ 1233      445F4641 
+ 1233      494C5300 
+ 1234              	.LASF65:
+ 1235 00bf 52425F67 		.ascii	"RB_getCapacity\000"
+ 1235      65744361 
+ 1235      70616369 
+ 1235      747900
+ 1236              	.LASF23:
+ 1237 00ce 45455F55 		.ascii	"EE_UINT32\000"
+ 1237      494E5433 
+ 1237      3200
+ 1238              	.LASF4:
+ 1239 00d8 5F5F7569 		.ascii	"__uint16_t\000"
+ 1239      6E743136 
+ 1239      5F7400
+ 1240              	.LASF26:
+ 1241 00e3 45455F54 		.ascii	"EE_TID\000"
+ 1241      494400
+ 1242              	.LASF13:
+ 1243 00ea 75696E74 		.ascii	"uint8_t\000"
+ 1243      385F7400 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 26
+
+
+ 1244              	.LASF51:
+ 1245 00f2 52435F45 		.ascii	"RC_ERROR_INVALID_STATE\000"
+ 1245      52524F52 
+ 1245      5F494E56 
+ 1245      414C4944 
+ 1245      5F535441 
+ 1246              	.LASF71:
+ 1247 0109 45455F49 		.ascii	"EE_IRQ_nesting_level\000"
+ 1247      52515F6E 
+ 1247      65737469 
+ 1247      6E675F6C 
+ 1247      6576656C 
+ 1248              	.LASF70:
+ 1249 011e 45455F73 		.ascii	"EE_std_endcycle_next_tid\000"
+ 1249      74645F65 
+ 1249      6E646379 
+ 1249      636C655F 
+ 1249      6E657874 
+ 1250              	.LASF33:
+ 1251 0137 52435F45 		.ascii	"RC_ERROR_RANGE\000"
+ 1251      52524F52 
+ 1251      5F52414E 
+ 1251      474500
+ 1252              	.LASF17:
+ 1253 0146 666C6F61 		.ascii	"float\000"
+ 1253      7400
+ 1254              	.LASF68:
+ 1255 014c 45455F6F 		.ascii	"EE_oo_IRQ_suspend_status\000"
+ 1255      6F5F4952 
+ 1255      515F7375 
+ 1255      7370656E 
+ 1255      645F7374 
+ 1256              	.LASF53:
+ 1257 0165 52435F45 		.ascii	"RC_ERROR_NOT_IMPLEMENTED\000"
+ 1257      52524F52 
+ 1257      5F4E4F54 
+ 1257      5F494D50 
+ 1257      4C454D45 
+ 1258              	.LASF10:
+ 1259 017e 6C6F6E67 		.ascii	"long long int\000"
+ 1259      206C6F6E 
+ 1259      6720696E 
+ 1259      7400
+ 1260              	.LASF61:
+ 1261 018c 52425F69 		.ascii	"RB_init\000"
+ 1261      6E697400 
+ 1262              	.LASF47:
+ 1263 0194 52435F45 		.ascii	"RC_ERROR_NOT_MATCH\000"
+ 1263      52524F52 
+ 1263      5F4E4F54 
+ 1263      5F4D4154 
+ 1263      434800
+ 1264              	.LASF52:
+ 1265 01a7 52435F45 		.ascii	"RC_ERROR_UNKNOWN\000"
+ 1265      52524F52 
+ 1265      5F554E4B 
+ 1265      4E4F574E 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 27
+
+
+ 1265      00
+ 1266              	.LASF7:
+ 1267 01b8 6C6F6E67 		.ascii	"long int\000"
+ 1267      20696E74 
+ 1267      00
+ 1268              	.LASF35:
+ 1269 01c1 52435F45 		.ascii	"RC_ERROR_UNDERRUN\000"
+ 1269      52524F52 
+ 1269      5F554E44 
+ 1269      45525255 
+ 1269      4E00
+ 1270              	.LASF38:
+ 1271 01d3 52435F45 		.ascii	"RC_ERROR_BUSY\000"
+ 1271      52524F52 
+ 1271      5F425553 
+ 1271      5900
+ 1272              	.LASF3:
+ 1273 01e1 5F5F7569 		.ascii	"__uint8_t\000"
+ 1273      6E74385F 
+ 1273      7400
+ 1274              	.LASF44:
+ 1275 01eb 52435F45 		.ascii	"RC_ERROR_INVALID\000"
+ 1275      52524F52 
+ 1275      5F494E56 
+ 1275      414C4944 
+ 1275      00
+ 1276              	.LASF49:
+ 1277 01fc 52435F45 		.ascii	"RC_ERROR_BAD_DATA\000"
+ 1277      52524F52 
+ 1277      5F424144 
+ 1277      5F444154 
+ 1277      4100
+ 1278              	.LASF8:
+ 1279 020e 5F5F7569 		.ascii	"__uint32_t\000"
+ 1279      6E743332 
+ 1279      5F7400
+ 1280              	.LASF59:
+ 1281 0219 6D5F6669 		.ascii	"m_fillLevel\000"
+ 1281      6C6C4C65 
+ 1281      76656C00 
+ 1282              	.LASF20:
+ 1283 0225 6C6F6E67 		.ascii	"long double\000"
+ 1283      20646F75 
+ 1283      626C6500 
+ 1284              	.LASF1:
+ 1285 0231 756E7369 		.ascii	"unsigned char\000"
+ 1285      676E6564 
+ 1285      20636861 
+ 1285      7200
+ 1286              	.LASF62:
+ 1287 023f 52425F77 		.ascii	"RB_write\000"
+ 1287      72697465 
+ 1287      00
+ 1288              	.LASF64:
+ 1289 0248 52425F72 		.ascii	"RB_read\000"
+ 1289      65616400 
+ 1290              	.LASF0:
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 28
+
+
+ 1291 0250 7369676E 		.ascii	"signed char\000"
+ 1291      65642063 
+ 1291      68617200 
+ 1292              	.LASF11:
+ 1293 025c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1293      206C6F6E 
+ 1293      6720756E 
+ 1293      7369676E 
+ 1293      65642069 
+ 1294              	.LASF16:
+ 1295 0273 75696E74 		.ascii	"uint32_t\000"
+ 1295      33325F74 
+ 1295      00
+ 1296              	.LASF12:
+ 1297 027c 756E7369 		.ascii	"unsigned int\000"
+ 1297      676E6564 
+ 1297      20696E74 
+ 1297      00
+ 1298              	.LASF40:
+ 1299 0289 52435F45 		.ascii	"RC_ERROR_OPEN\000"
+ 1299      52524F52 
+ 1299      5F4F5045 
+ 1299      4E00
+ 1300              	.LASF14:
+ 1301 0297 75696E74 		.ascii	"uint16_t\000"
+ 1301      31365F74 
+ 1301      00
+ 1302              	.LASF30:
+ 1303 02a0 52435F45 		.ascii	"RC_ERROR_NULL\000"
+ 1303      52524F52 
+ 1303      5F4E554C 
+ 1303      4C00
+ 1304              	.LASF56:
+ 1305 02ae 6D5F6275 		.ascii	"m_buffer\000"
+ 1305      66666572 
+ 1305      00
+ 1306              	.LASF22:
+ 1307 02b7 45455F49 		.ascii	"EE_INT32\000"
+ 1307      4E543332 
+ 1307      00
+ 1308              	.LASF5:
+ 1309 02c0 73686F72 		.ascii	"short unsigned int\000"
+ 1309      7420756E 
+ 1309      7369676E 
+ 1309      65642069 
+ 1309      6E7400
+ 1310              	.LASF73:
+ 1311 02d3 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1311      43313120 
+ 1311      352E342E 
+ 1311      31203230 
+ 1311      31363036 
+ 1312 0306 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1312      20726576 
+ 1312      6973696F 
+ 1312      6E203233 
+ 1312      37373135 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 29
+
+
+ 1313 0339 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1313      66756E63 
+ 1313      74696F6E 
+ 1313      2D736563 
+ 1313      74696F6E 
+ 1314              	.LASF19:
+ 1315 0361 63686172 		.ascii	"char\000"
+ 1315      00
+ 1316              	.LASF36:
+ 1317 0366 52435F45 		.ascii	"RC_ERROR_BUFFER_FULL\000"
+ 1317      52524F52 
+ 1317      5F425546 
+ 1317      4645525F 
+ 1317      46554C4C 
+ 1318              	.LASF15:
+ 1319 037b 696E7433 		.ascii	"int32_t\000"
+ 1319      325F7400 
+ 1320              	.LASF55:
+ 1321 0383 52425F62 		.ascii	"RB_buffer_t\000"
+ 1321      75666665 
+ 1321      725F7400 
+ 1322              	.LASF48:
+ 1323 038f 52435F45 		.ascii	"RC_ERROR_BAD_PARAM\000"
+ 1323      52524F52 
+ 1323      5F424144 
+ 1323      5F504152 
+ 1323      414D00
+ 1324              	.LASF63:
+ 1325 03a2 64617461 		.ascii	"data\000"
+ 1325      00
+ 1326              	.LASF69:
+ 1327 03a7 45455F41 		.ascii	"EE_ApplicationMode\000"
+ 1327      70706C69 
+ 1327      63617469 
+ 1327      6F6E4D6F 
+ 1327      646500
+ 1328              	.LASF66:
+ 1329 03ba 52425F67 		.ascii	"RB_getNumberOfStoredElements\000"
+ 1329      65744E75 
+ 1329      6D626572 
+ 1329      4F665374 
+ 1329      6F726564 
+ 1330              	.LASF9:
+ 1331 03d7 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1331      20756E73 
+ 1331      69676E65 
+ 1331      6420696E 
+ 1331      7400
+ 1332              	.LASF18:
+ 1333 03e9 646F7562 		.ascii	"double\000"
+ 1333      6C6500
+ 1334              	.LASF41:
+ 1335 03f0 52435F45 		.ascii	"RC_ERROR_CHECKSUM\000"
+ 1335      52524F52 
+ 1335      5F434845 
+ 1335      434B5355 
+ 1335      4D00
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 30
+
+
+ 1336              	.LASF24:
+ 1337 0402 45455F55 		.ascii	"EE_UREG\000"
+ 1337      52454700 
+ 1338              	.LASF75:
+ 1339 040a 443A5C57 		.ascii	"D:\\WS25\\AMAEOS\\Lab\\Lab3\\Lab 3 Task Description"
+ 1339      5332355C 
+ 1339      414D4145 
+ 1339      4F535C4C 
+ 1339      61625C4C 
+ 1340 0438 20616E64 		.ascii	" and Starting Code-20251209\\Lab3.cydsn\\TaskComms_"
+ 1340      20537461 
+ 1340      7274696E 
+ 1340      6720436F 
+ 1340      64652D32 
+ 1341 0469 42756666 		.ascii	"Buffer.cydsn\000"
+ 1341      65722E63 
+ 1341      7964736E 
+ 1341      00
+ 1342              	.LASF34:
+ 1343 0476 52435F45 		.ascii	"RC_ERROR_OVERRUN\000"
+ 1343      52524F52 
+ 1343      5F4F5645 
+ 1343      5252554E 
+ 1343      00
+ 1344              	.LASF6:
+ 1345 0487 5F5F696E 		.ascii	"__int32_t\000"
+ 1345      7433325F 
+ 1345      7400
+ 1346              	.LASF50:
+ 1347 0491 52435F45 		.ascii	"RC_ERROR_CANCELED\000"
+ 1347      52524F52 
+ 1347      5F43414E 
+ 1347      43454C45 
+ 1347      4400
+ 1348              	.LASF57:
+ 1349 04a3 6D5F7265 		.ascii	"m_readIndex\000"
+ 1349      6164496E 
+ 1349      64657800 
+ 1350              	.LASF72:
+ 1351 04af 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1351      52784275 
+ 1351      66666572 
+ 1351      00
+ 1352              	.LASF29:
+ 1353 04bc 52435F45 		.ascii	"RC_ERROR\000"
+ 1353      52524F52 
+ 1353      00
+ 1354              	.LASF32:
+ 1355 04c5 52435F45 		.ascii	"RC_ERROR_MEMORY\000"
+ 1355      52524F52 
+ 1355      5F4D454D 
+ 1355      4F525900 
+ 1356              	.LASF67:
+ 1357 04d5 45455F6F 		.ascii	"EE_oo_IRQ_disable_count\000"
+ 1357      6F5F4952 
+ 1357      515F6469 
+ 1357      7361626C 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 31
+
+
+ 1357      655F636F 
+ 1358              	.LASF37:
+ 1359 04ed 52435F45 		.ascii	"RC_ERROR_BUFFER_EMTPY\000"
+ 1359      52524F52 
+ 1359      5F425546 
+ 1359      4645525F 
+ 1359      454D5450 
+ 1360              	.LASF54:
+ 1361 0503 52435F74 		.ascii	"RC_t\000"
+ 1361      00
+ 1362              	.LASF39:
+ 1363 0508 52435F45 		.ascii	"RC_ERROR_TIME_OUT\000"
+ 1363      52524F52 
+ 1363      5F54494D 
+ 1363      455F4F55 
+ 1363      5400
+ 1364              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

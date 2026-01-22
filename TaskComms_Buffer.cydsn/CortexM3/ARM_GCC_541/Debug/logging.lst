@@ -1,0 +1,1537 @@
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"logging.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.LOG_Init,"ax",%progbits
+  20              		.align	2
+  21              		.global	LOG_Init
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	LOG_Init, %function
+  25              	LOG_Init:
+  26              	.LFB111:
+  27              		.file 1 "source\\bsw\\services\\logging.c"
+   1:source\bsw\services/logging.c **** /**
+   2:source\bsw\services/logging.c ****  * \file 	logging.c
+   3:source\bsw\services/logging.c ****  * \author 	Thomas Barth	- Hochschule Darmstadt thomas.barth@h-da.de
+   4:source\bsw\services/logging.c ****  * \date 	26.11.2016
+   5:source\bsw\services/logging.c ****  * \version 0.1
+   6:source\bsw\services/logging.c ****  *
+   7:source\bsw\services/logging.c ****  * \brief  Logging mechanism
+   8:source\bsw\services/logging.c ****  *
+   9:source\bsw\services/logging.c ****  * \copyright Copyright ©2016
+  10:source\bsw\services/logging.c ****  * Department of electrical engineering and information technology, Hochschule Darmstadt - Universi
+  11:source\bsw\services/logging.c ****  * Permission to use, copy, modify, and distribute this software and its documentation for educatio
+  12:source\bsw\services/logging.c ****  * (unless permitted by h_da) and official h_da projects, is hereby granted for enrolled students o
+  13:source\bsw\services/logging.c ****  * this paragraph and the following paragraph appear in all copies, modifications, and distribution
+  14:source\bsw\services/logging.c ****  * Contact Prof.Dr.-Ing. Peter Fromm, peter.fromm@h-da.de, Birkenweg 8 64295 Darmstadt - GERMANY fo
+  15:source\bsw\services/logging.c ****  *
+  16:source\bsw\services/logging.c ****  * \warning This software is a PROTOTYPE version and is not designed or intended for use in product
+  17:source\bsw\services/logging.c ****  * The user represents and warrants that it will NOT use or redistribute the Software for such purp
+  18:source\bsw\services/logging.c ****  * This prototype is for research purposes only. This software is provided "AS IS," without a warra
+  19:source\bsw\services/logging.c ****  */
+  20:source\bsw\services/logging.c **** /*=======================[ Includes ]==============================================================
+  21:source\bsw\services/logging.c **** #include <project.h>
+  22:source\bsw\services/logging.c **** #include "logging.h"
+  23:source\bsw\services/logging.c **** 
+  24:source\bsw\services/logging.c **** 
+  25:source\bsw\services/logging.c **** /*=======================[ constant data ]=========================================================
+  26:source\bsw\services/logging.c **** 
+  27:source\bsw\services/logging.c **** const char logLevel2String[6][CFG_LOGGING_LEVEL_L+1]={
+  28:source\bsw\services/logging.c ****     "Verbose",
+  29:source\bsw\services/logging.c ****     "Info",
+  30:source\bsw\services/logging.c ****     "Warning",
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 2
+
+
+  31:source\bsw\services/logging.c ****     "Error",
+  32:source\bsw\services/logging.c ****     "Debug",
+  33:source\bsw\services/logging.c ****     "Off"
+  34:source\bsw\services/logging.c **** };
+  35:source\bsw\services/logging.c **** 
+  36:source\bsw\services/logging.c **** /*=======================[ variable data ]=========================================================
+  37:source\bsw\services/logging.c **** 
+  38:source\bsw\services/logging.c **** /*=======================[ Function implementation ]===============================================
+  39:source\bsw\services/logging.c **** 
+  40:source\bsw\services/logging.c **** RC_t LOG_Init(void){
+  28              		.loc 1 40 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  41:source\bsw\services/logging.c **** #if (CFG_LOGGING_ENABLE==ON)   
+  42:source\bsw\services/logging.c ****     //Start logging service HW module
+  43:source\bsw\services/logging.c ****     MODULE_LOG(Start)();
+  36              		.loc 1 43 0
+  37 0002 FFF7FEFF 		bl	UART_LOG_Start
+  38              	.LVL0:
+  44:source\bsw\services/logging.c ****     
+  45:source\bsw\services/logging.c ****     //indicate DEBUG Start
+  46:source\bsw\services/logging.c ****     MODULE_LOG(PutString)(CFG_LOGGING_NL_CHAR);
+  39              		.loc 1 46 0
+  40 0006 074C     		ldr	r4, .L3
+  41 0008 2046     		mov	r0, r4
+  42 000a FFF7FEFF 		bl	UART_LOG_PutString
+  43              	.LVL1:
+  47:source\bsw\services/logging.c ****     MODULE_LOG(PutString)(CFG_LOGGING_NL_CHAR);
+  44              		.loc 1 47 0
+  45 000e 2046     		mov	r0, r4
+  46 0010 FFF7FEFF 		bl	UART_LOG_PutString
+  47              	.LVL2:
+  48:source\bsw\services/logging.c ****     MODULE_LOG(PutString)("UART started");
+  48              		.loc 1 48 0
+  49 0014 0448     		ldr	r0, .L3+4
+  50 0016 FFF7FEFF 		bl	UART_LOG_PutString
+  51              	.LVL3:
+  49:source\bsw\services/logging.c ****     MODULE_LOG(PutString)(CFG_LOGGING_NL_CHAR);
+  52              		.loc 1 49 0
+  53 001a 2046     		mov	r0, r4
+  54 001c FFF7FEFF 		bl	UART_LOG_PutString
+  55              	.LVL4:
+  50:source\bsw\services/logging.c **** 
+  51:source\bsw\services/logging.c **** #else
+  52:source\bsw\services/logging.c ****     return RC_ERROR_INVALID_STATE;
+  53:source\bsw\services/logging.c **** #endif
+  54:source\bsw\services/logging.c **** }
+  56              		.loc 1 54 0
+  57 0020 10BD     		pop	{r4, pc}
+  58              	.L4:
+  59 0022 00BF     		.align	2
+  60              	.L3:
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 3
+
+
+  61 0024 00000000 		.word	.LC0
+  62 0028 04000000 		.word	.LC1
+  63              		.cfi_endproc
+  64              	.LFE111:
+  65              		.size	LOG_Init, .-LOG_Init
+  66              		.section	.text.LOG_send,"ax",%progbits
+  67              		.align	2
+  68              		.global	LOG_send
+  69              		.thumb
+  70              		.thumb_func
+  71              		.type	LOG_send, %function
+  72              	LOG_send:
+  73              	.LFB112:
+  55:source\bsw\services/logging.c **** 
+  56:source\bsw\services/logging.c **** RC_t LOG_send(logging_t* entry){
+  74              		.loc 1 56 0
+  75              		.cfi_startproc
+  76              		@ args = 0, pretend = 0, frame = 0
+  77              		@ frame_needed = 0, uses_anonymous_args = 0
+  78              	.LVL5:
+  79 0000 10B5     		push	{r4, lr}
+  80              		.cfi_def_cfa_offset 8
+  81              		.cfi_offset 4, -8
+  82              		.cfi_offset 14, -4
+  83 0002 0446     		mov	r4, r0
+  84              	.LVL6:
+  57:source\bsw\services/logging.c ****     
+  58:source\bsw\services/logging.c ****     //result buffer
+  59:source\bsw\services/logging.c ****     RC_t result=RC_ERROR_INVALID_STATE;
+  60:source\bsw\services/logging.c **** #if (CFG_LOGGING_ENABLE==ON)     
+  61:source\bsw\services/logging.c ****     MODULE_LOG(PutString)(entry->sender);
+  85              		.loc 1 61 0
+  86 0004 0130     		adds	r0, r0, #1
+  87              	.LVL7:
+  88 0006 FFF7FEFF 		bl	UART_LOG_PutString
+  89              	.LVL8:
+  62:source\bsw\services/logging.c ****     MODULE_LOG(PutString)(" : ");
+  90              		.loc 1 62 0
+  91 000a 0648     		ldr	r0, .L7
+  92 000c FFF7FEFF 		bl	UART_LOG_PutString
+  93              	.LVL9:
+  63:source\bsw\services/logging.c ****     MODULE_LOG(PutString)(entry->message);
+  94              		.loc 1 63 0
+  95 0010 04F11100 		add	r0, r4, #17
+  96 0014 FFF7FEFF 		bl	UART_LOG_PutString
+  97              	.LVL10:
+  64:source\bsw\services/logging.c ****     MODULE_LOG(PutString)(CFG_LOGGING_NL_CHAR);
+  98              		.loc 1 64 0
+  99 0018 0348     		ldr	r0, .L7+4
+ 100 001a FFF7FEFF 		bl	UART_LOG_PutString
+ 101              	.LVL11:
+  65:source\bsw\services/logging.c ****     
+  66:source\bsw\services/logging.c ****     result = RC_SUCCESS;
+  67:source\bsw\services/logging.c ****     
+  68:source\bsw\services/logging.c **** #endif
+  69:source\bsw\services/logging.c **** 
+  70:source\bsw\services/logging.c ****     return result;
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 4
+
+
+  71:source\bsw\services/logging.c **** 
+  72:source\bsw\services/logging.c **** }
+ 102              		.loc 1 72 0
+ 103 001e 0020     		movs	r0, #0
+ 104 0020 10BD     		pop	{r4, pc}
+ 105              	.LVL12:
+ 106              	.L8:
+ 107 0022 00BF     		.align	2
+ 108              	.L7:
+ 109 0024 14000000 		.word	.LC2
+ 110 0028 00000000 		.word	.LC0
+ 111              		.cfi_endproc
+ 112              	.LFE112:
+ 113              		.size	LOG_send, .-LOG_send
+ 114              		.global	logLevel2String
+ 115              		.section	.rodata
+ 116              		.align	2
+ 117              		.type	logLevel2String, %object
+ 118              		.size	logLevel2String, 48
+ 119              	logLevel2String:
+ 120 0000 56657262 		.ascii	"Verbose\000"
+ 120      6F736500 
+ 121 0008 496E666F 		.ascii	"Info\000"
+ 121      00
+ 122 000d 000000   		.space	3
+ 123 0010 5761726E 		.ascii	"Warning\000"
+ 123      696E6700 
+ 124 0018 4572726F 		.ascii	"Error\000"
+ 124      7200
+ 125 001e 0000     		.space	2
+ 126 0020 44656275 		.ascii	"Debug\000"
+ 126      6700
+ 127 0026 0000     		.space	2
+ 128 0028 4F666600 		.ascii	"Off\000"
+ 129 002c 00000000 		.space	4
+ 130              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 131              		.align	2
+ 132              	.LC0:
+ 133 0000 0A00     		.ascii	"\012\000"
+ 134 0002 0000     		.space	2
+ 135              	.LC1:
+ 136 0004 55415254 		.ascii	"UART started\000"
+ 136      20737461 
+ 136      72746564 
+ 136      00
+ 137 0011 000000   		.space	3
+ 138              	.LC2:
+ 139 0014 203A2000 		.ascii	" : \000"
+ 140              		.text
+ 141              	.Letext0:
+ 142              		.file 2 "c:\\h_da softwares & projects\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.1\\
+ 143              		.file 3 "c:\\h_da softwares & projects\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.1\\
+ 144              		.file 4 "Generated_Source\\PSoC5/ErikaOS_common_ee_types.inc"
+ 145              		.file 5 "Generated_Source\\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc"
+ 146              		.file 6 ".\\source\\bsw/global.h"
+ 147              		.file 7 "source\\bsw\\services\\logging.h"
+ 148              		.file 8 "Generated_Source\\PSoC5/ErikaOS_ee_oo_intfunc.inc"
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 5
+
+
+ 149              		.file 9 "Generated_Source\\PSoC5/ErikaOS_cortex_mx_ee_context.inc"
+ 150              		.file 10 "Generated_Source\\PSoC5/ErikaOS_common_ee_primitives.inc"
+ 151              		.file 11 "Generated_Source\\PSoC5/core_cm3.h"
+ 152              		.file 12 "Generated_Source\\PSoC5/UART_LOG.h"
+ 153              		.section	.debug_info,"",%progbits
+ 154              	.Ldebug_info0:
+ 155 0000 B1030000 		.4byte	0x3b1
+ 156 0004 0400     		.2byte	0x4
+ 157 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 158 000a 04       		.byte	0x4
+ 159 000b 01       		.uleb128 0x1
+ 160 000c 5C030000 		.4byte	.LASF70
+ 161 0010 0C       		.byte	0xc
+ 162 0011 5B010000 		.4byte	.LASF71
+ 163 0015 DE000000 		.4byte	.LASF72
+ 164 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 165 001d 00000000 		.4byte	0
+ 166 0021 00000000 		.4byte	.Ldebug_line0
+ 167 0025 02       		.uleb128 0x2
+ 168 0026 01       		.byte	0x1
+ 169 0027 06       		.byte	0x6
+ 170 0028 BC020000 		.4byte	.LASF0
+ 171 002c 02       		.uleb128 0x2
+ 172 002d 01       		.byte	0x1
+ 173 002e 08       		.byte	0x8
+ 174 002f AE020000 		.4byte	.LASF1
+ 175 0033 02       		.uleb128 0x2
+ 176 0034 02       		.byte	0x2
+ 177 0035 05       		.byte	0x5
+ 178 0036 66000000 		.4byte	.LASF2
+ 179 003a 02       		.uleb128 0x2
+ 180 003b 02       		.byte	0x2
+ 181 003c 07       		.byte	0x7
+ 182 003d 49030000 		.4byte	.LASF3
+ 183 0041 03       		.uleb128 0x3
+ 184 0042 80040000 		.4byte	.LASF9
+ 185 0046 02       		.byte	0x2
+ 186 0047 3F       		.byte	0x3f
+ 187 0048 4C000000 		.4byte	0x4c
+ 188 004c 02       		.uleb128 0x2
+ 189 004d 04       		.byte	0x4
+ 190 004e 05       		.byte	0x5
+ 191 004f 33020000 		.4byte	.LASF4
+ 192 0053 02       		.uleb128 0x2
+ 193 0054 04       		.byte	0x4
+ 194 0055 07       		.byte	0x7
+ 195 0056 0A030000 		.4byte	.LASF5
+ 196 005a 02       		.uleb128 0x2
+ 197 005b 08       		.byte	0x8
+ 198 005c 05       		.byte	0x5
+ 199 005d E8010000 		.4byte	.LASF6
+ 200 0061 02       		.uleb128 0x2
+ 201 0062 08       		.byte	0x8
+ 202 0063 07       		.byte	0x7
+ 203 0064 C8020000 		.4byte	.LASF7
+ 204 0068 04       		.uleb128 0x4
+ 205 0069 04       		.byte	0x4
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 6
+
+
+ 206 006a 05       		.byte	0x5
+ 207 006b 696E7400 		.ascii	"int\000"
+ 208 006f 02       		.uleb128 0x2
+ 209 0070 04       		.byte	0x4
+ 210 0071 07       		.byte	0x7
+ 211 0072 EF020000 		.4byte	.LASF8
+ 212 0076 03       		.uleb128 0x3
+ 213 0077 04040000 		.4byte	.LASF10
+ 214 007b 03       		.byte	0x3
+ 215 007c 2C       		.byte	0x2c
+ 216 007d 41000000 		.4byte	0x41
+ 217 0081 02       		.uleb128 0x2
+ 218 0082 04       		.byte	0x4
+ 219 0083 04       		.byte	0x4
+ 220 0084 C9010000 		.4byte	.LASF11
+ 221 0088 02       		.uleb128 0x2
+ 222 0089 08       		.byte	0x8
+ 223 008a 04       		.byte	0x4
+ 224 008b 53040000 		.4byte	.LASF12
+ 225 008f 02       		.uleb128 0x2
+ 226 0090 01       		.byte	0x1
+ 227 0091 08       		.byte	0x8
+ 228 0092 EA030000 		.4byte	.LASF13
+ 229 0096 02       		.uleb128 0x2
+ 230 0097 08       		.byte	0x8
+ 231 0098 04       		.byte	0x4
+ 232 0099 A2020000 		.4byte	.LASF14
+ 233 009d 02       		.uleb128 0x2
+ 234 009e 04       		.byte	0x4
+ 235 009f 07       		.byte	0x7
+ 236 00a0 96000000 		.4byte	.LASF15
+ 237 00a4 05       		.uleb128 0x5
+ 238 00a5 8F000000 		.4byte	0x8f
+ 239 00a9 03       		.uleb128 0x3
+ 240 00aa 40030000 		.4byte	.LASF16
+ 241 00ae 04       		.byte	0x4
+ 242 00af 53       		.byte	0x53
+ 243 00b0 68000000 		.4byte	0x68
+ 244 00b4 03       		.uleb128 0x3
+ 245 00b5 4A010000 		.4byte	.LASF17
+ 246 00b9 04       		.byte	0x4
+ 247 00ba 54       		.byte	0x54
+ 248 00bb 6F000000 		.4byte	0x6f
+ 249 00bf 03       		.uleb128 0x3
+ 250 00c0 78040000 		.4byte	.LASF18
+ 251 00c4 05       		.byte	0x5
+ 252 00c5 4D       		.byte	0x4d
+ 253 00c6 B4000000 		.4byte	0xb4
+ 254 00ca 03       		.uleb128 0x3
+ 255 00cb C2000000 		.4byte	.LASF19
+ 256 00cf 05       		.byte	0x5
+ 257 00d0 4F       		.byte	0x4f
+ 258 00d1 B4000000 		.4byte	0xb4
+ 259 00d5 03       		.uleb128 0x3
+ 260 00d6 54010000 		.4byte	.LASF20
+ 261 00da 05       		.byte	0x5
+ 262 00db 78       		.byte	0x78
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 7
+
+
+ 263 00dc A9000000 		.4byte	0xa9
+ 264 00e0 06       		.uleb128 0x6
+ 265 00e1 01       		.byte	0x1
+ 266 00e2 25000000 		.4byte	0x25
+ 267 00e6 06       		.byte	0x6
+ 268 00e7 CF       		.byte	0xcf
+ 269 00e8 89010000 		.4byte	0x189
+ 270 00ec 07       		.uleb128 0x7
+ 271 00ed 29000000 		.4byte	.LASF21
+ 272 00f1 00       		.byte	0
+ 273 00f2 08       		.uleb128 0x8
+ 274 00f3 C1040000 		.4byte	.LASF22
+ 275 00f7 7F       		.sleb128 -1
+ 276 00f8 08       		.uleb128 0x8
+ 277 00f9 1C030000 		.4byte	.LASF23
+ 278 00fd 7E       		.sleb128 -2
+ 279 00fe 08       		.uleb128 0x8
+ 280 00ff B4000000 		.4byte	.LASF24
+ 281 0103 7D       		.sleb128 -3
+ 282 0104 08       		.uleb128 0x8
+ 283 0105 CA040000 		.4byte	.LASF25
+ 284 0109 7C       		.sleb128 -4
+ 285 010a 08       		.uleb128 0x8
+ 286 010b B3010000 		.4byte	.LASF26
+ 287 010f 7B       		.sleb128 -5
+ 288 0110 08       		.uleb128 0x8
+ 289 0111 70000000 		.4byte	.LASF27
+ 290 0115 7A       		.sleb128 -6
+ 291 0116 08       		.uleb128 0x8
+ 292 0117 3C020000 		.4byte	.LASF28
+ 293 011b 79       		.sleb128 -7
+ 294 011c 08       		.uleb128 0x8
+ 295 011d EF030000 		.4byte	.LASF29
+ 296 0121 78       		.sleb128 -8
+ 297 0122 08       		.uleb128 0x8
+ 298 0123 2A030000 		.4byte	.LASF30
+ 299 0127 77       		.sleb128 -9
+ 300 0128 08       		.uleb128 0x8
+ 301 0129 4E020000 		.4byte	.LASF31
+ 302 012d 76       		.sleb128 -10
+ 303 012e 08       		.uleb128 0x8
+ 304 012f F7040000 		.4byte	.LASF32
+ 305 0133 75       		.sleb128 -11
+ 306 0134 08       		.uleb128 0x8
+ 307 0135 FC020000 		.4byte	.LASF33
+ 308 0139 74       		.sleb128 -12
+ 309 013a 08       		.uleb128 0x8
+ 310 013b 66040000 		.4byte	.LASF34
+ 311 013f 73       		.sleb128 -13
+ 312 0140 08       		.uleb128 0x8
+ 313 0141 16000000 		.4byte	.LASF35
+ 314 0145 72       		.sleb128 -14
+ 315 0146 08       		.uleb128 0x8
+ 316 0147 52000000 		.4byte	.LASF36
+ 317 014b 71       		.sleb128 -15
+ 318 014c 08       		.uleb128 0x8
+ 319 014d 5C020000 		.4byte	.LASF37
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 8
+
+
+ 320 0151 70       		.sleb128 -16
+ 321 0152 08       		.uleb128 0x8
+ 322 0153 CA000000 		.4byte	.LASF38
+ 323 0157 6F       		.sleb128 -17
+ 324 0158 08       		.uleb128 0x8
+ 325 0159 81000000 		.4byte	.LASF39
+ 326 015d 6E       		.sleb128 -18
+ 327 015e 08       		.uleb128 0x8
+ 328 015f 0F020000 		.4byte	.LASF40
+ 329 0163 6D       		.sleb128 -19
+ 330 0164 08       		.uleb128 0x8
+ 331 0165 25040000 		.4byte	.LASF41
+ 332 0169 6C       		.sleb128 -20
+ 333 016a 08       		.uleb128 0x8
+ 334 016b 6D020000 		.4byte	.LASF42
+ 335 016f 6B       		.sleb128 -21
+ 336 0170 08       		.uleb128 0x8
+ 337 0171 A2040000 		.4byte	.LASF43
+ 338 0175 6A       		.sleb128 -22
+ 339 0176 08       		.uleb128 0x8
+ 340 0177 79010000 		.4byte	.LASF44
+ 341 017b 69       		.sleb128 -23
+ 342 017c 08       		.uleb128 0x8
+ 343 017d 22020000 		.4byte	.LASF45
+ 344 0181 68       		.sleb128 -24
+ 345 0182 08       		.uleb128 0x8
+ 346 0183 CF010000 		.4byte	.LASF46
+ 347 0187 67       		.sleb128 -25
+ 348 0188 00       		.byte	0
+ 349 0189 03       		.uleb128 0x3
+ 350 018a F2040000 		.4byte	.LASF47
+ 351 018e 06       		.byte	0x6
+ 352 018f EA       		.byte	0xea
+ 353 0190 E0000000 		.4byte	0xe0
+ 354 0194 06       		.uleb128 0x6
+ 355 0195 01       		.byte	0x1
+ 356 0196 2C000000 		.4byte	0x2c
+ 357 019a 07       		.byte	0x7
+ 358 019b 3D       		.byte	0x3d
+ 359 019c C5010000 		.4byte	0x1c5
+ 360 01a0 07       		.uleb128 0x7
+ 361 01a1 46000000 		.4byte	.LASF48
+ 362 01a5 00       		.byte	0
+ 363 01a6 07       		.uleb128 0x7
+ 364 01a7 99040000 		.4byte	.LASF49
+ 365 01ab 01       		.byte	0x1
+ 366 01ac 07       		.uleb128 0x7
+ 367 01ad 5A040000 		.4byte	.LASF50
+ 368 01b1 02       		.byte	0x2
+ 369 01b2 07       		.uleb128 0x7
+ 370 01b3 90010000 		.4byte	.LASF51
+ 371 01b7 03       		.byte	0x3
+ 372 01b8 07       		.uleb128 0x7
+ 373 01b9 7F020000 		.4byte	.LASF52
+ 374 01bd 04       		.byte	0x4
+ 375 01be 07       		.uleb128 0x7
+ 376 01bf 34000000 		.4byte	.LASF53
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 9
+
+
+ 377 01c3 05       		.byte	0x5
+ 378 01c4 00       		.byte	0
+ 379 01c5 03       		.uleb128 0x3
+ 380 01c6 15040000 		.4byte	.LASF54
+ 381 01ca 07       		.byte	0x7
+ 382 01cb 44       		.byte	0x44
+ 383 01cc 94010000 		.4byte	0x194
+ 384 01d0 09       		.uleb128 0x9
+ 385 01d1 A8       		.byte	0xa8
+ 386 01d2 07       		.byte	0x7
+ 387 01d3 4B       		.byte	0x4b
+ 388 01d4 FD010000 		.4byte	0x1fd
+ 389 01d8 0A       		.uleb128 0xa
+ 390 01d9 8A040000 		.4byte	.LASF55
+ 391 01dd 07       		.byte	0x7
+ 392 01de 4C       		.byte	0x4c
+ 393 01df C5010000 		.4byte	0x1c5
+ 394 01e3 00       		.byte	0
+ 395 01e4 0A       		.uleb128 0xa
+ 396 01e5 C2010000 		.4byte	.LASF56
+ 397 01e9 07       		.byte	0x7
+ 398 01ea 4D       		.byte	0x4d
+ 399 01eb FD010000 		.4byte	0x1fd
+ 400 01ef 01       		.byte	0x1
+ 401 01f0 0A       		.uleb128 0xa
+ 402 01f1 4B040000 		.4byte	.LASF57
+ 403 01f5 07       		.byte	0x7
+ 404 01f6 4E       		.byte	0x4e
+ 405 01f7 0D020000 		.4byte	0x20d
+ 406 01fb 11       		.byte	0x11
+ 407 01fc 00       		.byte	0
+ 408 01fd 0B       		.uleb128 0xb
+ 409 01fe 8F000000 		.4byte	0x8f
+ 410 0202 0D020000 		.4byte	0x20d
+ 411 0206 0C       		.uleb128 0xc
+ 412 0207 9D000000 		.4byte	0x9d
+ 413 020b 0F       		.byte	0xf
+ 414 020c 00       		.byte	0
+ 415 020d 0B       		.uleb128 0xb
+ 416 020e 8F000000 		.4byte	0x8f
+ 417 0212 1D020000 		.4byte	0x21d
+ 418 0216 0C       		.uleb128 0xc
+ 419 0217 9D000000 		.4byte	0x9d
+ 420 021b 96       		.byte	0x96
+ 421 021c 00       		.byte	0
+ 422 021d 03       		.uleb128 0x3
+ 423 021e 3C000000 		.4byte	.LASF58
+ 424 0222 07       		.byte	0x7
+ 425 0223 4F       		.byte	0x4f
+ 426 0224 D0010000 		.4byte	0x1d0
+ 427 0228 0D       		.uleb128 0xd
+ 428 0229 0C040000 		.4byte	.LASF59
+ 429 022d 01       		.byte	0x1
+ 430 022e 28       		.byte	0x28
+ 431 022f 89010000 		.4byte	0x189
+ 432 0233 00000000 		.4byte	.LFB111
+ 433 0237 2C000000 		.4byte	.LFE111-.LFB111
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 10
+
+
+ 434 023b 01       		.uleb128 0x1
+ 435 023c 9C       		.byte	0x9c
+ 436 023d 9A020000 		.4byte	0x29a
+ 437 0241 0E       		.uleb128 0xe
+ 438 0242 06000000 		.4byte	.LVL0
+ 439 0246 9E030000 		.4byte	0x39e
+ 440 024a 0F       		.uleb128 0xf
+ 441 024b 0E000000 		.4byte	.LVL1
+ 442 024f A9030000 		.4byte	0x3a9
+ 443 0253 5E020000 		.4byte	0x25e
+ 444 0257 10       		.uleb128 0x10
+ 445 0258 01       		.uleb128 0x1
+ 446 0259 50       		.byte	0x50
+ 447 025a 02       		.uleb128 0x2
+ 448 025b 74       		.byte	0x74
+ 449 025c 00       		.sleb128 0
+ 450 025d 00       		.byte	0
+ 451 025e 0F       		.uleb128 0xf
+ 452 025f 14000000 		.4byte	.LVL2
+ 453 0263 A9030000 		.4byte	0x3a9
+ 454 0267 72020000 		.4byte	0x272
+ 455 026b 10       		.uleb128 0x10
+ 456 026c 01       		.uleb128 0x1
+ 457 026d 50       		.byte	0x50
+ 458 026e 02       		.uleb128 0x2
+ 459 026f 74       		.byte	0x74
+ 460 0270 00       		.sleb128 0
+ 461 0271 00       		.byte	0
+ 462 0272 0F       		.uleb128 0xf
+ 463 0273 1A000000 		.4byte	.LVL3
+ 464 0277 A9030000 		.4byte	0x3a9
+ 465 027b 89020000 		.4byte	0x289
+ 466 027f 10       		.uleb128 0x10
+ 467 0280 01       		.uleb128 0x1
+ 468 0281 50       		.byte	0x50
+ 469 0282 05       		.uleb128 0x5
+ 470 0283 03       		.byte	0x3
+ 471 0284 04000000 		.4byte	.LC1
+ 472 0288 00       		.byte	0
+ 473 0289 11       		.uleb128 0x11
+ 474 028a 20000000 		.4byte	.LVL4
+ 475 028e A9030000 		.4byte	0x3a9
+ 476 0292 10       		.uleb128 0x10
+ 477 0293 01       		.uleb128 0x1
+ 478 0294 50       		.byte	0x50
+ 479 0295 02       		.uleb128 0x2
+ 480 0296 74       		.byte	0x74
+ 481 0297 00       		.sleb128 0
+ 482 0298 00       		.byte	0
+ 483 0299 00       		.byte	0
+ 484 029a 0D       		.uleb128 0xd
+ 485 029b 90040000 		.4byte	.LASF60
+ 486 029f 01       		.byte	0x1
+ 487 02a0 38       		.byte	0x38
+ 488 02a1 89010000 		.4byte	0x189
+ 489 02a5 00000000 		.4byte	.LFB112
+ 490 02a9 2C000000 		.4byte	.LFE112-.LFB112
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 11
+
+
+ 491 02ad 01       		.uleb128 0x1
+ 492 02ae 9C       		.byte	0x9c
+ 493 02af 24030000 		.4byte	0x324
+ 494 02b3 12       		.uleb128 0x12
+ 495 02b4 9C020000 		.4byte	.LASF73
+ 496 02b8 01       		.byte	0x1
+ 497 02b9 38       		.byte	0x38
+ 498 02ba 24030000 		.4byte	0x324
+ 499 02be 00000000 		.4byte	.LLST0
+ 500 02c2 13       		.uleb128 0x13
+ 501 02c3 0F000000 		.4byte	.LASF74
+ 502 02c7 01       		.byte	0x1
+ 503 02c8 3B       		.byte	0x3b
+ 504 02c9 89010000 		.4byte	0x189
+ 505 02cd 2C000000 		.4byte	.LLST1
+ 506 02d1 0F       		.uleb128 0xf
+ 507 02d2 0A000000 		.4byte	.LVL8
+ 508 02d6 A9030000 		.4byte	0x3a9
+ 509 02da E5020000 		.4byte	0x2e5
+ 510 02de 10       		.uleb128 0x10
+ 511 02df 01       		.uleb128 0x1
+ 512 02e0 50       		.byte	0x50
+ 513 02e1 02       		.uleb128 0x2
+ 514 02e2 74       		.byte	0x74
+ 515 02e3 01       		.sleb128 1
+ 516 02e4 00       		.byte	0
+ 517 02e5 0F       		.uleb128 0xf
+ 518 02e6 10000000 		.4byte	.LVL9
+ 519 02ea A9030000 		.4byte	0x3a9
+ 520 02ee FC020000 		.4byte	0x2fc
+ 521 02f2 10       		.uleb128 0x10
+ 522 02f3 01       		.uleb128 0x1
+ 523 02f4 50       		.byte	0x50
+ 524 02f5 05       		.uleb128 0x5
+ 525 02f6 03       		.byte	0x3
+ 526 02f7 14000000 		.4byte	.LC2
+ 527 02fb 00       		.byte	0
+ 528 02fc 0F       		.uleb128 0xf
+ 529 02fd 18000000 		.4byte	.LVL10
+ 530 0301 A9030000 		.4byte	0x3a9
+ 531 0305 10030000 		.4byte	0x310
+ 532 0309 10       		.uleb128 0x10
+ 533 030a 01       		.uleb128 0x1
+ 534 030b 50       		.byte	0x50
+ 535 030c 02       		.uleb128 0x2
+ 536 030d 74       		.byte	0x74
+ 537 030e 11       		.sleb128 17
+ 538 030f 00       		.byte	0
+ 539 0310 11       		.uleb128 0x11
+ 540 0311 1E000000 		.4byte	.LVL11
+ 541 0315 A9030000 		.4byte	0x3a9
+ 542 0319 10       		.uleb128 0x10
+ 543 031a 01       		.uleb128 0x1
+ 544 031b 50       		.byte	0x50
+ 545 031c 05       		.uleb128 0x5
+ 546 031d 03       		.byte	0x3
+ 547 031e 00000000 		.4byte	.LC0
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 12
+
+
+ 548 0322 00       		.byte	0
+ 549 0323 00       		.byte	0
+ 550 0324 14       		.uleb128 0x14
+ 551 0325 04       		.byte	0x4
+ 552 0326 1D020000 		.4byte	0x21d
+ 553 032a 15       		.uleb128 0x15
+ 554 032b DA040000 		.4byte	.LASF61
+ 555 032f 08       		.byte	0x8
+ 556 0330 40       		.byte	0x40
+ 557 0331 BF000000 		.4byte	0xbf
+ 558 0335 15       		.uleb128 0x15
+ 559 0336 F6010000 		.4byte	.LASF62
+ 560 033a 08       		.byte	0x8
+ 561 033b 47       		.byte	0x47
+ 562 033c CA000000 		.4byte	0xca
+ 563 0340 15       		.uleb128 0x15
+ 564 0341 38040000 		.4byte	.LASF63
+ 565 0345 08       		.byte	0x8
+ 566 0346 4A       		.byte	0x4a
+ 567 0347 BF000000 		.4byte	0xbf
+ 568 034b 15       		.uleb128 0x15
+ 569 034c 9A010000 		.4byte	.LASF64
+ 570 0350 09       		.byte	0x9
+ 571 0351 48       		.byte	0x48
+ 572 0352 D5000000 		.4byte	0xd5
+ 573 0356 15       		.uleb128 0x15
+ 574 0357 9F000000 		.4byte	.LASF65
+ 575 035b 0A       		.byte	0xa
+ 576 035c 44       		.byte	0x44
+ 577 035d BF000000 		.4byte	0xbf
+ 578 0361 16       		.uleb128 0x16
+ 579 0362 B4040000 		.4byte	.LASF66
+ 580 0366 0B       		.byte	0xb
+ 581 0367 1207     		.2byte	0x712
+ 582 0369 6D030000 		.4byte	0x36d
+ 583 036d 17       		.uleb128 0x17
+ 584 036e 76000000 		.4byte	0x76
+ 585 0372 0B       		.uleb128 0xb
+ 586 0373 A4000000 		.4byte	0xa4
+ 587 0377 88030000 		.4byte	0x388
+ 588 037b 0C       		.uleb128 0xc
+ 589 037c 9D000000 		.4byte	0x9d
+ 590 0380 05       		.byte	0x5
+ 591 0381 0C       		.uleb128 0xc
+ 592 0382 9D000000 		.4byte	0x9d
+ 593 0386 07       		.byte	0x7
+ 594 0387 00       		.byte	0
+ 595 0388 18       		.uleb128 0x18
+ 596 0389 DF020000 		.4byte	.LASF67
+ 597 038d 01       		.byte	0x1
+ 598 038e 1B       		.byte	0x1b
+ 599 038f 99030000 		.4byte	0x399
+ 600 0393 05       		.uleb128 0x5
+ 601 0394 03       		.byte	0x3
+ 602 0395 00000000 		.4byte	logLevel2String
+ 603 0399 05       		.uleb128 0x5
+ 604 039a 72030000 		.4byte	0x372
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 13
+
+
+ 605 039e 19       		.uleb128 0x19
+ 606 039f 00000000 		.4byte	.LASF68
+ 607 03a3 00000000 		.4byte	.LASF68
+ 608 03a7 0C       		.byte	0xc
+ 609 03a8 54       		.byte	0x54
+ 610 03a9 19       		.uleb128 0x19
+ 611 03aa 89020000 		.4byte	.LASF69
+ 612 03ae 89020000 		.4byte	.LASF69
+ 613 03b2 0C       		.byte	0xc
+ 614 03b3 8B       		.byte	0x8b
+ 615 03b4 00       		.byte	0
+ 616              		.section	.debug_abbrev,"",%progbits
+ 617              	.Ldebug_abbrev0:
+ 618 0000 01       		.uleb128 0x1
+ 619 0001 11       		.uleb128 0x11
+ 620 0002 01       		.byte	0x1
+ 621 0003 25       		.uleb128 0x25
+ 622 0004 0E       		.uleb128 0xe
+ 623 0005 13       		.uleb128 0x13
+ 624 0006 0B       		.uleb128 0xb
+ 625 0007 03       		.uleb128 0x3
+ 626 0008 0E       		.uleb128 0xe
+ 627 0009 1B       		.uleb128 0x1b
+ 628 000a 0E       		.uleb128 0xe
+ 629 000b 55       		.uleb128 0x55
+ 630 000c 17       		.uleb128 0x17
+ 631 000d 11       		.uleb128 0x11
+ 632 000e 01       		.uleb128 0x1
+ 633 000f 10       		.uleb128 0x10
+ 634 0010 17       		.uleb128 0x17
+ 635 0011 00       		.byte	0
+ 636 0012 00       		.byte	0
+ 637 0013 02       		.uleb128 0x2
+ 638 0014 24       		.uleb128 0x24
+ 639 0015 00       		.byte	0
+ 640 0016 0B       		.uleb128 0xb
+ 641 0017 0B       		.uleb128 0xb
+ 642 0018 3E       		.uleb128 0x3e
+ 643 0019 0B       		.uleb128 0xb
+ 644 001a 03       		.uleb128 0x3
+ 645 001b 0E       		.uleb128 0xe
+ 646 001c 00       		.byte	0
+ 647 001d 00       		.byte	0
+ 648 001e 03       		.uleb128 0x3
+ 649 001f 16       		.uleb128 0x16
+ 650 0020 00       		.byte	0
+ 651 0021 03       		.uleb128 0x3
+ 652 0022 0E       		.uleb128 0xe
+ 653 0023 3A       		.uleb128 0x3a
+ 654 0024 0B       		.uleb128 0xb
+ 655 0025 3B       		.uleb128 0x3b
+ 656 0026 0B       		.uleb128 0xb
+ 657 0027 49       		.uleb128 0x49
+ 658 0028 13       		.uleb128 0x13
+ 659 0029 00       		.byte	0
+ 660 002a 00       		.byte	0
+ 661 002b 04       		.uleb128 0x4
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 14
+
+
+ 662 002c 24       		.uleb128 0x24
+ 663 002d 00       		.byte	0
+ 664 002e 0B       		.uleb128 0xb
+ 665 002f 0B       		.uleb128 0xb
+ 666 0030 3E       		.uleb128 0x3e
+ 667 0031 0B       		.uleb128 0xb
+ 668 0032 03       		.uleb128 0x3
+ 669 0033 08       		.uleb128 0x8
+ 670 0034 00       		.byte	0
+ 671 0035 00       		.byte	0
+ 672 0036 05       		.uleb128 0x5
+ 673 0037 26       		.uleb128 0x26
+ 674 0038 00       		.byte	0
+ 675 0039 49       		.uleb128 0x49
+ 676 003a 13       		.uleb128 0x13
+ 677 003b 00       		.byte	0
+ 678 003c 00       		.byte	0
+ 679 003d 06       		.uleb128 0x6
+ 680 003e 04       		.uleb128 0x4
+ 681 003f 01       		.byte	0x1
+ 682 0040 0B       		.uleb128 0xb
+ 683 0041 0B       		.uleb128 0xb
+ 684 0042 49       		.uleb128 0x49
+ 685 0043 13       		.uleb128 0x13
+ 686 0044 3A       		.uleb128 0x3a
+ 687 0045 0B       		.uleb128 0xb
+ 688 0046 3B       		.uleb128 0x3b
+ 689 0047 0B       		.uleb128 0xb
+ 690 0048 01       		.uleb128 0x1
+ 691 0049 13       		.uleb128 0x13
+ 692 004a 00       		.byte	0
+ 693 004b 00       		.byte	0
+ 694 004c 07       		.uleb128 0x7
+ 695 004d 28       		.uleb128 0x28
+ 696 004e 00       		.byte	0
+ 697 004f 03       		.uleb128 0x3
+ 698 0050 0E       		.uleb128 0xe
+ 699 0051 1C       		.uleb128 0x1c
+ 700 0052 0B       		.uleb128 0xb
+ 701 0053 00       		.byte	0
+ 702 0054 00       		.byte	0
+ 703 0055 08       		.uleb128 0x8
+ 704 0056 28       		.uleb128 0x28
+ 705 0057 00       		.byte	0
+ 706 0058 03       		.uleb128 0x3
+ 707 0059 0E       		.uleb128 0xe
+ 708 005a 1C       		.uleb128 0x1c
+ 709 005b 0D       		.uleb128 0xd
+ 710 005c 00       		.byte	0
+ 711 005d 00       		.byte	0
+ 712 005e 09       		.uleb128 0x9
+ 713 005f 13       		.uleb128 0x13
+ 714 0060 01       		.byte	0x1
+ 715 0061 0B       		.uleb128 0xb
+ 716 0062 0B       		.uleb128 0xb
+ 717 0063 3A       		.uleb128 0x3a
+ 718 0064 0B       		.uleb128 0xb
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 15
+
+
+ 719 0065 3B       		.uleb128 0x3b
+ 720 0066 0B       		.uleb128 0xb
+ 721 0067 01       		.uleb128 0x1
+ 722 0068 13       		.uleb128 0x13
+ 723 0069 00       		.byte	0
+ 724 006a 00       		.byte	0
+ 725 006b 0A       		.uleb128 0xa
+ 726 006c 0D       		.uleb128 0xd
+ 727 006d 00       		.byte	0
+ 728 006e 03       		.uleb128 0x3
+ 729 006f 0E       		.uleb128 0xe
+ 730 0070 3A       		.uleb128 0x3a
+ 731 0071 0B       		.uleb128 0xb
+ 732 0072 3B       		.uleb128 0x3b
+ 733 0073 0B       		.uleb128 0xb
+ 734 0074 49       		.uleb128 0x49
+ 735 0075 13       		.uleb128 0x13
+ 736 0076 38       		.uleb128 0x38
+ 737 0077 0B       		.uleb128 0xb
+ 738 0078 00       		.byte	0
+ 739 0079 00       		.byte	0
+ 740 007a 0B       		.uleb128 0xb
+ 741 007b 01       		.uleb128 0x1
+ 742 007c 01       		.byte	0x1
+ 743 007d 49       		.uleb128 0x49
+ 744 007e 13       		.uleb128 0x13
+ 745 007f 01       		.uleb128 0x1
+ 746 0080 13       		.uleb128 0x13
+ 747 0081 00       		.byte	0
+ 748 0082 00       		.byte	0
+ 749 0083 0C       		.uleb128 0xc
+ 750 0084 21       		.uleb128 0x21
+ 751 0085 00       		.byte	0
+ 752 0086 49       		.uleb128 0x49
+ 753 0087 13       		.uleb128 0x13
+ 754 0088 2F       		.uleb128 0x2f
+ 755 0089 0B       		.uleb128 0xb
+ 756 008a 00       		.byte	0
+ 757 008b 00       		.byte	0
+ 758 008c 0D       		.uleb128 0xd
+ 759 008d 2E       		.uleb128 0x2e
+ 760 008e 01       		.byte	0x1
+ 761 008f 3F       		.uleb128 0x3f
+ 762 0090 19       		.uleb128 0x19
+ 763 0091 03       		.uleb128 0x3
+ 764 0092 0E       		.uleb128 0xe
+ 765 0093 3A       		.uleb128 0x3a
+ 766 0094 0B       		.uleb128 0xb
+ 767 0095 3B       		.uleb128 0x3b
+ 768 0096 0B       		.uleb128 0xb
+ 769 0097 27       		.uleb128 0x27
+ 770 0098 19       		.uleb128 0x19
+ 771 0099 49       		.uleb128 0x49
+ 772 009a 13       		.uleb128 0x13
+ 773 009b 11       		.uleb128 0x11
+ 774 009c 01       		.uleb128 0x1
+ 775 009d 12       		.uleb128 0x12
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 16
+
+
+ 776 009e 06       		.uleb128 0x6
+ 777 009f 40       		.uleb128 0x40
+ 778 00a0 18       		.uleb128 0x18
+ 779 00a1 9742     		.uleb128 0x2117
+ 780 00a3 19       		.uleb128 0x19
+ 781 00a4 01       		.uleb128 0x1
+ 782 00a5 13       		.uleb128 0x13
+ 783 00a6 00       		.byte	0
+ 784 00a7 00       		.byte	0
+ 785 00a8 0E       		.uleb128 0xe
+ 786 00a9 898201   		.uleb128 0x4109
+ 787 00ac 00       		.byte	0
+ 788 00ad 11       		.uleb128 0x11
+ 789 00ae 01       		.uleb128 0x1
+ 790 00af 31       		.uleb128 0x31
+ 791 00b0 13       		.uleb128 0x13
+ 792 00b1 00       		.byte	0
+ 793 00b2 00       		.byte	0
+ 794 00b3 0F       		.uleb128 0xf
+ 795 00b4 898201   		.uleb128 0x4109
+ 796 00b7 01       		.byte	0x1
+ 797 00b8 11       		.uleb128 0x11
+ 798 00b9 01       		.uleb128 0x1
+ 799 00ba 31       		.uleb128 0x31
+ 800 00bb 13       		.uleb128 0x13
+ 801 00bc 01       		.uleb128 0x1
+ 802 00bd 13       		.uleb128 0x13
+ 803 00be 00       		.byte	0
+ 804 00bf 00       		.byte	0
+ 805 00c0 10       		.uleb128 0x10
+ 806 00c1 8A8201   		.uleb128 0x410a
+ 807 00c4 00       		.byte	0
+ 808 00c5 02       		.uleb128 0x2
+ 809 00c6 18       		.uleb128 0x18
+ 810 00c7 9142     		.uleb128 0x2111
+ 811 00c9 18       		.uleb128 0x18
+ 812 00ca 00       		.byte	0
+ 813 00cb 00       		.byte	0
+ 814 00cc 11       		.uleb128 0x11
+ 815 00cd 898201   		.uleb128 0x4109
+ 816 00d0 01       		.byte	0x1
+ 817 00d1 11       		.uleb128 0x11
+ 818 00d2 01       		.uleb128 0x1
+ 819 00d3 31       		.uleb128 0x31
+ 820 00d4 13       		.uleb128 0x13
+ 821 00d5 00       		.byte	0
+ 822 00d6 00       		.byte	0
+ 823 00d7 12       		.uleb128 0x12
+ 824 00d8 05       		.uleb128 0x5
+ 825 00d9 00       		.byte	0
+ 826 00da 03       		.uleb128 0x3
+ 827 00db 0E       		.uleb128 0xe
+ 828 00dc 3A       		.uleb128 0x3a
+ 829 00dd 0B       		.uleb128 0xb
+ 830 00de 3B       		.uleb128 0x3b
+ 831 00df 0B       		.uleb128 0xb
+ 832 00e0 49       		.uleb128 0x49
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 17
+
+
+ 833 00e1 13       		.uleb128 0x13
+ 834 00e2 02       		.uleb128 0x2
+ 835 00e3 17       		.uleb128 0x17
+ 836 00e4 00       		.byte	0
+ 837 00e5 00       		.byte	0
+ 838 00e6 13       		.uleb128 0x13
+ 839 00e7 34       		.uleb128 0x34
+ 840 00e8 00       		.byte	0
+ 841 00e9 03       		.uleb128 0x3
+ 842 00ea 0E       		.uleb128 0xe
+ 843 00eb 3A       		.uleb128 0x3a
+ 844 00ec 0B       		.uleb128 0xb
+ 845 00ed 3B       		.uleb128 0x3b
+ 846 00ee 0B       		.uleb128 0xb
+ 847 00ef 49       		.uleb128 0x49
+ 848 00f0 13       		.uleb128 0x13
+ 849 00f1 02       		.uleb128 0x2
+ 850 00f2 17       		.uleb128 0x17
+ 851 00f3 00       		.byte	0
+ 852 00f4 00       		.byte	0
+ 853 00f5 14       		.uleb128 0x14
+ 854 00f6 0F       		.uleb128 0xf
+ 855 00f7 00       		.byte	0
+ 856 00f8 0B       		.uleb128 0xb
+ 857 00f9 0B       		.uleb128 0xb
+ 858 00fa 49       		.uleb128 0x49
+ 859 00fb 13       		.uleb128 0x13
+ 860 00fc 00       		.byte	0
+ 861 00fd 00       		.byte	0
+ 862 00fe 15       		.uleb128 0x15
+ 863 00ff 34       		.uleb128 0x34
+ 864 0100 00       		.byte	0
+ 865 0101 03       		.uleb128 0x3
+ 866 0102 0E       		.uleb128 0xe
+ 867 0103 3A       		.uleb128 0x3a
+ 868 0104 0B       		.uleb128 0xb
+ 869 0105 3B       		.uleb128 0x3b
+ 870 0106 0B       		.uleb128 0xb
+ 871 0107 49       		.uleb128 0x49
+ 872 0108 13       		.uleb128 0x13
+ 873 0109 3F       		.uleb128 0x3f
+ 874 010a 19       		.uleb128 0x19
+ 875 010b 3C       		.uleb128 0x3c
+ 876 010c 19       		.uleb128 0x19
+ 877 010d 00       		.byte	0
+ 878 010e 00       		.byte	0
+ 879 010f 16       		.uleb128 0x16
+ 880 0110 34       		.uleb128 0x34
+ 881 0111 00       		.byte	0
+ 882 0112 03       		.uleb128 0x3
+ 883 0113 0E       		.uleb128 0xe
+ 884 0114 3A       		.uleb128 0x3a
+ 885 0115 0B       		.uleb128 0xb
+ 886 0116 3B       		.uleb128 0x3b
+ 887 0117 05       		.uleb128 0x5
+ 888 0118 49       		.uleb128 0x49
+ 889 0119 13       		.uleb128 0x13
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 18
+
+
+ 890 011a 3F       		.uleb128 0x3f
+ 891 011b 19       		.uleb128 0x19
+ 892 011c 3C       		.uleb128 0x3c
+ 893 011d 19       		.uleb128 0x19
+ 894 011e 00       		.byte	0
+ 895 011f 00       		.byte	0
+ 896 0120 17       		.uleb128 0x17
+ 897 0121 35       		.uleb128 0x35
+ 898 0122 00       		.byte	0
+ 899 0123 49       		.uleb128 0x49
+ 900 0124 13       		.uleb128 0x13
+ 901 0125 00       		.byte	0
+ 902 0126 00       		.byte	0
+ 903 0127 18       		.uleb128 0x18
+ 904 0128 34       		.uleb128 0x34
+ 905 0129 00       		.byte	0
+ 906 012a 03       		.uleb128 0x3
+ 907 012b 0E       		.uleb128 0xe
+ 908 012c 3A       		.uleb128 0x3a
+ 909 012d 0B       		.uleb128 0xb
+ 910 012e 3B       		.uleb128 0x3b
+ 911 012f 0B       		.uleb128 0xb
+ 912 0130 49       		.uleb128 0x49
+ 913 0131 13       		.uleb128 0x13
+ 914 0132 3F       		.uleb128 0x3f
+ 915 0133 19       		.uleb128 0x19
+ 916 0134 02       		.uleb128 0x2
+ 917 0135 18       		.uleb128 0x18
+ 918 0136 00       		.byte	0
+ 919 0137 00       		.byte	0
+ 920 0138 19       		.uleb128 0x19
+ 921 0139 2E       		.uleb128 0x2e
+ 922 013a 00       		.byte	0
+ 923 013b 3F       		.uleb128 0x3f
+ 924 013c 19       		.uleb128 0x19
+ 925 013d 3C       		.uleb128 0x3c
+ 926 013e 19       		.uleb128 0x19
+ 927 013f 6E       		.uleb128 0x6e
+ 928 0140 0E       		.uleb128 0xe
+ 929 0141 03       		.uleb128 0x3
+ 930 0142 0E       		.uleb128 0xe
+ 931 0143 3A       		.uleb128 0x3a
+ 932 0144 0B       		.uleb128 0xb
+ 933 0145 3B       		.uleb128 0x3b
+ 934 0146 0B       		.uleb128 0xb
+ 935 0147 00       		.byte	0
+ 936 0148 00       		.byte	0
+ 937 0149 00       		.byte	0
+ 938              		.section	.debug_loc,"",%progbits
+ 939              	.Ldebug_loc0:
+ 940              	.LLST0:
+ 941 0000 00000000 		.4byte	.LVL5
+ 942 0004 06000000 		.4byte	.LVL7
+ 943 0008 0100     		.2byte	0x1
+ 944 000a 50       		.byte	0x50
+ 945 000b 06000000 		.4byte	.LVL7
+ 946 000f 22000000 		.4byte	.LVL12
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 19
+
+
+ 947 0013 0100     		.2byte	0x1
+ 948 0015 54       		.byte	0x54
+ 949 0016 22000000 		.4byte	.LVL12
+ 950 001a 2C000000 		.4byte	.LFE112
+ 951 001e 0400     		.2byte	0x4
+ 952 0020 F3       		.byte	0xf3
+ 953 0021 01       		.uleb128 0x1
+ 954 0022 50       		.byte	0x50
+ 955 0023 9F       		.byte	0x9f
+ 956 0024 00000000 		.4byte	0
+ 957 0028 00000000 		.4byte	0
+ 958              	.LLST1:
+ 959 002c 04000000 		.4byte	.LVL6
+ 960 0030 1E000000 		.4byte	.LVL11
+ 961 0034 0300     		.2byte	0x3
+ 962 0036 09       		.byte	0x9
+ 963 0037 E9       		.byte	0xe9
+ 964 0038 9F       		.byte	0x9f
+ 965 0039 1E000000 		.4byte	.LVL11
+ 966 003d 2C000000 		.4byte	.LFE112
+ 967 0041 0200     		.2byte	0x2
+ 968 0043 30       		.byte	0x30
+ 969 0044 9F       		.byte	0x9f
+ 970 0045 00000000 		.4byte	0
+ 971 0049 00000000 		.4byte	0
+ 972              		.section	.debug_aranges,"",%progbits
+ 973 0000 24000000 		.4byte	0x24
+ 974 0004 0200     		.2byte	0x2
+ 975 0006 00000000 		.4byte	.Ldebug_info0
+ 976 000a 04       		.byte	0x4
+ 977 000b 00       		.byte	0
+ 978 000c 0000     		.2byte	0
+ 979 000e 0000     		.2byte	0
+ 980 0010 00000000 		.4byte	.LFB111
+ 981 0014 2C000000 		.4byte	.LFE111-.LFB111
+ 982 0018 00000000 		.4byte	.LFB112
+ 983 001c 2C000000 		.4byte	.LFE112-.LFB112
+ 984 0020 00000000 		.4byte	0
+ 985 0024 00000000 		.4byte	0
+ 986              		.section	.debug_ranges,"",%progbits
+ 987              	.Ldebug_ranges0:
+ 988 0000 00000000 		.4byte	.LFB111
+ 989 0004 2C000000 		.4byte	.LFE111
+ 990 0008 00000000 		.4byte	.LFB112
+ 991 000c 2C000000 		.4byte	.LFE112
+ 992 0010 00000000 		.4byte	0
+ 993 0014 00000000 		.4byte	0
+ 994              		.section	.debug_line,"",%progbits
+ 995              	.Ldebug_line0:
+ 996 0000 59020000 		.section	.debug_str,"MS",%progbits,1
+ 996      02002A02 
+ 996      00000201 
+ 996      FB0E0D00 
+ 996      01010101 
+ 997              	.LASF68:
+ 998 0000 55415254 		.ascii	"UART_LOG_Start\000"
+ 998      5F4C4F47 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 20
+
+
+ 998      5F537461 
+ 998      727400
+ 999              	.LASF74:
+ 1000 000f 72657375 		.ascii	"result\000"
+ 1000      6C7400
+ 1001              	.LASF35:
+ 1002 0016 52435F45 		.ascii	"RC_ERROR_READ_ONLY\000"
+ 1002      52524F52 
+ 1002      5F524541 
+ 1002      445F4F4E 
+ 1002      4C5900
+ 1003              	.LASF21:
+ 1004 0029 52435F53 		.ascii	"RC_SUCCESS\000"
+ 1004      55434345 
+ 1004      535300
+ 1005              	.LASF53:
+ 1006 0034 4C4F475F 		.ascii	"LOG_OFF\000"
+ 1006      4F464600 
+ 1007              	.LASF58:
+ 1008 003c 6C6F6767 		.ascii	"logging_t\000"
+ 1008      696E675F 
+ 1008      7400
+ 1009              	.LASF48:
+ 1010 0046 4C4F475F 		.ascii	"LOG_VERBOSE\000"
+ 1010      56455242 
+ 1010      4F534500 
+ 1011              	.LASF36:
+ 1012 0052 52435F45 		.ascii	"RC_ERROR_WRITE_ONLY\000"
+ 1012      52524F52 
+ 1012      5F575249 
+ 1012      54455F4F 
+ 1012      4E4C5900 
+ 1013              	.LASF2:
+ 1014 0066 73686F72 		.ascii	"short int\000"
+ 1014      7420696E 
+ 1014      7400
+ 1015              	.LASF27:
+ 1016 0070 52435F45 		.ascii	"RC_ERROR_OVERRUN\000"
+ 1016      52524F52 
+ 1016      5F4F5645 
+ 1016      5252554E 
+ 1016      00
+ 1017              	.LASF39:
+ 1018 0081 52435F45 		.ascii	"RC_ERROR_WRITE_FAILS\000"
+ 1018      52524F52 
+ 1018      5F575249 
+ 1018      54455F46 
+ 1018      41494C53 
+ 1019              	.LASF15:
+ 1020 0096 73697A65 		.ascii	"sizetype\000"
+ 1020      74797065 
+ 1020      00
+ 1021              	.LASF65:
+ 1022 009f 45455F49 		.ascii	"EE_IRQ_nesting_level\000"
+ 1022      52515F6E 
+ 1022      65737469 
+ 1022      6E675F6C 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 21
+
+
+ 1022      6576656C 
+ 1023              	.LASF24:
+ 1024 00b4 52435F45 		.ascii	"RC_ERROR_ZERO\000"
+ 1024      52524F52 
+ 1024      5F5A4552 
+ 1024      4F00
+ 1025              	.LASF19:
+ 1026 00c2 45455F46 		.ascii	"EE_FREG\000"
+ 1026      52454700 
+ 1027              	.LASF38:
+ 1028 00ca 52435F45 		.ascii	"RC_ERROR_READ_FAILS\000"
+ 1028      52524F52 
+ 1028      5F524541 
+ 1028      445F4641 
+ 1028      494C5300 
+ 1029              	.LASF72:
+ 1030 00de 443A5C57 		.ascii	"D:\\WS25\\AMAEOS\\Lab\\Lab3\\Lab 3 Task Description"
+ 1030      5332355C 
+ 1030      414D4145 
+ 1030      4F535C4C 
+ 1030      61625C4C 
+ 1031 010c 20616E64 		.ascii	" and Starting Code-20251209\\Lab3.cydsn\\TaskComms_"
+ 1031      20537461 
+ 1031      7274696E 
+ 1031      6720436F 
+ 1031      64652D32 
+ 1032 013d 42756666 		.ascii	"Buffer.cydsn\000"
+ 1032      65722E63 
+ 1032      7964736E 
+ 1032      00
+ 1033              	.LASF17:
+ 1034 014a 45455F55 		.ascii	"EE_UINT32\000"
+ 1034      494E5433 
+ 1034      3200
+ 1035              	.LASF20:
+ 1036 0154 45455F54 		.ascii	"EE_TID\000"
+ 1036      494400
+ 1037              	.LASF71:
+ 1038 015b 736F7572 		.ascii	"source\\bsw\\services\\logging.c\000"
+ 1038      63655C62 
+ 1038      73775C73 
+ 1038      65727669 
+ 1038      6365735C 
+ 1039              	.LASF44:
+ 1040 0179 52435F45 		.ascii	"RC_ERROR_INVALID_STATE\000"
+ 1040      52524F52 
+ 1040      5F494E56 
+ 1040      414C4944 
+ 1040      5F535441 
+ 1041              	.LASF51:
+ 1042 0190 4C4F475F 		.ascii	"LOG_ERROR\000"
+ 1042      4552524F 
+ 1042      5200
+ 1043              	.LASF64:
+ 1044 019a 45455F73 		.ascii	"EE_std_endcycle_next_tid\000"
+ 1044      74645F65 
+ 1044      6E646379 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 22
+
+
+ 1044      636C655F 
+ 1044      6E657874 
+ 1045              	.LASF26:
+ 1046 01b3 52435F45 		.ascii	"RC_ERROR_RANGE\000"
+ 1046      52524F52 
+ 1046      5F52414E 
+ 1046      474500
+ 1047              	.LASF56:
+ 1048 01c2 73656E64 		.ascii	"sender\000"
+ 1048      657200
+ 1049              	.LASF11:
+ 1050 01c9 666C6F61 		.ascii	"float\000"
+ 1050      7400
+ 1051              	.LASF46:
+ 1052 01cf 52435F45 		.ascii	"RC_ERROR_NOT_IMPLEMENTED\000"
+ 1052      52524F52 
+ 1052      5F4E4F54 
+ 1052      5F494D50 
+ 1052      4C454D45 
+ 1053              	.LASF6:
+ 1054 01e8 6C6F6E67 		.ascii	"long long int\000"
+ 1054      206C6F6E 
+ 1054      6720696E 
+ 1054      7400
+ 1055              	.LASF62:
+ 1056 01f6 45455F6F 		.ascii	"EE_oo_IRQ_suspend_status\000"
+ 1056      6F5F4952 
+ 1056      515F7375 
+ 1056      7370656E 
+ 1056      645F7374 
+ 1057              	.LASF40:
+ 1058 020f 52435F45 		.ascii	"RC_ERROR_NOT_MATCH\000"
+ 1058      52524F52 
+ 1058      5F4E4F54 
+ 1058      5F4D4154 
+ 1058      434800
+ 1059              	.LASF45:
+ 1060 0222 52435F45 		.ascii	"RC_ERROR_UNKNOWN\000"
+ 1060      52524F52 
+ 1060      5F554E4B 
+ 1060      4E4F574E 
+ 1060      00
+ 1061              	.LASF4:
+ 1062 0233 6C6F6E67 		.ascii	"long int\000"
+ 1062      20696E74 
+ 1062      00
+ 1063              	.LASF28:
+ 1064 023c 52435F45 		.ascii	"RC_ERROR_UNDERRUN\000"
+ 1064      52524F52 
+ 1064      5F554E44 
+ 1064      45525255 
+ 1064      4E00
+ 1065              	.LASF31:
+ 1066 024e 52435F45 		.ascii	"RC_ERROR_BUSY\000"
+ 1066      52524F52 
+ 1066      5F425553 
+ 1066      5900
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 23
+
+
+ 1067              	.LASF37:
+ 1068 025c 52435F45 		.ascii	"RC_ERROR_INVALID\000"
+ 1068      52524F52 
+ 1068      5F494E56 
+ 1068      414C4944 
+ 1068      00
+ 1069              	.LASF42:
+ 1070 026d 52435F45 		.ascii	"RC_ERROR_BAD_DATA\000"
+ 1070      52524F52 
+ 1070      5F424144 
+ 1070      5F444154 
+ 1070      4100
+ 1071              	.LASF52:
+ 1072 027f 4C4F475F 		.ascii	"LOG_DEBUG\000"
+ 1072      44454255 
+ 1072      4700
+ 1073              	.LASF69:
+ 1074 0289 55415254 		.ascii	"UART_LOG_PutString\000"
+ 1074      5F4C4F47 
+ 1074      5F507574 
+ 1074      53747269 
+ 1074      6E6700
+ 1075              	.LASF73:
+ 1076 029c 656E7472 		.ascii	"entry\000"
+ 1076      7900
+ 1077              	.LASF14:
+ 1078 02a2 6C6F6E67 		.ascii	"long double\000"
+ 1078      20646F75 
+ 1078      626C6500 
+ 1079              	.LASF1:
+ 1080 02ae 756E7369 		.ascii	"unsigned char\000"
+ 1080      676E6564 
+ 1080      20636861 
+ 1080      7200
+ 1081              	.LASF0:
+ 1082 02bc 7369676E 		.ascii	"signed char\000"
+ 1082      65642063 
+ 1082      68617200 
+ 1083              	.LASF7:
+ 1084 02c8 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1084      206C6F6E 
+ 1084      6720756E 
+ 1084      7369676E 
+ 1084      65642069 
+ 1085              	.LASF67:
+ 1086 02df 6C6F674C 		.ascii	"logLevel2String\000"
+ 1086      6576656C 
+ 1086      32537472 
+ 1086      696E6700 
+ 1087              	.LASF8:
+ 1088 02ef 756E7369 		.ascii	"unsigned int\000"
+ 1088      676E6564 
+ 1088      20696E74 
+ 1088      00
+ 1089              	.LASF33:
+ 1090 02fc 52435F45 		.ascii	"RC_ERROR_OPEN\000"
+ 1090      52524F52 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 24
+
+
+ 1090      5F4F5045 
+ 1090      4E00
+ 1091              	.LASF5:
+ 1092 030a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1092      20756E73 
+ 1092      69676E65 
+ 1092      6420696E 
+ 1092      7400
+ 1093              	.LASF23:
+ 1094 031c 52435F45 		.ascii	"RC_ERROR_NULL\000"
+ 1094      52524F52 
+ 1094      5F4E554C 
+ 1094      4C00
+ 1095              	.LASF30:
+ 1096 032a 52435F45 		.ascii	"RC_ERROR_BUFFER_EMTPY\000"
+ 1096      52524F52 
+ 1096      5F425546 
+ 1096      4645525F 
+ 1096      454D5450 
+ 1097              	.LASF16:
+ 1098 0340 45455F49 		.ascii	"EE_INT32\000"
+ 1098      4E543332 
+ 1098      00
+ 1099              	.LASF3:
+ 1100 0349 73686F72 		.ascii	"short unsigned int\000"
+ 1100      7420756E 
+ 1100      7369676E 
+ 1100      65642069 
+ 1100      6E7400
+ 1101              	.LASF70:
+ 1102 035c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1102      43313120 
+ 1102      352E342E 
+ 1102      31203230 
+ 1102      31363036 
+ 1103 038f 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1103      20726576 
+ 1103      6973696F 
+ 1103      6E203233 
+ 1103      37373135 
+ 1104 03c2 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1104      66756E63 
+ 1104      74696F6E 
+ 1104      2D736563 
+ 1104      74696F6E 
+ 1105              	.LASF13:
+ 1106 03ea 63686172 		.ascii	"char\000"
+ 1106      00
+ 1107              	.LASF29:
+ 1108 03ef 52435F45 		.ascii	"RC_ERROR_BUFFER_FULL\000"
+ 1108      52524F52 
+ 1108      5F425546 
+ 1108      4645525F 
+ 1108      46554C4C 
+ 1109              	.LASF10:
+ 1110 0404 696E7433 		.ascii	"int32_t\000"
+ 1110      325F7400 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 25
+
+
+ 1111              	.LASF59:
+ 1112 040c 4C4F475F 		.ascii	"LOG_Init\000"
+ 1112      496E6974 
+ 1112      00
+ 1113              	.LASF54:
+ 1114 0415 6C6F6767 		.ascii	"logging_level_t\000"
+ 1114      696E675F 
+ 1114      6C657665 
+ 1114      6C5F7400 
+ 1115              	.LASF41:
+ 1116 0425 52435F45 		.ascii	"RC_ERROR_BAD_PARAM\000"
+ 1116      52524F52 
+ 1116      5F424144 
+ 1116      5F504152 
+ 1116      414D00
+ 1117              	.LASF63:
+ 1118 0438 45455F41 		.ascii	"EE_ApplicationMode\000"
+ 1118      70706C69 
+ 1118      63617469 
+ 1118      6F6E4D6F 
+ 1118      646500
+ 1119              	.LASF57:
+ 1120 044b 6D657373 		.ascii	"message\000"
+ 1120      61676500 
+ 1121              	.LASF12:
+ 1122 0453 646F7562 		.ascii	"double\000"
+ 1122      6C6500
+ 1123              	.LASF50:
+ 1124 045a 4C4F475F 		.ascii	"LOG_WARNING\000"
+ 1124      5741524E 
+ 1124      494E4700 
+ 1125              	.LASF34:
+ 1126 0466 52435F45 		.ascii	"RC_ERROR_CHECKSUM\000"
+ 1126      52524F52 
+ 1126      5F434845 
+ 1126      434B5355 
+ 1126      4D00
+ 1127              	.LASF18:
+ 1128 0478 45455F55 		.ascii	"EE_UREG\000"
+ 1128      52454700 
+ 1129              	.LASF9:
+ 1130 0480 5F5F696E 		.ascii	"__int32_t\000"
+ 1130      7433325F 
+ 1130      7400
+ 1131              	.LASF55:
+ 1132 048a 6C657665 		.ascii	"level\000"
+ 1132      6C00
+ 1133              	.LASF60:
+ 1134 0490 4C4F475F 		.ascii	"LOG_send\000"
+ 1134      73656E64 
+ 1134      00
+ 1135              	.LASF49:
+ 1136 0499 4C4F475F 		.ascii	"LOG_INFO\000"
+ 1136      494E464F 
+ 1136      00
+ 1137              	.LASF43:
+ 1138 04a2 52435F45 		.ascii	"RC_ERROR_CANCELED\000"
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 26
+
+
+ 1138      52524F52 
+ 1138      5F43414E 
+ 1138      43454C45 
+ 1138      4400
+ 1139              	.LASF66:
+ 1140 04b4 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1140      52784275 
+ 1140      66666572 
+ 1140      00
+ 1141              	.LASF22:
+ 1142 04c1 52435F45 		.ascii	"RC_ERROR\000"
+ 1142      52524F52 
+ 1142      00
+ 1143              	.LASF25:
+ 1144 04ca 52435F45 		.ascii	"RC_ERROR_MEMORY\000"
+ 1144      52524F52 
+ 1144      5F4D454D 
+ 1144      4F525900 
+ 1145              	.LASF61:
+ 1146 04da 45455F6F 		.ascii	"EE_oo_IRQ_disable_count\000"
+ 1146      6F5F4952 
+ 1146      515F6469 
+ 1146      7361626C 
+ 1146      655F636F 
+ 1147              	.LASF47:
+ 1148 04f2 52435F74 		.ascii	"RC_t\000"
+ 1148      00
+ 1149              	.LASF32:
+ 1150 04f7 52435F45 		.ascii	"RC_ERROR_TIME_OUT\000"
+ 1150      52524F52 
+ 1150      5F54494D 
+ 1150      455F4F55 
+ 1150      5400
+ 1151              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

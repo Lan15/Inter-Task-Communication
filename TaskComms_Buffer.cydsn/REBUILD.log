@@ -1,0 +1,336 @@
+--------------- Rebuild Started: 01/21/2026 19:00:12 Project: TaskComms_Buffer, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\tft.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\logging.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ringbuffer.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\main.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\comms.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cymetadata.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TFT_SPI.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TFT_SPI_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TFT_SPI_INT.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TFT_SCL.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TFT_DC.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TFT_RES.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TFT_CS.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TFT_LED.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TFT_SDA.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TFT_BackLight.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TFT_BackLight_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CLK_LED.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\UART_LOG.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\UART_LOG_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\UART_LOG_INT.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\UART_LOG_BOOT.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_activate.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alcancel.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alget.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_algetbase.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alsetabs.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alsetrel.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_altick.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_chaintas.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evclear.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evget.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evset.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evwait.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_force_schedule.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_getcountervalue.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_getelapsedvalue.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gettaskid.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gettaskstate.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_iparam.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_irqendin.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_lockres.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_lookup.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_rq_exchg.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_rq_first.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_rq_inser.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_schedule.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_semgetvalue.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_sempost.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_semtrywait.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_semwait.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_shtdown.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_startos.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_terminat.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_thendin.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_tnterm.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_tstub.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_ulockallres.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_ulockres.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_cortex_mx_ee_context.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_cortex_mx_ee_system_timer.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_cortex_mx_ee_utils.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_change_context_isr.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_irq_stack.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_multi_context.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_oo.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_common_ee_hal_structs.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ErikaOS_eecfg.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TFT_SPI_IntClock.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\UART_LOG_IntClock.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Cm3Start.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyDmac.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyFlash.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyLib.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cyPm.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CySpc.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cyutils.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\isr_uartRX.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.hex"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.elf"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.map"
+Deleting file ".\TaskComms_Buffer.cycdx"
+Deleting file ".\TaskComms_Buffer.svd"
+Deleting file ".\TaskComms_Buffer.rpt"
+Deleting file ".\TaskComms_Buffer_timing.html"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\.deps\SOURCE_C__ARM_GCC_GENERIC.P"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\.deps\SOURCE_ASM__ARM_GCC_GENERIC.P"
+cydsfit.exe -.appdatapath "C:\Users\agila\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p "D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\TaskComms_Buffer.cyprj" -d CY8C5888LTQ-LP097 -s "D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\Generated_Source\PSoC5" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+ADD: fit.M0032: warning: Clock Warning: (TFT_SPI_IntClock's accuracy range '24 MHz +/- 1%, (23.76 MHz - 24.24 MHz)' is not within the specified tolerance range '66 MHz +/- 5%, (62.7 MHz - 69.3 MHz)'.).
+ * C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\SPI_Master_v2_50\SPI_Master_v2_50.cysch (Instance:IntClock)
+ * D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\TaskComms_Buffer.cydwr (TFT_SPI_IntClock)
+HDL Generation...
+Synthesis...
+Tech Mapping...
+ADD: pft.M0040: information: The following 8 pin(s) will be assigned a location by the fitter: Rx_1(0), TFT_CS(0), TFT_DC(0), TFT_LED(0), TFT_RES(0), TFT_SCL(0), TFT_SDA(0), Tx_1(0)
+Analog Placement...
+Analog Routing...
+Analog Code Generation...
+Digital Placement...
+Digital Routing...
+Bitstream Generation...
+Bitstream Verification...
+Static timing analysis...
+API Generation...
+Dependency Generation...
+Cleanup...
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/tft.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c source\bsw\cdd\tft\tft.c -o .\CortexM3\ARM_GCC_541\Debug\tft.o
+In file included from Generated_Source\PSoC5/cyfitter_cfg.h:20:0,
+                 from Generated_Source\PSoC5/project.h:17,
+                 from .\source\bsw\services/ringbuffer.h:28,
+                 from .\source\bsw\services/logging.h:35,
+                 from source\bsw\cdd\tft\tft.c:24:
+Generated_Source\PSoC5/cytypes.h:1377:0: warning: "LO8" redefined
+ #define LO8(x)                  ((uint8) ((x) & 0xFFu))
+ ^
+In file included from source\bsw\cdd\tft\tft.h:29:0,
+                 from source\bsw\cdd\tft\tft.c:20:
+.\source\bsw/global.h:306:0: note: this is the location of the previous definition
+  # define LO8(x)   ((uint8_t) ((x) & 0xFFu))
+ ^
+In file included from Generated_Source\PSoC5/cyfitter_cfg.h:20:0,
+                 from Generated_Source\PSoC5/project.h:17,
+                 from .\source\bsw\services/ringbuffer.h:28,
+                 from .\source\bsw\services/logging.h:35,
+                 from source\bsw\cdd\tft\tft.c:24:
+Generated_Source\PSoC5/cytypes.h:1378:0: warning: "HI8" redefined
+ #define HI8(x)                  ((uint8) ((uint16)(x) >> 8))
+ ^
+In file included from source\bsw\cdd\tft\tft.h:29:0,
+                 from source\bsw\cdd\tft\tft.c:20:
+.\source\bsw/global.h:311:0: note: this is the location of the previous definition
+  # define HI8(x)   ((uint8_t) ((uint16_t)(x) >> 8))
+ ^
+In file included from Generated_Source\PSoC5/cyfitter_cfg.h:20:0,
+                 from Generated_Source\PSoC5/project.h:17,
+                 from .\source\bsw\services/ringbuffer.h:28,
+                 from .\source\bsw\services/logging.h:35,
+                 from source\bsw\cdd\tft\tft.c:24:
+Generated_Source\PSoC5/cytypes.h:1381:0: warning: "LO16" redefined
+ #define LO16(x)                 ((uint16) ((x) & 0xFFFFu))
+ ^
+In file included from source\bsw\cdd\tft\tft.h:29:0,
+                 from source\bsw\cdd\tft\tft.c:20:
+.\source\bsw/global.h:316:0: note: this is the location of the previous definition
+  # define LO16(x)   ((uint16_t) ((x) & 0xFFFFu))
+ ^
+In file included from Generated_Source\PSoC5/cyfitter_cfg.h:20:0,
+                 from Generated_Source\PSoC5/project.h:17,
+                 from .\source\bsw\services/ringbuffer.h:28,
+                 from .\source\bsw\services/logging.h:35,
+                 from source\bsw\cdd\tft\tft.c:24:
+Generated_Source\PSoC5/cytypes.h:1382:0: warning: "HI16" redefined
+ #define HI16(x)                 ((uint16) ((uint32)(x) >> 16))
+ ^
+In file included from source\bsw\cdd\tft\tft.h:29:0,
+                 from source\bsw\cdd\tft\tft.c:20:
+.\source\bsw/global.h:321:0: note: this is the location of the previous definition
+  # define HI16(x)   ((uint16_t) ((uint32_t)(x) >> 16))
+ ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/logging.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c source\bsw\services\logging.c -o .\CortexM3\ARM_GCC_541\Debug\logging.o
+source\bsw\services\logging.c: In function 'LOG_Init':
+source\bsw\services\logging.c:54:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ringbuffer.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c source\bsw\services\ringbuffer.c -o .\CortexM3\ARM_GCC_541\Debug\ringbuffer.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c source\asw\main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/comms.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c comms.c -o .\CortexM3\ARM_GCC_541\Debug\comms.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cyfitter_cfg.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cyfitter_cfg.c -o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cymetadata.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cymetadata.c -o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TFT_SPI.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\TFT_SPI.c -o .\CortexM3\ARM_GCC_541\Debug\TFT_SPI.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TFT_SPI_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\TFT_SPI_PM.c -o .\CortexM3\ARM_GCC_541\Debug\TFT_SPI_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TFT_SPI_INT.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\TFT_SPI_INT.c -o .\CortexM3\ARM_GCC_541\Debug\TFT_SPI_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TFT_SCL.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\TFT_SCL.c -o .\CortexM3\ARM_GCC_541\Debug\TFT_SCL.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TFT_DC.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\TFT_DC.c -o .\CortexM3\ARM_GCC_541\Debug\TFT_DC.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TFT_RES.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\TFT_RES.c -o .\CortexM3\ARM_GCC_541\Debug\TFT_RES.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TFT_CS.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\TFT_CS.c -o .\CortexM3\ARM_GCC_541\Debug\TFT_CS.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TFT_LED.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\TFT_LED.c -o .\CortexM3\ARM_GCC_541\Debug\TFT_LED.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TFT_SDA.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\TFT_SDA.c -o .\CortexM3\ARM_GCC_541\Debug\TFT_SDA.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TFT_BackLight.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\TFT_BackLight.c -o .\CortexM3\ARM_GCC_541\Debug\TFT_BackLight.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TFT_BackLight_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\TFT_BackLight_PM.c -o .\CortexM3\ARM_GCC_541\Debug\TFT_BackLight_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CLK_LED.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\CLK_LED.c -o .\CortexM3\ARM_GCC_541\Debug\CLK_LED.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/UART_LOG.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\UART_LOG.c -o .\CortexM3\ARM_GCC_541\Debug\UART_LOG.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/UART_LOG_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\UART_LOG_PM.c -o .\CortexM3\ARM_GCC_541\Debug\UART_LOG_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/UART_LOG_INT.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\UART_LOG_INT.c -o .\CortexM3\ARM_GCC_541\Debug\UART_LOG_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/UART_LOG_BOOT.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\UART_LOG_BOOT.c -o .\CortexM3\ARM_GCC_541\Debug\UART_LOG_BOOT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_activate.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_activate.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_activate.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_alcancel.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_alcancel.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alcancel.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_alget.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_alget.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alget.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_algetbase.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_algetbase.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_algetbase.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_alsetabs.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_alsetabs.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alsetabs.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_alsetrel.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_alsetrel.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alsetrel.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_altick.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_altick.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_altick.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_chaintas.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_chaintas.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_chaintas.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_evclear.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_evclear.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evclear.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_evget.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_evget.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evget.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_evset.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_evset.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evset.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_evwait.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_evwait.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evwait.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_force_schedule.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_force_schedule.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_force_schedule.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_getcountervalue.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_getcountervalue.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_getcountervalue.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_getelapsedvalue.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_getelapsedvalue.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_getelapsedvalue.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_gettaskid.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_gettaskid.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gettaskid.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_gettaskstate.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_gettaskstate.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gettaskstate.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_iparam.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_iparam.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_iparam.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_irqendin.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_irqendin.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_irqendin.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_lockres.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_lockres.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_lockres.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_lookup.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_lookup.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_lookup.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_rq_exchg.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_rq_exchg.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_rq_exchg.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_rq_first.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_rq_first.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_rq_first.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_rq_inser.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_rq_inser.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_rq_inser.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_schedule.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_schedule.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_schedule.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_semgetvalue.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_semgetvalue.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_semgetvalue.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_sempost.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_sempost.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_sempost.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_semtrywait.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_semtrywait.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_semtrywait.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_semwait.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_semwait.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_semwait.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_shtdown.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_shtdown.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_shtdown.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_startos.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_startos.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_startos.o
+In file included from Generated_Source\PSoC5\ErikaOS_ee_startos.c:332:0:
+Generated_Source\PSoC5\ErikaOS_ee_startos.c: In function 'EE_oo_StartOS':
+Generated_Source\PSoC5\CyLib.h:59:15: warning: unused variable 'cydelay_32k_ms' [-Wunused-variable]
+ extern uint32 cydelay_32k_ms;
+               ^
+Generated_Source\PSoC5\CyLib.h:58:15: warning: unused variable 'cydelay_freq_mhz' [-Wunused-variable]
+ extern uint8  cydelay_freq_mhz;
+               ^
+Generated_Source\PSoC5\CyLib.h:57:15: warning: unused variable 'cydelay_freq_khz' [-Wunused-variable]
+ extern uint32 cydelay_freq_khz;
+               ^
+Generated_Source\PSoC5\CyLib.h:56:15: warning: unused variable 'cydelay_freq_hz' [-Wunused-variable]
+ extern uint32 cydelay_freq_hz;
+               ^
+Generated_Source\PSoC5\CyLib.h:44:22: warning: unused variable 'CyResetStatus' [-Wunused-variable]
+ extern uint8 CYXDATA CyResetStatus;
+                      ^
+In file included from Generated_Source\PSoC5\cyPm.h:25:0,
+                 from Generated_Source\PSoC5\CyLib.h:29,
+                 from Generated_Source\PSoC5\ErikaOS_ee_startos.c:332:
+Generated_Source\PSoC5\CyFlash.h:28:14: warning: unused variable 'dieTemperature' [-Wunused-variable]
+ extern uint8 dieTemperature[CY_FLASH_DIE_TEMP_DATA_SIZE];
+              ^
+In file included from Generated_Source\PSoC5\CyFlash.h:24:0,
+                 from Generated_Source\PSoC5\cyPm.h:25,
+                 from Generated_Source\PSoC5\CyLib.h:29,
+                 from Generated_Source\PSoC5\ErikaOS_ee_startos.c:332:
+Generated_Source\PSoC5\CySpc.h:28:14: warning: unused variable 'SpcLockState' [-Wunused-variable]
+ extern uint8 SpcLockState;
+              ^
+In file included from Generated_Source\PSoC5\CyLib.h:26:0,
+                 from Generated_Source\PSoC5\ErikaOS_ee_startos.c:332:
+Generated_Source\PSoC5\cytypes.h:492:25: warning: typedef 'int8' locally defined but not used [-Wunused-local-typedefs]
+ typedef signed   char   int8;
+                         ^
+Generated_Source\PSoC5\cytypes.h:493:25: warning: typedef 'int16' locally defined but not used [-Wunused-local-typedefs]
+ typedef signed   short  int16;
+                         ^
+Generated_Source\PSoC5\cytypes.h:494:25: warning: typedef 'int32' locally defined but not used [-Wunused-local-typedefs]
+ typedef signed   long   int32;
+                         ^
+Generated_Source\PSoC5\cytypes.h:495:25: warning: typedef 'float32' locally defined but not used [-Wunused-local-typedefs]
+ typedef          float  float32;
+                         ^
+Generated_Source\PSoC5\cytypes.h:499:34: warning: typedef 'float64' locally defined but not used [-Wunused-local-typedefs]
+     typedef               double float64;
+                                  ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_terminat.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_terminat.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_terminat.o
+Generated_Source\PSoC5\cytypes.h:500:34: warning: typedef 'int64' locally defined but not used [-Wunused-local-typedefs]
+     typedef          long long   int64;
+                                  ^
+Generated_Source\PSoC5\cytypes.h:501:34: warning: typedef 'uint64' locally defined but not used [-Wunused-local-typedefs]
+     typedef unsigned long long   uint64;
+                                  ^
+Generated_Source\PSoC5\cytypes.h:506:25: warning: typedef 'char8' locally defined but not used [-Wunused-local-typedefs]
+ typedef          char   char8;
+                         ^
+Generated_Source\PSoC5\cytypes.h:659:33: warning: typedef 'reg8' locally defined but not used [-Wunused-local-typedefs]
+ typedef volatile uint8  CYXDATA reg8;
+                                 ^
+Generated_Source\PSoC5\cytypes.h:660:33: warning: typedef 'reg16' locally defined but not used [-Wunused-local-typedefs]
+ typedef volatile uint16 CYXDATA reg16;
+                                 ^
+Generated_Source\PSoC5\cytypes.h:661:33: warning: typedef 'reg32' locally defined but not used [-Wunused-local-typedefs]
+ typedef volatile uint32 CYXDATA reg32;
+                                 ^
+In file included from Generated_Source\PSoC5\CyLib.h:29:0,
+                 from Generated_Source\PSoC5\ErikaOS_ee_startos.c:332:
+Generated_Source\PSoC5\cyPm.h:267:3: warning: typedef 'CY_PM_CLOCK_BACKUP_STRUCT' locally defined but not used [-Wunused-local-typedefs]
+ } CY_PM_CLOCK_BACKUP_STRUCT;
+   ^
+Generated_Source\PSoC5\cyPm.h:315:3: warning: typedef 'CY_PM_BACKUP_STRUCT' locally defined but not used [-Wunused-local-typedefs]
+ } CY_PM_BACKUP_STRUCT;
+   ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_thendin.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_thendin.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_thendin.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_tnterm.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_tnterm.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_tnterm.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_tstub.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_tstub.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_tstub.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_ulockallres.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_ulockallres.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_ulockallres.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_ulockres.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_ee_ulockres.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_ulockres.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_cortex_mx_ee_context.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_cortex_mx_ee_context.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_cortex_mx_ee_context.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_cortex_mx_ee_system_timer.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_cortex_mx_ee_system_timer.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_cortex_mx_ee_system_timer.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_cortex_mx_ee_utils.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_cortex_mx_ee_utils.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_cortex_mx_ee_utils.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_common_ee_hal_structs.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_common_ee_hal_structs.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_common_ee_hal_structs.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_eecfg.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\ErikaOS_eecfg.c -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_eecfg.o
+Generated_Source\PSoC5\ErikaOS_eecfg.c:1943:62: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+         { (EE_OO_AUTOSTART_TASK_MODE_OSDEFAULTAPPMODE_SIZE), EE_oo_autostart_task_mode_OSDEFAULTAPPMODE}
+                                                              ^
+Generated_Source\PSoC5\ErikaOS_eecfg.c:1943:62: note: (near initialization for 'EE_oo_autostart_task_data[0].task')
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TFT_SPI_IntClock.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\TFT_SPI_IntClock.c -o .\CortexM3\ARM_GCC_541\Debug\TFT_SPI_IntClock.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/UART_LOG_IntClock.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\UART_LOG_IntClock.c -o .\CortexM3\ARM_GCC_541\Debug\UART_LOG_IntClock.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Cm3Start.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\Cm3Start.c -o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CyDmac.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\CyDmac.c -o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CyFlash.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\CyFlash.c -o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CyLib.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\CyLib.c -o .\CortexM3\ARM_GCC_541\Debug\CyLib.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cyPm.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cyPm.c -o .\CortexM3\ARM_GCC_541\Debug\cyPm.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CySpc.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\CySpc.c -o .\CortexM3\ARM_GCC_541\Debug\CySpc.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cyutils.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cyutils.c -o .\CortexM3\ARM_GCC_541\Debug\cyutils.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cy_em_eeprom.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cy_em_eeprom.c -o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I.\source -I.\source\asw -I.\source\bsw -I.\source\bsw\cdd -I.\source\bsw\cdd\tft -I.\source\bsw\cdd\tft\fonts -I.\source\bsw\services -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/isr_uartRX.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\isr_uartRX.c -o .\CortexM3\ARM_GCC_541\Debug\isr_uartRX.o
+arm-none-eabi-as.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_gnu_change_context_isr.lst -g -W -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_change_context_isr.o Generated_Source\PSoC5\ErikaOS_ee_gnu_change_context_isr.s
+arm-none-eabi-as.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_gnu_irq_stack.lst -g -W -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_irq_stack.o Generated_Source\PSoC5\ErikaOS_ee_gnu_irq_stack.s
+arm-none-eabi-as.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_gnu_multi_context.lst -g -W -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_multi_context.o Generated_Source\PSoC5\ErikaOS_ee_gnu_multi_context.s
+arm-none-eabi-as.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -alh=.\CortexM3\ARM_GCC_541\Debug/ErikaOS_ee_gnu_oo.lst -g -W -o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_oo.o Generated_Source\PSoC5\ErikaOS_ee_gnu_oo.s
+arm-none-eabi-as.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -alh=.\CortexM3\ARM_GCC_541\Debug/CyBootAsmGnu.lst -g -W -o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o Generated_Source\PSoC5\CyBootAsmGnu.s
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a .\CortexM3\ARM_GCC_541\Debug\TFT_SPI.o .\CortexM3\ARM_GCC_541\Debug\TFT_SPI_PM.o .\CortexM3\ARM_GCC_541\Debug\TFT_SPI_INT.o .\CortexM3\ARM_GCC_541\Debug\TFT_SCL.o .\CortexM3\ARM_GCC_541\Debug\TFT_DC.o .\CortexM3\ARM_GCC_541\Debug\TFT_RES.o .\CortexM3\ARM_GCC_541\Debug\TFT_CS.o .\CortexM3\ARM_GCC_541\Debug\TFT_LED.o .\CortexM3\ARM_GCC_541\Debug\TFT_SDA.o .\CortexM3\ARM_GCC_541\Debug\TFT_BackLight.o .\CortexM3\ARM_GCC_541\Debug\TFT_BackLight_PM.o .\CortexM3\ARM_GCC_541\Debug\CLK_LED.o .\CortexM3\ARM_GCC_541\Debug\UART_LOG.o .\CortexM3\ARM_GCC_541\Debug\UART_LOG_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_LOG_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_LOG_BOOT.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_activate.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alcancel.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alget.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_algetbase.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alsetabs.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_alsetrel.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_altick.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_chaintas.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evclear.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evget.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evset.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_evwait.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_force_schedule.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_getcountervalue.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_getelapsedvalue.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gettaskid.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gettaskstate.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_iparam.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_irqendin.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_lockres.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_lookup.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_rq_exchg.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_rq_first.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_rq_inser.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_schedule.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_semgetvalue.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_sempost.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_semtrywait.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_semwait.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_shtdown.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_startos.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_terminat.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_thendin.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_tnterm.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_tstub.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_ulockallres.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_ulockres.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_cortex_mx_ee_context.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_cortex_mx_ee_system_timer.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_cortex_mx_ee_utils.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_common_ee_hal_structs.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_eecfg.o .\CortexM3\ARM_GCC_541\Debug\TFT_SPI_IntClock.o .\CortexM3\ARM_GCC_541\Debug\UART_LOG_IntClock.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\isr_uartRX.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_change_context_isr.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_irq_stack.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_multi_context.o .\CortexM3\ARM_GCC_541\Debug\ErikaOS_ee_gnu_oo.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o "D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.elf" .\CortexM3\ARM_GCC_541\Debug\tft.o .\CortexM3\ARM_GCC_541\Debug\logging.o .\CortexM3\ARM_GCC_541\Debug\ringbuffer.o .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\comms.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.a "C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/TaskComms_Buffer.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C "D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.elf" --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
+No ELF section .cychecksum found, creating one
+Application checksum calculated and stored in ELF section .cychecksum
+Checksum calculated and stored in ELF section .cymeta
+cyelftool.exe -S "D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\CortexM3\ARM_GCC_541\Debug\TaskComms_Buffer.elf"
+Flash used: 11694 of 262144 bytes (4.5%).
+SRAM used: 11145 of 65536 bytes (17.0%). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Rebuild Succeeded: 01/21/2026 19:00:25 ---------------

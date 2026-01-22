@@ -1,0 +1,1679 @@
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"ErikaOS_ee_gettaskstate.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.EE_oo_GetTaskState,"ax",%progbits
+  20              		.align	2
+  21              		.global	EE_oo_GetTaskState
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	EE_oo_GetTaskState, %function
+  25              	EE_oo_GetTaskState:
+  26              	.LFB71:
+  27              		.file 1 "Generated_Source\\PSoC5\\ErikaOS_ee_gettaskstate.c"
+   1:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** /* ###*B*###
+   2:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * ERIKA Enterprise - a tiny RTOS for small microcontrollers
+   3:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  *
+   4:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * Copyright (C) 2002-2008  Evidence Srl
+   5:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  *
+   6:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * This file is part of ERIKA Enterprise.
+   7:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  *
+   8:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * ERIKA Enterprise is free software; you can redistribute it
+   9:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * and/or modify it under the terms of the GNU General Public License
+  10:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * version 2 as published by the Free Software Foundation, 
+  11:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * (with a special exception described below).
+  12:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  *
+  13:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * Linking this code statically or dynamically with other modules is
+  14:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * making a combined work based on this code.  Thus, the terms and
+  15:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * conditions of the GNU General Public License cover the whole
+  16:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * combination.
+  17:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  *
+  18:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * As a special exception, the copyright holders of this library give you
+  19:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * permission to link this code with independent modules to produce an
+  20:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * executable, regardless of the license terms of these independent
+  21:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * modules, and to copy and distribute the resulting executable under
+  22:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * terms of your choice, provided that you also meet, for each linked
+  23:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * independent module, the terms and conditions of the license of that
+  24:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * module.  An independent module is a module which is not derived from
+  25:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * or based on this library.  If you modify this code, you may extend
+  26:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * this exception to your version of the code, but you are not
+  27:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * obligated to do so.  If you do not wish to do so, delete this
+  28:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * exception statement from your version.
+  29:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  *
+  30:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * ERIKA Enterprise is distributed in the hope that it will be
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 2
+
+
+  31:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+  32:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  33:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * GNU General Public License version 2 for more details.
+  34:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  *
+  35:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * You should have received a copy of the GNU General Public License
+  36:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * version 2 along with ERIKA Enterprise; if not, write to the
+  37:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+  38:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * Boston, MA 02110-1301 USA.
+  39:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * ###*E*### */
+  40:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+  41:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** /*
+  42:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * Author: 2004 Paolo Gai
+  43:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * CVS: $Id: ee_gettaskstate.c,v 1.1 2005/07/16 12:23:42 pj Exp $
+  44:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  */
+  45:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+  46:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** /*
+  47:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * PSoC Port and API Generation
+  48:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * Carlos Fernando Meier Martinez
+  49:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * Hochschule Darmstadt, Germany. 2017.
+  50:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  */
+  51:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+  52:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** #include "ErikaOS_ee_internal.inc"
+  53:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+  54:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** /***************************************************************************
+  55:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  * 13.2 Task management 
+  56:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****  ***************************************************************************/
+  57:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+  58:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** /* 13.2.3.6: BCC1, BCC2, ECC1, ECC2 */
+  59:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** #ifndef __PRIVATE_GETTASKSTATE__
+  60:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+  61:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** StatusType EE_oo_GetTaskState(TaskType TaskID, TaskStateRefType State)
+  62:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** {
+  28              		.loc 1 62 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              	.LVL0:
+  63:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   register StatusType ev;
+  64:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+  65:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   EE_ORTI_set_service_in(EE_SERVICETRACE_GETTASKSTATE);
+  66:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+  67:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** #ifdef EE_SERVICE_PROTECTION__
+  68:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   /* [OS093]: If interrupts are disabled/suspended by a Task/OsIsr and the
+  69:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       Task/OsIsr calls any OS service (excluding the interrupt services)
+  70:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       then the Operating System shall ignore the service AND shall return
+  71:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       E_OS_DISABLEDINT if the service returns a StatusType value. */
+  72:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   /* [OS088]: If an OS-Application makes a service call from the wrong context
+  73:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       AND is currently not inside a Category 1 ISR the Operating System module
+  74:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       shall not perform the requested action (the service call shall have no
+  75:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       effect), and return E_OS_CALLEVEL (see [12], section 13.1) or the
+  76:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       "invalid value" of  the service. (BSW11009, BSW11013) */
+  77:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   /* GetTaskID is callable by Task, ISR2, ErrorHook, ProtectionHook, Pre and
+  78:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****      Post TaskHook */
+  79:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   if ( (EE_as_execution_context > ErrorHook_Context) &&
+  80:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****        (EE_as_execution_context != PreTaskHook_Context) &&
+  81:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****        (EE_as_execution_context != PostTaskHook_Context) )
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 3
+
+
+  82:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   {
+  83:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     ev = E_OS_CALLEVEL;
+  84:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   } else if ( EE_oo_check_disableint_error() ) {
+  85:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     ev = E_OS_DISABLEDINT;
+  86:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   } else
+  87:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** #endif /* EE_SERVICE_PROTECTION__ */
+  88:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+  89:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   /* [OS566]: The Operating System API shall check in extended mode all pointer
+  90:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****      argument for NULL pointer and return OS_E_PARAMETER_POINTER
+  91:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****      if such argument is NULL. 
+  92:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****      + 
+  93:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****      MISRA dictate NULL check for pointers always. */
+  94:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   if ( State == NULL ) {
+  34              		.loc 1 94 0
+  35 0000 39B1     		cbz	r1, .L3
+  95:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     ev = E_OS_PARAM_POINTER;
+  96:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   } else
+  97:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** #if (defined(EE_AS_OSAPPLICATIONS__)) && (defined(EE_SERVICE_PROTECTION__)) \
+  98:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   && (defined(__EE_MEMORY_PROTECTION__))
+  99:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   /* [SWS_Os_00051]: If an invalid address (address is not writable by this
+ 100:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       OS-Application) is passed as an out-parameter to an Operating System
+ 101:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       service, the Operating System module shall return the status code
+ 102:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       E_OS_ILLEGAL_ADDRESS. (SRS_Os_11009, SRS_Os_11013) */
+ 103:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   if ( !OSMEMORY_IS_WRITEABLE( EE_hal_get_app_mem_access(EE_as_active_app,
+ 104:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     State, sizeof(*State))) )
+ 105:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   {
+ 106:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     ev = E_OS_ILLEGAL_ADDRESS;
+ 107:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   } else
+ 108:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** #endif /* EE_AS_OSAPPLICATIONS__ && EE_SERVICE_PROTECTION__ &&
+ 109:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   __EE_MEMORY_PROTECTION__ */
+ 110:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+ 111:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** #ifdef EE_AS_RPC__
+ 112:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   if ( EE_IS_TID_REMOTE(TaskID) )
+ 113:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   {
+ 114:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     /* Tmp Tid (introduced to meet MISRA requirements) */
+ 115:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     EE_TID tmp_tid;
+ 116:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     EE_os_param as_state;
+ 117:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     EE_os_param unmarked_tid;
+ 118:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 	/* Two steps macro assignment to meet MISRA 10.3 required rule */
+ 119:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     tmp_tid = EE_UNMARK_REMOTE_TID(TaskID);
+ 120:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     unmarked_tid.value_param = (EE_UREG)tmp_tid;
+ 121:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     as_state.task_state_ref = State;
+ 122:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+ 123:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     /* forward the request to another CPU in synchronous way */
+ 124:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     ev = EE_as_rpc_from_us(OSServiceId_GetTaskState, unmarked_tid, as_state,
+ 125:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       EE_OS_INVALID_PARAM);
+ 126:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   } else {
+ 127:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** #endif /* EE_AS_RPC__ */
+ 128:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+ 129:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** #if (defined(EE_AS_OSAPPLICATIONS__)) && (defined(EE_SERVICE_PROTECTION__))
+ 130:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     /* check if the task Id is valid */
+ 131:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     if ( (TaskID < 0) || (TaskID >= EE_MAX_TASK) ) {
+ 132:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       ev = E_OS_ID;
+ 133:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     } else if ( EE_TASK_ACCESS_ERR(TaskID, EE_as_active_app) ) {
+ 134:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       ev = E_OS_ACCESS;
+ 135:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     } else
+ 136:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** #elif defined(__OO_EXTENDED_STATUS__)
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 4
+
+
+ 137:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     /* check if the task Id is valid */
+ 138:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     if ( (TaskID < 0) || (TaskID >= EE_MAX_TASK) ) {
+  36              		.loc 1 138 0
+  37 0002 0428     		cmp	r0, #4
+  38 0004 07D8     		bhi	.L4
+ 139:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       ev = E_OS_ID;
+ 140:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     } else
+ 141:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** #endif /* EE_AS_OSAPPLICATIONS__ || E_SERVICE_PROTECTION__ ||
+ 142:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** __OO_EXTENDED_STATUS__ */
+ 143:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     {
+ 144:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     /* XXX: This SHALL be atomic. Check this architectures other than TriCore */
+ 145:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       *State = EE_th_status[TaskID];
+  39              		.loc 1 145 0
+  40 0006 054A     		ldr	r2, .L5
+  41 0008 52F82020 		ldr	r2, [r2, r0, lsl #2]
+  42 000c 0A60     		str	r2, [r1]
+  43              	.LVL1:
+ 146:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       ev = E_OK;
+  44              		.loc 1 146 0
+  45 000e 0020     		movs	r0, #0
+  46              	.LVL2:
+  47 0010 7047     		bx	lr
+  48              	.LVL3:
+  49              	.L3:
+  95:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     ev = E_OS_PARAM_POINTER;
+  50              		.loc 1 95 0
+  51 0012 0E20     		movs	r0, #14
+  52              	.LVL4:
+  53 0014 7047     		bx	lr
+  54              	.LVL5:
+  55              	.L4:
+ 139:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****       ev = E_OS_ID;
+  56              		.loc 1 139 0
+  57 0016 0320     		movs	r0, #3
+  58              	.LVL6:
+ 147:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     }
+ 148:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** #ifdef EE_AS_RPC__
+ 149:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   }
+ 150:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** #endif /*  EE_AS_RPC__ */
+ 151:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+ 152:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   if ( ev != E_OK ) {
+ 153:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     EE_OS_ERROR_PARAMETERS();
+ 154:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     EE_OS_ERROR_PARAMETERS_PARAM1_REF(task_state_ref,State);
+ 155:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+ 156:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     EE_os_notify_error_from_us(OSServiceId_GetTaskState, &error_parameters, ev);
+ 157:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     EE_ORTI_set_service_out(EE_SERVICETRACE_GETTASKSTATE);
+ 158:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   } else {
+ 159:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****     EE_ORTI_set_service_out(EE_SERVICETRACE_GETTASKSTATE);
+ 160:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   }
+ 161:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** 
+ 162:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c ****   return ev;
+ 163:Generated_Source\PSoC5/ErikaOS_ee_gettaskstate.c **** }
+  59              		.loc 1 163 0
+  60 0018 7047     		bx	lr
+  61              	.L6:
+  62 001a 00BF     		.align	2
+  63              	.L5:
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 5
+
+
+  64 001c 00000000 		.word	EE_th_status
+  65              		.cfi_endproc
+  66              	.LFE71:
+  67              		.size	EE_oo_GetTaskState, .-EE_oo_GetTaskState
+  68              		.text
+  69              	.Letext0:
+  70              		.file 2 "Generated_Source\\PSoC5\\ErikaOS_common_ee_types.inc"
+  71              		.file 3 "Generated_Source\\PSoC5\\ErikaOS_cortex_mx_ee_cpu.inc"
+  72              		.file 4 "Generated_Source\\PSoC5\\ErikaOS_ee_oo_common.inc"
+  73              		.file 5 "Generated_Source\\PSoC5\\ErikaOS_ee_oo_internal.inc"
+  74              		.file 6 "Generated_Source\\PSoC5\\ErikaOS_common_ee_primitives.inc"
+  75              		.file 7 "Generated_Source\\PSoC5\\ErikaOS_cortex_mx_ee_context.inc"
+  76              		.file 8 "Generated_Source\\PSoC5\\ErikaOS_ee_oo_intfunc.inc"
+  77              		.section	.debug_info,"",%progbits
+  78              	.Ldebug_info0:
+  79 0000 AC040000 		.4byte	0x4ac
+  80 0004 0400     		.2byte	0x4
+  81 0006 00000000 		.4byte	.Ldebug_abbrev0
+  82 000a 04       		.byte	0x4
+  83 000b 01       		.uleb128 0x1
+  84 000c B7040000 		.4byte	.LASF74
+  85 0010 0C       		.byte	0xc
+  86 0011 5C030000 		.4byte	.LASF75
+  87 0015 C1000000 		.4byte	.LASF76
+  88 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  89 001d 00000000 		.4byte	0
+  90 0021 00000000 		.4byte	.Ldebug_line0
+  91 0025 02       		.uleb128 0x2
+  92 0026 01       		.byte	0x1
+  93 0027 06       		.byte	0x6
+  94 0028 50030000 		.4byte	.LASF0
+  95 002c 02       		.uleb128 0x2
+  96 002d 01       		.byte	0x1
+  97 002e 08       		.byte	0x8
+  98 002f 11030000 		.4byte	.LASF1
+  99 0033 02       		.uleb128 0x2
+ 100 0034 02       		.byte	0x2
+ 101 0035 05       		.byte	0x5
+ 102 0036 83000000 		.4byte	.LASF2
+ 103 003a 02       		.uleb128 0x2
+ 104 003b 02       		.byte	0x2
+ 105 003c 07       		.byte	0x7
+ 106 003d B6030000 		.4byte	.LASF3
+ 107 0041 02       		.uleb128 0x2
+ 108 0042 04       		.byte	0x4
+ 109 0043 05       		.byte	0x5
+ 110 0044 67020000 		.4byte	.LASF4
+ 111 0048 02       		.uleb128 0x2
+ 112 0049 04       		.byte	0x4
+ 113 004a 07       		.byte	0x7
+ 114 004b 19040000 		.4byte	.LASF5
+ 115 004f 02       		.uleb128 0x2
+ 116 0050 08       		.byte	0x8
+ 117 0051 05       		.byte	0x5
+ 118 0052 00020000 		.4byte	.LASF6
+ 119 0056 02       		.uleb128 0x2
+ 120 0057 08       		.byte	0x8
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 6
+
+
+ 121 0058 07       		.byte	0x7
+ 122 0059 0E020000 		.4byte	.LASF7
+ 123 005d 03       		.uleb128 0x3
+ 124 005e 04       		.byte	0x4
+ 125 005f 05       		.byte	0x5
+ 126 0060 696E7400 		.ascii	"int\000"
+ 127 0064 02       		.uleb128 0x2
+ 128 0065 04       		.byte	0x4
+ 129 0066 07       		.byte	0x7
+ 130 0067 8D030000 		.4byte	.LASF8
+ 131 006b 02       		.uleb128 0x2
+ 132 006c 08       		.byte	0x8
+ 133 006d 04       		.byte	0x4
+ 134 006e ED020000 		.4byte	.LASF9
+ 135 0072 04       		.uleb128 0x4
+ 136 0073 1E000000 		.4byte	.LASF10
+ 137 0077 02       		.byte	0x2
+ 138 0078 3E       		.byte	0x3e
+ 139 0079 2C000000 		.4byte	0x2c
+ 140 007d 04       		.uleb128 0x4
+ 141 007e 5F020000 		.4byte	.LASF11
+ 142 0082 02       		.byte	0x2
+ 143 0083 3F       		.byte	0x3f
+ 144 0084 25000000 		.4byte	0x25
+ 145 0088 04       		.uleb128 0x4
+ 146 0089 E7030000 		.4byte	.LASF12
+ 147 008d 02       		.byte	0x2
+ 148 008e 52       		.byte	0x52
+ 149 008f 3A000000 		.4byte	0x3a
+ 150 0093 04       		.uleb128 0x4
+ 151 0094 AD030000 		.4byte	.LASF13
+ 152 0098 02       		.byte	0x2
+ 153 0099 53       		.byte	0x53
+ 154 009a 5D000000 		.4byte	0x5d
+ 155 009e 04       		.uleb128 0x4
+ 156 009f 43010000 		.4byte	.LASF14
+ 157 00a3 02       		.byte	0x2
+ 158 00a4 54       		.byte	0x54
+ 159 00a5 64000000 		.4byte	0x64
+ 160 00a9 04       		.uleb128 0x4
+ 161 00aa 35000000 		.4byte	.LASF15
+ 162 00ae 03       		.byte	0x3
+ 163 00af 4D       		.byte	0x4d
+ 164 00b0 9E000000 		.4byte	0x9e
+ 165 00b4 04       		.uleb128 0x4
+ 166 00b5 B9000000 		.4byte	.LASF16
+ 167 00b9 03       		.byte	0x3
+ 168 00ba 4F       		.byte	0x4f
+ 169 00bb 9E000000 		.4byte	0x9e
+ 170 00bf 04       		.uleb128 0x4
+ 171 00c0 2B040000 		.4byte	.LASF17
+ 172 00c4 03       		.byte	0x3
+ 173 00c5 54       		.byte	0x54
+ 174 00c6 A9000000 		.4byte	0xa9
+ 175 00ca 04       		.uleb128 0x4
+ 176 00cb 5E010000 		.4byte	.LASF18
+ 177 00cf 03       		.byte	0x3
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 7
+
+
+ 178 00d0 78       		.byte	0x78
+ 179 00d1 93000000 		.4byte	0x93
+ 180 00d5 05       		.uleb128 0x5
+ 181 00d6 3E020000 		.4byte	.LASF19
+ 182 00da 04       		.byte	0x4
+ 183 00db 1101     		.2byte	0x111
+ 184 00dd 88000000 		.4byte	0x88
+ 185 00e1 05       		.uleb128 0x5
+ 186 00e2 08030000 		.4byte	.LASF20
+ 187 00e6 04       		.byte	0x4
+ 188 00e7 F701     		.2byte	0x1f7
+ 189 00e9 CA000000 		.4byte	0xca
+ 190 00ed 05       		.uleb128 0x5
+ 191 00ee 57040000 		.4byte	.LASF21
+ 192 00f2 04       		.byte	0x4
+ 193 00f3 0002     		.2byte	0x200
+ 194 00f5 F9000000 		.4byte	0xf9
+ 195 00f9 06       		.uleb128 0x6
+ 196 00fa 04       		.byte	0x4
+ 197 00fb A9000000 		.4byte	0xa9
+ 198 00ff 05       		.uleb128 0x5
+ 199 0100 C3020000 		.4byte	.LASF22
+ 200 0104 04       		.byte	0x4
+ 201 0105 3502     		.2byte	0x235
+ 202 0107 A9000000 		.4byte	0xa9
+ 203 010b 05       		.uleb128 0x5
+ 204 010c DB020000 		.4byte	.LASF23
+ 205 0110 04       		.byte	0x4
+ 206 0111 5D02     		.2byte	0x25d
+ 207 0113 A9000000 		.4byte	0xa9
+ 208 0117 05       		.uleb128 0x5
+ 209 0118 7F040000 		.4byte	.LASF24
+ 210 011c 04       		.byte	0x4
+ 211 011d 6C02     		.2byte	0x26c
+ 212 011f A9000000 		.4byte	0xa9
+ 213 0123 07       		.uleb128 0x7
+ 214 0124 0C       		.byte	0xc
+ 215 0125 04       		.byte	0x4
+ 216 0126 7202     		.2byte	0x272
+ 217 0128 54010000 		.4byte	0x154
+ 218 012c 08       		.uleb128 0x8
+ 219 012d 70020000 		.4byte	.LASF25
+ 220 0131 04       		.byte	0x4
+ 221 0132 7302     		.2byte	0x273
+ 222 0134 FF000000 		.4byte	0xff
+ 223 0138 00       		.byte	0
+ 224 0139 08       		.uleb128 0x8
+ 225 013a 43000000 		.4byte	.LASF26
+ 226 013e 04       		.byte	0x4
+ 227 013f 7402     		.2byte	0x274
+ 228 0141 FF000000 		.4byte	0xff
+ 229 0145 04       		.byte	0x4
+ 230 0146 08       		.uleb128 0x8
+ 231 0147 65010000 		.4byte	.LASF27
+ 232 014b 04       		.byte	0x4
+ 233 014c 7502     		.2byte	0x275
+ 234 014e FF000000 		.4byte	0xff
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 8
+
+
+ 235 0152 08       		.byte	0x8
+ 236 0153 00       		.byte	0
+ 237 0154 05       		.uleb128 0x5
+ 238 0155 9E020000 		.4byte	.LASF28
+ 239 0159 04       		.byte	0x4
+ 240 015a 7A02     		.2byte	0x27a
+ 241 015c 23010000 		.4byte	0x123
+ 242 0160 07       		.uleb128 0x7
+ 243 0161 08       		.byte	0x8
+ 244 0162 04       		.byte	0x4
+ 245 0163 7D02     		.2byte	0x27d
+ 246 0165 84010000 		.4byte	0x184
+ 247 0169 08       		.uleb128 0x8
+ 248 016a 6E010000 		.4byte	.LASF29
+ 249 016e 04       		.byte	0x4
+ 250 016f 7E02     		.2byte	0x27e
+ 251 0171 FF000000 		.4byte	0xff
+ 252 0175 00       		.byte	0
+ 253 0176 08       		.uleb128 0x8
+ 254 0177 78050000 		.4byte	.LASF30
+ 255 017b 04       		.byte	0x4
+ 256 017c 7F02     		.2byte	0x27f
+ 257 017e 0B010000 		.4byte	0x10b
+ 258 0182 04       		.byte	0x4
+ 259 0183 00       		.byte	0
+ 260 0184 05       		.uleb128 0x5
+ 261 0185 E9010000 		.4byte	.LASF31
+ 262 0189 04       		.byte	0x4
+ 263 018a 8002     		.2byte	0x280
+ 264 018c 60010000 		.4byte	0x160
+ 265 0190 09       		.uleb128 0x9
+ 266 0191 01       		.byte	0x1
+ 267 0192 2C000000 		.4byte	0x2c
+ 268 0196 04       		.byte	0x4
+ 269 0197 8A02     		.2byte	0x28a
+ 270 0199 AA010000 		.4byte	0x1aa
+ 271 019d 0A       		.uleb128 0xa
+ 272 019e 68040000 		.4byte	.LASF32
+ 273 01a2 00       		.byte	0
+ 274 01a3 0A       		.uleb128 0xa
+ 275 01a4 4E020000 		.4byte	.LASF33
+ 276 01a8 01       		.byte	0x1
+ 277 01a9 00       		.byte	0
+ 278 01aa 05       		.uleb128 0x5
+ 279 01ab 9E010000 		.4byte	.LASF34
+ 280 01af 04       		.byte	0x4
+ 281 01b0 8D02     		.2byte	0x28d
+ 282 01b2 90010000 		.4byte	0x190
+ 283 01b6 05       		.uleb128 0x5
+ 284 01b7 2D010000 		.4byte	.LASF35
+ 285 01bb 04       		.byte	0x4
+ 286 01bc 9002     		.2byte	0x290
+ 287 01be AA010000 		.4byte	0x1aa
+ 288 01c2 07       		.uleb128 0x7
+ 289 01c3 0C       		.byte	0xc
+ 290 01c4 04       		.byte	0x4
+ 291 01c5 9402     		.2byte	0x294
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 9
+
+
+ 292 01c7 F1010000 		.4byte	0x1f1
+ 293 01cb 0B       		.uleb128 0xb
+ 294 01cc 6300     		.ascii	"c\000"
+ 295 01ce 04       		.byte	0x4
+ 296 01cf 9602     		.2byte	0x296
+ 297 01d1 17010000 		.4byte	0x117
+ 298 01d5 00       		.byte	0
+ 299 01d6 08       		.uleb128 0x8
+ 300 01d7 B1000000 		.4byte	.LASF36
+ 301 01db 04       		.byte	0x4
+ 302 01dc 9802     		.2byte	0x298
+ 303 01de 0B010000 		.4byte	0x10b
+ 304 01e2 04       		.byte	0x4
+ 305 01e3 08       		.uleb128 0x8
+ 306 01e4 19000000 		.4byte	.LASF37
+ 307 01e8 04       		.byte	0x4
+ 308 01e9 9A02     		.2byte	0x29a
+ 309 01eb B6010000 		.4byte	0x1b6
+ 310 01ef 08       		.byte	0x8
+ 311 01f0 00       		.byte	0
+ 312 01f1 05       		.uleb128 0x5
+ 313 01f2 C9030000 		.4byte	.LASF38
+ 314 01f6 04       		.byte	0x4
+ 315 01f7 9B02     		.2byte	0x29b
+ 316 01f9 C2010000 		.4byte	0x1c2
+ 317 01fd 07       		.uleb128 0x7
+ 318 01fe 10       		.byte	0x10
+ 319 01ff 04       		.byte	0x4
+ 320 0200 9F02     		.2byte	0x29f
+ 321 0202 3B020000 		.4byte	0x23b
+ 322 0206 08       		.uleb128 0x8
+ 323 0207 71040000 		.4byte	.LASF39
+ 324 020b 04       		.byte	0x4
+ 325 020c A002     		.2byte	0x2a0
+ 326 020e BF000000 		.4byte	0xbf
+ 327 0212 00       		.byte	0
+ 328 0213 08       		.uleb128 0x8
+ 329 0214 45050000 		.4byte	.LASF40
+ 330 0218 04       		.byte	0x4
+ 331 0219 A102     		.2byte	0x2a1
+ 332 021b FF000000 		.4byte	0xff
+ 333 021f 04       		.byte	0x4
+ 334 0220 08       		.uleb128 0x8
+ 335 0221 AB000000 		.4byte	.LASF41
+ 336 0225 04       		.byte	0x4
+ 337 0226 A202     		.2byte	0x2a2
+ 338 0228 FF000000 		.4byte	0xff
+ 339 022c 08       		.byte	0x8
+ 340 022d 08       		.uleb128 0x8
+ 341 022e 66050000 		.4byte	.LASF42
+ 342 0232 04       		.byte	0x4
+ 343 0233 A302     		.2byte	0x2a3
+ 344 0235 0B010000 		.4byte	0x10b
+ 345 0239 0C       		.byte	0xc
+ 346 023a 00       		.byte	0
+ 347 023b 05       		.uleb128 0x5
+ 348 023c 80020000 		.4byte	.LASF43
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 10
+
+
+ 349 0240 04       		.byte	0x4
+ 350 0241 A402     		.2byte	0x2a4
+ 351 0243 FD010000 		.4byte	0x1fd
+ 352 0247 05       		.uleb128 0x5
+ 353 0248 8D000000 		.4byte	.LASF44
+ 354 024c 04       		.byte	0x4
+ 355 024d 2103     		.2byte	0x321
+ 356 024f 2C000000 		.4byte	0x2c
+ 357 0253 0C       		.uleb128 0xc
+ 358 0254 63000000 		.4byte	.LASF45
+ 359 0258 04       		.byte	0x4
+ 360 0259 9703     		.2byte	0x397
+ 361 025b 03       		.byte	0x3
+ 362 025c 6D020000 		.4byte	0x26d
+ 363 0260 0D       		.uleb128 0xd
+ 364 0261 73727600 		.ascii	"srv\000"
+ 365 0265 04       		.byte	0x4
+ 366 0266 9703     		.2byte	0x397
+ 367 0268 72000000 		.4byte	0x72
+ 368 026c 00       		.byte	0
+ 369 026d 0C       		.uleb128 0xc
+ 370 026e D2010000 		.4byte	.LASF46
+ 371 0272 04       		.byte	0x4
+ 372 0273 A303     		.2byte	0x3a3
+ 373 0275 03       		.byte	0x3
+ 374 0276 86020000 		.4byte	0x286
+ 375 027a 0D       		.uleb128 0xd
+ 376 027b 696400   		.ascii	"id\000"
+ 377 027e 04       		.byte	0x4
+ 378 027f A303     		.2byte	0x3a3
+ 379 0281 72000000 		.4byte	0x72
+ 380 0285 00       		.byte	0
+ 381 0286 0C       		.uleb128 0xc
+ 382 0287 1F030000 		.4byte	.LASF47
+ 383 028b 04       		.byte	0x4
+ 384 028c A803     		.2byte	0x3a8
+ 385 028e 03       		.byte	0x3
+ 386 028f 9F020000 		.4byte	0x29f
+ 387 0293 0D       		.uleb128 0xd
+ 388 0294 696400   		.ascii	"id\000"
+ 389 0297 04       		.byte	0x4
+ 390 0298 A803     		.2byte	0x3a8
+ 391 029a 72000000 		.4byte	0x72
+ 392 029e 00       		.byte	0
+ 393 029f 0E       		.uleb128 0xe
+ 394 02a0 37040000 		.4byte	.LASF48
+ 395 02a4 05       		.byte	0x5
+ 396 02a5 B7       		.byte	0xb7
+ 397 02a6 03       		.byte	0x3
+ 398 02a7 B7020000 		.4byte	0x2b7
+ 399 02ab 0F       		.uleb128 0xf
+ 400 02ac F1030000 		.4byte	.LASF49
+ 401 02b0 05       		.byte	0x5
+ 402 02b1 B8       		.byte	0xb8
+ 403 02b2 47020000 		.4byte	0x247
+ 404 02b6 00       		.byte	0
+ 405 02b7 10       		.uleb128 0x10
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 11
+
+
+ 406 02b8 98000000 		.4byte	.LASF77
+ 407 02bc 01       		.byte	0x1
+ 408 02bd 3D       		.byte	0x3d
+ 409 02be 47020000 		.4byte	0x247
+ 410 02c2 00000000 		.4byte	.LFB71
+ 411 02c6 20000000 		.4byte	.LFE71-.LFB71
+ 412 02ca 01       		.uleb128 0x1
+ 413 02cb 9C       		.byte	0x9c
+ 414 02cc FB020000 		.4byte	0x2fb
+ 415 02d0 11       		.uleb128 0x11
+ 416 02d1 A6030000 		.4byte	.LASF50
+ 417 02d5 01       		.byte	0x1
+ 418 02d6 3D       		.byte	0x3d
+ 419 02d7 E1000000 		.4byte	0xe1
+ 420 02db 00000000 		.4byte	.LLST0
+ 421 02df 12       		.uleb128 0x12
+ 422 02e0 3D000000 		.4byte	.LASF51
+ 423 02e4 01       		.byte	0x1
+ 424 02e5 3D       		.byte	0x3d
+ 425 02e6 ED000000 		.4byte	0xed
+ 426 02ea 01       		.uleb128 0x1
+ 427 02eb 51       		.byte	0x51
+ 428 02ec 13       		.uleb128 0x13
+ 429 02ed 657600   		.ascii	"ev\000"
+ 430 02f0 01       		.byte	0x1
+ 431 02f1 3F       		.byte	0x3f
+ 432 02f2 47020000 		.4byte	0x247
+ 433 02f6 53000000 		.4byte	.LLST1
+ 434 02fa 00       		.byte	0
+ 435 02fb 14       		.uleb128 0x14
+ 436 02fc BD010000 		.4byte	.LASF52
+ 437 0300 06       		.byte	0x6
+ 438 0301 44       		.byte	0x44
+ 439 0302 A9000000 		.4byte	0xa9
+ 440 0306 14       		.uleb128 0x14
+ 441 0307 00000000 		.4byte	.LASF53
+ 442 030b 07       		.byte	0x7
+ 443 030c 48       		.byte	0x48
+ 444 030d CA000000 		.4byte	0xca
+ 445 0311 15       		.uleb128 0x15
+ 446 0312 28030000 		.4byte	0x328
+ 447 0316 21030000 		.4byte	0x321
+ 448 031a 16       		.uleb128 0x16
+ 449 031b 21030000 		.4byte	0x321
+ 450 031f 04       		.byte	0x4
+ 451 0320 00       		.byte	0
+ 452 0321 02       		.uleb128 0x2
+ 453 0322 04       		.byte	0x4
+ 454 0323 07       		.byte	0x7
+ 455 0324 76040000 		.4byte	.LASF54
+ 456 0328 17       		.uleb128 0x17
+ 457 0329 A9000000 		.4byte	0xa9
+ 458 032d 14       		.uleb128 0x14
+ 459 032e 4D010000 		.4byte	.LASF55
+ 460 0332 04       		.byte	0x4
+ 461 0333 B2       		.byte	0xb2
+ 462 0334 38030000 		.4byte	0x338
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 12
+
+
+ 463 0338 17       		.uleb128 0x17
+ 464 0339 11030000 		.4byte	0x311
+ 465 033d 14       		.uleb128 0x14
+ 466 033e 98040000 		.4byte	.LASF56
+ 467 0342 04       		.byte	0x4
+ 468 0343 B3       		.byte	0xb3
+ 469 0344 48030000 		.4byte	0x348
+ 470 0348 17       		.uleb128 0x17
+ 471 0349 11030000 		.4byte	0x311
+ 472 034d 15       		.uleb128 0x15
+ 473 034e A9000000 		.4byte	0xa9
+ 474 0352 5D030000 		.4byte	0x35d
+ 475 0356 16       		.uleb128 0x16
+ 476 0357 21030000 		.4byte	0x321
+ 477 035b 04       		.byte	0x4
+ 478 035c 00       		.byte	0
+ 479 035d 14       		.uleb128 0x14
+ 480 035e 8B040000 		.4byte	.LASF57
+ 481 0362 04       		.byte	0x4
+ 482 0363 CA       		.byte	0xca
+ 483 0364 4D030000 		.4byte	0x34d
+ 484 0368 15       		.uleb128 0x15
+ 485 0369 CA000000 		.4byte	0xca
+ 486 036d 78030000 		.4byte	0x378
+ 487 0371 16       		.uleb128 0x16
+ 488 0372 21030000 		.4byte	0x321
+ 489 0376 04       		.byte	0x4
+ 490 0377 00       		.byte	0
+ 491 0378 14       		.uleb128 0x14
+ 492 0379 AC040000 		.4byte	.LASF58
+ 493 037d 04       		.byte	0x4
+ 494 037e D2       		.byte	0xd2
+ 495 037f 68030000 		.4byte	0x368
+ 496 0383 14       		.uleb128 0x14
+ 497 0384 9A030000 		.4byte	.LASF59
+ 498 0388 04       		.byte	0x4
+ 499 0389 DA       		.byte	0xda
+ 500 038a 4D030000 		.4byte	0x34d
+ 501 038e 14       		.uleb128 0x14
+ 502 038f 77000000 		.4byte	.LASF60
+ 503 0393 04       		.byte	0x4
+ 504 0394 E2       		.byte	0xe2
+ 505 0395 CA000000 		.4byte	0xca
+ 506 0399 14       		.uleb128 0x14
+ 507 039a CC020000 		.4byte	.LASF61
+ 508 039e 04       		.byte	0x4
+ 509 039f F7       		.byte	0xf7
+ 510 03a0 A9000000 		.4byte	0xa9
+ 511 03a4 18       		.uleb128 0x18
+ 512 03a5 27000000 		.4byte	.LASF62
+ 513 03a9 04       		.byte	0x4
+ 514 03aa 3F01     		.2byte	0x13f
+ 515 03ac D5000000 		.4byte	0xd5
+ 516 03b0 18       		.uleb128 0x18
+ 517 03b1 50000000 		.4byte	.LASF63
+ 518 03b5 04       		.byte	0x4
+ 519 03b6 5C01     		.2byte	0x15c
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 13
+
+
+ 520 03b8 4D030000 		.4byte	0x34d
+ 521 03bc 15       		.uleb128 0x15
+ 522 03bd BF000000 		.4byte	0xbf
+ 523 03c1 CC030000 		.4byte	0x3cc
+ 524 03c5 16       		.uleb128 0x16
+ 525 03c6 21030000 		.4byte	0x321
+ 526 03ca 04       		.byte	0x4
+ 527 03cb 00       		.byte	0
+ 528 03cc 18       		.uleb128 0x18
+ 529 03cd 74010000 		.4byte	.LASF64
+ 530 03d1 04       		.byte	0x4
+ 531 03d2 6701     		.2byte	0x167
+ 532 03d4 BC030000 		.4byte	0x3bc
+ 533 03d8 15       		.uleb128 0x15
+ 534 03d9 E8030000 		.4byte	0x3e8
+ 535 03dd E8030000 		.4byte	0x3e8
+ 536 03e1 16       		.uleb128 0x16
+ 537 03e2 21030000 		.4byte	0x321
+ 538 03e6 00       		.byte	0
+ 539 03e7 00       		.byte	0
+ 540 03e8 17       		.uleb128 0x17
+ 541 03e9 54010000 		.4byte	0x154
+ 542 03ed 18       		.uleb128 0x18
+ 543 03ee F9020000 		.4byte	.LASF65
+ 544 03f2 04       		.byte	0x4
+ 545 03f3 CA02     		.2byte	0x2ca
+ 546 03f5 F9030000 		.4byte	0x3f9
+ 547 03f9 17       		.uleb128 0x17
+ 548 03fa D8030000 		.4byte	0x3d8
+ 549 03fe 15       		.uleb128 0x15
+ 550 03ff 0E040000 		.4byte	0x40e
+ 551 0403 0E040000 		.4byte	0x40e
+ 552 0407 16       		.uleb128 0x16
+ 553 0408 21030000 		.4byte	0x321
+ 554 040c 00       		.byte	0
+ 555 040d 00       		.byte	0
+ 556 040e 17       		.uleb128 0x17
+ 557 040f F1010000 		.4byte	0x1f1
+ 558 0413 18       		.uleb128 0x18
+ 559 0414 85010000 		.4byte	.LASF66
+ 560 0418 04       		.byte	0x4
+ 561 0419 DD02     		.2byte	0x2dd
+ 562 041b 1F040000 		.4byte	0x41f
+ 563 041f 17       		.uleb128 0x17
+ 564 0420 FE030000 		.4byte	0x3fe
+ 565 0424 15       		.uleb128 0x15
+ 566 0425 84010000 		.4byte	0x184
+ 567 0429 34040000 		.4byte	0x434
+ 568 042d 16       		.uleb128 0x16
+ 569 042e 21030000 		.4byte	0x321
+ 570 0432 00       		.byte	0
+ 571 0433 00       		.byte	0
+ 572 0434 18       		.uleb128 0x18
+ 573 0435 F7030000 		.4byte	.LASF67
+ 574 0439 04       		.byte	0x4
+ 575 043a FB02     		.2byte	0x2fb
+ 576 043c 24040000 		.4byte	0x424
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 14
+
+
+ 577 0440 15       		.uleb128 0x15
+ 578 0441 3B020000 		.4byte	0x23b
+ 579 0445 50040000 		.4byte	0x450
+ 580 0449 16       		.uleb128 0x16
+ 581 044a 21030000 		.4byte	0x321
+ 582 044e 00       		.byte	0
+ 583 044f 00       		.byte	0
+ 584 0450 18       		.uleb128 0x18
+ 585 0451 37030000 		.4byte	.LASF68
+ 586 0455 04       		.byte	0x4
+ 587 0456 0403     		.2byte	0x304
+ 588 0458 40040000 		.4byte	0x440
+ 589 045c 14       		.uleb128 0x14
+ 590 045d 4E050000 		.4byte	.LASF69
+ 591 0461 08       		.byte	0x8
+ 592 0462 40       		.byte	0x40
+ 593 0463 A9000000 		.4byte	0xa9
+ 594 0467 14       		.uleb128 0x14
+ 595 0468 25020000 		.4byte	.LASF70
+ 596 046c 08       		.byte	0x8
+ 597 046d 47       		.byte	0x47
+ 598 046e B4000000 		.4byte	0xb4
+ 599 0472 14       		.uleb128 0x14
+ 600 0473 06040000 		.4byte	.LASF71
+ 601 0477 08       		.byte	0x8
+ 602 0478 4A       		.byte	0x4a
+ 603 0479 A9000000 		.4byte	0xa9
+ 604 047d 15       		.uleb128 0x15
+ 605 047e 8D040000 		.4byte	0x48d
+ 606 0482 8D040000 		.4byte	0x48d
+ 607 0486 16       		.uleb128 0x16
+ 608 0487 21030000 		.4byte	0x321
+ 609 048b FF       		.byte	0xff
+ 610 048c 00       		.byte	0
+ 611 048d 17       		.uleb128 0x17
+ 612 048e 7D000000 		.4byte	0x7d
+ 613 0492 18       		.uleb128 0x18
+ 614 0493 6B050000 		.4byte	.LASF72
+ 615 0497 05       		.byte	0x5
+ 616 0498 AB01     		.2byte	0x1ab
+ 617 049a 9E040000 		.4byte	0x49e
+ 618 049e 17       		.uleb128 0x17
+ 619 049f 7D040000 		.4byte	0x47d
+ 620 04a3 18       		.uleb128 0x18
+ 621 04a4 B5020000 		.4byte	.LASF73
+ 622 04a8 05       		.byte	0x5
+ 623 04a9 1602     		.2byte	0x216
+ 624 04ab A9000000 		.4byte	0xa9
+ 625 04af 00       		.byte	0
+ 626              		.section	.debug_abbrev,"",%progbits
+ 627              	.Ldebug_abbrev0:
+ 628 0000 01       		.uleb128 0x1
+ 629 0001 11       		.uleb128 0x11
+ 630 0002 01       		.byte	0x1
+ 631 0003 25       		.uleb128 0x25
+ 632 0004 0E       		.uleb128 0xe
+ 633 0005 13       		.uleb128 0x13
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 15
+
+
+ 634 0006 0B       		.uleb128 0xb
+ 635 0007 03       		.uleb128 0x3
+ 636 0008 0E       		.uleb128 0xe
+ 637 0009 1B       		.uleb128 0x1b
+ 638 000a 0E       		.uleb128 0xe
+ 639 000b 55       		.uleb128 0x55
+ 640 000c 17       		.uleb128 0x17
+ 641 000d 11       		.uleb128 0x11
+ 642 000e 01       		.uleb128 0x1
+ 643 000f 10       		.uleb128 0x10
+ 644 0010 17       		.uleb128 0x17
+ 645 0011 00       		.byte	0
+ 646 0012 00       		.byte	0
+ 647 0013 02       		.uleb128 0x2
+ 648 0014 24       		.uleb128 0x24
+ 649 0015 00       		.byte	0
+ 650 0016 0B       		.uleb128 0xb
+ 651 0017 0B       		.uleb128 0xb
+ 652 0018 3E       		.uleb128 0x3e
+ 653 0019 0B       		.uleb128 0xb
+ 654 001a 03       		.uleb128 0x3
+ 655 001b 0E       		.uleb128 0xe
+ 656 001c 00       		.byte	0
+ 657 001d 00       		.byte	0
+ 658 001e 03       		.uleb128 0x3
+ 659 001f 24       		.uleb128 0x24
+ 660 0020 00       		.byte	0
+ 661 0021 0B       		.uleb128 0xb
+ 662 0022 0B       		.uleb128 0xb
+ 663 0023 3E       		.uleb128 0x3e
+ 664 0024 0B       		.uleb128 0xb
+ 665 0025 03       		.uleb128 0x3
+ 666 0026 08       		.uleb128 0x8
+ 667 0027 00       		.byte	0
+ 668 0028 00       		.byte	0
+ 669 0029 04       		.uleb128 0x4
+ 670 002a 16       		.uleb128 0x16
+ 671 002b 00       		.byte	0
+ 672 002c 03       		.uleb128 0x3
+ 673 002d 0E       		.uleb128 0xe
+ 674 002e 3A       		.uleb128 0x3a
+ 675 002f 0B       		.uleb128 0xb
+ 676 0030 3B       		.uleb128 0x3b
+ 677 0031 0B       		.uleb128 0xb
+ 678 0032 49       		.uleb128 0x49
+ 679 0033 13       		.uleb128 0x13
+ 680 0034 00       		.byte	0
+ 681 0035 00       		.byte	0
+ 682 0036 05       		.uleb128 0x5
+ 683 0037 16       		.uleb128 0x16
+ 684 0038 00       		.byte	0
+ 685 0039 03       		.uleb128 0x3
+ 686 003a 0E       		.uleb128 0xe
+ 687 003b 3A       		.uleb128 0x3a
+ 688 003c 0B       		.uleb128 0xb
+ 689 003d 3B       		.uleb128 0x3b
+ 690 003e 05       		.uleb128 0x5
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 16
+
+
+ 691 003f 49       		.uleb128 0x49
+ 692 0040 13       		.uleb128 0x13
+ 693 0041 00       		.byte	0
+ 694 0042 00       		.byte	0
+ 695 0043 06       		.uleb128 0x6
+ 696 0044 0F       		.uleb128 0xf
+ 697 0045 00       		.byte	0
+ 698 0046 0B       		.uleb128 0xb
+ 699 0047 0B       		.uleb128 0xb
+ 700 0048 49       		.uleb128 0x49
+ 701 0049 13       		.uleb128 0x13
+ 702 004a 00       		.byte	0
+ 703 004b 00       		.byte	0
+ 704 004c 07       		.uleb128 0x7
+ 705 004d 13       		.uleb128 0x13
+ 706 004e 01       		.byte	0x1
+ 707 004f 0B       		.uleb128 0xb
+ 708 0050 0B       		.uleb128 0xb
+ 709 0051 3A       		.uleb128 0x3a
+ 710 0052 0B       		.uleb128 0xb
+ 711 0053 3B       		.uleb128 0x3b
+ 712 0054 05       		.uleb128 0x5
+ 713 0055 01       		.uleb128 0x1
+ 714 0056 13       		.uleb128 0x13
+ 715 0057 00       		.byte	0
+ 716 0058 00       		.byte	0
+ 717 0059 08       		.uleb128 0x8
+ 718 005a 0D       		.uleb128 0xd
+ 719 005b 00       		.byte	0
+ 720 005c 03       		.uleb128 0x3
+ 721 005d 0E       		.uleb128 0xe
+ 722 005e 3A       		.uleb128 0x3a
+ 723 005f 0B       		.uleb128 0xb
+ 724 0060 3B       		.uleb128 0x3b
+ 725 0061 05       		.uleb128 0x5
+ 726 0062 49       		.uleb128 0x49
+ 727 0063 13       		.uleb128 0x13
+ 728 0064 38       		.uleb128 0x38
+ 729 0065 0B       		.uleb128 0xb
+ 730 0066 00       		.byte	0
+ 731 0067 00       		.byte	0
+ 732 0068 09       		.uleb128 0x9
+ 733 0069 04       		.uleb128 0x4
+ 734 006a 01       		.byte	0x1
+ 735 006b 0B       		.uleb128 0xb
+ 736 006c 0B       		.uleb128 0xb
+ 737 006d 49       		.uleb128 0x49
+ 738 006e 13       		.uleb128 0x13
+ 739 006f 3A       		.uleb128 0x3a
+ 740 0070 0B       		.uleb128 0xb
+ 741 0071 3B       		.uleb128 0x3b
+ 742 0072 05       		.uleb128 0x5
+ 743 0073 01       		.uleb128 0x1
+ 744 0074 13       		.uleb128 0x13
+ 745 0075 00       		.byte	0
+ 746 0076 00       		.byte	0
+ 747 0077 0A       		.uleb128 0xa
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 17
+
+
+ 748 0078 28       		.uleb128 0x28
+ 749 0079 00       		.byte	0
+ 750 007a 03       		.uleb128 0x3
+ 751 007b 0E       		.uleb128 0xe
+ 752 007c 1C       		.uleb128 0x1c
+ 753 007d 0B       		.uleb128 0xb
+ 754 007e 00       		.byte	0
+ 755 007f 00       		.byte	0
+ 756 0080 0B       		.uleb128 0xb
+ 757 0081 0D       		.uleb128 0xd
+ 758 0082 00       		.byte	0
+ 759 0083 03       		.uleb128 0x3
+ 760 0084 08       		.uleb128 0x8
+ 761 0085 3A       		.uleb128 0x3a
+ 762 0086 0B       		.uleb128 0xb
+ 763 0087 3B       		.uleb128 0x3b
+ 764 0088 05       		.uleb128 0x5
+ 765 0089 49       		.uleb128 0x49
+ 766 008a 13       		.uleb128 0x13
+ 767 008b 38       		.uleb128 0x38
+ 768 008c 0B       		.uleb128 0xb
+ 769 008d 00       		.byte	0
+ 770 008e 00       		.byte	0
+ 771 008f 0C       		.uleb128 0xc
+ 772 0090 2E       		.uleb128 0x2e
+ 773 0091 01       		.byte	0x1
+ 774 0092 03       		.uleb128 0x3
+ 775 0093 0E       		.uleb128 0xe
+ 776 0094 3A       		.uleb128 0x3a
+ 777 0095 0B       		.uleb128 0xb
+ 778 0096 3B       		.uleb128 0x3b
+ 779 0097 05       		.uleb128 0x5
+ 780 0098 27       		.uleb128 0x27
+ 781 0099 19       		.uleb128 0x19
+ 782 009a 20       		.uleb128 0x20
+ 783 009b 0B       		.uleb128 0xb
+ 784 009c 01       		.uleb128 0x1
+ 785 009d 13       		.uleb128 0x13
+ 786 009e 00       		.byte	0
+ 787 009f 00       		.byte	0
+ 788 00a0 0D       		.uleb128 0xd
+ 789 00a1 05       		.uleb128 0x5
+ 790 00a2 00       		.byte	0
+ 791 00a3 03       		.uleb128 0x3
+ 792 00a4 08       		.uleb128 0x8
+ 793 00a5 3A       		.uleb128 0x3a
+ 794 00a6 0B       		.uleb128 0xb
+ 795 00a7 3B       		.uleb128 0x3b
+ 796 00a8 05       		.uleb128 0x5
+ 797 00a9 49       		.uleb128 0x49
+ 798 00aa 13       		.uleb128 0x13
+ 799 00ab 00       		.byte	0
+ 800 00ac 00       		.byte	0
+ 801 00ad 0E       		.uleb128 0xe
+ 802 00ae 2E       		.uleb128 0x2e
+ 803 00af 01       		.byte	0x1
+ 804 00b0 03       		.uleb128 0x3
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 18
+
+
+ 805 00b1 0E       		.uleb128 0xe
+ 806 00b2 3A       		.uleb128 0x3a
+ 807 00b3 0B       		.uleb128 0xb
+ 808 00b4 3B       		.uleb128 0x3b
+ 809 00b5 0B       		.uleb128 0xb
+ 810 00b6 27       		.uleb128 0x27
+ 811 00b7 19       		.uleb128 0x19
+ 812 00b8 20       		.uleb128 0x20
+ 813 00b9 0B       		.uleb128 0xb
+ 814 00ba 01       		.uleb128 0x1
+ 815 00bb 13       		.uleb128 0x13
+ 816 00bc 00       		.byte	0
+ 817 00bd 00       		.byte	0
+ 818 00be 0F       		.uleb128 0xf
+ 819 00bf 05       		.uleb128 0x5
+ 820 00c0 00       		.byte	0
+ 821 00c1 03       		.uleb128 0x3
+ 822 00c2 0E       		.uleb128 0xe
+ 823 00c3 3A       		.uleb128 0x3a
+ 824 00c4 0B       		.uleb128 0xb
+ 825 00c5 3B       		.uleb128 0x3b
+ 826 00c6 0B       		.uleb128 0xb
+ 827 00c7 49       		.uleb128 0x49
+ 828 00c8 13       		.uleb128 0x13
+ 829 00c9 00       		.byte	0
+ 830 00ca 00       		.byte	0
+ 831 00cb 10       		.uleb128 0x10
+ 832 00cc 2E       		.uleb128 0x2e
+ 833 00cd 01       		.byte	0x1
+ 834 00ce 3F       		.uleb128 0x3f
+ 835 00cf 19       		.uleb128 0x19
+ 836 00d0 03       		.uleb128 0x3
+ 837 00d1 0E       		.uleb128 0xe
+ 838 00d2 3A       		.uleb128 0x3a
+ 839 00d3 0B       		.uleb128 0xb
+ 840 00d4 3B       		.uleb128 0x3b
+ 841 00d5 0B       		.uleb128 0xb
+ 842 00d6 27       		.uleb128 0x27
+ 843 00d7 19       		.uleb128 0x19
+ 844 00d8 49       		.uleb128 0x49
+ 845 00d9 13       		.uleb128 0x13
+ 846 00da 11       		.uleb128 0x11
+ 847 00db 01       		.uleb128 0x1
+ 848 00dc 12       		.uleb128 0x12
+ 849 00dd 06       		.uleb128 0x6
+ 850 00de 40       		.uleb128 0x40
+ 851 00df 18       		.uleb128 0x18
+ 852 00e0 9742     		.uleb128 0x2117
+ 853 00e2 19       		.uleb128 0x19
+ 854 00e3 01       		.uleb128 0x1
+ 855 00e4 13       		.uleb128 0x13
+ 856 00e5 00       		.byte	0
+ 857 00e6 00       		.byte	0
+ 858 00e7 11       		.uleb128 0x11
+ 859 00e8 05       		.uleb128 0x5
+ 860 00e9 00       		.byte	0
+ 861 00ea 03       		.uleb128 0x3
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 19
+
+
+ 862 00eb 0E       		.uleb128 0xe
+ 863 00ec 3A       		.uleb128 0x3a
+ 864 00ed 0B       		.uleb128 0xb
+ 865 00ee 3B       		.uleb128 0x3b
+ 866 00ef 0B       		.uleb128 0xb
+ 867 00f0 49       		.uleb128 0x49
+ 868 00f1 13       		.uleb128 0x13
+ 869 00f2 02       		.uleb128 0x2
+ 870 00f3 17       		.uleb128 0x17
+ 871 00f4 00       		.byte	0
+ 872 00f5 00       		.byte	0
+ 873 00f6 12       		.uleb128 0x12
+ 874 00f7 05       		.uleb128 0x5
+ 875 00f8 00       		.byte	0
+ 876 00f9 03       		.uleb128 0x3
+ 877 00fa 0E       		.uleb128 0xe
+ 878 00fb 3A       		.uleb128 0x3a
+ 879 00fc 0B       		.uleb128 0xb
+ 880 00fd 3B       		.uleb128 0x3b
+ 881 00fe 0B       		.uleb128 0xb
+ 882 00ff 49       		.uleb128 0x49
+ 883 0100 13       		.uleb128 0x13
+ 884 0101 02       		.uleb128 0x2
+ 885 0102 18       		.uleb128 0x18
+ 886 0103 00       		.byte	0
+ 887 0104 00       		.byte	0
+ 888 0105 13       		.uleb128 0x13
+ 889 0106 34       		.uleb128 0x34
+ 890 0107 00       		.byte	0
+ 891 0108 03       		.uleb128 0x3
+ 892 0109 08       		.uleb128 0x8
+ 893 010a 3A       		.uleb128 0x3a
+ 894 010b 0B       		.uleb128 0xb
+ 895 010c 3B       		.uleb128 0x3b
+ 896 010d 0B       		.uleb128 0xb
+ 897 010e 49       		.uleb128 0x49
+ 898 010f 13       		.uleb128 0x13
+ 899 0110 02       		.uleb128 0x2
+ 900 0111 17       		.uleb128 0x17
+ 901 0112 00       		.byte	0
+ 902 0113 00       		.byte	0
+ 903 0114 14       		.uleb128 0x14
+ 904 0115 34       		.uleb128 0x34
+ 905 0116 00       		.byte	0
+ 906 0117 03       		.uleb128 0x3
+ 907 0118 0E       		.uleb128 0xe
+ 908 0119 3A       		.uleb128 0x3a
+ 909 011a 0B       		.uleb128 0xb
+ 910 011b 3B       		.uleb128 0x3b
+ 911 011c 0B       		.uleb128 0xb
+ 912 011d 49       		.uleb128 0x49
+ 913 011e 13       		.uleb128 0x13
+ 914 011f 3F       		.uleb128 0x3f
+ 915 0120 19       		.uleb128 0x19
+ 916 0121 3C       		.uleb128 0x3c
+ 917 0122 19       		.uleb128 0x19
+ 918 0123 00       		.byte	0
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 20
+
+
+ 919 0124 00       		.byte	0
+ 920 0125 15       		.uleb128 0x15
+ 921 0126 01       		.uleb128 0x1
+ 922 0127 01       		.byte	0x1
+ 923 0128 49       		.uleb128 0x49
+ 924 0129 13       		.uleb128 0x13
+ 925 012a 01       		.uleb128 0x1
+ 926 012b 13       		.uleb128 0x13
+ 927 012c 00       		.byte	0
+ 928 012d 00       		.byte	0
+ 929 012e 16       		.uleb128 0x16
+ 930 012f 21       		.uleb128 0x21
+ 931 0130 00       		.byte	0
+ 932 0131 49       		.uleb128 0x49
+ 933 0132 13       		.uleb128 0x13
+ 934 0133 2F       		.uleb128 0x2f
+ 935 0134 0B       		.uleb128 0xb
+ 936 0135 00       		.byte	0
+ 937 0136 00       		.byte	0
+ 938 0137 17       		.uleb128 0x17
+ 939 0138 26       		.uleb128 0x26
+ 940 0139 00       		.byte	0
+ 941 013a 49       		.uleb128 0x49
+ 942 013b 13       		.uleb128 0x13
+ 943 013c 00       		.byte	0
+ 944 013d 00       		.byte	0
+ 945 013e 18       		.uleb128 0x18
+ 946 013f 34       		.uleb128 0x34
+ 947 0140 00       		.byte	0
+ 948 0141 03       		.uleb128 0x3
+ 949 0142 0E       		.uleb128 0xe
+ 950 0143 3A       		.uleb128 0x3a
+ 951 0144 0B       		.uleb128 0xb
+ 952 0145 3B       		.uleb128 0x3b
+ 953 0146 05       		.uleb128 0x5
+ 954 0147 49       		.uleb128 0x49
+ 955 0148 13       		.uleb128 0x13
+ 956 0149 3F       		.uleb128 0x3f
+ 957 014a 19       		.uleb128 0x19
+ 958 014b 3C       		.uleb128 0x3c
+ 959 014c 19       		.uleb128 0x19
+ 960 014d 00       		.byte	0
+ 961 014e 00       		.byte	0
+ 962 014f 00       		.byte	0
+ 963              		.section	.debug_loc,"",%progbits
+ 964              	.Ldebug_loc0:
+ 965              	.LLST0:
+ 966 0000 00000000 		.4byte	.LVL0
+ 967 0004 10000000 		.4byte	.LVL2
+ 968 0008 0100     		.2byte	0x1
+ 969 000a 50       		.byte	0x50
+ 970 000b 10000000 		.4byte	.LVL2
+ 971 000f 12000000 		.4byte	.LVL3
+ 972 0013 0400     		.2byte	0x4
+ 973 0015 F3       		.byte	0xf3
+ 974 0016 01       		.uleb128 0x1
+ 975 0017 50       		.byte	0x50
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 21
+
+
+ 976 0018 9F       		.byte	0x9f
+ 977 0019 12000000 		.4byte	.LVL3
+ 978 001d 14000000 		.4byte	.LVL4
+ 979 0021 0100     		.2byte	0x1
+ 980 0023 50       		.byte	0x50
+ 981 0024 14000000 		.4byte	.LVL4
+ 982 0028 16000000 		.4byte	.LVL5
+ 983 002c 0400     		.2byte	0x4
+ 984 002e F3       		.byte	0xf3
+ 985 002f 01       		.uleb128 0x1
+ 986 0030 50       		.byte	0x50
+ 987 0031 9F       		.byte	0x9f
+ 988 0032 16000000 		.4byte	.LVL5
+ 989 0036 18000000 		.4byte	.LVL6
+ 990 003a 0100     		.2byte	0x1
+ 991 003c 50       		.byte	0x50
+ 992 003d 18000000 		.4byte	.LVL6
+ 993 0041 20000000 		.4byte	.LFE71
+ 994 0045 0400     		.2byte	0x4
+ 995 0047 F3       		.byte	0xf3
+ 996 0048 01       		.uleb128 0x1
+ 997 0049 50       		.byte	0x50
+ 998 004a 9F       		.byte	0x9f
+ 999 004b 00000000 		.4byte	0
+ 1000 004f 00000000 		.4byte	0
+ 1001              	.LLST1:
+ 1002 0053 0E000000 		.4byte	.LVL1
+ 1003 0057 12000000 		.4byte	.LVL3
+ 1004 005b 0200     		.2byte	0x2
+ 1005 005d 30       		.byte	0x30
+ 1006 005e 9F       		.byte	0x9f
+ 1007 005f 18000000 		.4byte	.LVL6
+ 1008 0063 20000000 		.4byte	.LFE71
+ 1009 0067 0100     		.2byte	0x1
+ 1010 0069 50       		.byte	0x50
+ 1011 006a 00000000 		.4byte	0
+ 1012 006e 00000000 		.4byte	0
+ 1013              		.section	.debug_aranges,"",%progbits
+ 1014 0000 1C000000 		.4byte	0x1c
+ 1015 0004 0200     		.2byte	0x2
+ 1016 0006 00000000 		.4byte	.Ldebug_info0
+ 1017 000a 04       		.byte	0x4
+ 1018 000b 00       		.byte	0
+ 1019 000c 0000     		.2byte	0
+ 1020 000e 0000     		.2byte	0
+ 1021 0010 00000000 		.4byte	.LFB71
+ 1022 0014 20000000 		.4byte	.LFE71-.LFB71
+ 1023 0018 00000000 		.4byte	0
+ 1024 001c 00000000 		.4byte	0
+ 1025              		.section	.debug_ranges,"",%progbits
+ 1026              	.Ldebug_ranges0:
+ 1027 0000 00000000 		.4byte	.LFB71
+ 1028 0004 20000000 		.4byte	.LFE71
+ 1029 0008 00000000 		.4byte	0
+ 1030 000c 00000000 		.4byte	0
+ 1031              		.section	.debug_line,"",%progbits
+ 1032              	.Ldebug_line0:
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 22
+
+
+ 1033 0000 4B010000 		.section	.debug_str,"MS",%progbits,1
+ 1033      02002501 
+ 1033      00000201 
+ 1033      FB0E0D00 
+ 1033      01010101 
+ 1034              	.LASF53:
+ 1035 0000 45455F73 		.ascii	"EE_std_endcycle_next_tid\000"
+ 1035      74645F65 
+ 1035      6E646379 
+ 1035      636C655F 
+ 1035      6E657874 
+ 1036              	.LASF37:
+ 1037 0019 6B696E64 		.ascii	"kind\000"
+ 1037      00
+ 1038              	.LASF10:
+ 1039 001e 45455F55 		.ascii	"EE_UINT8\000"
+ 1039      494E5438 
+ 1039      00
+ 1040              	.LASF62:
+ 1041 0027 45455F72 		.ascii	"EE_rq_bitmask\000"
+ 1041      715F6269 
+ 1041      746D6173 
+ 1041      6B00
+ 1042              	.LASF15:
+ 1043 0035 45455F55 		.ascii	"EE_UREG\000"
+ 1043      52454700 
+ 1044              	.LASF51:
+ 1045 003d 53746174 		.ascii	"State\000"
+ 1045      6500
+ 1046              	.LASF26:
+ 1047 0043 7469636B 		.ascii	"ticksperbase\000"
+ 1047      73706572 
+ 1047      62617365 
+ 1047      00
+ 1048              	.LASF63:
+ 1049 0050 45455F74 		.ascii	"EE_th_event_active\000"
+ 1049      685F6576 
+ 1049      656E745F 
+ 1049      61637469 
+ 1049      766500
+ 1050              	.LASF45:
+ 1051 0063 45455F4F 		.ascii	"EE_ORTI_set_service\000"
+ 1051      5254495F 
+ 1051      7365745F 
+ 1051      73657276 
+ 1051      69636500 
+ 1052              	.LASF60:
+ 1053 0077 45455F73 		.ascii	"EE_stkfirst\000"
+ 1053      746B6669 
+ 1053      72737400 
+ 1054              	.LASF2:
+ 1055 0083 73686F72 		.ascii	"short int\000"
+ 1055      7420696E 
+ 1055      7400
+ 1056              	.LASF44:
+ 1057 008d 53746174 		.ascii	"StatusType\000"
+ 1057      75735479 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 23
+
+
+ 1057      706500
+ 1058              	.LASF77:
+ 1059 0098 45455F6F 		.ascii	"EE_oo_GetTaskState\000"
+ 1059      6F5F4765 
+ 1059      74546173 
+ 1059      6B537461 
+ 1059      746500
+ 1060              	.LASF41:
+ 1061 00ab 64656C74 		.ascii	"delta\000"
+ 1061      6100
+ 1062              	.LASF36:
+ 1063 00b1 73706563 		.ascii	"spec_id\000"
+ 1063      5F696400 
+ 1064              	.LASF16:
+ 1065 00b9 45455F46 		.ascii	"EE_FREG\000"
+ 1065      52454700 
+ 1066              	.LASF76:
+ 1067 00c1 443A5C57 		.ascii	"D:\\WS25\\AMAEOS\\Lab\\Lab3\\Lab 3 Task Description"
+ 1067      5332355C 
+ 1067      414D4145 
+ 1067      4F535C4C 
+ 1067      61625C4C 
+ 1068 00ef 20616E64 		.ascii	" and Starting Code-20251209\\Lab3.cydsn\\TaskComms_"
+ 1068      20537461 
+ 1068      7274696E 
+ 1068      6720436F 
+ 1068      64652D32 
+ 1069 0120 42756666 		.ascii	"Buffer.cydsn\000"
+ 1069      65722E63 
+ 1069      7964736E 
+ 1069      00
+ 1070              	.LASF35:
+ 1071 012d 436F756E 		.ascii	"CounterObjectKindType\000"
+ 1071      7465724F 
+ 1071      626A6563 
+ 1071      744B696E 
+ 1071      64547970 
+ 1072              	.LASF14:
+ 1073 0143 45455F55 		.ascii	"EE_UINT32\000"
+ 1073      494E5433 
+ 1073      3200
+ 1074              	.LASF55:
+ 1075 014d 45455F74 		.ascii	"EE_th_ready_prio\000"
+ 1075      685F7265 
+ 1075      6164795F 
+ 1075      7072696F 
+ 1075      00
+ 1076              	.LASF18:
+ 1077 015e 45455F54 		.ascii	"EE_TID\000"
+ 1077      494400
+ 1078              	.LASF27:
+ 1079 0165 6D696E63 		.ascii	"mincycle\000"
+ 1079      79636C65 
+ 1079      00
+ 1080              	.LASF29:
+ 1081 016e 76616C75 		.ascii	"value\000"
+ 1081      6500
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 24
+
+
+ 1082              	.LASF64:
+ 1083 0174 45455F74 		.ascii	"EE_th_waswaiting\000"
+ 1083      685F7761 
+ 1083      73776169 
+ 1083      74696E67 
+ 1083      00
+ 1084              	.LASF66:
+ 1085 0185 45455F6F 		.ascii	"EE_oo_counter_object_ROM\000"
+ 1085      6F5F636F 
+ 1085      756E7465 
+ 1085      725F6F62 
+ 1085      6A656374 
+ 1086              	.LASF34:
+ 1087 019e 45455F6F 		.ascii	"EE_oo_counter_object_kind_type\000"
+ 1087      6F5F636F 
+ 1087      756E7465 
+ 1087      725F6F62 
+ 1087      6A656374 
+ 1088              	.LASF52:
+ 1089 01bd 45455F49 		.ascii	"EE_IRQ_nesting_level\000"
+ 1089      52515F6E 
+ 1089      65737469 
+ 1089      6E675F6C 
+ 1089      6576656C 
+ 1090              	.LASF46:
+ 1091 01d2 45455F4F 		.ascii	"EE_ORTI_set_service_in\000"
+ 1091      5254495F 
+ 1091      7365745F 
+ 1091      73657276 
+ 1091      6963655F 
+ 1092              	.LASF31:
+ 1093 01e9 45455F6F 		.ascii	"EE_oo_counter_RAM_type\000"
+ 1093      6F5F636F 
+ 1093      756E7465 
+ 1093      725F5241 
+ 1093      4D5F7479 
+ 1094              	.LASF6:
+ 1095 0200 6C6F6E67 		.ascii	"long long int\000"
+ 1095      206C6F6E 
+ 1095      6720696E 
+ 1095      7400
+ 1096              	.LASF7:
+ 1097 020e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1097      206C6F6E 
+ 1097      6720756E 
+ 1097      7369676E 
+ 1097      65642069 
+ 1098              	.LASF70:
+ 1099 0225 45455F6F 		.ascii	"EE_oo_IRQ_suspend_status\000"
+ 1099      6F5F4952 
+ 1099      515F7375 
+ 1099      7370656E 
+ 1099      645F7374 
+ 1100              	.LASF19:
+ 1101 023e 45455F54 		.ascii	"EE_TYPE_RQ_MASK\000"
+ 1101      5950455F 
+ 1101      52515F4D 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 25
+
+
+ 1101      41534B00 
+ 1102              	.LASF33:
+ 1103 024e 45455F53 		.ascii	"EE_SCHEDULETABLE\000"
+ 1103      43484544 
+ 1103      554C4554 
+ 1103      41424C45 
+ 1103      00
+ 1104              	.LASF11:
+ 1105 025f 45455F49 		.ascii	"EE_INT8\000"
+ 1105      4E543800 
+ 1106              	.LASF4:
+ 1107 0267 6C6F6E67 		.ascii	"long int\000"
+ 1107      20696E74 
+ 1107      00
+ 1108              	.LASF25:
+ 1109 0270 6D617861 		.ascii	"maxallowedvalue\000"
+ 1109      6C6C6F77 
+ 1109      65647661 
+ 1109      6C756500 
+ 1110              	.LASF43:
+ 1111 0280 45455F6F 		.ascii	"EE_oo_counter_object_RAM_type\000"
+ 1111      6F5F636F 
+ 1111      756E7465 
+ 1111      725F6F62 
+ 1111      6A656374 
+ 1112              	.LASF28:
+ 1113 029e 45455F6F 		.ascii	"EE_oo_counter_ROM_type\000"
+ 1113      6F5F636F 
+ 1113      756E7465 
+ 1113      725F524F 
+ 1113      4D5F7479 
+ 1114              	.LASF73:
+ 1115 02b5 45455F69 		.ascii	"EE_isr2_index\000"
+ 1115      7372325F 
+ 1115      696E6465 
+ 1115      7800
+ 1116              	.LASF22:
+ 1117 02c3 5469636B 		.ascii	"TickType\000"
+ 1117      54797065 
+ 1117      00
+ 1118              	.LASF61:
+ 1119 02cc 45455F73 		.ascii	"EE_sys_ceiling\000"
+ 1119      79735F63 
+ 1119      65696C69 
+ 1119      6E6700
+ 1120              	.LASF23:
+ 1121 02db 436F756E 		.ascii	"CounterObjectType\000"
+ 1121      7465724F 
+ 1121      626A6563 
+ 1121      74547970 
+ 1121      6500
+ 1122              	.LASF9:
+ 1123 02ed 6C6F6E67 		.ascii	"long double\000"
+ 1123      20646F75 
+ 1123      626C6500 
+ 1124              	.LASF65:
+ 1125 02f9 45455F63 		.ascii	"EE_counter_ROM\000"
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 26
+
+
+ 1125      6F756E74 
+ 1125      65725F52 
+ 1125      4F4D00
+ 1126              	.LASF20:
+ 1127 0308 5461736B 		.ascii	"TaskType\000"
+ 1127      54797065 
+ 1127      00
+ 1128              	.LASF1:
+ 1129 0311 756E7369 		.ascii	"unsigned char\000"
+ 1129      676E6564 
+ 1129      20636861 
+ 1129      7200
+ 1130              	.LASF47:
+ 1131 031f 45455F4F 		.ascii	"EE_ORTI_set_service_out\000"
+ 1131      5254495F 
+ 1131      7365745F 
+ 1131      73657276 
+ 1131      6963655F 
+ 1132              	.LASF68:
+ 1133 0337 45455F6F 		.ascii	"EE_oo_counter_object_RAM\000"
+ 1133      6F5F636F 
+ 1133      756E7465 
+ 1133      725F6F62 
+ 1133      6A656374 
+ 1134              	.LASF0:
+ 1135 0350 7369676E 		.ascii	"signed char\000"
+ 1135      65642063 
+ 1135      68617200 
+ 1136              	.LASF75:
+ 1137 035c 47656E65 		.ascii	"Generated_Source\\PSoC5\\ErikaOS_ee_gettaskstate.c\000"
+ 1137      72617465 
+ 1137      645F536F 
+ 1137      75726365 
+ 1137      5C50536F 
+ 1138              	.LASF8:
+ 1139 038d 756E7369 		.ascii	"unsigned int\000"
+ 1139      676E6564 
+ 1139      20696E74 
+ 1139      00
+ 1140              	.LASF59:
+ 1141 039a 45455F74 		.ascii	"EE_th_rnact\000"
+ 1141      685F726E 
+ 1141      61637400 
+ 1142              	.LASF50:
+ 1143 03a6 5461736B 		.ascii	"TaskID\000"
+ 1143      494400
+ 1144              	.LASF13:
+ 1145 03ad 45455F49 		.ascii	"EE_INT32\000"
+ 1145      4E543332 
+ 1145      00
+ 1146              	.LASF3:
+ 1147 03b6 73686F72 		.ascii	"short unsigned int\000"
+ 1147      7420756E 
+ 1147      7369676E 
+ 1147      65642069 
+ 1147      6E7400
+ 1148              	.LASF38:
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 27
+
+
+ 1149 03c9 45455F6F 		.ascii	"EE_oo_counter_object_ROM_type\000"
+ 1149      6F5F636F 
+ 1149      756E7465 
+ 1149      725F6F62 
+ 1149      6A656374 
+ 1150              	.LASF12:
+ 1151 03e7 45455F55 		.ascii	"EE_UINT16\000"
+ 1151      494E5431 
+ 1151      3600
+ 1152              	.LASF49:
+ 1153 03f1 4572726F 		.ascii	"Error\000"
+ 1153      7200
+ 1154              	.LASF67:
+ 1155 03f7 45455F63 		.ascii	"EE_counter_RAM\000"
+ 1155      6F756E74 
+ 1155      65725F52 
+ 1155      414D00
+ 1156              	.LASF71:
+ 1157 0406 45455F41 		.ascii	"EE_ApplicationMode\000"
+ 1157      70706C69 
+ 1157      63617469 
+ 1157      6F6E4D6F 
+ 1157      646500
+ 1158              	.LASF5:
+ 1159 0419 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1159      20756E73 
+ 1159      69676E65 
+ 1159      6420696E 
+ 1159      7400
+ 1160              	.LASF17:
+ 1161 042b 45455F54 		.ascii	"EE_TYPEBOOL\000"
+ 1161      59504542 
+ 1161      4F4F4C00 
+ 1162              	.LASF48:
+ 1163 0437 45455F6F 		.ascii	"EE_os_notify_error_from_us_impl\000"
+ 1163      735F6E6F 
+ 1163      74696679 
+ 1163      5F657272 
+ 1163      6F725F66 
+ 1164              	.LASF21:
+ 1165 0457 5461736B 		.ascii	"TaskStateRefType\000"
+ 1165      53746174 
+ 1165      65526566 
+ 1165      54797065 
+ 1165      00
+ 1166              	.LASF32:
+ 1167 0468 45455F41 		.ascii	"EE_ALARM\000"
+ 1167      4C41524D 
+ 1167      00
+ 1168              	.LASF39:
+ 1169 0471 75736564 		.ascii	"used\000"
+ 1169      00
+ 1170              	.LASF54:
+ 1171 0476 73697A65 		.ascii	"sizetype\000"
+ 1171      74797065 
+ 1171      00
+ 1172              	.LASF24:
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cc0E2TeZ.s 			page 28
+
+
+ 1173 047f 436F756E 		.ascii	"CounterType\000"
+ 1173      74657254 
+ 1173      79706500 
+ 1174              	.LASF57:
+ 1175 048b 45455F74 		.ascii	"EE_th_status\000"
+ 1175      685F7374 
+ 1175      61747573 
+ 1175      00
+ 1176              	.LASF56:
+ 1177 0498 45455F74 		.ascii	"EE_th_dispatch_prio\000"
+ 1177      685F6469 
+ 1177      73706174 
+ 1177      63685F70 
+ 1177      72696F00 
+ 1178              	.LASF58:
+ 1179 04ac 45455F74 		.ascii	"EE_th_next\000"
+ 1179      685F6E65 
+ 1179      787400
+ 1180              	.LASF74:
+ 1181 04b7 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1181      43313120 
+ 1181      352E342E 
+ 1181      31203230 
+ 1181      31363036 
+ 1182 04ea 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1182      20726576 
+ 1182      6973696F 
+ 1182      6E203233 
+ 1182      37373135 
+ 1183 051d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1183      66756E63 
+ 1183      74696F6E 
+ 1183      2D736563 
+ 1183      74696F6E 
+ 1184              	.LASF40:
+ 1185 0545 636E7463 		.ascii	"cntcycle\000"
+ 1185      79636C65 
+ 1185      00
+ 1186              	.LASF69:
+ 1187 054e 45455F6F 		.ascii	"EE_oo_IRQ_disable_count\000"
+ 1187      6F5F4952 
+ 1187      515F6469 
+ 1187      7361626C 
+ 1187      655F636F 
+ 1188              	.LASF42:
+ 1189 0566 6E657874 		.ascii	"next\000"
+ 1189      00
+ 1190              	.LASF72:
+ 1191 056b 45455F72 		.ascii	"EE_rq_lookup\000"
+ 1191      715F6C6F 
+ 1191      6F6B7570 
+ 1191      00
+ 1192              	.LASF30:
+ 1193 0578 66697273 		.ascii	"first\000"
+ 1193      7400
+ 1194              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

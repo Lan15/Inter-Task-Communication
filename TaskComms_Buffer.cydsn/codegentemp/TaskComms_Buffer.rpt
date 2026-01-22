@@ -1,0 +1,3678 @@
+Loading plugins phase: Elapsed time ==> 0s.123ms
+<CYPRESSTAG name="CyDsfit arguments...">
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\TaskComms_Buffer.cyprj -d CY8C5888LTQ-LP097 -s D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+</CYPRESSTAG>
+<CYPRESSTAG name="Design elaboration results...">
+ADD: fit.M0032: warning: Clock Warning: (TFT_SPI_IntClock's accuracy range '24 MHz +/- 1%, (23.76 MHz - 24.24 MHz)' is not within the specified tolerance range '66 MHz +/- 5%, (62.7 MHz - 69.3 MHz)'.).
+ * C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\SPI_Master_v2_50\SPI_Master_v2_50.cysch (Instance:IntClock)
+ * D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\TaskComms_Buffer.cydwr (TFT_SPI_IntClock)
+
+</CYPRESSTAG>
+Elaboration phase: Elapsed time ==> 1s.117ms
+<CYPRESSTAG name="HDL generation results...">
+</CYPRESSTAG>
+HDL generation phase: Elapsed time ==> 0s.025ms
+<CYPRESSTAG name="Synthesis results...">
+
+     | | | | | | |
+   _________________
+  -|               |-
+  -|               |-
+  -|               |-
+  -|    CYPRESS    |-
+  -|               |-
+  -|               |-   Warp Verilog Synthesis Compiler: Version 6.3 IR 41
+  -|               |-   Copyright (C) 1991-2001 Cypress Semiconductor
+   |_______________|
+     | | | | | | |
+
+======================================================================
+Compiling:  TaskComms_Buffer.v
+Program  :   C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\TaskComms_Buffer.cyprj -dcpsoc3 TaskComms_Buffer.v -verilog
+======================================================================
+
+======================================================================
+Compiling:  TaskComms_Buffer.v
+Program  :   C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\TaskComms_Buffer.cyprj -dcpsoc3 TaskComms_Buffer.v -verilog
+======================================================================
+
+======================================================================
+Compiling:  TaskComms_Buffer.v
+Program  :   vlogfe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\TaskComms_Buffer.cyprj -dcpsoc3 -verilog TaskComms_Buffer.v
+======================================================================
+
+vlogfe V6.3 IR 41:  Verilog parser
+Wed Jan 21 20:29:31 2026
+
+
+======================================================================
+Compiling:  TaskComms_Buffer.v
+Program  :   vpp
+Options  :    -yv2 -q10 TaskComms_Buffer.v
+======================================================================
+
+vpp V6.3 IR 41:  Verilog Pre-Processor
+Wed Jan 21 20:29:31 2026
+
+Flattening file 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'
+Flattening file 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
+Flattening file 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'
+Flattening file 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
+Flattening file 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_SPI_Master_v2_50\B_SPI_Master_v2_50.v'
+Flattening file 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'
+Flattening file 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
+Flattening file 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v'
+Flattening file 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'
+
+vpp:  No errors.
+
+Library 'work' => directory 'lcpsoc3'
+General_symbol_table
+General_symbol_table
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Using control file 'TaskComms_Buffer.ctl'.
+C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1113, col 55):  Note: Substituting module 'add_vv_vv' for '+'.
+C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1122, col 48):  Note: Substituting module 'cmp_vv_vv' for '<'.
+C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1122, col 77):  Note: Substituting module 'cmp_vv_vv' for '<'.
+C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1389, col 59):  Note: Substituting module 'cmp_vv_vv' for '<'.
+C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1424, col 61):  Note: Substituting module 'cmp_vv_vv' for '/='.
+C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1547, col 106):  Note: Substituting module 'cmp_vv_vv' for '<'.
+C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1603, col 68):  Note: Substituting module 'cmp_vv_vv' for '<'.
+C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1604, col 68):  Note: Substituting module 'cmp_vv_vv' for '<'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
+
+vlogfe:  No errors.
+
+
+======================================================================
+Compiling:  TaskComms_Buffer.v
+Program  :   tovif
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\TaskComms_Buffer.cyprj -dcpsoc3 -verilog TaskComms_Buffer.v
+======================================================================
+
+tovif V6.3 IR 41:  High-level synthesis
+Wed Jan 21 20:29:31 2026
+
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\codegentemp\TaskComms_Buffer.ctl'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
+Linking 'D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\codegentemp\TaskComms_Buffer.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_SPI_Master_v2_50\B_SPI_Master_v2_50.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\lcpsoc3\stdlogic\mod_cnst.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mcompare.vif'.
+
+tovif:  No errors.
+
+
+======================================================================
+Compiling:  TaskComms_Buffer.v
+Program  :   topld
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\TaskComms_Buffer.cyprj -dcpsoc3 -verilog TaskComms_Buffer.v
+======================================================================
+
+topld V6.3 IR 41:  Synthesis and optimization
+Wed Jan 21 20:29:31 2026
+
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\codegentemp\TaskComms_Buffer.ctl'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
+Linking 'D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\codegentemp\TaskComms_Buffer.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_SPI_Master_v2_50\B_SPI_Master_v2_50.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\lcpsoc3\stdlogic\mod_cnst.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\mcompare.vif'.
+Linking 'C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
+
+----------------------------------------------------------
+Detecting unused logic.
+----------------------------------------------------------
+    User names
+	Net_134
+	Net_140
+	\TFT_BackLight:Net_114\
+	\TFT_SPI:BSPIM:mosi_after_ld\
+	\TFT_SPI:BSPIM:so_send\
+	\TFT_SPI:BSPIM:mosi_fin\
+	\TFT_SPI:BSPIM:mosi_cpha_0\
+	\TFT_SPI:BSPIM:mosi_cpha_1\
+	\TFT_SPI:BSPIM:pre_mosi\
+	\TFT_SPI:BSPIM:dpcounter_zero\
+	\TFT_SPI:BSPIM:control_7\
+	\TFT_SPI:BSPIM:control_6\
+	\TFT_SPI:BSPIM:control_5\
+	\TFT_SPI:BSPIM:control_4\
+	\TFT_SPI:BSPIM:control_3\
+	\TFT_SPI:BSPIM:control_2\
+	\TFT_SPI:BSPIM:control_1\
+	\TFT_SPI:BSPIM:control_0\
+	\TFT_SPI:Net_294\
+	\UART_LOG:BUART:reset_sr\
+	Net_94
+	\UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:b_1\
+	\UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:b_0\
+	\UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:gta_0\
+	\UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:gta_0\
+	Net_87
+	\UART_LOG:BUART:sRX:MODULE_4:g2:a0:gta_0\
+	\UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:albi_1\
+	\UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:agbi_1\
+	\UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:lt_0\
+	\UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:gt_0\
+	\UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:lti_0\
+	\UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:gti_0\
+	\UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:albi_0\
+	\UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:agbi_0\
+	\UART_LOG:BUART:sRX:MODULE_5:g1:a0:xeq\
+	\UART_LOG:BUART:sRX:MODULE_5:g1:a0:xlt\
+	\UART_LOG:BUART:sRX:MODULE_5:g1:a0:xlte\
+	\UART_LOG:BUART:sRX:MODULE_5:g1:a0:xgt\
+	\UART_LOG:BUART:sRX:MODULE_5:g1:a0:xgte\
+	\UART_LOG:BUART:sRX:MODULE_5:lt\
+	\UART_LOG:BUART:sRX:MODULE_5:eq\
+	\UART_LOG:BUART:sRX:MODULE_5:gt\
+	\UART_LOG:BUART:sRX:MODULE_5:gte\
+	\UART_LOG:BUART:sRX:MODULE_5:lte\
+
+
+Deleted 45 User equations/components.
+Deleted 0 Synthesized equations/components.
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+Aliasing zero to Net_120
+Aliasing tmpOE__TFT_SDA_net_0 to \TFT_BackLight:Net_113\
+Aliasing one to \TFT_BackLight:Net_113\
+Aliasing Net_113 to Net_120
+Aliasing Net_107 to Net_120
+Aliasing tmpOE__TFT_LED_net_0 to \TFT_BackLight:Net_113\
+Aliasing tmpOE__TFT_CS_net_0 to \TFT_BackLight:Net_113\
+Aliasing tmpOE__TFT_RES_net_0 to \TFT_BackLight:Net_113\
+Aliasing tmpOE__TFT_DC_net_0 to \TFT_BackLight:Net_113\
+Aliasing tmpOE__TFT_SCL_net_0 to \TFT_BackLight:Net_113\
+Aliasing \TFT_SPI:BSPIM:pol_supprt\ to Net_120
+Aliasing \TFT_SPI:BSPIM:tx_status_3\ to \TFT_SPI:BSPIM:load_rx_data\
+Aliasing \TFT_SPI:BSPIM:tx_status_6\ to Net_120
+Aliasing \TFT_SPI:BSPIM:tx_status_5\ to Net_120
+Aliasing \TFT_SPI:BSPIM:rx_status_3\ to Net_120
+Aliasing \TFT_SPI:BSPIM:rx_status_2\ to Net_120
+Aliasing \TFT_SPI:BSPIM:rx_status_1\ to Net_120
+Aliasing \TFT_SPI:BSPIM:rx_status_0\ to Net_120
+Aliasing \TFT_SPI:Net_289\ to Net_120
+Aliasing \UART_LOG:BUART:tx_hd_send_break\ to Net_120
+Aliasing \UART_LOG:BUART:HalfDuplexSend\ to Net_120
+Aliasing \UART_LOG:BUART:FinalParityType_1\ to Net_120
+Aliasing \UART_LOG:BUART:FinalParityType_0\ to Net_120
+Aliasing \UART_LOG:BUART:FinalAddrMode_2\ to Net_120
+Aliasing \UART_LOG:BUART:FinalAddrMode_1\ to Net_120
+Aliasing \UART_LOG:BUART:FinalAddrMode_0\ to Net_120
+Aliasing \UART_LOG:BUART:tx_ctrl_mark\ to Net_120
+Aliasing \UART_LOG:BUART:tx_status_6\ to Net_120
+Aliasing \UART_LOG:BUART:tx_status_5\ to Net_120
+Aliasing \UART_LOG:BUART:tx_status_4\ to Net_120
+Aliasing \UART_LOG:BUART:rx_count7_bit8_wire\ to Net_120
+Aliasing \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ to \TFT_BackLight:Net_113\
+Aliasing \UART_LOG:BUART:sRX:s23Poll:MODIN2_1\ to \UART_LOG:BUART:sRX:s23Poll:MODIN1_1\
+Aliasing \UART_LOG:BUART:sRX:s23Poll:MODIN2_0\ to \UART_LOG:BUART:sRX:s23Poll:MODIN1_0\
+Aliasing \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:newb_1\ to Net_120
+Aliasing \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:newb_0\ to \TFT_BackLight:Net_113\
+Aliasing \UART_LOG:BUART:sRX:s23Poll:MODIN3_1\ to \UART_LOG:BUART:sRX:s23Poll:MODIN1_1\
+Aliasing \UART_LOG:BUART:sRX:s23Poll:MODIN3_0\ to \UART_LOG:BUART:sRX:s23Poll:MODIN1_0\
+Aliasing \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:newb_1\ to \TFT_BackLight:Net_113\
+Aliasing \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:newb_0\ to Net_120
+Aliasing \UART_LOG:BUART:rx_status_1\ to Net_120
+Aliasing \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_6\ to Net_120
+Aliasing \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_5\ to Net_120
+Aliasing \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_4\ to Net_120
+Aliasing \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_6\ to Net_120
+Aliasing \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_5\ to Net_120
+Aliasing \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_4\ to Net_120
+Aliasing \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_3\ to Net_120
+Aliasing \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_2\ to \TFT_BackLight:Net_113\
+Aliasing \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_1\ to \TFT_BackLight:Net_113\
+Aliasing \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_0\ to Net_120
+Aliasing \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:aeqb_0\ to \TFT_BackLight:Net_113\
+Aliasing tmpOE__Rx_1_net_0 to \TFT_BackLight:Net_113\
+Aliasing tmpOE__Tx_1_net_0 to \TFT_BackLight:Net_113\
+Aliasing \TFT_SPI:BSPIM:so_send_reg\\D\ to Net_120
+Aliasing \TFT_SPI:BSPIM:mosi_pre_reg\\D\ to Net_120
+Aliasing \TFT_SPI:BSPIM:dpcounter_one_reg\\D\ to \TFT_SPI:BSPIM:load_rx_data\
+Aliasing \UART_LOG:BUART:reset_reg\\D\ to Net_120
+Aliasing \UART_LOG:BUART:rx_break_status\\D\ to Net_120
+Removing Lhs of wire \TFT_BackLight:Net_107\[4] = Net_120[0]
+Removing Lhs of wire zero[6] = Net_120[0]
+Removing Rhs of wire wTFT_LED[10] = \TFT_BackLight:Net_57\[8]
+Removing Rhs of wire tmpOE__TFT_SDA_net_0[15] = \TFT_BackLight:Net_113\[5]
+Removing Rhs of wire wTFT_SDA[16] = \TFT_SPI:BSPIM:mosi_reg\[75]
+Removing Lhs of wire one[20] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire Net_113[22] = Net_120[0]
+Removing Lhs of wire Net_107[23] = Net_120[0]
+Removing Lhs of wire tmpOE__TFT_LED_net_0[25] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire tmpOE__TFT_CS_net_0[38] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire tmpOE__TFT_RES_net_0[44] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire tmpOE__TFT_DC_net_0[50] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire tmpOE__TFT_SCL_net_0[56] = tmpOE__TFT_SDA_net_0[15]
+Removing Rhs of wire \TFT_SPI:Net_276\[62] = \TFT_SPI:Net_288\[63]
+Removing Rhs of wire \TFT_SPI:BSPIM:load_rx_data\[67] = \TFT_SPI:BSPIM:dpcounter_one\[68]
+Removing Lhs of wire \TFT_SPI:BSPIM:pol_supprt\[69] = Net_120[0]
+Removing Lhs of wire \TFT_SPI:BSPIM:miso_to_dp\[70] = \TFT_SPI:Net_244\[71]
+Removing Lhs of wire \TFT_SPI:Net_244\[71] = Net_120[0]
+Removing Rhs of wire \TFT_SPI:BSPIM:tx_status_1\[97] = \TFT_SPI:BSPIM:dpMOSI_fifo_empty\[98]
+Removing Rhs of wire \TFT_SPI:BSPIM:tx_status_2\[99] = \TFT_SPI:BSPIM:dpMOSI_fifo_not_full\[100]
+Removing Lhs of wire \TFT_SPI:BSPIM:tx_status_3\[101] = \TFT_SPI:BSPIM:load_rx_data\[67]
+Removing Rhs of wire \TFT_SPI:BSPIM:rx_status_4\[103] = \TFT_SPI:BSPIM:dpMISO_fifo_full\[104]
+Removing Rhs of wire \TFT_SPI:BSPIM:rx_status_5\[105] = \TFT_SPI:BSPIM:dpMISO_fifo_not_empty\[106]
+Removing Lhs of wire \TFT_SPI:BSPIM:tx_status_6\[108] = Net_120[0]
+Removing Lhs of wire \TFT_SPI:BSPIM:tx_status_5\[109] = Net_120[0]
+Removing Lhs of wire \TFT_SPI:BSPIM:rx_status_3\[110] = Net_120[0]
+Removing Lhs of wire \TFT_SPI:BSPIM:rx_status_2\[111] = Net_120[0]
+Removing Lhs of wire \TFT_SPI:BSPIM:rx_status_1\[112] = Net_120[0]
+Removing Lhs of wire \TFT_SPI:BSPIM:rx_status_0\[113] = Net_120[0]
+Removing Lhs of wire \TFT_SPI:Net_273\[123] = Net_120[0]
+Removing Lhs of wire \TFT_SPI:Net_289\[162] = Net_120[0]
+Removing Lhs of wire \UART_LOG:Net_61\[165] = \UART_LOG:Net_9\[164]
+Removing Lhs of wire \UART_LOG:BUART:tx_hd_send_break\[169] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:HalfDuplexSend\[170] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:FinalParityType_1\[171] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:FinalParityType_0\[172] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:FinalAddrMode_2\[173] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:FinalAddrMode_1\[174] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:FinalAddrMode_0\[175] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:tx_ctrl_mark\[176] = Net_120[0]
+Removing Rhs of wire Net_8[183] = \UART_LOG:BUART:rx_interrupt_out\[184]
+Removing Rhs of wire \UART_LOG:BUART:tx_bitclk_enable_pre\[188] = \UART_LOG:BUART:tx_bitclk_dp\[224]
+Removing Lhs of wire \UART_LOG:BUART:tx_counter_tc\[234] = \UART_LOG:BUART:tx_counter_dp\[225]
+Removing Lhs of wire \UART_LOG:BUART:tx_status_6\[235] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:tx_status_5\[236] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:tx_status_4\[237] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:tx_status_1\[239] = \UART_LOG:BUART:tx_fifo_empty\[202]
+Removing Lhs of wire \UART_LOG:BUART:tx_status_3\[241] = \UART_LOG:BUART:tx_fifo_notfull\[201]
+Removing Lhs of wire \UART_LOG:BUART:rx_count7_bit8_wire\[301] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:add_vv_vv_MODGEN_1_1\[309] = \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_1\[320]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:add_vv_vv_MODGEN_1_0\[311] = \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_0\[321]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:cmp_vv_vv_MODGEN_2\[312] = \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:lta_0\[337]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:cmp_vv_vv_MODGEN_3\[313] = \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:lta_0\[351]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:a_1\[314] = \UART_LOG:BUART:sRX:s23Poll:MODIN1_1\[315]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN1_1\[315] = \UART_LOG:BUART:pollcount_1\[307]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:a_0\[316] = \UART_LOG:BUART:sRX:s23Poll:MODIN1_0\[317]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN1_0\[317] = \UART_LOG:BUART:pollcount_0\[310]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[323] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[324] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:newa_1\[325] = \UART_LOG:BUART:pollcount_1\[307]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN2_1\[326] = \UART_LOG:BUART:pollcount_1\[307]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:newa_0\[327] = \UART_LOG:BUART:pollcount_0\[310]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN2_0\[328] = \UART_LOG:BUART:pollcount_0\[310]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:newb_1\[329] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:newb_0\[330] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:dataa_1\[331] = \UART_LOG:BUART:pollcount_1\[307]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:dataa_0\[332] = \UART_LOG:BUART:pollcount_0\[310]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:datab_1\[333] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:datab_0\[334] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:newa_1\[339] = \UART_LOG:BUART:pollcount_1\[307]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN3_1\[340] = \UART_LOG:BUART:pollcount_1\[307]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:newa_0\[341] = \UART_LOG:BUART:pollcount_0\[310]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODIN3_0\[342] = \UART_LOG:BUART:pollcount_0\[310]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:newb_1\[343] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:newb_0\[344] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:dataa_1\[345] = \UART_LOG:BUART:pollcount_1\[307]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:dataa_0\[346] = \UART_LOG:BUART:pollcount_0\[310]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:datab_1\[347] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire \UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:datab_0\[348] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:rx_status_1\[355] = Net_120[0]
+Removing Rhs of wire \UART_LOG:BUART:rx_status_2\[356] = \UART_LOG:BUART:rx_parity_error_status\[357]
+Removing Rhs of wire \UART_LOG:BUART:rx_status_3\[358] = \UART_LOG:BUART:rx_stop_bit_error\[359]
+Removing Lhs of wire \UART_LOG:BUART:sRX:cmp_vv_vv_MODGEN_4\[369] = \UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_0\[418]
+Removing Lhs of wire \UART_LOG:BUART:sRX:cmp_vv_vv_MODGEN_5\[373] = \UART_LOG:BUART:sRX:MODULE_5:g1:a0:xneq\[440]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_6\[374] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_5\[375] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_4\[376] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_3\[377] = \UART_LOG:BUART:sRX:MODIN4_6\[378]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODIN4_6\[378] = \UART_LOG:BUART:rx_count_6\[296]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_2\[379] = \UART_LOG:BUART:sRX:MODIN4_5\[380]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODIN4_5\[380] = \UART_LOG:BUART:rx_count_5\[297]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_1\[381] = \UART_LOG:BUART:sRX:MODIN4_4\[382]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODIN4_4\[382] = \UART_LOG:BUART:rx_count_4\[298]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newa_0\[383] = \UART_LOG:BUART:sRX:MODIN4_3\[384]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODIN4_3\[384] = \UART_LOG:BUART:rx_count_3\[299]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_6\[385] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_5\[386] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_4\[387] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_3\[388] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_2\[389] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_1\[390] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:newb_0\[391] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_6\[392] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_5\[393] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_4\[394] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_3\[395] = \UART_LOG:BUART:rx_count_6\[296]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_2\[396] = \UART_LOG:BUART:rx_count_5\[297]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_1\[397] = \UART_LOG:BUART:rx_count_4\[298]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:dataa_0\[398] = \UART_LOG:BUART:rx_count_3\[299]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_6\[399] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_5\[400] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_4\[401] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_3\[402] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_2\[403] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_1\[404] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_4:g2:a0:datab_0\[405] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:newa_0\[420] = \UART_LOG:BUART:rx_postpoll\[255]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:newb_0\[421] = \UART_LOG:BUART:rx_parity_bit\[372]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:dataa_0\[422] = \UART_LOG:BUART:rx_postpoll\[255]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:datab_0\[423] = \UART_LOG:BUART:rx_parity_bit\[372]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:a_0\[424] = \UART_LOG:BUART:rx_postpoll\[255]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:b_0\[425] = \UART_LOG:BUART:rx_parity_bit\[372]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:aeqb_0\[427] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:eq_0\[428] = \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:xnor_array_0\[426]
+Removing Lhs of wire \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:eqi_0\[429] = \UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:xnor_array_0\[426]
+Removing Lhs of wire tmpOE__Rx_1_net_0[451] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire tmpOE__Tx_1_net_0[456] = tmpOE__TFT_SDA_net_0[15]
+Removing Lhs of wire \TFT_SPI:BSPIM:so_send_reg\\D\[463] = Net_120[0]
+Removing Lhs of wire \TFT_SPI:BSPIM:mosi_pre_reg\\D\[469] = Net_120[0]
+Removing Lhs of wire \TFT_SPI:BSPIM:dpcounter_one_reg\\D\[471] = \TFT_SPI:BSPIM:load_rx_data\[67]
+Removing Lhs of wire \TFT_SPI:BSPIM:mosi_from_dp_reg\\D\[472] = \TFT_SPI:BSPIM:mosi_from_dp\[81]
+Removing Lhs of wire \UART_LOG:BUART:reset_reg\\D\[475] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:rx_bitclk\\D\[490] = \UART_LOG:BUART:rx_bitclk_pre\[290]
+Removing Lhs of wire \UART_LOG:BUART:rx_parity_error_pre\\D\[499] = \UART_LOG:BUART:rx_parity_error_pre\[367]
+Removing Lhs of wire \UART_LOG:BUART:rx_break_status\\D\[500] = Net_120[0]
+
+------------------------------------------------------
+Aliased 0 equations, 135 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+Substituting virtuals - pass 1:
+
+Note:  Expanding virtual equation for 'Net_120' (cost = 0):
+Net_120 <=  ('0') ;
+
+Note:  Expanding virtual equation for 'tmpOE__TFT_SDA_net_0' (cost = 0):
+tmpOE__TFT_SDA_net_0 <=  ('1') ;
+
+Note:  Expanding virtual equation for '\TFT_SPI:BSPIM:load_rx_data\' (cost = 1):
+\TFT_SPI:BSPIM:load_rx_data\ <= ((not \TFT_SPI:BSPIM:count_4\ and not \TFT_SPI:BSPIM:count_3\ and not \TFT_SPI:BSPIM:count_2\ and not \TFT_SPI:BSPIM:count_1\ and \TFT_SPI:BSPIM:count_0\));
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:rx_addressmatch\' (cost = 0):
+\UART_LOG:BUART:rx_addressmatch\ <= (\UART_LOG:BUART:rx_addressmatch2\
+	OR \UART_LOG:BUART:rx_addressmatch1\);
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:rx_bitclk_pre\' (cost = 1):
+\UART_LOG:BUART:rx_bitclk_pre\ <= ((not \UART_LOG:BUART:rx_count_2\ and not \UART_LOG:BUART:rx_count_1\ and not \UART_LOG:BUART:rx_count_0\));
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:rx_bitclk_pre16x\' (cost = 0):
+\UART_LOG:BUART:rx_bitclk_pre16x\ <= ((not \UART_LOG:BUART:rx_count_2\ and \UART_LOG:BUART:rx_count_1\ and \UART_LOG:BUART:rx_count_0\));
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:rx_poll_bit1\' (cost = 1):
+\UART_LOG:BUART:rx_poll_bit1\ <= ((not \UART_LOG:BUART:rx_count_2\ and not \UART_LOG:BUART:rx_count_1\ and \UART_LOG:BUART:rx_count_0\));
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:rx_poll_bit2\' (cost = 1):
+\UART_LOG:BUART:rx_poll_bit2\ <= ((not \UART_LOG:BUART:rx_count_2\ and not \UART_LOG:BUART:rx_count_1\ and not \UART_LOG:BUART:rx_count_0\));
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:pollingrange\' (cost = 4):
+\UART_LOG:BUART:pollingrange\ <= ((not \UART_LOG:BUART:rx_count_2\ and not \UART_LOG:BUART:rx_count_1\));
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\' (cost = 0):
+\UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\ <= (\UART_LOG:BUART:pollcount_0\);
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_0\' (cost = 0):
+\UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_0\ <= (not \UART_LOG:BUART:pollcount_0\);
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:lta_1\' (cost = 0):
+\UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:lta_1\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:gta_1\' (cost = 0):
+\UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:gta_1\ <= (\UART_LOG:BUART:pollcount_1\);
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:lta_1\' (cost = 0):
+\UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:lta_1\ <= (not \UART_LOG:BUART:pollcount_1\);
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:gta_1\' (cost = 0):
+\UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:gta_1\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_6\' (cost = 0):
+\UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_6\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_4:g2:a0:gta_6\' (cost = 0):
+\UART_LOG:BUART:sRX:MODULE_4:g2:a0:gta_6\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_5\' (cost = 0):
+\UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_5\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_4:g2:a0:gta_5\' (cost = 0):
+\UART_LOG:BUART:sRX:MODULE_4:g2:a0:gta_5\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_4\' (cost = 0):
+\UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_4\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_4:g2:a0:gta_4\' (cost = 0):
+\UART_LOG:BUART:sRX:MODULE_4:g2:a0:gta_4\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_3\' (cost = 0):
+\UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_3\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_4:g2:a0:gta_3\' (cost = 0):
+\UART_LOG:BUART:sRX:MODULE_4:g2:a0:gta_3\ <= (\UART_LOG:BUART:rx_count_6\);
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_2\' (cost = 1):
+\UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_2\ <= ((not \UART_LOG:BUART:rx_count_6\ and not \UART_LOG:BUART:rx_count_5\));
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_4:g2:a0:gta_2\' (cost = 0):
+\UART_LOG:BUART:sRX:MODULE_4:g2:a0:gta_2\ <= (\UART_LOG:BUART:rx_count_6\);
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_1\' (cost = 2):
+\UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_1\ <= ((not \UART_LOG:BUART:rx_count_6\ and not \UART_LOG:BUART:rx_count_4\)
+	OR (not \UART_LOG:BUART:rx_count_6\ and not \UART_LOG:BUART:rx_count_5\));
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_4:g2:a0:gta_1\' (cost = 0):
+\UART_LOG:BUART:sRX:MODULE_4:g2:a0:gta_1\ <= (\UART_LOG:BUART:rx_count_6\);
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_0\' (cost = 8):
+\UART_LOG:BUART:sRX:MODULE_4:g2:a0:lta_0\ <= ((not \UART_LOG:BUART:rx_count_6\ and not \UART_LOG:BUART:rx_count_4\)
+	OR (not \UART_LOG:BUART:rx_count_6\ and not \UART_LOG:BUART:rx_count_5\));
+
+
+Substituting virtuals - pass 2:
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:lta_0\' (cost = 4):
+\UART_LOG:BUART:sRX:s23Poll:MODULE_2:g2:a0:lta_0\ <= ((not \UART_LOG:BUART:pollcount_1\ and not \UART_LOG:BUART:pollcount_0\));
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:lta_0\' (cost = 0):
+\UART_LOG:BUART:sRX:s23Poll:MODULE_3:g2:a0:lta_0\ <= (not \UART_LOG:BUART:pollcount_1\);
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_1\' (cost = 2):
+\UART_LOG:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_1\ <= ((not \UART_LOG:BUART:pollcount_0\ and \UART_LOG:BUART:pollcount_1\)
+	OR (not \UART_LOG:BUART:pollcount_1\ and \UART_LOG:BUART:pollcount_0\));
+
+
+Substituting virtuals - pass 3:
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:rx_postpoll\' (cost = 72):
+\UART_LOG:BUART:rx_postpoll\ <= (\UART_LOG:BUART:pollcount_1\
+	OR (Net_88 and \UART_LOG:BUART:pollcount_0\));
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:xnor_array_0\' (cost = 4):
+\UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:xnor_array_0\ <= ((not \UART_LOG:BUART:pollcount_1\ and not Net_88 and not \UART_LOG:BUART:rx_parity_bit\)
+	OR (not \UART_LOG:BUART:pollcount_1\ and not \UART_LOG:BUART:pollcount_0\ and not \UART_LOG:BUART:rx_parity_bit\)
+	OR (\UART_LOG:BUART:pollcount_1\ and \UART_LOG:BUART:rx_parity_bit\)
+	OR (Net_88 and \UART_LOG:BUART:pollcount_0\ and \UART_LOG:BUART:rx_parity_bit\));
+
+Note:  Expanding virtual equation for '\UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:aeqb_1\' (cost = 4):
+\UART_LOG:BUART:sRX:MODULE_5:g1:a0:gx:u0:aeqb_1\ <= ((not \UART_LOG:BUART:pollcount_1\ and not Net_88 and not \UART_LOG:BUART:rx_parity_bit\)
+	OR (not \UART_LOG:BUART:pollcount_1\ and not \UART_LOG:BUART:pollcount_0\ and not \UART_LOG:BUART:rx_parity_bit\)
+	OR (\UART_LOG:BUART:pollcount_1\ and \UART_LOG:BUART:rx_parity_bit\)
+	OR (Net_88 and \UART_LOG:BUART:pollcount_0\ and \UART_LOG:BUART:rx_parity_bit\));
+
+
+Substituting virtuals - pass 4:
+
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 34 signals.
+	Turned 0 signals into soft nodes.
+	Maximum default expansion cost was set at 3.
+----------------------------------------------------------
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+Aliasing \UART_LOG:BUART:rx_status_0\ to Net_120
+Aliasing \UART_LOG:BUART:rx_status_6\ to Net_120
+Aliasing \UART_LOG:BUART:rx_markspace_status\\D\ to Net_120
+Aliasing \UART_LOG:BUART:rx_parity_error_status\\D\ to Net_120
+Aliasing \UART_LOG:BUART:rx_addr_match_status\\D\ to Net_120
+Removing Rhs of wire \UART_LOG:BUART:rx_bitclk_enable\[254] = \UART_LOG:BUART:rx_bitclk\[302]
+Removing Lhs of wire \UART_LOG:BUART:rx_status_0\[353] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:rx_status_6\[362] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:tx_ctrl_mark_last\\D\[482] = \UART_LOG:BUART:tx_ctrl_mark_last\[245]
+Removing Lhs of wire \UART_LOG:BUART:rx_markspace_status\\D\[494] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:rx_parity_error_status\\D\[495] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:rx_addr_match_status\\D\[497] = Net_120[0]
+Removing Lhs of wire \UART_LOG:BUART:rx_markspace_pre\\D\[498] = \UART_LOG:BUART:rx_markspace_pre\[366]
+Removing Lhs of wire \UART_LOG:BUART:rx_parity_bit\\D\[503] = \UART_LOG:BUART:rx_parity_bit\[372]
+
+------------------------------------------------------
+Aliased 0 equations, 9 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+Eliminating unused logic - pass 1:
+
+Note:  Deleted unused equation:
+\UART_LOG:BUART:sRX:MODULE_5:g1:a0:xneq\ <= ((not \UART_LOG:BUART:rx_parity_bit\ and Net_88 and \UART_LOG:BUART:pollcount_0\)
+	OR (not \UART_LOG:BUART:pollcount_1\ and not \UART_LOG:BUART:pollcount_0\ and \UART_LOG:BUART:rx_parity_bit\)
+	OR (not \UART_LOG:BUART:pollcount_1\ and not Net_88 and \UART_LOG:BUART:rx_parity_bit\)
+	OR (not \UART_LOG:BUART:rx_parity_bit\ and \UART_LOG:BUART:pollcount_1\));
+
+
+Eliminating unused logic - pass 2:
+
+
+Substituting virtuals - pass 1:
+
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 0 signals.
+	Turned 0 signals into soft nodes.
+	Maximum default expansion cost was set at 3.
+----------------------------------------------------------
+
+topld:  No errors.
+
+CYPRESS_DIR    : C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp
+Warp Program   : C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\TaskComms_Buffer.cyprj" -dcpsoc3 TaskComms_Buffer.v -verilog
+</CYPRESSTAG>
+Warp synthesis phase: Elapsed time ==> 0s.850ms
+<CYPRESSTAG name="Fitter results...">
+<CYPRESSTAG name="Fitter startup details...">
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Wednesday, 21 January 2026 20:29:31
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn\TaskComms_Buffer.cyprj -d CY8C5888LTQ-LP097 TaskComms_Buffer.v -verilog
+</CYPRESSTAG>
+<CYPRESSTAG name="Design parsing">
+Design parsing phase: Elapsed time ==> 0s.012ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Tech Mapping">
+<CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
+    Converted constant MacroCell: \TFT_SPI:BSPIM:so_send_reg\ from registered to combinatorial
+    Converted constant MacroCell: \TFT_SPI:BSPIM:mosi_pre_reg\ from registered to combinatorial
+    Converted constant MacroCell: \UART_LOG:BUART:reset_reg\ from registered to combinatorial
+    Converted constant MacroCell: \UART_LOG:BUART:rx_markspace_status\ from registered to combinatorial
+    Converted constant MacroCell: \UART_LOG:BUART:rx_status_2\ from registered to combinatorial
+    Converted constant MacroCell: \UART_LOG:BUART:rx_addr_match_status\ from registered to combinatorial
+    Converted constant MacroCell: \UART_LOG:BUART:rx_break_status\ from registered to combinatorial
+<CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
+    Digital Clock 0: Automatic-assigning  clock 'TFT_SPI_IntClock'. Fanout=1, Signal=\TFT_SPI:Net_276\
+    Digital Clock 1: Automatic-assigning  clock 'UART_LOG_IntClock'. Fanout=1, Signal=\UART_LOG:Net_9\
+    Digital Clock 2: Automatic-assigning  clock 'CLK_LED'. Fanout=1, Signal=Net_129
+</CYPRESSTAG>
+
+Removing unused cells resulting from optimization
+Done removing unused cells.
+<CYPRESSTAG name="UDB Clock/Enable Remapping Results">
+    UDB Clk/Enable \TFT_SPI:BSPIM:ClkEn\: with output requested to be synchronous
+        ClockIn: TFT_SPI_IntClock was determined to be a global clock that is synchronous to BUS_CLK
+        EnableIn: Constant 1 was determined to be synchronous to ClockIn
+        ClockOut: TFT_SPI_IntClock, EnableOut: Constant 1
+    UDB Clk/Enable \UART_LOG:BUART:ClkSync\: with output requested to be synchronous
+        ClockIn: UART_LOG_IntClock was determined to be a global clock that is synchronous to BUS_CLK
+        EnableIn: Constant 1 was determined to be synchronous to ClockIn
+        ClockOut: UART_LOG_IntClock, EnableOut: Constant 1
+</CYPRESSTAG>
+
+Removing unused cells resulting from optimization
+Done removing unused cells.
+<CYPRESSTAG name="Duplicate Macrocell detection">
+</CYPRESSTAG>
+</CYPRESSTAG>
+<CYPRESSTAG name="Duplicate Macrocell detection">
+
+Removing duplicate macrocells
+    Removing \UART_LOG:BUART:rx_parity_bit\, Duplicate of \UART_LOG:BUART:tx_ctrl_mark_last\ 
+    MacroCell: Name=\UART_LOG:BUART:rx_parity_bit\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \UART_LOG:BUART:rx_parity_bit\ (fanout=0)
+
+    Removing \UART_LOG:BUART:rx_address_detected\, Duplicate of \UART_LOG:BUART:tx_ctrl_mark_last\ 
+    MacroCell: Name=\UART_LOG:BUART:rx_address_detected\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \UART_LOG:BUART:rx_address_detected\ (fanout=0)
+
+    Removing \UART_LOG:BUART:rx_parity_error_pre\, Duplicate of \UART_LOG:BUART:tx_ctrl_mark_last\ 
+    MacroCell: Name=\UART_LOG:BUART:rx_parity_error_pre\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \UART_LOG:BUART:rx_parity_error_pre\ (fanout=0)
+
+    Removing \UART_LOG:BUART:rx_markspace_pre\, Duplicate of \UART_LOG:BUART:tx_ctrl_mark_last\ 
+    MacroCell: Name=\UART_LOG:BUART:rx_markspace_pre\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \UART_LOG:BUART:rx_markspace_pre\ (fanout=0)
+
+    Removing \UART_LOG:BUART:rx_state_1\, Duplicate of \UART_LOG:BUART:tx_ctrl_mark_last\ 
+    MacroCell: Name=\UART_LOG:BUART:rx_state_1\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \UART_LOG:BUART:rx_state_1\ (fanout=8)
+
+    Removing \UART_LOG:BUART:tx_parity_bit\, Duplicate of \UART_LOG:BUART:tx_ctrl_mark_last\ 
+    MacroCell: Name=\UART_LOG:BUART:tx_parity_bit\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \UART_LOG:BUART:tx_parity_bit\ (fanout=0)
+
+    Removing \UART_LOG:BUART:tx_mark\, Duplicate of \UART_LOG:BUART:tx_ctrl_mark_last\ 
+    MacroCell: Name=\UART_LOG:BUART:tx_mark\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \UART_LOG:BUART:tx_mark\ (fanout=0)
+
+End removing duplicate macrocells: used 1 pass
+</CYPRESSTAG>
+<CYPRESSTAG name="Design Equations" icon="FILE_RPT_EQUATION">
+
+------------------------------------------------------------
+Design Equations
+------------------------------------------------------------
+    <CYPRESSTAG name="Pin listing">
+
+    ------------------------------------------------------------
+    Pin listing
+    ------------------------------------------------------------
+
+    Pin : Name = TFT_SDA(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL, ROUTABLE
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => TFT_SDA(0)__PA ,
+            pin_input => wTFT_SDA ,
+            pad => TFT_SDA(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = TFT_LED(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL, ROUTABLE
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => TFT_LED(0)__PA ,
+            pin_input => wTFT_LED ,
+            pad => TFT_LED(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = TFT_CS(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => TFT_CS(0)__PA ,
+            pad => TFT_CS(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = TFT_RES(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => TFT_RES(0)__PA ,
+            pad => TFT_RES(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = TFT_DC(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => TFT_DC(0)__PA ,
+            pad => TFT_DC(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = TFT_SCL(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL, ROUTABLE
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => TFT_SCL(0)__PA ,
+            pin_input => wTFT_SCL ,
+            pad => TFT_SCL(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = Rx_1(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: SYNC
+            Out Sync Option: AUTO
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: HI_Z_DIGITAL
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: True
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL, ROUTABLE
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => Rx_1(0)__PA ,
+            fb => Net_88 ,
+            pad => Rx_1(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = Tx_1(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL, ROUTABLE
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => Tx_1(0)__PA ,
+            pin_input => Net_9 ,
+            pad => Tx_1(0)_PAD );
+        Properties:
+        {
+        }
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Macrocell listing" icon="FILE_RPT_EQUATION">
+
+    ------------------------------------------------------------
+    Macrocell listing
+    ------------------------------------------------------------
+
+    MacroCell: Name=\TFT_SPI:BSPIM:load_rx_data\, Mode=(Combinatorial)
+        Total # of inputs        : 5
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\TFT_SPI:BSPIM:count_4\ * !\TFT_SPI:BSPIM:count_3\ * 
+              !\TFT_SPI:BSPIM:count_2\ * !\TFT_SPI:BSPIM:count_1\ * 
+              \TFT_SPI:BSPIM:count_0\
+        );
+        Output = \TFT_SPI:BSPIM:load_rx_data\ (fanout=2)
+
+    MacroCell: Name=\TFT_SPI:BSPIM:tx_status_0\, Mode=(Combinatorial)
+        Total # of inputs        : 3
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\
+        );
+        Output = \TFT_SPI:BSPIM:tx_status_0\ (fanout=1)
+
+    MacroCell: Name=\TFT_SPI:BSPIM:tx_status_4\, Mode=(Combinatorial)
+        Total # of inputs        : 3
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\
+        );
+        Output = \TFT_SPI:BSPIM:tx_status_4\ (fanout=1)
+
+    MacroCell: Name=\TFT_SPI:BSPIM:rx_status_6\, Mode=(Combinatorial)
+        Total # of inputs        : 6
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\TFT_SPI:BSPIM:count_4\ * !\TFT_SPI:BSPIM:count_3\ * 
+              !\TFT_SPI:BSPIM:count_2\ * !\TFT_SPI:BSPIM:count_1\ * 
+              \TFT_SPI:BSPIM:count_0\ * \TFT_SPI:BSPIM:rx_status_4\
+        );
+        Output = \TFT_SPI:BSPIM:rx_status_6\ (fanout=1)
+
+    MacroCell: Name=Net_9, Mode=(Combinatorial)
+        Total # of inputs        : 1
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\UART_LOG:BUART:txn\
+        );
+        Output = Net_9 (fanout=1)
+
+    MacroCell: Name=\UART_LOG:BUART:counter_load_not\, Mode=(Combinatorial)
+        Total # of inputs        : 4
+        Total # of product terms : 2
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        !(
+              !\UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_bitclk_enable_pre\
+            + !\UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              !\UART_LOG:BUART:tx_state_2\
+        );
+        Output = \UART_LOG:BUART:counter_load_not\ (fanout=1)
+
+    MacroCell: Name=\UART_LOG:BUART:tx_status_0\, Mode=(Combinatorial)
+        Total # of inputs        : 5
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_bitclk_enable_pre\ * 
+              \UART_LOG:BUART:tx_fifo_empty\ * \UART_LOG:BUART:tx_state_2\
+        );
+        Output = \UART_LOG:BUART:tx_status_0\ (fanout=1)
+
+    MacroCell: Name=\UART_LOG:BUART:tx_status_2\, Mode=(Combinatorial)
+        Total # of inputs        : 1
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\UART_LOG:BUART:tx_fifo_notfull\
+        );
+        Output = \UART_LOG:BUART:tx_status_2\ (fanout=1)
+
+    MacroCell: Name=\UART_LOG:BUART:rx_counter_load\, Mode=(Combinatorial)
+        Total # of inputs        : 4
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\
+        );
+        Output = \UART_LOG:BUART:rx_counter_load\ (fanout=1)
+
+    MacroCell: Name=\UART_LOG:BUART:rx_postpoll\, Mode=(Combinatorial)
+        Total # of inputs        : 3
+        Total # of product terms : 2
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \UART_LOG:BUART:pollcount_1\
+            + Net_88 * \UART_LOG:BUART:pollcount_0\
+        );
+        Output = \UART_LOG:BUART:rx_postpoll\ (fanout=1)
+
+    MacroCell: Name=\UART_LOG:BUART:rx_status_4\, Mode=(Combinatorial)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \UART_LOG:BUART:rx_load_fifo\ * \UART_LOG:BUART:rx_fifofull\
+        );
+        Output = \UART_LOG:BUART:rx_status_4\ (fanout=1)
+
+    MacroCell: Name=\UART_LOG:BUART:rx_status_5\, Mode=(Combinatorial)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \UART_LOG:BUART:rx_fifonotempty\ * 
+              \UART_LOG:BUART:rx_state_stop1_reg\
+        );
+        Output = \UART_LOG:BUART:rx_status_5\ (fanout=1)
+
+    MacroCell: Name=__ONE__, Mode=(Combinatorial)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = __ONE__ (fanout=1)
+
+    MacroCell: Name=wTFT_SCL, Mode=(D-Register)
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              wTFT_SCL * \TFT_SPI:BSPIM:state_1\ * \TFT_SPI:BSPIM:state_0\
+            + !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\
+        );
+        Output = wTFT_SCL (fanout=2)
+
+    MacroCell: Name=wTFT_SDA, Mode=(D-Register)
+        Total # of inputs        : 11
+        Total # of product terms : 7
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 7 pterms
+        !(
+              !wTFT_SDA * !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_0\
+            + !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\
+            + !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_0\ * 
+              !\TFT_SPI:BSPIM:count_4\ * !\TFT_SPI:BSPIM:count_3\ * 
+              !\TFT_SPI:BSPIM:count_2\ * \TFT_SPI:BSPIM:count_1\ * 
+              !\TFT_SPI:BSPIM:count_0\ * !\TFT_SPI:BSPIM:ld_ident\
+            + \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\
+            + \TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\
+            + \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:mosi_from_dp\
+            + !\TFT_SPI:BSPIM:state_0\ * !\TFT_SPI:BSPIM:mosi_from_dp\
+        );
+        Output = wTFT_SDA (fanout=2)
+
+    MacroCell: Name=\TFT_SPI:BSPIM:state_2\, Mode=(D-Register)
+        Total # of inputs        : 10
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\
+            + !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\ * !\TFT_SPI:BSPIM:count_4\ * 
+              !\TFT_SPI:BSPIM:count_3\ * !\TFT_SPI:BSPIM:count_2\ * 
+              \TFT_SPI:BSPIM:count_1\ * !\TFT_SPI:BSPIM:count_0\ * 
+              !\TFT_SPI:BSPIM:ld_ident\
+            + !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_0\ * 
+              !\TFT_SPI:BSPIM:count_4\ * !\TFT_SPI:BSPIM:count_3\ * 
+              \TFT_SPI:BSPIM:count_2\ * !\TFT_SPI:BSPIM:count_1\ * 
+              \TFT_SPI:BSPIM:count_0\ * !\TFT_SPI:BSPIM:tx_status_1\
+        );
+        Output = \TFT_SPI:BSPIM:state_2\ (fanout=12)
+
+    MacroCell: Name=\TFT_SPI:BSPIM:state_1\, Mode=(T-Register)
+        Total # of inputs        : 10
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\
+            + !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_0\ * 
+              !\TFT_SPI:BSPIM:count_4\ * !\TFT_SPI:BSPIM:count_3\ * 
+              \TFT_SPI:BSPIM:count_2\ * !\TFT_SPI:BSPIM:count_1\ * 
+              \TFT_SPI:BSPIM:count_0\ * !\TFT_SPI:BSPIM:tx_status_1\
+            + \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_0\
+            + \TFT_SPI:BSPIM:state_1\ * !\TFT_SPI:BSPIM:state_0\ * 
+              !\TFT_SPI:BSPIM:count_4\ * !\TFT_SPI:BSPIM:count_3\ * 
+              !\TFT_SPI:BSPIM:count_2\ * \TFT_SPI:BSPIM:count_1\ * 
+              !\TFT_SPI:BSPIM:count_0\ * !\TFT_SPI:BSPIM:ld_ident\
+        );
+        Output = \TFT_SPI:BSPIM:state_1\ (fanout=12)
+
+    MacroCell: Name=\TFT_SPI:BSPIM:state_0\, Mode=(T-Register)
+        Total # of inputs        : 4
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\
+            + \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\
+            + !\TFT_SPI:BSPIM:state_1\ * !\TFT_SPI:BSPIM:state_0\ * 
+              !\TFT_SPI:BSPIM:tx_status_1\
+        );
+        Output = \TFT_SPI:BSPIM:state_0\ (fanout=12)
+
+    MacroCell: Name=Net_111, Mode=(D-Register)
+        Total # of inputs        : 4
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        !(
+              !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\
+            + !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\ * !Net_111
+            + \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\ * !Net_111
+            + \TFT_SPI:BSPIM:state_1\ * \TFT_SPI:BSPIM:state_0\ * !Net_111
+        );
+        Output = Net_111 (fanout=1)
+
+    MacroCell: Name=\TFT_SPI:BSPIM:load_cond\, Mode=(T-Register)
+        Total # of inputs        : 9
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:count_4\ * 
+              !\TFT_SPI:BSPIM:count_3\ * !\TFT_SPI:BSPIM:count_2\ * 
+              !\TFT_SPI:BSPIM:count_1\ * !\TFT_SPI:BSPIM:count_0\ * 
+              \TFT_SPI:BSPIM:load_cond\
+            + \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\ * !\TFT_SPI:BSPIM:load_cond\
+            + \TFT_SPI:BSPIM:state_1\ * !\TFT_SPI:BSPIM:count_4\ * 
+              !\TFT_SPI:BSPIM:count_3\ * !\TFT_SPI:BSPIM:count_2\ * 
+              !\TFT_SPI:BSPIM:count_1\ * !\TFT_SPI:BSPIM:count_0\ * 
+              \TFT_SPI:BSPIM:load_cond\
+            + \TFT_SPI:BSPIM:state_0\ * !\TFT_SPI:BSPIM:count_4\ * 
+              !\TFT_SPI:BSPIM:count_3\ * !\TFT_SPI:BSPIM:count_2\ * 
+              !\TFT_SPI:BSPIM:count_1\ * !\TFT_SPI:BSPIM:count_0\ * 
+              \TFT_SPI:BSPIM:load_cond\
+        );
+        Output = \TFT_SPI:BSPIM:load_cond\ (fanout=1)
+
+    MacroCell: Name=\TFT_SPI:BSPIM:ld_ident\, Mode=(T-Register)
+        Total # of inputs        : 9
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\ * !\TFT_SPI:BSPIM:ld_ident\
+            + \TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\ * \TFT_SPI:BSPIM:ld_ident\
+            + \TFT_SPI:BSPIM:state_1\ * !\TFT_SPI:BSPIM:state_0\ * 
+              !\TFT_SPI:BSPIM:count_4\ * !\TFT_SPI:BSPIM:count_3\ * 
+              !\TFT_SPI:BSPIM:count_2\ * \TFT_SPI:BSPIM:count_1\ * 
+              !\TFT_SPI:BSPIM:count_0\ * \TFT_SPI:BSPIM:ld_ident\
+        );
+        Output = \TFT_SPI:BSPIM:ld_ident\ (fanout=4)
+
+    MacroCell: Name=\TFT_SPI:BSPIM:cnt_enable\, Mode=(T-Register)
+        Total # of inputs        : 4
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\ * \TFT_SPI:BSPIM:cnt_enable\
+            + !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\ * !\TFT_SPI:BSPIM:cnt_enable\
+            + \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\ * \TFT_SPI:BSPIM:cnt_enable\
+            + \TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\ * \TFT_SPI:BSPIM:cnt_enable\
+        );
+        Output = \TFT_SPI:BSPIM:cnt_enable\ (fanout=2)
+
+    MacroCell: Name=\UART_LOG:BUART:txn\, Mode=(D-Register)
+        Total # of inputs        : 7
+        Total # of product terms : 5
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 5 pterms
+        (
+              \UART_LOG:BUART:txn\ * \UART_LOG:BUART:tx_state_1\ * 
+              !\UART_LOG:BUART:tx_bitclk\
+            + \UART_LOG:BUART:txn\ * \UART_LOG:BUART:tx_state_2\
+            + !\UART_LOG:BUART:tx_state_1\ * \UART_LOG:BUART:tx_state_0\ * 
+              !\UART_LOG:BUART:tx_shift_out\ * !\UART_LOG:BUART:tx_state_2\
+            + !\UART_LOG:BUART:tx_state_1\ * \UART_LOG:BUART:tx_state_0\ * 
+              !\UART_LOG:BUART:tx_state_2\ * !\UART_LOG:BUART:tx_bitclk\
+            + \UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              !\UART_LOG:BUART:tx_shift_out\ * !\UART_LOG:BUART:tx_state_2\ * 
+              !\UART_LOG:BUART:tx_counter_dp\ * \UART_LOG:BUART:tx_bitclk\
+        );
+        Output = \UART_LOG:BUART:txn\ (fanout=2)
+
+    MacroCell: Name=\UART_LOG:BUART:tx_state_1\, Mode=(T-Register)
+        Total # of inputs        : 6
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              \UART_LOG:BUART:tx_state_1\ * \UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_bitclk_enable_pre\ * 
+              \UART_LOG:BUART:tx_state_2\
+            + \UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_2\ * 
+              \UART_LOG:BUART:tx_counter_dp\ * \UART_LOG:BUART:tx_bitclk\
+            + \UART_LOG:BUART:tx_state_0\ * !\UART_LOG:BUART:tx_state_2\ * 
+              \UART_LOG:BUART:tx_bitclk\
+        );
+        Output = \UART_LOG:BUART:tx_state_1\ (fanout=8)
+
+    MacroCell: Name=\UART_LOG:BUART:tx_state_0\, Mode=(T-Register)
+        Total # of inputs        : 6
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_bitclk_enable_pre\ * 
+              !\UART_LOG:BUART:tx_fifo_empty\
+            + !\UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              !\UART_LOG:BUART:tx_fifo_empty\ * !\UART_LOG:BUART:tx_state_2\
+            + \UART_LOG:BUART:tx_state_1\ * \UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_bitclk_enable_pre\ * 
+              \UART_LOG:BUART:tx_fifo_empty\ * \UART_LOG:BUART:tx_state_2\
+            + \UART_LOG:BUART:tx_state_0\ * !\UART_LOG:BUART:tx_state_2\ * 
+              \UART_LOG:BUART:tx_bitclk\
+        );
+        Output = \UART_LOG:BUART:tx_state_0\ (fanout=8)
+
+    MacroCell: Name=\UART_LOG:BUART:tx_state_2\, Mode=(T-Register)
+        Total # of inputs        : 6
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_bitclk_enable_pre\ * 
+              \UART_LOG:BUART:tx_state_2\
+            + \UART_LOG:BUART:tx_state_1\ * \UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_bitclk_enable_pre\ * 
+              \UART_LOG:BUART:tx_state_2\
+            + \UART_LOG:BUART:tx_state_1\ * \UART_LOG:BUART:tx_state_0\ * 
+              !\UART_LOG:BUART:tx_state_2\ * \UART_LOG:BUART:tx_bitclk\
+            + \UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_2\ * 
+              \UART_LOG:BUART:tx_counter_dp\ * \UART_LOG:BUART:tx_bitclk\
+        );
+        Output = \UART_LOG:BUART:tx_state_2\ (fanout=7)
+
+    MacroCell: Name=\UART_LOG:BUART:tx_bitclk\, Mode=(D-Register)
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        !(
+              !\UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_state_2\
+            + !\UART_LOG:BUART:tx_bitclk_enable_pre\
+        );
+        Output = \UART_LOG:BUART:tx_bitclk\ (fanout=4)
+
+    MacroCell: Name=\UART_LOG:BUART:tx_ctrl_mark_last\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \UART_LOG:BUART:tx_ctrl_mark_last\ (fanout=8)
+
+    MacroCell: Name=\UART_LOG:BUART:rx_state_0\, Mode=(T-Register)
+        Total # of inputs        : 11
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * 
+              !\UART_LOG:BUART:rx_state_3\ * \UART_LOG:BUART:rx_state_2\ * 
+              !\UART_LOG:BUART:pollcount_1\ * !Net_88
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * 
+              !\UART_LOG:BUART:rx_state_3\ * \UART_LOG:BUART:rx_state_2\ * 
+              !\UART_LOG:BUART:pollcount_1\ * !\UART_LOG:BUART:pollcount_0\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_5\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_4\
+        );
+        Output = \UART_LOG:BUART:rx_state_0\ (fanout=8)
+
+    MacroCell: Name=\UART_LOG:BUART:rx_load_fifo\, Mode=(D-Register)
+        Total # of inputs        : 8
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * \UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_5\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_4\
+        );
+        Output = \UART_LOG:BUART:rx_load_fifo\ (fanout=2)
+
+    MacroCell: Name=\UART_LOG:BUART:rx_state_3\, Mode=(T-Register)
+        Total # of inputs        : 8
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * \UART_LOG:BUART:rx_state_3\ * 
+              \UART_LOG:BUART:rx_state_2\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_5\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_4\
+        );
+        Output = \UART_LOG:BUART:rx_state_3\ (fanout=7)
+
+    MacroCell: Name=\UART_LOG:BUART:rx_state_2\, Mode=(T-Register)
+        Total # of inputs        : 10
+        Total # of product terms : 5
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 5 pterms
+        (
+              !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * \UART_LOG:BUART:rx_state_3\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * \UART_LOG:BUART:rx_state_2\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !Net_88 * 
+              \UART_LOG:BUART:rx_last\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_5\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_4\
+        );
+        Output = \UART_LOG:BUART:rx_state_2\ (fanout=7)
+
+    MacroCell: Name=\UART_LOG:BUART:rx_bitclk_enable\, Mode=(D-Register)
+        Total # of inputs        : 3
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\UART_LOG:BUART:rx_count_2\ * !\UART_LOG:BUART:rx_count_1\ * 
+              !\UART_LOG:BUART:rx_count_0\
+        );
+        Output = \UART_LOG:BUART:rx_bitclk_enable\ (fanout=6)
+
+    MacroCell: Name=\UART_LOG:BUART:rx_state_stop1_reg\, Mode=(D-Register)
+        Total # of inputs        : 4
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * \UART_LOG:BUART:rx_state_3\ * 
+              \UART_LOG:BUART:rx_state_2\
+        );
+        Output = \UART_LOG:BUART:rx_state_stop1_reg\ (fanout=1)
+
+    MacroCell: Name=\UART_LOG:BUART:pollcount_1\, Mode=(D-Register)
+        Total # of inputs        : 5
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\UART_LOG:BUART:rx_count_2\ * !\UART_LOG:BUART:rx_count_1\ * 
+              !\UART_LOG:BUART:pollcount_1\ * Net_88 * 
+              \UART_LOG:BUART:pollcount_0\
+            + !\UART_LOG:BUART:rx_count_2\ * !\UART_LOG:BUART:rx_count_1\ * 
+              \UART_LOG:BUART:pollcount_1\ * !Net_88
+            + !\UART_LOG:BUART:rx_count_2\ * !\UART_LOG:BUART:rx_count_1\ * 
+              \UART_LOG:BUART:pollcount_1\ * !\UART_LOG:BUART:pollcount_0\
+        );
+        Output = \UART_LOG:BUART:pollcount_1\ (fanout=4)
+
+    MacroCell: Name=\UART_LOG:BUART:pollcount_0\, Mode=(D-Register)
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\UART_LOG:BUART:rx_count_2\ * !\UART_LOG:BUART:rx_count_1\ * 
+              !Net_88 * \UART_LOG:BUART:pollcount_0\
+            + !\UART_LOG:BUART:rx_count_2\ * !\UART_LOG:BUART:rx_count_1\ * 
+              Net_88 * !\UART_LOG:BUART:pollcount_0\
+        );
+        Output = \UART_LOG:BUART:pollcount_0\ (fanout=5)
+
+    MacroCell: Name=\UART_LOG:BUART:rx_status_3\, Mode=(D-Register)
+        Total # of inputs        : 8
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * \UART_LOG:BUART:rx_state_3\ * 
+              \UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:pollcount_1\ * 
+              !Net_88
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * \UART_LOG:BUART:rx_state_3\ * 
+              \UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:pollcount_1\ * 
+              !\UART_LOG:BUART:pollcount_0\
+        );
+        Output = \UART_LOG:BUART:rx_status_3\ (fanout=1)
+
+    MacroCell: Name=\UART_LOG:BUART:rx_last\, Mode=(D-Register)
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_88
+        );
+        Output = \UART_LOG:BUART:rx_last\ (fanout=1)
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Datapath listing">
+
+    ------------------------------------------------------------
+    Datapath listing
+    ------------------------------------------------------------
+
+    datapathcell: Name =\TFT_SPI:BSPIM:sR8:Dp:u0\
+        PORT MAP (
+            clock => \TFT_SPI:Net_276\ ,
+            cs_addr_2 => \TFT_SPI:BSPIM:state_2\ ,
+            cs_addr_1 => \TFT_SPI:BSPIM:state_1\ ,
+            cs_addr_0 => \TFT_SPI:BSPIM:state_0\ ,
+            f1_load => \TFT_SPI:BSPIM:load_rx_data\ ,
+            so_comb => \TFT_SPI:BSPIM:mosi_from_dp\ ,
+            f0_bus_stat_comb => \TFT_SPI:BSPIM:tx_status_2\ ,
+            f0_blk_stat_comb => \TFT_SPI:BSPIM:tx_status_1\ ,
+            f1_bus_stat_comb => \TFT_SPI:BSPIM:rx_status_5\ ,
+            f1_blk_stat_comb => \TFT_SPI:BSPIM:rx_status_4\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000000000000000000001100000000000001010000000001000100010000000000011100000000010001000000000000000101000000000000010100000011111111000000001111111111111111000000000010001000001000111100000000000000000100"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    datapathcell: Name =\UART_LOG:BUART:sTX:TxShifter:u0\
+        PORT MAP (
+            clock => \UART_LOG:Net_9\ ,
+            cs_addr_2 => \UART_LOG:BUART:tx_state_1\ ,
+            cs_addr_1 => \UART_LOG:BUART:tx_state_0\ ,
+            cs_addr_0 => \UART_LOG:BUART:tx_bitclk_enable_pre\ ,
+            so_comb => \UART_LOG:BUART:tx_shift_out\ ,
+            f0_bus_stat_comb => \UART_LOG:BUART:tx_fifo_notfull\ ,
+            f0_blk_stat_comb => \UART_LOG:BUART:tx_fifo_empty\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000000000000000000000000000000000000000000000000000011000000000000000000000000000010010000000000000000000000000000000000000011111111000000001111111111111111000000000000000001000100111100000000000000001100"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    datapathcell: Name =\UART_LOG:BUART:sTX:sCLOCK:TxBitClkGen\
+        PORT MAP (
+            clock => \UART_LOG:Net_9\ ,
+            cs_addr_0 => \UART_LOG:BUART:counter_load_not\ ,
+            ce0_reg => \UART_LOG:BUART:tx_bitclk_enable_pre\ ,
+            ce1_reg => \UART_LOG:BUART:tx_counter_dp\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "1010100001000000001000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111100000111001000000100000000000101111100000000000000001000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    datapathcell: Name =\UART_LOG:BUART:sRX:RxShifter:u0\
+        PORT MAP (
+            clock => \UART_LOG:Net_9\ ,
+            cs_addr_2 => \UART_LOG:BUART:tx_ctrl_mark_last\ ,
+            cs_addr_1 => \UART_LOG:BUART:rx_state_0\ ,
+            cs_addr_0 => \UART_LOG:BUART:rx_bitclk_enable\ ,
+            route_si => \UART_LOG:BUART:rx_postpoll\ ,
+            f0_load => \UART_LOG:BUART:rx_load_fifo\ ,
+            f0_bus_stat_comb => \UART_LOG:BUART:rx_fifonotempty\ ,
+            f0_blk_stat_comb => \UART_LOG:BUART:rx_fifofull\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000000000000000000000000000000000000000000000000001001000000000100000000000000010000001100000001000000000000000100100001000011111111000000001111111111111111101000000110001001000001111100000000000000001100"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Status register listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="StatusI register listing">
+
+    ------------------------------------------------------------
+    StatusI register listing
+    ------------------------------------------------------------
+
+    statusicell: Name =\TFT_SPI:BSPIM:TxStsReg\
+        PORT MAP (
+            clock => \TFT_SPI:Net_276\ ,
+            status_4 => \TFT_SPI:BSPIM:tx_status_4\ ,
+            status_3 => \TFT_SPI:BSPIM:load_rx_data\ ,
+            status_2 => \TFT_SPI:BSPIM:tx_status_2\ ,
+            status_1 => \TFT_SPI:BSPIM:tx_status_1\ ,
+            status_0 => \TFT_SPI:BSPIM:tx_status_0\ );
+        Properties:
+        {
+            cy_force_order = 1
+            cy_int_mask = "0000000"
+            cy_md_select = "0001001"
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    statusicell: Name =\TFT_SPI:BSPIM:RxStsReg\
+        PORT MAP (
+            clock => \TFT_SPI:Net_276\ ,
+            status_6 => \TFT_SPI:BSPIM:rx_status_6\ ,
+            status_5 => \TFT_SPI:BSPIM:rx_status_5\ ,
+            status_4 => \TFT_SPI:BSPIM:rx_status_4\ );
+        Properties:
+        {
+            cy_force_order = 1
+            cy_int_mask = "0000000"
+            cy_md_select = "1000000"
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    statusicell: Name =\UART_LOG:BUART:sTX:TxSts\
+        PORT MAP (
+            clock => \UART_LOG:Net_9\ ,
+            status_3 => \UART_LOG:BUART:tx_fifo_notfull\ ,
+            status_2 => \UART_LOG:BUART:tx_status_2\ ,
+            status_1 => \UART_LOG:BUART:tx_fifo_empty\ ,
+            status_0 => \UART_LOG:BUART:tx_status_0\ );
+        Properties:
+        {
+            cy_force_order = 1
+            cy_int_mask = "1111111"
+            cy_md_select = "0000001"
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    statusicell: Name =\UART_LOG:BUART:sRX:RxSts\
+        PORT MAP (
+            clock => \UART_LOG:Net_9\ ,
+            status_5 => \UART_LOG:BUART:rx_status_5\ ,
+            status_4 => \UART_LOG:BUART:rx_status_4\ ,
+            status_3 => \UART_LOG:BUART:rx_status_3\ ,
+            interrupt => Net_8 );
+        Properties:
+        {
+            cy_force_order = 1
+            cy_int_mask = "1111111"
+            cy_md_select = "1011111"
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Sync listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Control register listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Count7 listing">
+
+    ------------------------------------------------------------
+    Count7 listing
+    ------------------------------------------------------------
+
+    count7cell: Name =\TFT_SPI:BSPIM:BitCounter\
+        PORT MAP (
+            clock => \TFT_SPI:Net_276\ ,
+            enable => \TFT_SPI:BSPIM:cnt_enable\ ,
+            count_6 => \TFT_SPI:BSPIM:count_6\ ,
+            count_5 => \TFT_SPI:BSPIM:count_5\ ,
+            count_4 => \TFT_SPI:BSPIM:count_4\ ,
+            count_3 => \TFT_SPI:BSPIM:count_3\ ,
+            count_2 => \TFT_SPI:BSPIM:count_2\ ,
+            count_1 => \TFT_SPI:BSPIM:count_1\ ,
+            count_0 => \TFT_SPI:BSPIM:count_0\ ,
+            tc => \TFT_SPI:BSPIM:cnt_tc\ );
+        Properties:
+        {
+            cy_alt_mode = 0
+            cy_init_value = "0000000"
+            cy_period = "0001111"
+            cy_route_en = 1
+            cy_route_ld = 0
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    count7cell: Name =\UART_LOG:BUART:sRX:RxBitCounter\
+        PORT MAP (
+            clock => \UART_LOG:Net_9\ ,
+            load => \UART_LOG:BUART:rx_counter_load\ ,
+            count_6 => \UART_LOG:BUART:rx_count_6\ ,
+            count_5 => \UART_LOG:BUART:rx_count_5\ ,
+            count_4 => \UART_LOG:BUART:rx_count_4\ ,
+            count_3 => \UART_LOG:BUART:rx_count_3\ ,
+            count_2 => \UART_LOG:BUART:rx_count_2\ ,
+            count_1 => \UART_LOG:BUART:rx_count_1\ ,
+            count_0 => \UART_LOG:BUART:rx_count_0\ ,
+            tc => \UART_LOG:BUART:rx_count7_tc\ );
+        Properties:
+        {
+            cy_alt_mode = 0
+            cy_init_value = "0000000"
+            cy_period = "1110010"
+            cy_route_en = 1
+            cy_route_ld = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+    </CYPRESSTAG>
+    <CYPRESSTAG name="DRQ listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Interrupt listing">
+
+    ------------------------------------------------------------
+    Interrupt listing
+    ------------------------------------------------------------
+
+    interrupt: Name =isr_uartRX
+        PORT MAP (
+            interrupt => Net_8 );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
+    </CYPRESSTAG>
+</CYPRESSTAG>
+<CYPRESSTAG name="Technology mapping summary" expanded>
+
+------------------------------------------------------------
+Technology mapping summary
+------------------------------------------------------------
+
+Resource Type                 : Used : Free :  Max :  % Used
+============================================================
+Digital Clocks                :    3 :    5 :    8 : 37.50 %
+Analog Clocks                 :    0 :    4 :    4 :  0.00 %
+CapSense Buffers              :    0 :    2 :    2 :  0.00 %
+Digital Filter Block          :    0 :    1 :    1 :  0.00 %
+Interrupts                    :    1 :   31 :   32 :  3.13 %
+IO                            :   11 :   37 :   48 : 22.92 %
+Segment LCD                   :    0 :    1 :    1 :  0.00 %
+CAN 2.0b                      :    0 :    1 :    1 :  0.00 %
+I2C                           :    0 :    1 :    1 :  0.00 %
+USB                           :    0 :    1 :    1 :  0.00 %
+DMA Channels                  :    0 :   24 :   24 :  0.00 %
+Timer                         :    1 :    3 :    4 : 25.00 %
+UDB                           :      :      :      :        
+  Macrocells                  :   38 :  154 :  192 : 19.79 %
+  Unique P-terms              :   77 :  307 :  384 : 20.05 %
+  Total P-terms               :   91 :      :      :        
+  Datapath Cells              :    4 :   20 :   24 : 16.67 %
+  Status Cells                :    6 :   18 :   24 : 25.00 %
+    StatusI Registers         :    4 :      :      :        
+    Routed Count7 Load/Enable :    2 :      :      :        
+  Control Cells               :    2 :   22 :   24 :  8.33 %
+    Count7 Cells              :    2 :      :      :        
+Opamp                         :    0 :    4 :    4 :  0.00 %
+Comparator                    :    0 :    4 :    4 :  0.00 %
+Delta-Sigma ADC               :    0 :    1 :    1 :  0.00 %
+LPF                           :    0 :    2 :    2 :  0.00 %
+SAR ADC                       :    0 :    2 :    2 :  0.00 %
+Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
+DAC                           :      :      :      :        
+  VIDAC                       :    0 :    4 :    4 :  0.00 %
+</CYPRESSTAG>
+Technology Mapping: Elapsed time ==> 0s.085ms
+Tech Mapping phase: Elapsed time ==> 0s.128ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Placement">
+Initial Analog Placement Results:
+IO_6@[IOP=(12)][IoId=(6)] : Rx_1(0) (fixed)
+IO_3@[IOP=(3)][IoId=(3)] : TFT_CS(0) (fixed)
+IO_3@[IOP=(12)][IoId=(3)] : TFT_DC(0) (fixed)
+IO_2@[IOP=(12)][IoId=(2)] : TFT_LED(0) (fixed)
+IO_4@[IOP=(3)][IoId=(4)] : TFT_RES(0) (fixed)
+IO_4@[IOP=(12)][IoId=(4)] : TFT_SCL(0) (fixed)
+IO_5@[IOP=(12)][IoId=(5)] : TFT_SDA(0) (fixed)
+IO_7@[IOP=(12)][IoId=(7)] : Tx_1(0) (fixed)
+Analog Placement phase: Elapsed time ==> 0s.023ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Routing">
+Analog Routing phase: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Code Generation">
+============ Analog Final Answer Routes ============
+Dump of CyAnalogRoutingResultsDB
+Map of net to items {
+}
+Map of item to net {
+}
+Mux Info {
+}
+Dump of CyP35AnalogRoutingResultsDB
+IsVddaHalfUsedForComp = False
+IsVddaHalfUsedForSar0 = False
+IsVddaHalfUsedForSar1 = False
+Analog Code Generation phase: Elapsed time ==> 0s.178ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Digital Placement">
+<CYPRESSTAG name="Detailed placement messages">
+I2076: Total run-time: 0.7 sec.
+
+</CYPRESSTAG>
+<CYPRESSTAG name="PLD Packing">
+<CYPRESSTAG name="PLD Packing Summary" expanded>
+
+------------------------------------------------------------
+PLD Packing Summary
+------------------------------------------------------------
+            Resource Type : Used : Free :  Max :  % Used
+    ====================================================
+                     PLDs :   14 :   34 :   48 :  29.17%
+
+<CYPRESSTAG name="PLD Statistics">
+
+        PLD Resource Type :     Average/LAB
+    =======================================
+                   Inputs :            7.71
+                   Pterms :            5.93
+               Macrocells :            2.71
+</CYPRESSTAG>
+<CYPRESSTAG name="Packed PLD Contents">
+Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
+</CYPRESSTAG>
+PLD Packing: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Partitioning">
+<CYPRESSTAG name="Initial Partitioning Summary">
+Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
+<CYPRESSTAG name="Final Partitioning Summary">
+Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
+Partitioning: Elapsed time ==> 0s.013ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Final Placement Summary">
+
+------------------------------------------------------------
+Final Placement Summary
+------------------------------------------------------------
+
+       Resource Type :      Count : Avg Inputs : Avg Outputs
+    ========================================================
+                 UDB :          9 :       8.56 :       4.22
+<CYPRESSTAG name="Final Placement Details">
+<CYPRESSTAG name="Component Details">
+
+------------------------------------------------------------
+Component Placement Details
+------------------------------------------------------------
+UDB [UDB=(0,0)] contents:
+LAB@[UDB=(0,0)][LB=0] #macrocells=4, #inputs=11, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\UART_LOG:BUART:rx_state_0\, Mode=(T-Register) @ [UDB=(0,0)][LB=0][MC=0]
+        Total # of inputs        : 11
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * 
+              !\UART_LOG:BUART:rx_state_3\ * \UART_LOG:BUART:rx_state_2\ * 
+              !\UART_LOG:BUART:pollcount_1\ * !Net_88
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * 
+              !\UART_LOG:BUART:rx_state_3\ * \UART_LOG:BUART:rx_state_2\ * 
+              !\UART_LOG:BUART:pollcount_1\ * !\UART_LOG:BUART:pollcount_0\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_5\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_4\
+        );
+        Output = \UART_LOG:BUART:rx_state_0\ (fanout=8)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\UART_LOG:BUART:rx_postpoll\, Mode=(Combinatorial) @ [UDB=(0,0)][LB=0][MC=1]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \UART_LOG:BUART:pollcount_1\
+            + Net_88 * \UART_LOG:BUART:pollcount_0\
+        );
+        Output = \UART_LOG:BUART:rx_postpoll\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\UART_LOG:BUART:rx_state_3\, Mode=(T-Register) @ [UDB=(0,0)][LB=0][MC=2]
+        Total # of inputs        : 8
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * \UART_LOG:BUART:rx_state_3\ * 
+              \UART_LOG:BUART:rx_state_2\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_5\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_4\
+        );
+        Output = \UART_LOG:BUART:rx_state_3\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\UART_LOG:BUART:rx_last\, Mode=(D-Register) @ [UDB=(0,0)][LB=0][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_88
+        );
+        Output = \UART_LOG:BUART:rx_last\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(0,0)][LB=1] #macrocells=3, #inputs=10, #pterms=7
+{
+    [McSlotId=0]:     MacroCell: Name=\UART_LOG:BUART:rx_state_2\, Mode=(T-Register) @ [UDB=(0,0)][LB=1][MC=0]
+        Total # of inputs        : 10
+        Total # of product terms : 5
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 5 pterms
+        (
+              !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * \UART_LOG:BUART:rx_state_3\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * \UART_LOG:BUART:rx_state_2\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !Net_88 * 
+              \UART_LOG:BUART:rx_last\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_5\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_4\
+        );
+        Output = \UART_LOG:BUART:rx_state_2\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\UART_LOG:BUART:rx_load_fifo\, Mode=(D-Register) @ [UDB=(0,0)][LB=1][MC=1]
+        Total # of inputs        : 8
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * \UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_5\
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              \UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:rx_count_6\ * 
+              !\UART_LOG:BUART:rx_count_4\
+        );
+        Output = \UART_LOG:BUART:rx_load_fifo\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\UART_LOG:BUART:rx_state_stop1_reg\, Mode=(D-Register) @ [UDB=(0,0)][LB=1][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * \UART_LOG:BUART:rx_state_3\ * 
+              \UART_LOG:BUART:rx_state_2\
+        );
+        Output = \UART_LOG:BUART:rx_state_stop1_reg\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\UART_LOG:BUART:sRX:RxShifter:u0\
+    PORT MAP (
+        clock => \UART_LOG:Net_9\ ,
+        cs_addr_2 => \UART_LOG:BUART:tx_ctrl_mark_last\ ,
+        cs_addr_1 => \UART_LOG:BUART:rx_state_0\ ,
+        cs_addr_0 => \UART_LOG:BUART:rx_bitclk_enable\ ,
+        route_si => \UART_LOG:BUART:rx_postpoll\ ,
+        f0_load => \UART_LOG:BUART:rx_load_fifo\ ,
+        f0_bus_stat_comb => \UART_LOG:BUART:rx_fifonotempty\ ,
+        f0_blk_stat_comb => \UART_LOG:BUART:rx_fifofull\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000000000000000000000000000000000000000000000000001001000000000100000000000000010000001100000001000000000000000100100001000011111111000000001111111111111111101000000110001001000001111100000000000000001100"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+count7cell: Name =\UART_LOG:BUART:sRX:RxBitCounter\
+    PORT MAP (
+        clock => \UART_LOG:Net_9\ ,
+        load => \UART_LOG:BUART:rx_counter_load\ ,
+        count_6 => \UART_LOG:BUART:rx_count_6\ ,
+        count_5 => \UART_LOG:BUART:rx_count_5\ ,
+        count_4 => \UART_LOG:BUART:rx_count_4\ ,
+        count_3 => \UART_LOG:BUART:rx_count_3\ ,
+        count_2 => \UART_LOG:BUART:rx_count_2\ ,
+        count_1 => \UART_LOG:BUART:rx_count_1\ ,
+        count_0 => \UART_LOG:BUART:rx_count_0\ ,
+        tc => \UART_LOG:BUART:rx_count7_tc\ );
+    Properties:
+    {
+        cy_alt_mode = 0
+        cy_init_value = "0000000"
+        cy_period = "1110010"
+        cy_route_en = 1
+        cy_route_ld = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(0,1)] contents:
+LAB@[UDB=(0,1)][LB=0] #macrocells=3, #inputs=11, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\UART_LOG:BUART:tx_state_0\, Mode=(T-Register) @ [UDB=(0,1)][LB=0][MC=0]
+        Total # of inputs        : 6
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_bitclk_enable_pre\ * 
+              !\UART_LOG:BUART:tx_fifo_empty\
+            + !\UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              !\UART_LOG:BUART:tx_fifo_empty\ * !\UART_LOG:BUART:tx_state_2\
+            + \UART_LOG:BUART:tx_state_1\ * \UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_bitclk_enable_pre\ * 
+              \UART_LOG:BUART:tx_fifo_empty\ * \UART_LOG:BUART:tx_state_2\
+            + \UART_LOG:BUART:tx_state_0\ * !\UART_LOG:BUART:tx_state_2\ * 
+              \UART_LOG:BUART:tx_bitclk\
+        );
+        Output = \UART_LOG:BUART:tx_state_0\ (fanout=8)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\UART_LOG:BUART:tx_status_0\, Mode=(Combinatorial) @ [UDB=(0,1)][LB=0][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_bitclk_enable_pre\ * 
+              \UART_LOG:BUART:tx_fifo_empty\ * \UART_LOG:BUART:tx_state_2\
+        );
+        Output = \UART_LOG:BUART:tx_status_0\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\UART_LOG:BUART:pollcount_1\, Mode=(D-Register) @ [UDB=(0,1)][LB=0][MC=2]
+        Total # of inputs        : 5
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\UART_LOG:BUART:rx_count_2\ * !\UART_LOG:BUART:rx_count_1\ * 
+              !\UART_LOG:BUART:pollcount_1\ * Net_88 * 
+              \UART_LOG:BUART:pollcount_0\
+            + !\UART_LOG:BUART:rx_count_2\ * !\UART_LOG:BUART:rx_count_1\ * 
+              \UART_LOG:BUART:pollcount_1\ * !Net_88
+            + !\UART_LOG:BUART:rx_count_2\ * !\UART_LOG:BUART:rx_count_1\ * 
+              \UART_LOG:BUART:pollcount_1\ * !\UART_LOG:BUART:pollcount_0\
+        );
+        Output = \UART_LOG:BUART:pollcount_1\ (fanout=4)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(0,1)][LB=1] #macrocells=4, #inputs=11, #pterms=6
+{
+    [McSlotId=0]:     MacroCell: Name=\UART_LOG:BUART:rx_status_3\, Mode=(D-Register) @ [UDB=(0,1)][LB=1][MC=0]
+        Total # of inputs        : 8
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * \UART_LOG:BUART:rx_state_3\ * 
+              \UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:pollcount_1\ * 
+              !Net_88
+            + !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * 
+              \UART_LOG:BUART:rx_bitclk_enable\ * \UART_LOG:BUART:rx_state_3\ * 
+              \UART_LOG:BUART:rx_state_2\ * !\UART_LOG:BUART:pollcount_1\ * 
+              !\UART_LOG:BUART:pollcount_0\
+        );
+        Output = \UART_LOG:BUART:rx_status_3\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\UART_LOG:BUART:rx_counter_load\, Mode=(Combinatorial) @ [UDB=(0,1)][LB=1][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\UART_LOG:BUART:tx_ctrl_mark_last\ * 
+              !\UART_LOG:BUART:rx_state_0\ * !\UART_LOG:BUART:rx_state_3\ * 
+              !\UART_LOG:BUART:rx_state_2\
+        );
+        Output = \UART_LOG:BUART:rx_counter_load\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\UART_LOG:BUART:pollcount_0\, Mode=(D-Register) @ [UDB=(0,1)][LB=1][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\UART_LOG:BUART:rx_count_2\ * !\UART_LOG:BUART:rx_count_1\ * 
+              !Net_88 * \UART_LOG:BUART:pollcount_0\
+            + !\UART_LOG:BUART:rx_count_2\ * !\UART_LOG:BUART:rx_count_1\ * 
+              Net_88 * !\UART_LOG:BUART:pollcount_0\
+        );
+        Output = \UART_LOG:BUART:pollcount_0\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\UART_LOG:BUART:rx_bitclk_enable\, Mode=(D-Register) @ [UDB=(0,1)][LB=1][MC=3]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\UART_LOG:BUART:rx_count_2\ * !\UART_LOG:BUART:rx_count_1\ * 
+              !\UART_LOG:BUART:rx_count_0\
+        );
+        Output = \UART_LOG:BUART:rx_bitclk_enable\ (fanout=6)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\UART_LOG:BUART:sTX:TxShifter:u0\
+    PORT MAP (
+        clock => \UART_LOG:Net_9\ ,
+        cs_addr_2 => \UART_LOG:BUART:tx_state_1\ ,
+        cs_addr_1 => \UART_LOG:BUART:tx_state_0\ ,
+        cs_addr_0 => \UART_LOG:BUART:tx_bitclk_enable_pre\ ,
+        so_comb => \UART_LOG:BUART:tx_shift_out\ ,
+        f0_bus_stat_comb => \UART_LOG:BUART:tx_fifo_notfull\ ,
+        f0_blk_stat_comb => \UART_LOG:BUART:tx_fifo_empty\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000000000000000000000000000000000000000000000000000011000000000000000000000000000010010000000000000000000000000000000000000011111111000000001111111111111111000000000000000001000100111100000000000000001100"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+statusicell: Name =\UART_LOG:BUART:sTX:TxSts\
+    PORT MAP (
+        clock => \UART_LOG:Net_9\ ,
+        status_3 => \UART_LOG:BUART:tx_fifo_notfull\ ,
+        status_2 => \UART_LOG:BUART:tx_status_2\ ,
+        status_1 => \UART_LOG:BUART:tx_fifo_empty\ ,
+        status_0 => \UART_LOG:BUART:tx_status_0\ );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "0000001"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(0,2)] contents:
+LAB@[UDB=(0,2)][LB=0] #macrocells=3, #inputs=3, #pterms=2
+{
+    [McSlotId=0]:     MacroCell: Name=\UART_LOG:BUART:tx_status_2\, Mode=(Combinatorial) @ [UDB=(0,2)][LB=0][MC=0]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\UART_LOG:BUART:tx_fifo_notfull\
+        );
+        Output = \UART_LOG:BUART:tx_status_2\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\UART_LOG:BUART:tx_ctrl_mark_last\, Mode=(T-Register) @ [UDB=(0,2)][LB=0][MC=1]
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \UART_LOG:BUART:tx_ctrl_mark_last\ (fanout=8)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\UART_LOG:BUART:rx_status_4\, Mode=(Combinatorial) @ [UDB=(0,2)][LB=0][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \UART_LOG:BUART:rx_load_fifo\ * \UART_LOG:BUART:rx_fifofull\
+        );
+        Output = \UART_LOG:BUART:rx_status_4\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+UDB [UDB=(0,3)] contents:
+LAB@[UDB=(0,3)][LB=0] #macrocells=2, #inputs=7, #pterms=6
+{
+    [McSlotId=0]:     MacroCell: Name=\UART_LOG:BUART:txn\, Mode=(D-Register) @ [UDB=(0,3)][LB=0][MC=0]
+        Total # of inputs        : 7
+        Total # of product terms : 5
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 5 pterms
+        (
+              \UART_LOG:BUART:txn\ * \UART_LOG:BUART:tx_state_1\ * 
+              !\UART_LOG:BUART:tx_bitclk\
+            + \UART_LOG:BUART:txn\ * \UART_LOG:BUART:tx_state_2\
+            + !\UART_LOG:BUART:tx_state_1\ * \UART_LOG:BUART:tx_state_0\ * 
+              !\UART_LOG:BUART:tx_shift_out\ * !\UART_LOG:BUART:tx_state_2\
+            + !\UART_LOG:BUART:tx_state_1\ * \UART_LOG:BUART:tx_state_0\ * 
+              !\UART_LOG:BUART:tx_state_2\ * !\UART_LOG:BUART:tx_bitclk\
+            + \UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              !\UART_LOG:BUART:tx_shift_out\ * !\UART_LOG:BUART:tx_state_2\ * 
+              !\UART_LOG:BUART:tx_counter_dp\ * \UART_LOG:BUART:tx_bitclk\
+        );
+        Output = \UART_LOG:BUART:txn\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=Net_9, Mode=(Combinatorial) @ [UDB=(0,3)][LB=0][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\UART_LOG:BUART:txn\
+        );
+        Output = Net_9 (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(0,3)][LB=1] #macrocells=3, #inputs=6, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\UART_LOG:BUART:tx_state_2\, Mode=(T-Register) @ [UDB=(0,3)][LB=1][MC=0]
+        Total # of inputs        : 6
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_bitclk_enable_pre\ * 
+              \UART_LOG:BUART:tx_state_2\
+            + \UART_LOG:BUART:tx_state_1\ * \UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_bitclk_enable_pre\ * 
+              \UART_LOG:BUART:tx_state_2\
+            + \UART_LOG:BUART:tx_state_1\ * \UART_LOG:BUART:tx_state_0\ * 
+              !\UART_LOG:BUART:tx_state_2\ * \UART_LOG:BUART:tx_bitclk\
+            + \UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_2\ * 
+              \UART_LOG:BUART:tx_counter_dp\ * \UART_LOG:BUART:tx_bitclk\
+        );
+        Output = \UART_LOG:BUART:tx_state_2\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\UART_LOG:BUART:counter_load_not\, Mode=(Combinatorial) @ [UDB=(0,3)][LB=1][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        !(
+              !\UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_bitclk_enable_pre\
+            + !\UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              !\UART_LOG:BUART:tx_state_2\
+        );
+        Output = \UART_LOG:BUART:counter_load_not\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\UART_LOG:BUART:tx_bitclk\, Mode=(D-Register) @ [UDB=(0,3)][LB=1][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        !(
+              !\UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_state_2\
+            + !\UART_LOG:BUART:tx_bitclk_enable_pre\
+        );
+        Output = \UART_LOG:BUART:tx_bitclk\ (fanout=4)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\UART_LOG:BUART:sTX:sCLOCK:TxBitClkGen\
+    PORT MAP (
+        clock => \UART_LOG:Net_9\ ,
+        cs_addr_0 => \UART_LOG:BUART:counter_load_not\ ,
+        ce0_reg => \UART_LOG:BUART:tx_bitclk_enable_pre\ ,
+        ce1_reg => \UART_LOG:BUART:tx_counter_dp\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001000000001000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111100000111001000000100000000000101111100000000000000001000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+statusicell: Name =\TFT_SPI:BSPIM:RxStsReg\
+    PORT MAP (
+        clock => \TFT_SPI:Net_276\ ,
+        status_6 => \TFT_SPI:BSPIM:rx_status_6\ ,
+        status_5 => \TFT_SPI:BSPIM:rx_status_5\ ,
+        status_4 => \TFT_SPI:BSPIM:rx_status_4\ );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "0000000"
+        cy_md_select = "1000000"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(0,4)] is empty.
+UDB [UDB=(0,5)] is empty.
+UDB [UDB=(1,0)] contents:
+LAB@[UDB=(1,0)][LB=1] #macrocells=2, #inputs=6, #pterms=3
+{
+    [McSlotId=0]:     MacroCell: Name=wTFT_SCL, Mode=(D-Register) @ [UDB=(1,0)][LB=1][MC=0]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              wTFT_SCL * \TFT_SPI:BSPIM:state_1\ * \TFT_SPI:BSPIM:state_0\
+            + !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\
+        );
+        Output = wTFT_SCL (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\UART_LOG:BUART:rx_status_5\, Mode=(Combinatorial) @ [UDB=(1,0)][LB=1][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \UART_LOG:BUART:rx_fifonotempty\ * 
+              \UART_LOG:BUART:rx_state_stop1_reg\
+        );
+        Output = \UART_LOG:BUART:rx_status_5\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+UDB [UDB=(1,1)] contents:
+LAB@[UDB=(1,1)][LB=0] #macrocells=1, #inputs=6, #pterms=3
+{
+    [McSlotId=0]:     MacroCell: Name=\UART_LOG:BUART:tx_state_1\, Mode=(T-Register) @ [UDB=(1,1)][LB=0][MC=0]
+        Total # of inputs        : 6
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\UART_LOG:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              \UART_LOG:BUART:tx_state_1\ * \UART_LOG:BUART:tx_state_0\ * 
+              \UART_LOG:BUART:tx_bitclk_enable_pre\ * 
+              \UART_LOG:BUART:tx_state_2\
+            + \UART_LOG:BUART:tx_state_1\ * !\UART_LOG:BUART:tx_state_2\ * 
+              \UART_LOG:BUART:tx_counter_dp\ * \UART_LOG:BUART:tx_bitclk\
+            + \UART_LOG:BUART:tx_state_0\ * !\UART_LOG:BUART:tx_state_2\ * 
+              \UART_LOG:BUART:tx_bitclk\
+        );
+        Output = \UART_LOG:BUART:tx_state_1\ (fanout=8)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+statusicell: Name =\UART_LOG:BUART:sRX:RxSts\
+    PORT MAP (
+        clock => \UART_LOG:Net_9\ ,
+        status_5 => \UART_LOG:BUART:rx_status_5\ ,
+        status_4 => \UART_LOG:BUART:rx_status_4\ ,
+        status_3 => \UART_LOG:BUART:rx_status_3\ ,
+        interrupt => Net_8 );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "1011111"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(1,2)] contents:
+LAB@[UDB=(1,2)][LB=0] #macrocells=4, #inputs=11, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=wTFT_SDA, Mode=(D-Register) @ [UDB=(1,2)][LB=0][MC=0]
+        Total # of inputs        : 11
+        Total # of product terms : 7
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 7 pterms
+        !(
+              !wTFT_SDA * !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_0\
+            + !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\
+            + !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_0\ * 
+              !\TFT_SPI:BSPIM:count_4\ * !\TFT_SPI:BSPIM:count_3\ * 
+              !\TFT_SPI:BSPIM:count_2\ * \TFT_SPI:BSPIM:count_1\ * 
+              !\TFT_SPI:BSPIM:count_0\ * !\TFT_SPI:BSPIM:ld_ident\
+            + \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\
+            + \TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\
+            + \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:mosi_from_dp\
+            + !\TFT_SPI:BSPIM:state_0\ * !\TFT_SPI:BSPIM:mosi_from_dp\
+        );
+        Output = wTFT_SDA (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\TFT_SPI:BSPIM:load_rx_data\, Mode=(Combinatorial) @ [UDB=(1,2)][LB=0][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\TFT_SPI:BSPIM:count_4\ * !\TFT_SPI:BSPIM:count_3\ * 
+              !\TFT_SPI:BSPIM:count_2\ * !\TFT_SPI:BSPIM:count_1\ * 
+              \TFT_SPI:BSPIM:count_0\
+        );
+        Output = \TFT_SPI:BSPIM:load_rx_data\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\TFT_SPI:BSPIM:tx_status_0\, Mode=(Combinatorial) @ [UDB=(1,2)][LB=0][MC=2]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\
+        );
+        Output = \TFT_SPI:BSPIM:tx_status_0\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\TFT_SPI:BSPIM:tx_status_4\, Mode=(Combinatorial) @ [UDB=(1,2)][LB=0][MC=3]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\
+        );
+        Output = \TFT_SPI:BSPIM:tx_status_4\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(1,2)][LB=1] #macrocells=3, #inputs=10, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\TFT_SPI:BSPIM:state_1\, Mode=(T-Register) @ [UDB=(1,2)][LB=1][MC=0]
+        Total # of inputs        : 10
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\
+            + !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_0\ * 
+              !\TFT_SPI:BSPIM:count_4\ * !\TFT_SPI:BSPIM:count_3\ * 
+              \TFT_SPI:BSPIM:count_2\ * !\TFT_SPI:BSPIM:count_1\ * 
+              \TFT_SPI:BSPIM:count_0\ * !\TFT_SPI:BSPIM:tx_status_1\
+            + \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_0\
+            + \TFT_SPI:BSPIM:state_1\ * !\TFT_SPI:BSPIM:state_0\ * 
+              !\TFT_SPI:BSPIM:count_4\ * !\TFT_SPI:BSPIM:count_3\ * 
+              !\TFT_SPI:BSPIM:count_2\ * \TFT_SPI:BSPIM:count_1\ * 
+              !\TFT_SPI:BSPIM:count_0\ * !\TFT_SPI:BSPIM:ld_ident\
+        );
+        Output = \TFT_SPI:BSPIM:state_1\ (fanout=12)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\TFT_SPI:BSPIM:state_2\, Mode=(D-Register) @ [UDB=(1,2)][LB=1][MC=1]
+        Total # of inputs        : 10
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\
+            + !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\ * !\TFT_SPI:BSPIM:count_4\ * 
+              !\TFT_SPI:BSPIM:count_3\ * !\TFT_SPI:BSPIM:count_2\ * 
+              \TFT_SPI:BSPIM:count_1\ * !\TFT_SPI:BSPIM:count_0\ * 
+              !\TFT_SPI:BSPIM:ld_ident\
+            + !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_0\ * 
+              !\TFT_SPI:BSPIM:count_4\ * !\TFT_SPI:BSPIM:count_3\ * 
+              \TFT_SPI:BSPIM:count_2\ * !\TFT_SPI:BSPIM:count_1\ * 
+              \TFT_SPI:BSPIM:count_0\ * !\TFT_SPI:BSPIM:tx_status_1\
+        );
+        Output = \TFT_SPI:BSPIM:state_2\ (fanout=12)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\TFT_SPI:BSPIM:ld_ident\, Mode=(T-Register) @ [UDB=(1,2)][LB=1][MC=2]
+        Total # of inputs        : 9
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\ * !\TFT_SPI:BSPIM:ld_ident\
+            + \TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\ * \TFT_SPI:BSPIM:ld_ident\
+            + \TFT_SPI:BSPIM:state_1\ * !\TFT_SPI:BSPIM:state_0\ * 
+              !\TFT_SPI:BSPIM:count_4\ * !\TFT_SPI:BSPIM:count_3\ * 
+              !\TFT_SPI:BSPIM:count_2\ * \TFT_SPI:BSPIM:count_1\ * 
+              !\TFT_SPI:BSPIM:count_0\ * \TFT_SPI:BSPIM:ld_ident\
+        );
+        Output = \TFT_SPI:BSPIM:ld_ident\ (fanout=4)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\TFT_SPI:BSPIM:sR8:Dp:u0\
+    PORT MAP (
+        clock => \TFT_SPI:Net_276\ ,
+        cs_addr_2 => \TFT_SPI:BSPIM:state_2\ ,
+        cs_addr_1 => \TFT_SPI:BSPIM:state_1\ ,
+        cs_addr_0 => \TFT_SPI:BSPIM:state_0\ ,
+        f1_load => \TFT_SPI:BSPIM:load_rx_data\ ,
+        so_comb => \TFT_SPI:BSPIM:mosi_from_dp\ ,
+        f0_bus_stat_comb => \TFT_SPI:BSPIM:tx_status_2\ ,
+        f0_blk_stat_comb => \TFT_SPI:BSPIM:tx_status_1\ ,
+        f1_bus_stat_comb => \TFT_SPI:BSPIM:rx_status_5\ ,
+        f1_blk_stat_comb => \TFT_SPI:BSPIM:rx_status_4\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000000000000000000001100000000000001010000000001000100010000000000011100000000010001000000000000000101000000000000010100000011111111000000001111111111111111000000000010001000001000111100000000000000000100"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+count7cell: Name =\TFT_SPI:BSPIM:BitCounter\
+    PORT MAP (
+        clock => \TFT_SPI:Net_276\ ,
+        enable => \TFT_SPI:BSPIM:cnt_enable\ ,
+        count_6 => \TFT_SPI:BSPIM:count_6\ ,
+        count_5 => \TFT_SPI:BSPIM:count_5\ ,
+        count_4 => \TFT_SPI:BSPIM:count_4\ ,
+        count_3 => \TFT_SPI:BSPIM:count_3\ ,
+        count_2 => \TFT_SPI:BSPIM:count_2\ ,
+        count_1 => \TFT_SPI:BSPIM:count_1\ ,
+        count_0 => \TFT_SPI:BSPIM:count_0\ ,
+        tc => \TFT_SPI:BSPIM:cnt_tc\ );
+    Properties:
+    {
+        cy_alt_mode = 0
+        cy_init_value = "0000000"
+        cy_period = "0001111"
+        cy_route_en = 1
+        cy_route_ld = 0
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(1,3)] contents:
+LAB@[UDB=(1,3)][LB=0] #macrocells=3, #inputs=11, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\TFT_SPI:BSPIM:load_cond\, Mode=(T-Register) @ [UDB=(1,3)][LB=0][MC=0]
+        Total # of inputs        : 9
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:count_4\ * 
+              !\TFT_SPI:BSPIM:count_3\ * !\TFT_SPI:BSPIM:count_2\ * 
+              !\TFT_SPI:BSPIM:count_1\ * !\TFT_SPI:BSPIM:count_0\ * 
+              \TFT_SPI:BSPIM:load_cond\
+            + \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\ * !\TFT_SPI:BSPIM:load_cond\
+            + \TFT_SPI:BSPIM:state_1\ * !\TFT_SPI:BSPIM:count_4\ * 
+              !\TFT_SPI:BSPIM:count_3\ * !\TFT_SPI:BSPIM:count_2\ * 
+              !\TFT_SPI:BSPIM:count_1\ * !\TFT_SPI:BSPIM:count_0\ * 
+              \TFT_SPI:BSPIM:load_cond\
+            + \TFT_SPI:BSPIM:state_0\ * !\TFT_SPI:BSPIM:count_4\ * 
+              !\TFT_SPI:BSPIM:count_3\ * !\TFT_SPI:BSPIM:count_2\ * 
+              !\TFT_SPI:BSPIM:count_1\ * !\TFT_SPI:BSPIM:count_0\ * 
+              \TFT_SPI:BSPIM:load_cond\
+        );
+        Output = \TFT_SPI:BSPIM:load_cond\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\TFT_SPI:BSPIM:state_0\, Mode=(T-Register) @ [UDB=(1,3)][LB=0][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\
+            + \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\
+            + !\TFT_SPI:BSPIM:state_1\ * !\TFT_SPI:BSPIM:state_0\ * 
+              !\TFT_SPI:BSPIM:tx_status_1\
+        );
+        Output = \TFT_SPI:BSPIM:state_0\ (fanout=12)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\TFT_SPI:BSPIM:rx_status_6\, Mode=(Combinatorial) @ [UDB=(1,3)][LB=0][MC=2]
+        Total # of inputs        : 6
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\TFT_SPI:BSPIM:count_4\ * !\TFT_SPI:BSPIM:count_3\ * 
+              !\TFT_SPI:BSPIM:count_2\ * !\TFT_SPI:BSPIM:count_1\ * 
+              \TFT_SPI:BSPIM:count_0\ * \TFT_SPI:BSPIM:rx_status_4\
+        );
+        Output = \TFT_SPI:BSPIM:rx_status_6\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(1,3)][LB=1] #macrocells=2, #inputs=5, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=Net_111, Mode=(D-Register) @ [UDB=(1,3)][LB=1][MC=0]
+        Total # of inputs        : 4
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        !(
+              !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\
+            + !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\ * !Net_111
+            + \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\ * !Net_111
+            + \TFT_SPI:BSPIM:state_1\ * \TFT_SPI:BSPIM:state_0\ * !Net_111
+        );
+        Output = Net_111 (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\TFT_SPI:BSPIM:cnt_enable\, Mode=(T-Register) @ [UDB=(1,3)][LB=1][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\TFT_SPI:Net_276\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\ * \TFT_SPI:BSPIM:cnt_enable\
+            + !\TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\ * !\TFT_SPI:BSPIM:cnt_enable\
+            + \TFT_SPI:BSPIM:state_2\ * !\TFT_SPI:BSPIM:state_1\ * 
+              \TFT_SPI:BSPIM:state_0\ * \TFT_SPI:BSPIM:cnt_enable\
+            + \TFT_SPI:BSPIM:state_2\ * \TFT_SPI:BSPIM:state_1\ * 
+              !\TFT_SPI:BSPIM:state_0\ * \TFT_SPI:BSPIM:cnt_enable\
+        );
+        Output = \TFT_SPI:BSPIM:cnt_enable\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+statusicell: Name =\TFT_SPI:BSPIM:TxStsReg\
+    PORT MAP (
+        clock => \TFT_SPI:Net_276\ ,
+        status_4 => \TFT_SPI:BSPIM:tx_status_4\ ,
+        status_3 => \TFT_SPI:BSPIM:load_rx_data\ ,
+        status_2 => \TFT_SPI:BSPIM:tx_status_2\ ,
+        status_1 => \TFT_SPI:BSPIM:tx_status_1\ ,
+        status_0 => \TFT_SPI:BSPIM:tx_status_0\ );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "0000000"
+        cy_md_select = "0001001"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(1,4)] is empty.
+UDB [UDB=(1,5)] is empty.
+UDB [UDB=(2,0)] is empty.
+UDB [UDB=(2,1)] is empty.
+UDB [UDB=(2,2)] is empty.
+UDB [UDB=(2,3)] is empty.
+UDB [UDB=(2,4)] is empty.
+UDB [UDB=(2,5)] is empty.
+UDB [UDB=(3,0)] is empty.
+UDB [UDB=(3,1)] is empty.
+UDB [UDB=(3,2)] is empty.
+UDB [UDB=(3,3)] contents:
+LAB@[UDB=(3,3)][LB=0] #macrocells=1, #inputs=0, #pterms=0
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=__ONE__, Mode=(Combinatorial) @ [UDB=(3,3)][LB=0][MC=3]
+        Total # of inputs        : 0
+        Total # of product terms : 0
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = __ONE__ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+UDB [UDB=(3,4)] is empty.
+UDB [UDB=(3,5)] is empty.
+Intr container @ [IntrContainer=(0)]: 
+  Intr@ [IntrContainer=(0)][IntrId=(0)] 
+    interrupt: Name =isr_uartRX
+        PORT MAP (
+            interrupt => Net_8 );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
+Drq container @ [DrqContainer=(0)]: empty
+Port 0 contains the following IO cells:
+Port 1 contains the following IO cells:
+Port 2 contains the following IO cells:
+Port 3 contains the following IO cells:
+[IoId=3]: 
+Pin : Name = TFT_CS(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => TFT_CS(0)__PA ,
+        pad => TFT_CS(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=4]: 
+Pin : Name = TFT_RES(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => TFT_RES(0)__PA ,
+        pad => TFT_RES(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 12 contains the following IO cells:
+[IoId=2]: 
+Pin : Name = TFT_LED(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => TFT_LED(0)__PA ,
+        pin_input => wTFT_LED ,
+        pad => TFT_LED(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=3]: 
+Pin : Name = TFT_DC(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => TFT_DC(0)__PA ,
+        pad => TFT_DC(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=4]: 
+Pin : Name = TFT_SCL(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => TFT_SCL(0)__PA ,
+        pin_input => wTFT_SCL ,
+        pad => TFT_SCL(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=5]: 
+Pin : Name = TFT_SDA(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => TFT_SDA(0)__PA ,
+        pin_input => wTFT_SDA ,
+        pad => TFT_SDA(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=6]: 
+Pin : Name = Rx_1(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: SYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_DIGITAL
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: True
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Rx_1(0)__PA ,
+        fb => Net_88 ,
+        pad => Rx_1(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=7]: 
+Pin : Name = Tx_1(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL, ROUTABLE
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Tx_1(0)__PA ,
+        pin_input => Net_9 ,
+        pad => Tx_1(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 15 contains the following IO cells:
+ARM group 0: empty
+CAN group 0: empty
+Cache group 0: empty
+CapSense group 0: empty
+Clock group 0: 
+    Clock Block @ F(Clock,0): 
+    clockblockcell: Name =ClockBlock
+        PORT MAP (
+            imo => ClockBlock_IMO ,
+            pllout => ClockBlock_PLL_OUT ,
+            ilo => ClockBlock_ILO ,
+            clk_100k => ClockBlock_100k ,
+            clk_1k => ClockBlock_1k ,
+            clk_32k => ClockBlock_32k ,
+            xtal => ClockBlock_XTAL ,
+            clk_32k_xtal => ClockBlock_XTAL_32KHZ ,
+            clk_sync => ClockBlock_MASTER_CLK ,
+            clk_bus_glb => ClockBlock_BUS_CLK ,
+            clk_bus => ClockBlock_BUS_CLK_local ,
+            dclk_glb_0 => \TFT_SPI:Net_276\ ,
+            dclk_0 => \TFT_SPI:Net_276_local\ ,
+            dclk_glb_1 => \UART_LOG:Net_9\ ,
+            dclk_1 => \UART_LOG:Net_9_local\ ,
+            dclk_glb_2 => Net_129 ,
+            dclk_2 => Net_129_local );
+        Properties:
+        {
+        }
+Comparator group 0: empty
+DFB group 0: empty
+DSM group 0: empty
+Decimator group 0: empty
+EMIF group 0: empty
+I2C group 0: empty
+LCD group 0: empty
+LVD group 0: empty
+PICU group 0: empty
+PM group 0: empty
+SC group 0: empty
+SPC group 0: empty
+Timer group 0: 
+    Timer Block @ F(Timer,0): 
+    timercell: Name =\TFT_BackLight:PWMHW\
+        PORT MAP (
+            clock => Net_129 ,
+            enable => __ONE__ ,
+            tc => \TFT_BackLight:Net_63\ ,
+            cmp => wTFT_LED ,
+            irq => \TFT_BackLight:Net_54\ );
+        Properties:
+        {
+            cy_registers = ""
+        }
+USB group 0: empty
+VIDAC group 0: empty
+OpAmp group 0: empty
+CsAbuf group 0: empty
+Vref group 0: empty
+LPF group 0: empty
+SAR group 0: empty
+ANAIF group 0: empty
+PHUB group 0: empty
+</CYPRESSTAG>
+<CYPRESSTAG name="Port Configuration Details">
+
+------------------------------------------------------------
+Port Configuration report
+------------------------------------------------------------
+     |     |       | Interrupt |                  |            | 
+Port | Pin | Fixed |      Type |       Drive Mode |       Name | Connections
+-----+-----+-------+-----------+------------------+------------+-------------
+   3 |   3 |     * |      NONE |         CMOS_OUT |  TFT_CS(0) | 
+     |   4 |     * |      NONE |         CMOS_OUT | TFT_RES(0) | 
+-----+-----+-------+-----------+------------------+------------+-------------
+  12 |   2 |     * |      NONE |         CMOS_OUT | TFT_LED(0) | In(wTFT_LED)
+     |   3 |     * |      NONE |         CMOS_OUT |  TFT_DC(0) | 
+     |   4 |     * |      NONE |         CMOS_OUT | TFT_SCL(0) | In(wTFT_SCL)
+     |   5 |     * |      NONE |         CMOS_OUT | TFT_SDA(0) | In(wTFT_SDA)
+     |   6 |     * |      NONE |     HI_Z_DIGITAL |    Rx_1(0) | FB(Net_88)
+     |   7 |     * |      NONE |         CMOS_OUT |    Tx_1(0) | In(Net_9)
+-----------------------------------------------------------------------------
+</CYPRESSTAG>
+</CYPRESSTAG>
+</CYPRESSTAG>
+Digital component placer commit/Report: Elapsed time ==> 0s.020ms
+Digital Placement phase: Elapsed time ==> 0s.930ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Digital Routing">
+"C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\H_Da Softwares & Projects\PSoC Creator\4.4\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "TaskComms_Buffer_r.vh2" --pcf-path "TaskComms_Buffer.pco" --des-name "TaskComms_Buffer" --dsf-path "TaskComms_Buffer.dsf" --sdc-path "TaskComms_Buffer.sdc" --lib-path "TaskComms_Buffer_r.lib"
+Routing successful.
+Digital Routing phase: Elapsed time ==> 1s.325ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream Generation">
+Bitstream Generation phase: Elapsed time ==> 0s.124ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream Verification">
+Bitstream Verification phase: Elapsed time ==> 0s.027ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Static timing analysis">
+Timing report is in TaskComms_Buffer_timing.html.
+Static timing analysis phase: Elapsed time ==> 0s.277ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Data reporting">
+Data reporting phase: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Database update...">
+Design database save phase: Elapsed time ==> 0s.172ms
+</CYPRESSTAG>
+cydsfit: Elapsed time ==> 3s.339ms
+</CYPRESSTAG>
+Fitter phase: Elapsed time ==> 3s.339ms
+API generation phase: Elapsed time ==> 1s.393ms
+Dependency generation phase: Elapsed time ==> 0s.034ms
+Cleanup phase: Elapsed time ==> 0s.001ms

@@ -1,0 +1,2634 @@
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"ErikaOS_ee_terminat.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.EE_oo_TerminateTask,"ax",%progbits
+  20              		.align	2
+  21              		.global	EE_oo_TerminateTask
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	EE_oo_TerminateTask, %function
+  25              	EE_oo_TerminateTask:
+  26              	.LFB71:
+  27              		.file 1 "Generated_Source\\PSoC5\\ErikaOS_ee_terminat.c"
+   1:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** /* ###*B*###
+   2:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * ERIKA Enterprise - a tiny RTOS for small microcontrollers
+   3:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  *
+   4:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * Copyright (C) 2002-2008  Evidence Srl
+   5:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  *
+   6:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * This file is part of ERIKA Enterprise.
+   7:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  *
+   8:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * ERIKA Enterprise is free software; you can redistribute it
+   9:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * and/or modify it under the terms of the GNU General Public License
+  10:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * version 2 as published by the Free Software Foundation, 
+  11:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * (with a special exception described below).
+  12:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  *
+  13:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * Linking this code statically or dynamically with other modules is
+  14:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * making a combined work based on this code.  Thus, the terms and
+  15:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * conditions of the GNU General Public License cover the whole
+  16:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * combination.
+  17:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  *
+  18:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * As a special exception, the copyright holders of this library give you
+  19:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * permission to link this code with independent modules to produce an
+  20:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * executable, regardless of the license terms of these independent
+  21:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * modules, and to copy and distribute the resulting executable under
+  22:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * terms of your choice, provided that you also meet, for each linked
+  23:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * independent module, the terms and conditions of the license of that
+  24:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * module.  An independent module is a module which is not derived from
+  25:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * or based on this library.  If you modify this code, you may extend
+  26:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * this exception to your version of the code, but you are not
+  27:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * obligated to do so.  If you do not wish to do so, delete this
+  28:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * exception statement from your version.
+  29:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  *
+  30:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * ERIKA Enterprise is distributed in the hope that it will be
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 2
+
+
+  31:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+  32:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  33:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * GNU General Public License version 2 for more details.
+  34:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  *
+  35:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * You should have received a copy of the GNU General Public License
+  36:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * version 2 along with ERIKA Enterprise; if not, write to the
+  37:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+  38:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * Boston, MA 02110-1301 USA.
+  39:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * ###*E*### */
+  40:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 
+  41:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** /*
+  42:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * Author: 2002 Paolo Gai
+  43:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * CVS: $Id: ee_terminat.c,v 1.1 2005/07/16 12:23:42 pj Exp $
+  44:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  */
+  45:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 
+  46:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** /*
+  47:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * PSoC Port and API Generation
+  48:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * Carlos Fernando Meier Martinez
+  49:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  * Hochschule Darmstadt, Germany. 2017.
+  50:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****  */
+  51:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 
+  52:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #include "ErikaOS_ee_internal.inc"
+  53:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 
+  54:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** /* TerminateTask:
+  55:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****    - The task is moved from the running state to the suspended state
+  56:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****    - automatic release of internal resource
+  57:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****    - no check for pending resources left by the task
+  58:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****    - Rescheduling is issued
+  59:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****    - returns (only extended state)
+  60:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****        E_OS_RESOURCE if the task still occupy resources
+  61:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****        E_OS_CALLLEVEL if called at interrupt level
+  62:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** */
+  63:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 
+  64:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #ifndef __PRIVATE_TERMINATETASK__
+  65:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** StatusType EE_oo_TerminateTask(void)
+  66:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** {
+  28              		.loc 1 66 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  36              	.LBB30:
+  37              	.LBB31:
+  38              	.LBB32:
+  39              		.file 2 "Generated_Source\\PSoC5\\ErikaOS_cortex_mx_ee_cpu.inc"
+   1:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* ###*B*###
+   2:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * ERIKA Enterprise - a tiny RTOS for small microcontrollers
+   3:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  *
+   4:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * Copyright (C) 2002-2011  Evidence Srl
+   5:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  *
+   6:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * This file is part of ERIKA Enterprise.
+   7:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  *
+   8:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * ERIKA Enterprise is free software; you can redistribute it
+   9:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * and/or modify it under the terms of the GNU General Public License
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 3
+
+
+  10:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * version 2 as published by the Free Software Foundation, 
+  11:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * (with a special exception described below).
+  12:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  *
+  13:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * Linking this code statically or dynamically with other modules is
+  14:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * making a combined work based on this code.  Thus, the terms and
+  15:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * conditions of the GNU General Public License cover the whole
+  16:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * combination.
+  17:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  *
+  18:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * As a special exception, the copyright holders of this library give you
+  19:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * permission to link this code with independent modules to produce an
+  20:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * executable, regardless of the license terms of these independent
+  21:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * modules, and to copy and distribute the resulting executable under
+  22:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * terms of your choice, provided that you also meet, for each linked
+  23:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * independent module, the terms and conditions of the license of that
+  24:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * module.  An independent module is a module which is not derived from
+  25:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * or based on this library.  If you modify this code, you may extend
+  26:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * this exception to your version of the code, but you are not
+  27:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * obligated to do so.  If you do not wish to do so, delete this
+  28:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * exception statement from your version.
+  29:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  *
+  30:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * ERIKA Enterprise is distributed in the hope that it will be
+  31:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+  32:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  33:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * GNU General Public License version 2 for more details.
+  34:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  *
+  35:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * You should have received a copy of the GNU General Public License
+  36:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * version 2 along with ERIKA Enterprise; if not, write to the
+  37:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+  38:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * Boston, MA 02110-1301 USA.
+  39:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * ###*E*### */
+  40:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+  41:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /** 
+  42:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	@file ee_cpu.h
+  43:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	@brief CPU-dependent part of HAL. Derived from pkg/cpu/pic30/inc/ee_cpu.h
+  44:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	@author Gianluca Franchino
+  45:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	@author Giuseppe Serano
+  46:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	@date 2011
+  47:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** */ 
+  48:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****     
+  49:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /*
+  50:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * PSoC Port and API Generation
+  51:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * Carlos Fernando Meier Martinez
+  52:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * Hochschule Darmstadt, Germany. 2017.
+  53:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  */
+  54:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+  55:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifndef __INCLUDE_CORTEX_MX_EE_CPU_H__
+  56:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define __INCLUDE_CORTEX_MX_EE_CPU_H__
+  57:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+  58:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #include "ErikaOS_eecfg.inc"
+  59:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+  60:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+  61:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __GNU__
+  62:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #include "ErikaOS_common_ee_compiler_gcc.inc"
+  63:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif
+  64:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+  65:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* Initial stack offset (in words): Used in multistack. */
+  66:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifndef CORTEX_MX_INIT_TOS_OFFSET
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 4
+
+
+  67:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define CORTEX_MX_INIT_TOS_OFFSET 10
+  68:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif
+  69:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+  70:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /*************************************************************************
+  71:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  HAL Types and structures
+  72:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  *************************************************************************/
+  73:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+  74:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* Primitive data types */
+  75:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #include "ErikaOS_common_ee_types.inc"
+  76:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+  77:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** typedef EE_UINT32 EE_UREG;
+  78:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** typedef EE_INT32  EE_SREG;
+  79:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** typedef EE_UINT32 EE_FREG;
+  80:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define EE_UREG_SIZE 4
+  81:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+  82:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* boolean type */
+  83:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifndef EE_TYPEBOOL
+  84:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** typedef EE_UREG EE_TYPEBOOL;
+  85:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif
+  86:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+  87:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* boolean true define */
+  88:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifndef EE_TRUE
+  89:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define EE_TRUE ((EE_TYPEBOOL)1U)
+  90:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif
+  91:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+  92:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* boolean false define */
+  93:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifndef EE_FALSE
+  94:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define EE_FALSE ((EE_TYPEBOOL)0U)
+  95:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif
+  96:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+  97:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define	EE_HWREG_PTR		volatile EE_UREG *
+  98:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define	EE_HWREG_ADDR(x)	((EE_HWREG_PTR)(x))
+  99:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define	EE_HWREG(x)		(*EE_HWREG_ADDR(x))
+ 100:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 101:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __GNU__
+ 102:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 103:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* Get current SP */
+ 104:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** __INLINE__ EE_UINT32  __current_sp(void)
+ 105:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** {
+ 106:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** EE_UINT32 temp;
+ 107:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** __ASM ("mov %0, sp" : "=r" (temp) : );
+ 108:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** return temp;
+ 109:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** }
+ 110:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 111:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* Set a breakpoint */
+ 112:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define __breakpoint(value)	__ASM ("bkpt "#value)
+ 113:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 114:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif
+ 115:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 116:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* ISR Priority representation type */
+ 117:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** typedef EE_UREG EE_TYPEISR2PRIO;
+ 118:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 119:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* Thread IDs */
+ 120:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** typedef EE_INT32 EE_TID;
+ 121:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 122:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* Thread IDs - unsigned version*/
+ 123:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** typedef EE_UINT32 EE_UTID;
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 5
+
+
+ 124:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 125:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* Used by the common layer to decide whether to start a new thread */
+ 126:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define TID_IS_STACKED_MARK 0x80000000
+ 127:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 128:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* EE_TYPEIRQ is currently unused */
+ 129:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 130:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* XXX: define EE_TIME? */
+ 131:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 132:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* Use the "standard" implementation */
+ 133:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #include "ErikaOS_common_ee_hal_structs.inc"
+ 134:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 135:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /******************************************************************************
+ 136:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  Application dependent data types
+ 137:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  ******************************************************************************/
+ 138:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 139:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef	__HAS_TYPES_H__
+ 140:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #include	"types.h"
+ 141:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif
+ 142:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 143:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /******************************************************************************
+ 144:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  CPU Peripherals
+ 145:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  ******************************************************************************/
+ 146:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 147:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __CORTEX_MX__
+ 148:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #include "ErikaOS_cortex_mx_ee_nvic.inc"
+ 149:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #include "ErikaOS_cortex_mx_ee_systick.inc"
+ 150:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif
+ 151:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 152:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /******************************************************************************
+ 153:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  HAL Variables
+ 154:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  ******************************************************************************/
+ 155:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 156:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __MULTI__
+ 157:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 158:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* Top-of-stack of each private stack */
+ 159:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** extern struct EE_TOS EE_cortex_mx_system_tos[];
+ 160:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** //#define	EE_std_system_tos EE_cortex_mx_system_tos
+ 161:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 162:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* Index of the current stack */
+ 163:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** extern EE_UREG EE_cortex_mx_active_tos;
+ 164:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define	EE_hal_active_tos EE_cortex_mx_active_tos
+ 165:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 166:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /*extern	EE_UREG EE_pic30_thread_tos[];
+ 167:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define	EE_std_thread_tos EE_pic30_thread_tos */
+ 168:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif /* __MULTI__ */
+ 169:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 170:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /*********************************************************************
+ 171:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  Cortex M0 interrupt disabling/enabling
+ 172:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  *********************************************************************/
+ 173:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 174:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* Used to check the value returned by EE_cortex_mx_disableIRQ */
+ 175:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define EE_cortex_mx_are_IRQs_enabled(ie) ((ie) ^ 1)
+ 176:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 177:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /**
+ 178:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * Enable interrupts
+ 179:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  */
+ 180:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** __INLINE__ void  EE_cortex_mx_enableIRQ(void)
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 6
+
+
+ 181:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** {
+ 182:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __IAR__
+ 183:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__ASM ("cpsie i");
+ 184:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #else	/* __IAR__ */
+ 185:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __CCS__
+ 186:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__ASM ("    cpsie    i\n");
+ 187:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #else	/* __CCS__ */
+ 188:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __KEIL__
+ 189:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__enable_irq();
+ 190:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #else	/* __KEIL__ */
+ 191:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__ASM volatile("cpsie i");
+ 192:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif	/* !__KEIL__ */
+ 193:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif	/* !__CCS__ */
+ 194:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif	/* !__IAR__ */
+ 195:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** }
+ 196:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 197:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /**
+ 198:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * Disable interrupts
+ 199:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  */
+ 200:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** __INLINE__ void  EE_cortex_mx_disableIRQ(void)
+ 201:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** {
+ 202:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __IAR__
+ 203:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__ASM ("cpsid i");
+ 204:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #else	/* __IAR__ */
+ 205:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __CCS__
+ 206:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__ASM ("    cpsid    i\n");
+ 207:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #else	/* __CCS__ */
+ 208:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __KEIL__
+ 209:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__disable_irq();
+ 210:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #else	/* __KEIL__ */
+ 211:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__ASM volatile("cpsid i");
+ 212:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif	/* !__KEIL__ */
+ 213:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif	/* !__CCS__ */
+ 214:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif	/* !__IAR__ */
+ 215:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** }
+ 216:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ 217:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /**
+ 218:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * Resume interrupts
+ 219:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  */
+ 220:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** __INLINE__ void  EE_cortex_mx_resumeIRQ(EE_FREG f)
+ 221:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** {
+ 222:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __IAR__
+ 223:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__set_PRIMASK(f);
+ 224:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #else	/* __IAR__ */
+ 225:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __CCS__
+ 226:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__ASM ("    msr    primask, r0\n");
+ 227:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #else	/* __CCS__ */
+ 228:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __KEIL__
+ 229:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	register EE_FREG PRIMASK __ASM("primask");
+ 230:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	PRIMASK = f;
+ 231:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #else	/* __KEIL__ */
+ 232:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__ASM volatile("msr primask, %0" :: "r" (f));
+ 233:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif	/* !__KEIL__ */
+ 234:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif	/* !__CCS__ */
+ 235:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif	/* !__IAR__ */
+ 236:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** }
+ 237:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 7
+
+
+ 238:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /**
+ 239:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * Suspend interrupts
+ 240:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  */
+ 241:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** __INLINE__ EE_FREG  EE_cortex_mx_suspendIRQ(void)
+ 242:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** {
+ 243:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifndef __CCS__
+ 244:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	EE_FREG istat;
+ 245:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif
+ 246:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __IAR__
+ 247:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	 istat = __get_PRIMASK();
+ 248:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__ASM ("cpsid i");
+ 249:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #else	/* __IAR__ */
+ 250:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __CCS__
+ 251:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__ASM ("    mrs     r0, primask\n"
+ 252:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	       "    cpsid   i\n"
+ 253:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	       "    bx      lr\n");
+ 254:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #else	/* __CCS__ */
+ 255:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __KEIL__
+ 256:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	register EE_FREG PRIMASK __ASM("primask");
+ 257:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	istat = PRIMASK;
+ 258:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__disable_irq();
+ 259:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #else	/* __KEIL__ */
+ 260:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__ASM volatile ("mrs %0, primask" : "=r" (istat) );
+  40              		.loc 2 260 0
+  41              		.syntax unified
+  42              	@ 260 "Generated_Source\PSoC5\ErikaOS_cortex_mx_ee_cpu.inc" 1
+  43 0002 EFF31082 		mrs r2, primask
+  44              	@ 0 "" 2
+  45              	.LVL0:
+ 261:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__ASM volatile ("cpsid i");
+  46              		.loc 2 261 0
+  47              	@ 261 "Generated_Source\PSoC5\ErikaOS_cortex_mx_ee_cpu.inc" 1
+  48 0006 72B6     		cpsid i
+  49              	@ 0 "" 2
+  50              	.LVL1:
+  51              		.thumb
+  52              		.syntax unified
+  53              	.LBE32:
+  54              	.LBE31:
+  55              	.LBE30:
+  56              	.LBB33:
+  57              	.LBB34:
+  58              		.file 3 "Generated_Source\\PSoC5\\ErikaOS_ee_oo_internal.inc"
+   1:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /* ###*B*###
+   2:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * ERIKA Enterprise - a tiny RTOS for small microcontrollers
+   3:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  *
+   4:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * Copyright (C) 2002-2008  Evidence Srl
+   5:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  *
+   6:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * This file is part of ERIKA Enterprise.
+   7:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  *
+   8:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * ERIKA Enterprise is free software; you can redistribute it
+   9:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * and/or modify it under the terms of the GNU General Public License
+  10:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * version 2 as published by the Free Software Foundation, 
+  11:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * (with a special exception described below).
+  12:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  *
+  13:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * Linking this code statically or dynamically with other modules is
+  14:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * making a combined work based on this code.  Thus, the terms and
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 8
+
+
+  15:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * conditions of the GNU General Public License cover the whole
+  16:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * combination.
+  17:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  *
+  18:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * As a special exception, the copyright holders of this library give you
+  19:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * permission to link this code with independent modules to produce an
+  20:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * executable, regardless of the license terms of these independent
+  21:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * modules, and to copy and distribute the resulting executable under
+  22:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * terms of your choice, provided that you also meet, for each linked
+  23:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * independent module, the terms and conditions of the license of that
+  24:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * module.  An independent module is a module which is not derived from
+  25:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * or based on this library.  If you modify this code, you may extend
+  26:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * this exception to your version of the code, but you are not
+  27:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * obligated to do so.  If you do not wish to do so, delete this
+  28:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * exception statement from your version.
+  29:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  *
+  30:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * ERIKA Enterprise is distributed in the hope that it will be
+  31:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+  32:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  33:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * GNU General Public License version 2 for more details.
+  34:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  *
+  35:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * You should have received a copy of the GNU General Public License
+  36:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * version 2 along with ERIKA Enterprise; if not, write to the
+  37:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+  38:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * Boston, MA 02110-1301 USA.
+  39:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * ###*E*### */
+  40:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+  41:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /*
+  42:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * Author: 2002 Paolo Gai
+  43:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * CVS: $Id: ee_internal.h,v 1.6 2006/12/03 22:07:50 pj Exp $
+  44:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  */
+  45:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+  46:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /*
+  47:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * PSoC Port and API Generation
+  48:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * Carlos Fernando Meier Martinez
+  49:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * Hochschule Darmstadt, Germany. 2017.
+  50:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  */
+  51:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+  52:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #ifndef PKG_KERNEL_OO_INC_EE_OO_INTERNAL_H
+  53:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define PKG_KERNEL_OO_INC_EE_OO_INTERNAL_H
+  54:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+  55:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #include "ErikaOS_ee_oo_common.inc"
+  56:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #include "ErikaOS_ee_oo_intfunc.inc"
+  57:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #include "ErikaOS_ee_oo_irq.inc"
+  58:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #if (__OO_configUSE_TRACE_FACILITY == 1)
+  59:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #include "trcKernelPort.h" 
+  60:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #endif
+  61:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /*******************************************************************************
+  62:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  *                    New Error Handling Internal Utilities
+  63:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  ******************************************************************************/
+  64:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+  65:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /* Error Parameters Utilities Macros */
+  66:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_PARAM(param_name)   EE_os_param param_name
+  67:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_PARAM_VALUE(param_name, param_value)  \
+  68:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   ((param_name).value_param = (param_value))
+  69:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+  70:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_PARAM_REF(param_name, param_field, param_ref) \
+  71:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   ((param_name).param_field = (param_ref))
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 9
+
+
+  72:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+  73:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #ifdef __OO_HAS_ERRORHOOK__
+  74:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /* Error Parameters Data Structure Utilities Macros from user space */
+  75:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS()  EE_oo_ErrorHook_parameters error_parameters
+  76:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+  77:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_INIT(param1_in,param2_in,param3_in)  \
+  78:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   EE_oo_ErrorHook_parameters error_parameters = { param1_in, param2_in, \
+  79:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     param3_in }
+  80:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+  81:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_PARAM1_VALUE(param1_value) \
+  82:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   (error_parameters.param1.value_param = param1_value)
+  83:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_PARAM2_VALUE(param2_value) \
+  84:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   (error_parameters.param2.value_param = param2_value)
+  85:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_PARAM3_VALUE(param3_value) \
+  86:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   (error_parameters.param3.value_param = param3_value)
+  87:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+  88:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_PARAM1_REF(param_field,param_ref)  \
+  89:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   (error_parameters.param1.param_field = (param_ref))
+  90:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_PARAM2_REF(param_field,param_ref)  \
+  91:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   (error_parameters.param2.param_field = (param_ref))
+  92:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_PARAM3_REF(param_field,param_ref)  \
+  93:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   (error_parameters.param3.param_field = (param_ref))
+  94:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #else /* __OO_HAS_ERRORHOOK__ */
+  95:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS()                                    ((void)0)
+  96:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+  97:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_INIT(param1_in,param2_in,param3_in)  ((void)0)
+  98:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+  99:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_PARAM1_VALUE(param1_value)           ((void)0)
+ 100:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_PARAM2_VALUE(param2_value)           ((void)0)
+ 101:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_PARAM3_VALUE(param3_value)           ((void)0)
+ 102:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 103:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_PARAM1_REF(param_field,param_ref)    ((void)0)
+ 104:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_PARAM2_REF(param_field,param_ref)    ((void)0)
+ 105:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_PARAM3_REF(param_field,param_ref)    ((void)0)
+ 106:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #endif /* __OO_HAS_ERRORHOOK__ */
+ 107:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 108:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /* Error Handling */
+ 109:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #ifdef __OO_HAS_ERRORHOOK__
+ 110:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #ifndef  __OO_ERRORHOOK_NOMACROS__
+ 111:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 112:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** __INLINE__ void  EE_os_fill_error_data( OSServiceIdType
+ 113:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   ServiceID, EE_os_param param1, EE_os_param param2, EE_os_param param3 )
+ 114:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** {
+ 115:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   register EE_oo_ErrorHook_parameters * const
+ 116:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     p_errorhook_parameter = EE_oo_get_errorhook_data();
+ 117:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   (*EE_oo_get_errorhook_service_id()) = ServiceID;
+ 118:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   p_errorhook_parameter->param1 = param1;
+ 119:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   p_errorhook_parameter->param2 = param2;
+ 120:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   p_errorhook_parameter->param3 = param3;
+ 121:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** }
+ 122:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #else /* !__OO_ERRORHOOK_NOMACROS__ */
+ 123:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 124:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_os_fill_error_data(ServiceID,param1,param2,param3) ((void)0)
+ 125:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #endif /* !__OO_ERRORHOOK_NOMACROS__ */
+ 126:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 127:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** __INLINE__ void  EE_os_notify_error( OSServiceIdType ServiceID,
+ 128:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   EE_os_param param1, EE_os_param param2, EE_os_param param3,
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 10
+
+
+ 129:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   StatusType Error )
+ 130:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** {
+ 131:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   EE_ORTI_set_lasterror(Error);
+ 132:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   if ( EE_ErrorHook_nested_flag == 0U )
+ 133:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   {
+ 134:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     EE_os_fill_error_data(ServiceID, param1, param2, param3);
+ 135:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     EE_ErrorHook_nested_flag = 1U;
+ 136:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     EE_oo_call_ErrorHook(Error);
+ 137:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     EE_ErrorHook_nested_flag = 0U;
+ 138:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   }
+ 139:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** }
+ 140:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 141:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #ifndef __EE_MEMORY_PROTECTION__
+ 142:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** __INLINE__ void  EE_os_notify_error_from_us(
+ 143:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   OSServiceIdType ServiceID, const EE_oo_ErrorHook_parameters * const
+ 144:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     error_parameters_ref, StatusType Error )
+ 145:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** {
+ 146:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   if ( error_parameters_ref != NULL ) {
+ 147:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     register EE_FREG const flag = EE_hal_begin_nested_primitive();
+ 148:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     EE_os_notify_error(ServiceID, error_parameters_ref->param1,
+ 149:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****       error_parameters_ref->param2, error_parameters_ref->param3, Error);
+ 150:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     EE_hal_end_nested_primitive(flag);
+ 151:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   }
+ 152:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** }
+ 153:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #else /* !__EE_MEMORY_PROTECTION__ */
+ 154:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /* If MemMap.h support is enabled (i.e. because memory protection): use it */
+ 155:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #ifdef EE_SUPPORT_MEMMAP_H
+ 156:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /* The following code belong to ERIKA API section ee_api_text */
+ 157:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define API_START_SEC_CODE
+ 158:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #include "MemMap.inc"
+ 159:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #endif /* EE_SUPPORT_MEMMAP_H */
+ 160:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 161:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** void EE_os_notify_error_from_us( OSServiceIdType ServiceID,
+ 162:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   const EE_oo_ErrorHook_parameters * const error_parameters_ref,
+ 163:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   StatusType Error );
+ 164:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 165:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #ifdef EE_SUPPORT_MEMMAP_H
+ 166:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define API_STOP_SEC_CODE
+ 167:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #include "MemMap.inc"
+ 168:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #endif /* EE_SUPPORT_MEMMAP_H */
+ 169:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #endif /* !__EE_MEMORY_PROTECTION__ */
+ 170:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #else /* __OO_HAS_ERRORHOOK__ */
+ 171:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 172:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /* Macro used for remapping to prevent compiler warnings on unused parameters */
+ 173:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_os_notify_error(k,j,x,y,z) EE_os_notify_error_impl(z)
+ 174:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 175:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** __INLINE__ void  EE_os_notify_error_impl(StatusType Error)
+ 176:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** {
+ 177:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   EE_ORTI_set_lasterror(Error);
+ 178:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** }
+ 179:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 180:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /* Macro used for remapping to prevent compiler warnings on unused parameters */
+ 181:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_os_notify_error_from_us(x,y,z) EE_os_notify_error_from_us_impl(z)
+ 182:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 183:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** __INLINE__ void  EE_os_notify_error_from_us_impl(
+ 184:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   StatusType Error )
+ 185:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** {
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 11
+
+
+ 186:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   EE_ORTI_set_lasterror(Error);
+ 187:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** }
+ 188:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #endif /* __OO_HAS_ERRORHOOK__ */
+ 189:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 190:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /*******************************************************************************
+ 191:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  *                  Kernel Critical Section Utility Macros
+ 192:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  ******************************************************************************/
+ 193:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #ifndef __EE_MEMORY_PROTECTION__
+ 194:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 195:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_DECLARE_CRITICAL_SECTION()  register EE_FREG flag
+ 196:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 197:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ENTER_CRITICAL_SECTION()          \
+ 198:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   do {                                          \
+ 199:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     flag = EE_hal_begin_nested_primitive();     \
+ 200:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     EE_as_tp_active_pause_and_update_budgets(); \
+ 201:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   } while ( 0 )
+ 202:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 203:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_DECLARE_AND_ENTER_CRITICAL_SECTION()  \
+ 204:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   EE_OS_DECLARE_CRITICAL_SECTION();                 \
+ 205:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   EE_OS_ENTER_CRITICAL_SECTION()
+ 206:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 207:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_EXIT_CRITICAL_SECTION()             \
+ 208:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   do {                                            \
+ 209:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     EE_as_tp_active_update_budgets_and_restart(); \
+ 210:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     EE_hal_end_nested_primitive(flag);            \
+ 211:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   } while ( 0 )
+ 212:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 213:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_FOREVER_CRITICAL_SECTION()          \
+ 214:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   do {                                            \
+ 215:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     EE_hal_disableIRQ();                          \
+ 216:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     EE_as_tp_active_pause_and_update_budgets();   \
+ 217:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   } while ( 0 )
+ 218:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 219:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #else /* !__EE_MEMORY_PROTECTION__ */
+ 220:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /* TP in any case have to be handled in Service Implementation. Syscall
+ 221:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****    mechanism can be implement in C language and, in that case, a function call
+ 222:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****    cannot be done in syscall handler. */
+ 223:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_DECLARE_CRITICAL_SECTION()            ((void)0)
+ 224:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ENTER_CRITICAL_SECTION()              \
+ 225:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   EE_as_tp_active_pause_and_update_budgets()
+ 226:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_DECLARE_AND_ENTER_CRITICAL_SECTION()  \
+ 227:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   EE_as_tp_active_pause_and_update_budgets()
+ 228:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_EXIT_CRITICAL_SECTION()               \
+ 229:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   EE_as_tp_active_update_budgets_and_restart()
+ 230:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_FOREVER_CRITICAL_SECTION()			\
+ 231:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   EE_as_tp_active_pause_and_update_budgets()
+ 232:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #endif /* !__EE_MEMORY_PROTECTION__ */
+ 233:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
+ 234:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /* return the first stacked task (the running task) without extracting it 
+ 235:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****    we suppose that this function can be called ALSO at interrupt ENABLED!!!
+ 236:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****    (see WaitEvent.c) */
+ 237:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #ifndef __PRIVATE_STK_QUERYFIRST__
+ 238:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** __INLINE__ EE_TID  EE_stk_queryfirst(void)
+ 239:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** {
+ 240:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     return EE_stkfirst;  
+  59              		.loc 3 240 0
+  60 0008 0D4B     		ldr	r3, .L7
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 12
+
+
+  61 000a 1968     		ldr	r1, [r3]
+  62              	.LBE34:
+  63              	.LBE33:
+  64              	.LBB35:
+  65              	.LBB36:
+  66              		.file 4 "Generated_Source\\PSoC5\\ErikaOS_common_ee_primitives.inc"
+   1:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** /* ###*B*###
+   2:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * ERIKA Enterprise - a tiny RTOS for small microcontrollers
+   3:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  *
+   4:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * Copyright (C) 2002-2009  Evidence Srl
+   5:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  *
+   6:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * This file is part of ERIKA Enterprise.
+   7:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  *
+   8:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * ERIKA Enterprise is free software; you can redistribute it
+   9:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * and/or modify it under the terms of the GNU General Public License
+  10:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * version 2 as published by the Free Software Foundation, 
+  11:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * (with a special exception described below).
+  12:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  *
+  13:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * Linking this code statically or dynamically with other modules is
+  14:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * making a combined work based on this code.  Thus, the terms and
+  15:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * conditions of the GNU General Public License cover the whole
+  16:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * combination.
+  17:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  *
+  18:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * As a special exception, the copyright holders of this library give you
+  19:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * permission to link this code with independent modules to produce an
+  20:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * executable, regardless of the license terms of these independent
+  21:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * modules, and to copy and distribute the resulting executable under
+  22:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * terms of your choice, provided that you also meet, for each linked
+  23:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * independent module, the terms and conditions of the license of that
+  24:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * module.  An independent module is a module which is not derived from
+  25:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * or based on this library.  If you modify this code, you may extend
+  26:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * this exception to your version of the code, but you are not
+  27:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * obligated to do so.  If you do not wish to do so, delete this
+  28:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * exception statement from your version.
+  29:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  *
+  30:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * ERIKA Enterprise is distributed in the hope that it will be
+  31:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+  32:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  33:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * GNU General Public License version 2 for more details.
+  34:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  *
+  35:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * You should have received a copy of the GNU General Public License
+  36:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * version 2 along with ERIKA Enterprise; if not, write to the
+  37:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+  38:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * Boston, MA 02110-1301 USA.
+  39:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * ###*E*### */
+  40:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** 
+  41:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** /*
+  42:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * Functions used in HAL implementations, to be included by a specific
+  43:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * ee_internal.h header.
+  44:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * Derived from pkg/cpu/pic30/inc/ee_internal.h
+  45:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * Author: 2009 Bernardo Dal Seno
+  46:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  */
+  47:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** 
+  48:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** /*
+  49:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * PSoC Port and API Generation
+  50:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * Carlos Fernando Meier Martinez
+  51:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * Hochschule Darmstadt, Germany. 2017.
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 13
+
+
+  52:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  */
+  53:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** 
+  54:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** #ifndef PKG_CPU_COMMON_INC_EE_PRIMITIVES_H
+  55:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** #define PKG_CPU_COMMON_INC_EE_PRIMITIVES_H
+  56:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** 
+  57:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** /*
+  58:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * Nested Interrupts Handling
+  59:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  */
+  60:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** 
+  61:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** /* If MemMap.h support is enabled (i.e. because memory protection): use it */
+  62:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** #ifdef EE_SUPPORT_MEMMAP_H
+  63:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** /* The following variables belong to ERIKA OS section: ee_kernel_bss */
+  64:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** #define OS_START_SEC_VAR_NOINIT
+  65:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** #include "MemMap.inc"
+  66:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** #endif /* EE_SUPPORT_MEMMAP_H */
+  67:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** 
+  68:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** extern EE_UREG EE_IRQ_nesting_level;
+  69:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** 
+  70:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** /* If MemMap.h support is enabled (i.e. because memory protection): use it */
+  71:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** #ifdef EE_SUPPORT_MEMMAP_H
+  72:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** #define OS_STOP_SEC_VAR_NOINIT
+  73:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** #include "MemMap.inc"
+  74:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** #endif /* EE_SUPPORT_MEMMAP_H */
+  75:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** 
+  76:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** /* can be called with interrupt enabled */
+  77:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** __INLINE__ EE_UREG  EE_hal_get_IRQ_nesting_level(void)
+  78:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** {
+  79:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****     return EE_IRQ_nesting_level;
+  67              		.loc 4 79 0
+  68 000c 0D4B     		ldr	r3, .L7+4
+  69 000e 1B68     		ldr	r3, [r3]
+  70              	.LBE36:
+  71              	.LBE35:
+  67:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   /* Error Value */
+  68:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   register StatusType ev;
+  69:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   /* Current TID */
+  70:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   register EE_TID current;
+  71:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 
+  72:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   /* Primitive Lock Procedure */
+  73:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   EE_OS_DECLARE_AND_ENTER_CRITICAL_SECTION();
+  74:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 
+  75:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   EE_ORTI_set_service_in(EE_SERVICETRACE_TERMINATETASK);
+  76:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 
+  77:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   EE_as_monitoring_the_stack();
+  78:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 
+  79:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   current = EE_stk_queryfirst();
+  80:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #ifdef EE_SERVICE_PROTECTION__
+  81:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   /*  [OS093]: If interrupts are disabled/suspended by a Task/OsIsr and the
+  82:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****       Task/OsIsr calls any OS service (excluding the interrupt services)
+  83:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****       then the Operating System shall ignore the service AND shall return
+  84:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****       E_OS_DISABLEDINT if the service returns a StatusType value. */
+  85:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   if ( EE_oo_check_disableint_error() ) {
+  86:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****     ev = E_OS_DISABLEDINT;
+  87:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   } else
+  88:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #endif /* EE_SERVICE_PROTECTION__ */
+  89:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #if (defined(__OO_EXTENDED_STATUS__)) || (defined(EE_SERVICE_PROTECTION__))
+  90:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   /*  [OS088]: If an OS-Application makes a service call from the wrong context
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 14
+
+
+  91:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****       AND is currently not inside a Category 1 ISR the Operating System module
+  92:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****       shall not perform the requested action (the service call shall have no
+  93:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****       effect), and return E_OS_CALLEVEL (see [12], section 13.1) or the
+  94:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****       "invalid value" of  the service. (BSW11009, BSW11013) */
+  95:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   /* check for a call at interrupt level
+  96:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****    * This must be the FIRST Check!!!
+  97:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****    */
+  98:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   if ( (EE_hal_get_IRQ_nesting_level() != 0U)
+  72              		.loc 1 98 0
+  73 0010 63B9     		cbnz	r3, .L4
+  99:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #if !defined (EE_SERVICE_PROTECTION__)
+ 100:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   ) /* If EE_SERVICE_PROTECTION__ is not defined the succeeding
+ 101:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 	 * check is always FALSE, hence it is not needed  */
+ 102:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #else
+ 103:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   || (EE_as_get_execution_context() > TASK_Context) )
+ 104:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #endif
+ 105:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   {
+ 106:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****     ev = E_OS_CALLEVEL;
+ 107:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   } else
+ 108:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #endif /* __OO_EXTENDED_STATUS__ || EE_SERVICE_PROTECTION__ */
+ 109:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 
+ 110:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #ifdef __OO_EXTENDED_STATUS__
+ 111:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #ifndef __OO_NO_RESOURCES__
+ 112:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   /* check for busy resources */ 
+ 113:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   if ( EE_th_resource_last[current] != EE_UREG_MINUS1 ) {
+  74              		.loc 1 113 0
+  75 0012 0D4B     		ldr	r3, .L7+8
+  76 0014 53F82130 		ldr	r3, [r3, r1, lsl #2]
+  77 0018 B3F1FF3F 		cmp	r3, #-1
+  78 001c 08D1     		bne	.L5
+ 114:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****     ev = E_OS_RESOURCE;
+ 115:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   } else
+ 116:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #endif /* __OO_NO_RESOURCES__ */
+ 117:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 
+ 118:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #ifdef EE_AS_USER_SPINLOCKS__
+ 119:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   /* [OS612]: In extended status TerminateTask / ChainTask shall return with an
+ 120:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****       error (E_OS_SPINLOCK), which can be evaluated in the application.
+ 121:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****       (BSW4080021) */
+ 122:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   if ( EE_as_has_spinlocks_locked(current) ) {
+ 123:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****     ev = E_OS_SPINLOCK;
+ 124:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   } else
+ 125:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #endif /* EE_AS_USER_SPINLOCKS__ */
+ 126:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #endif /* __OO_EXTENDED_STATUS__ */
+ 127:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   {
+ 128:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #ifndef __OO_NO_CHAINTASK__
+ 129:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****     EE_th_terminate_nextask[current] = EE_NIL;
+  79              		.loc 1 129 0
+  80 001e 4FF0FF30 		mov	r0, #-1
+  81 0022 0A4B     		ldr	r3, .L7+12
+  82 0024 43F82100 		str	r0, [r3, r1, lsl #2]
+  83              	.LVL2:
+ 130:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** #endif /* __OO_NO_CHAINTASK__ */
+ 131:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****     ev = E_OK;
+  84              		.loc 1 131 0
+  85 0028 0020     		movs	r0, #0
+  86 002a 02E0     		b	.L2
+  87              	.LVL3:
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 15
+
+
+  88              	.L4:
+ 106:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   } else
+  89              		.loc 1 106 0
+  90 002c 0220     		movs	r0, #2
+  91 002e 00E0     		b	.L2
+  92              	.L5:
+ 114:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****     ev = E_OS_RESOURCE;
+  93              		.loc 1 114 0
+  94 0030 0620     		movs	r0, #6
+  95              	.L2:
+  96              	.LVL4:
+ 132:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   }
+ 133:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 
+ 134:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   if ( ev != E_OK ) {
+  97              		.loc 1 134 0
+  98 0032 10B9     		cbnz	r0, .L3
+ 135:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****     EE_ORTI_set_lasterror(ev);
+ 136:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****     EE_oo_notify_error_service(OSServiceId_TerminateTask, ev);
+ 137:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   } else {
+ 138:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****     /* The following won't never return */
+ 139:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****     EE_ORTI_set_service_out(EE_SERVICETRACE_TERMINATETASK);
+ 140:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****     EE_hal_terminate_task(current);  
+  99              		.loc 1 140 0
+ 100 0034 0846     		mov	r0, r1
+ 101              	.LVL5:
+ 102 0036 FFF7FEFF 		bl	EE_hal_terminate_task
+ 103              	.LVL6:
+ 104              	.L3:
+ 105              	.LBB37:
+ 106              	.LBB38:
+ 107              	.LBB39:
+ 232:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif	/* !__KEIL__ */
+ 108              		.loc 2 232 0
+ 109              		.syntax unified
+ 110              	@ 232 "Generated_Source\PSoC5\ErikaOS_cortex_mx_ee_cpu.inc" 1
+ 111 003a 82F31088 		msr primask, r2
+ 112              	@ 0 "" 2
+ 113              	.LVL7:
+ 114              		.thumb
+ 115              		.syntax unified
+ 116              	.LBE39:
+ 117              	.LBE38:
+ 118              	.LBE37:
+ 141:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   }
+ 142:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 
+ 143:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   EE_ORTI_set_service_out(EE_SERVICETRACE_TERMINATETASK);
+ 144:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   EE_OS_EXIT_CRITICAL_SECTION();
+ 145:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** 
+ 146:Generated_Source\PSoC5/ErikaOS_ee_terminat.c ****   return ev;
+ 147:Generated_Source\PSoC5/ErikaOS_ee_terminat.c **** }
+ 119              		.loc 1 147 0
+ 120 003e 08BD     		pop	{r3, pc}
+ 121              	.L8:
+ 122              		.align	2
+ 123              	.L7:
+ 124 0040 00000000 		.word	EE_stkfirst
+ 125 0044 00000000 		.word	EE_IRQ_nesting_level
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 16
+
+
+ 126 0048 00000000 		.word	EE_th_resource_last
+ 127 004c 00000000 		.word	EE_th_terminate_nextask
+ 128              		.cfi_endproc
+ 129              	.LFE71:
+ 130              		.size	EE_oo_TerminateTask, .-EE_oo_TerminateTask
+ 131              		.text
+ 132              	.Letext0:
+ 133              		.file 5 "Generated_Source\\PSoC5\\ErikaOS_common_ee_types.inc"
+ 134              		.file 6 "Generated_Source\\PSoC5\\ErikaOS_ee_oo_common.inc"
+ 135              		.file 7 "Generated_Source\\PSoC5\\ErikaOS_cortex_mx_ee_internal.inc"
+ 136              		.file 8 "Generated_Source\\PSoC5\\ErikaOS_cortex_mx_ee_context.inc"
+ 137              		.file 9 "Generated_Source\\PSoC5\\ErikaOS_ee_oo_intfunc.inc"
+ 138              		.file 10 "Generated_Source\\PSoC5\\ErikaOS_ee_as_internal.inc"
+ 139              		.section	.debug_info,"",%progbits
+ 140              	.Ldebug_info0:
+ 141 0000 AD050000 		.4byte	0x5ad
+ 142 0004 0400     		.2byte	0x4
+ 143 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 144 000a 04       		.byte	0x4
+ 145 000b 01       		.uleb128 0x1
+ 146 000c 5E050000 		.4byte	.LASF78
+ 147 0010 0C       		.byte	0xc
+ 148 0011 19000000 		.4byte	.LASF79
+ 149 0015 DA000000 		.4byte	.LASF80
+ 150 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 151 001d 00000000 		.4byte	0
+ 152 0021 00000000 		.4byte	.Ldebug_line0
+ 153 0025 02       		.uleb128 0x2
+ 154 0026 01       		.byte	0x1
+ 155 0027 06       		.byte	0x6
+ 156 0028 A3030000 		.4byte	.LASF0
+ 157 002c 02       		.uleb128 0x2
+ 158 002d 01       		.byte	0x1
+ 159 002e 08       		.byte	0x8
+ 160 002f 30030000 		.4byte	.LASF1
+ 161 0033 02       		.uleb128 0x2
+ 162 0034 02       		.byte	0x2
+ 163 0035 05       		.byte	0x5
+ 164 0036 AF000000 		.4byte	.LASF2
+ 165 003a 02       		.uleb128 0x2
+ 166 003b 02       		.byte	0x2
+ 167 003c 07       		.byte	0x7
+ 168 003d 23040000 		.4byte	.LASF3
+ 169 0041 02       		.uleb128 0x2
+ 170 0042 04       		.byte	0x4
+ 171 0043 05       		.byte	0x5
+ 172 0044 79020000 		.4byte	.LASF4
+ 173 0048 02       		.uleb128 0x2
+ 174 0049 04       		.byte	0x4
+ 175 004a 07       		.byte	0x7
+ 176 004b 97040000 		.4byte	.LASF5
+ 177 004f 02       		.uleb128 0x2
+ 178 0050 08       		.byte	0x8
+ 179 0051 05       		.byte	0x5
+ 180 0052 29020000 		.4byte	.LASF6
+ 181 0056 02       		.uleb128 0x2
+ 182 0057 08       		.byte	0x8
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 17
+
+
+ 183 0058 07       		.byte	0x7
+ 184 0059 AF030000 		.4byte	.LASF7
+ 185 005d 03       		.uleb128 0x3
+ 186 005e 04       		.byte	0x4
+ 187 005f 05       		.byte	0x5
+ 188 0060 696E7400 		.ascii	"int\000"
+ 189 0064 02       		.uleb128 0x2
+ 190 0065 04       		.byte	0x4
+ 191 0066 07       		.byte	0x7
+ 192 0067 F3030000 		.4byte	.LASF8
+ 193 006b 02       		.uleb128 0x2
+ 194 006c 08       		.byte	0x8
+ 195 006d 04       		.byte	0x4
+ 196 006e 15030000 		.4byte	.LASF9
+ 197 0072 04       		.uleb128 0x4
+ 198 0073 4B000000 		.4byte	.LASF10
+ 199 0077 05       		.byte	0x5
+ 200 0078 3E       		.byte	0x3e
+ 201 0079 2C000000 		.4byte	0x2c
+ 202 007d 04       		.uleb128 0x4
+ 203 007e 37020000 		.4byte	.LASF11
+ 204 0082 05       		.byte	0x5
+ 205 0083 3F       		.byte	0x3f
+ 206 0084 25000000 		.4byte	0x25
+ 207 0088 04       		.uleb128 0x4
+ 208 0089 54040000 		.4byte	.LASF12
+ 209 008d 05       		.byte	0x5
+ 210 008e 52       		.byte	0x52
+ 211 008f 3A000000 		.4byte	0x3a
+ 212 0093 04       		.uleb128 0x4
+ 213 0094 14040000 		.4byte	.LASF13
+ 214 0098 05       		.byte	0x5
+ 215 0099 53       		.byte	0x53
+ 216 009a 5D000000 		.4byte	0x5d
+ 217 009e 04       		.uleb128 0x4
+ 218 009f 5C010000 		.4byte	.LASF14
+ 219 00a3 05       		.byte	0x5
+ 220 00a4 54       		.byte	0x54
+ 221 00a5 64000000 		.4byte	0x64
+ 222 00a9 04       		.uleb128 0x4
+ 223 00aa 62000000 		.4byte	.LASF15
+ 224 00ae 02       		.byte	0x2
+ 225 00af 4D       		.byte	0x4d
+ 226 00b0 9E000000 		.4byte	0x9e
+ 227 00b4 04       		.uleb128 0x4
+ 228 00b5 D2000000 		.4byte	.LASF16
+ 229 00b9 02       		.byte	0x2
+ 230 00ba 4F       		.byte	0x4f
+ 231 00bb 9E000000 		.4byte	0x9e
+ 232 00bf 04       		.uleb128 0x4
+ 233 00c0 A9040000 		.4byte	.LASF17
+ 234 00c4 02       		.byte	0x2
+ 235 00c5 54       		.byte	0x54
+ 236 00c6 A9000000 		.4byte	0xa9
+ 237 00ca 04       		.uleb128 0x4
+ 238 00cb 77010000 		.4byte	.LASF18
+ 239 00cf 02       		.byte	0x2
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 18
+
+
+ 240 00d0 78       		.byte	0x78
+ 241 00d1 93000000 		.4byte	0x93
+ 242 00d5 05       		.uleb128 0x5
+ 243 00d6 58020000 		.4byte	.LASF19
+ 244 00da 06       		.byte	0x6
+ 245 00db 1101     		.2byte	0x111
+ 246 00dd 88000000 		.4byte	0x88
+ 247 00e1 05       		.uleb128 0x5
+ 248 00e2 EB020000 		.4byte	.LASF20
+ 249 00e6 06       		.byte	0x6
+ 250 00e7 3502     		.2byte	0x235
+ 251 00e9 A9000000 		.4byte	0xa9
+ 252 00ed 05       		.uleb128 0x5
+ 253 00ee 03030000 		.4byte	.LASF21
+ 254 00f2 06       		.byte	0x6
+ 255 00f3 5D02     		.2byte	0x25d
+ 256 00f5 A9000000 		.4byte	0xa9
+ 257 00f9 05       		.uleb128 0x5
+ 258 00fa 1D050000 		.4byte	.LASF22
+ 259 00fe 06       		.byte	0x6
+ 260 00ff 6C02     		.2byte	0x26c
+ 261 0101 A9000000 		.4byte	0xa9
+ 262 0105 06       		.uleb128 0x6
+ 263 0106 0C       		.byte	0xc
+ 264 0107 06       		.byte	0x6
+ 265 0108 7202     		.2byte	0x272
+ 266 010a 36010000 		.4byte	0x136
+ 267 010e 07       		.uleb128 0x7
+ 268 010f 82020000 		.4byte	.LASF23
+ 269 0113 06       		.byte	0x6
+ 270 0114 7302     		.2byte	0x273
+ 271 0116 E1000000 		.4byte	0xe1
+ 272 011a 00       		.byte	0
+ 273 011b 07       		.uleb128 0x7
+ 274 011c 6A000000 		.4byte	.LASF24
+ 275 0120 06       		.byte	0x6
+ 276 0121 7402     		.2byte	0x274
+ 277 0123 E1000000 		.4byte	0xe1
+ 278 0127 04       		.byte	0x4
+ 279 0128 07       		.uleb128 0x7
+ 280 0129 7E010000 		.4byte	.LASF25
+ 281 012d 06       		.byte	0x6
+ 282 012e 7502     		.2byte	0x275
+ 283 0130 E1000000 		.4byte	0xe1
+ 284 0134 08       		.byte	0x8
+ 285 0135 00       		.byte	0
+ 286 0136 05       		.uleb128 0x5
+ 287 0137 B0020000 		.4byte	.LASF26
+ 288 013b 06       		.byte	0x6
+ 289 013c 7A02     		.2byte	0x27a
+ 290 013e 05010000 		.4byte	0x105
+ 291 0142 06       		.uleb128 0x6
+ 292 0143 08       		.byte	0x8
+ 293 0144 06       		.byte	0x6
+ 294 0145 7D02     		.2byte	0x27d
+ 295 0147 66010000 		.4byte	0x166
+ 296 014b 07       		.uleb128 0x7
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 19
+
+
+ 297 014c 87010000 		.4byte	.LASF27
+ 298 0150 06       		.byte	0x6
+ 299 0151 7E02     		.2byte	0x27e
+ 300 0153 E1000000 		.4byte	0xe1
+ 301 0157 00       		.byte	0
+ 302 0158 07       		.uleb128 0x7
+ 303 0159 30060000 		.4byte	.LASF28
+ 304 015d 06       		.byte	0x6
+ 305 015e 7F02     		.2byte	0x27f
+ 306 0160 ED000000 		.4byte	0xed
+ 307 0164 04       		.byte	0x4
+ 308 0165 00       		.byte	0
+ 309 0166 05       		.uleb128 0x5
+ 310 0167 05020000 		.4byte	.LASF29
+ 311 016b 06       		.byte	0x6
+ 312 016c 8002     		.2byte	0x280
+ 313 016e 42010000 		.4byte	0x142
+ 314 0172 08       		.uleb128 0x8
+ 315 0173 01       		.byte	0x1
+ 316 0174 2C000000 		.4byte	0x2c
+ 317 0178 06       		.byte	0x6
+ 318 0179 8A02     		.2byte	0x28a
+ 319 017b 8C010000 		.4byte	0x18c
+ 320 017f 09       		.uleb128 0x9
+ 321 0180 06050000 		.4byte	.LASF30
+ 322 0184 00       		.byte	0
+ 323 0185 09       		.uleb128 0x9
+ 324 0186 68020000 		.4byte	.LASF31
+ 325 018a 01       		.byte	0x1
+ 326 018b 00       		.byte	0
+ 327 018c 05       		.uleb128 0x5
+ 328 018d A6010000 		.4byte	.LASF32
+ 329 0191 06       		.byte	0x6
+ 330 0192 8D02     		.2byte	0x28d
+ 331 0194 72010000 		.4byte	0x172
+ 332 0198 05       		.uleb128 0x5
+ 333 0199 46010000 		.4byte	.LASF33
+ 334 019d 06       		.byte	0x6
+ 335 019e 9002     		.2byte	0x290
+ 336 01a0 8C010000 		.4byte	0x18c
+ 337 01a4 06       		.uleb128 0x6
+ 338 01a5 0C       		.byte	0xc
+ 339 01a6 06       		.byte	0x6
+ 340 01a7 9402     		.2byte	0x294
+ 341 01a9 D3010000 		.4byte	0x1d3
+ 342 01ad 0A       		.uleb128 0xa
+ 343 01ae 6300     		.ascii	"c\000"
+ 344 01b0 06       		.byte	0x6
+ 345 01b1 9602     		.2byte	0x296
+ 346 01b3 F9000000 		.4byte	0xf9
+ 347 01b7 00       		.byte	0
+ 348 01b8 07       		.uleb128 0x7
+ 349 01b9 CA000000 		.4byte	.LASF34
+ 350 01bd 06       		.byte	0x6
+ 351 01be 9802     		.2byte	0x298
+ 352 01c0 ED000000 		.4byte	0xed
+ 353 01c4 04       		.byte	0x4
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 20
+
+
+ 354 01c5 07       		.uleb128 0x7
+ 355 01c6 46000000 		.4byte	.LASF35
+ 356 01ca 06       		.byte	0x6
+ 357 01cb 9A02     		.2byte	0x29a
+ 358 01cd 98010000 		.4byte	0x198
+ 359 01d1 08       		.byte	0x8
+ 360 01d2 00       		.byte	0
+ 361 01d3 05       		.uleb128 0x5
+ 362 01d4 36040000 		.4byte	.LASF36
+ 363 01d8 06       		.byte	0x6
+ 364 01d9 9B02     		.2byte	0x29b
+ 365 01db A4010000 		.4byte	0x1a4
+ 366 01df 06       		.uleb128 0x6
+ 367 01e0 10       		.byte	0x10
+ 368 01e1 06       		.byte	0x6
+ 369 01e2 9F02     		.2byte	0x29f
+ 370 01e4 1D020000 		.4byte	0x21d
+ 371 01e8 07       		.uleb128 0x7
+ 372 01e9 0F050000 		.4byte	.LASF37
+ 373 01ed 06       		.byte	0x6
+ 374 01ee A002     		.2byte	0x2a0
+ 375 01f0 BF000000 		.4byte	0xbf
+ 376 01f4 00       		.byte	0
+ 377 01f5 07       		.uleb128 0x7
+ 378 01f6 EC050000 		.4byte	.LASF38
+ 379 01fa 06       		.byte	0x6
+ 380 01fb A102     		.2byte	0x2a1
+ 381 01fd E1000000 		.4byte	0xe1
+ 382 0201 04       		.byte	0x4
+ 383 0202 07       		.uleb128 0x7
+ 384 0203 C4000000 		.4byte	.LASF39
+ 385 0207 06       		.byte	0x6
+ 386 0208 A202     		.2byte	0x2a2
+ 387 020a E1000000 		.4byte	0xe1
+ 388 020e 08       		.byte	0x8
+ 389 020f 07       		.uleb128 0x7
+ 390 0210 0D060000 		.4byte	.LASF40
+ 391 0214 06       		.byte	0x6
+ 392 0215 A302     		.2byte	0x2a3
+ 393 0217 ED000000 		.4byte	0xed
+ 394 021b 0C       		.byte	0xc
+ 395 021c 00       		.byte	0
+ 396 021d 05       		.uleb128 0x5
+ 397 021e 92020000 		.4byte	.LASF41
+ 398 0222 06       		.byte	0x6
+ 399 0223 A402     		.2byte	0x2a4
+ 400 0225 DF010000 		.4byte	0x1df
+ 401 0229 05       		.uleb128 0x5
+ 402 022a B9000000 		.4byte	.LASF42
+ 403 022e 06       		.byte	0x6
+ 404 022f 2103     		.2byte	0x321
+ 405 0231 2C000000 		.4byte	0x2c
+ 406 0235 0B       		.uleb128 0xb
+ 407 0236 72030000 		.4byte	.LASF81
+ 408 023a 02       		.byte	0x2
+ 409 023b F1       		.byte	0xf1
+ 410 023c B4000000 		.4byte	0xb4
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 21
+
+
+ 411 0240 03       		.byte	0x3
+ 412 0241 51020000 		.4byte	0x251
+ 413 0245 0C       		.uleb128 0xc
+ 414 0246 1D040000 		.4byte	.LASF51
+ 415 024a 02       		.byte	0x2
+ 416 024b F4       		.byte	0xf4
+ 417 024c B4000000 		.4byte	0xb4
+ 418 0250 00       		.byte	0
+ 419 0251 0D       		.uleb128 0xd
+ 420 0252 5E040000 		.4byte	.LASF43
+ 421 0256 02       		.byte	0x2
+ 422 0257 DC       		.byte	0xdc
+ 423 0258 03       		.byte	0x3
+ 424 0259 67020000 		.4byte	0x267
+ 425 025d 0E       		.uleb128 0xe
+ 426 025e 6600     		.ascii	"f\000"
+ 427 0260 02       		.byte	0x2
+ 428 0261 DC       		.byte	0xdc
+ 429 0262 B4000000 		.4byte	0xb4
+ 430 0266 00       		.byte	0
+ 431 0267 0F       		.uleb128 0xf
+ 432 0268 8A000000 		.4byte	.LASF44
+ 433 026c 06       		.byte	0x6
+ 434 026d 9703     		.2byte	0x397
+ 435 026f 03       		.byte	0x3
+ 436 0270 81020000 		.4byte	0x281
+ 437 0274 10       		.uleb128 0x10
+ 438 0275 73727600 		.ascii	"srv\000"
+ 439 0279 06       		.byte	0x6
+ 440 027a 9703     		.2byte	0x397
+ 441 027c 72000000 		.4byte	0x72
+ 442 0280 00       		.byte	0
+ 443 0281 11       		.uleb128 0x11
+ 444 0282 D5040000 		.4byte	.LASF45
+ 445 0286 04       		.byte	0x4
+ 446 0287 4D       		.byte	0x4d
+ 447 0288 A9000000 		.4byte	0xa9
+ 448 028c 03       		.byte	0x3
+ 449 028d 11       		.uleb128 0x11
+ 450 028e E1030000 		.4byte	.LASF46
+ 451 0292 03       		.byte	0x3
+ 452 0293 EE       		.byte	0xee
+ 453 0294 CA000000 		.4byte	0xca
+ 454 0298 03       		.byte	0x3
+ 455 0299 12       		.uleb128 0x12
+ 456 029a C6030000 		.4byte	.LASF82
+ 457 029e 0A       		.byte	0xa
+ 458 029f AB01     		.2byte	0x1ab
+ 459 02a1 03       		.byte	0x3
+ 460 02a2 0F       		.uleb128 0xf
+ 461 02a3 EE010000 		.4byte	.LASF47
+ 462 02a7 06       		.byte	0x6
+ 463 02a8 A303     		.2byte	0x3a3
+ 464 02aa 03       		.byte	0x3
+ 465 02ab BB020000 		.4byte	0x2bb
+ 466 02af 10       		.uleb128 0x10
+ 467 02b0 696400   		.ascii	"id\000"
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 22
+
+
+ 468 02b3 06       		.byte	0x6
+ 469 02b4 A303     		.2byte	0x3a3
+ 470 02b6 72000000 		.4byte	0x72
+ 471 02ba 00       		.byte	0
+ 472 02bb 11       		.uleb128 0x11
+ 473 02bc 12060000 		.4byte	.LASF48
+ 474 02c0 07       		.byte	0x7
+ 475 02c1 60       		.byte	0x60
+ 476 02c2 B4000000 		.4byte	0xb4
+ 477 02c6 03       		.byte	0x3
+ 478 02c7 0F       		.uleb128 0xf
+ 479 02c8 5A030000 		.4byte	.LASF49
+ 480 02cc 06       		.byte	0x6
+ 481 02cd A803     		.2byte	0x3a8
+ 482 02cf 03       		.byte	0x3
+ 483 02d0 E0020000 		.4byte	0x2e0
+ 484 02d4 10       		.uleb128 0x10
+ 485 02d5 696400   		.ascii	"id\000"
+ 486 02d8 06       		.byte	0x6
+ 487 02d9 A803     		.2byte	0x3a8
+ 488 02db 72000000 		.4byte	0x72
+ 489 02df 00       		.byte	0
+ 490 02e0 0D       		.uleb128 0xd
+ 491 02e1 3E030000 		.4byte	.LASF50
+ 492 02e5 07       		.byte	0x7
+ 493 02e6 68       		.byte	0x68
+ 494 02e7 03       		.byte	0x3
+ 495 02e8 F6020000 		.4byte	0x2f6
+ 496 02ec 0E       		.uleb128 0xe
+ 497 02ed 6600     		.ascii	"f\000"
+ 498 02ef 07       		.byte	0x7
+ 499 02f0 68       		.byte	0x68
+ 500 02f1 B4000000 		.4byte	0xb4
+ 501 02f5 00       		.byte	0
+ 502 02f6 13       		.uleb128 0x13
+ 503 02f7 DA010000 		.4byte	.LASF83
+ 504 02fb 01       		.byte	0x1
+ 505 02fc 41       		.byte	0x41
+ 506 02fd 29020000 		.4byte	0x229
+ 507 0301 00000000 		.4byte	.LFB71
+ 508 0305 50000000 		.4byte	.LFE71-.LFB71
+ 509 0309 01       		.uleb128 0x1
+ 510 030a 9C       		.byte	0x9c
+ 511 030b CA030000 		.4byte	0x3ca
+ 512 030f 14       		.uleb128 0x14
+ 513 0310 657600   		.ascii	"ev\000"
+ 514 0313 01       		.byte	0x1
+ 515 0314 44       		.byte	0x44
+ 516 0315 29020000 		.4byte	0x229
+ 517 0319 00000000 		.4byte	.LLST0
+ 518 031d 0C       		.uleb128 0xc
+ 519 031e 0C040000 		.4byte	.LASF52
+ 520 0322 01       		.byte	0x1
+ 521 0323 46       		.byte	0x46
+ 522 0324 CA000000 		.4byte	0xca
+ 523 0328 15       		.uleb128 0x15
+ 524 0329 4E050000 		.4byte	.LASF53
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 23
+
+
+ 525 032d 01       		.byte	0x1
+ 526 032e 49       		.byte	0x49
+ 527 032f B4000000 		.4byte	0xb4
+ 528 0333 01       		.uleb128 0x1
+ 529 0334 52       		.byte	0x52
+ 530 0335 16       		.uleb128 0x16
+ 531 0336 BB020000 		.4byte	0x2bb
+ 532 033a 02000000 		.4byte	.LBB30
+ 533 033e 06000000 		.4byte	.LBE30-.LBB30
+ 534 0342 01       		.byte	0x1
+ 535 0343 49       		.byte	0x49
+ 536 0344 6C030000 		.4byte	0x36c
+ 537 0348 17       		.uleb128 0x17
+ 538 0349 35020000 		.4byte	0x235
+ 539 034d 02000000 		.4byte	.LBB31
+ 540 0351 06000000 		.4byte	.LBE31-.LBB31
+ 541 0355 07       		.byte	0x7
+ 542 0356 62       		.byte	0x62
+ 543 0357 18       		.uleb128 0x18
+ 544 0358 02000000 		.4byte	.LBB32
+ 545 035c 06000000 		.4byte	.LBE32-.LBB32
+ 546 0360 19       		.uleb128 0x19
+ 547 0361 45020000 		.4byte	0x245
+ 548 0365 2A000000 		.4byte	.LLST1
+ 549 0369 00       		.byte	0
+ 550 036a 00       		.byte	0
+ 551 036b 00       		.byte	0
+ 552 036c 1A       		.uleb128 0x1a
+ 553 036d 8D020000 		.4byte	0x28d
+ 554 0371 08000000 		.4byte	.LBB33
+ 555 0375 04000000 		.4byte	.LBE33-.LBB33
+ 556 0379 01       		.byte	0x1
+ 557 037a 4F       		.byte	0x4f
+ 558 037b 1A       		.uleb128 0x1a
+ 559 037c 81020000 		.4byte	0x281
+ 560 0380 0C000000 		.4byte	.LBB35
+ 561 0384 04000000 		.4byte	.LBE35-.LBB35
+ 562 0388 01       		.byte	0x1
+ 563 0389 62       		.byte	0x62
+ 564 038a 16       		.uleb128 0x16
+ 565 038b E0020000 		.4byte	0x2e0
+ 566 038f 3A000000 		.4byte	.LBB37
+ 567 0393 04000000 		.4byte	.LBE37-.LBB37
+ 568 0397 01       		.byte	0x1
+ 569 0398 90       		.byte	0x90
+ 570 0399 C0030000 		.4byte	0x3c0
+ 571 039d 1B       		.uleb128 0x1b
+ 572 039e EC020000 		.4byte	0x2ec
+ 573 03a2 3D000000 		.4byte	.LLST2
+ 574 03a6 17       		.uleb128 0x17
+ 575 03a7 51020000 		.4byte	0x251
+ 576 03ab 3A000000 		.4byte	.LBB38
+ 577 03af 04000000 		.4byte	.LBE38-.LBB38
+ 578 03b3 07       		.byte	0x7
+ 579 03b4 6A       		.byte	0x6a
+ 580 03b5 1B       		.uleb128 0x1b
+ 581 03b6 5D020000 		.4byte	0x25d
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 24
+
+
+ 582 03ba 3D000000 		.4byte	.LLST2
+ 583 03be 00       		.byte	0
+ 584 03bf 00       		.byte	0
+ 585 03c0 1C       		.uleb128 0x1c
+ 586 03c1 3A000000 		.4byte	.LVL6
+ 587 03c5 A5050000 		.4byte	0x5a5
+ 588 03c9 00       		.byte	0
+ 589 03ca 1D       		.uleb128 0x1d
+ 590 03cb C5010000 		.4byte	.LASF54
+ 591 03cf 04       		.byte	0x4
+ 592 03d0 44       		.byte	0x44
+ 593 03d1 A9000000 		.4byte	0xa9
+ 594 03d5 1D       		.uleb128 0x1d
+ 595 03d6 00000000 		.4byte	.LASF55
+ 596 03da 08       		.byte	0x8
+ 597 03db 48       		.byte	0x48
+ 598 03dc CA000000 		.4byte	0xca
+ 599 03e0 1E       		.uleb128 0x1e
+ 600 03e1 F7030000 		.4byte	0x3f7
+ 601 03e5 F0030000 		.4byte	0x3f0
+ 602 03e9 1F       		.uleb128 0x1f
+ 603 03ea F0030000 		.4byte	0x3f0
+ 604 03ee 04       		.byte	0x4
+ 605 03ef 00       		.byte	0
+ 606 03f0 02       		.uleb128 0x2
+ 607 03f1 04       		.byte	0x4
+ 608 03f2 07       		.byte	0x7
+ 609 03f3 14050000 		.4byte	.LASF56
+ 610 03f7 20       		.uleb128 0x20
+ 611 03f8 A9000000 		.4byte	0xa9
+ 612 03fc 1D       		.uleb128 0x1d
+ 613 03fd 66010000 		.4byte	.LASF57
+ 614 0401 06       		.byte	0x6
+ 615 0402 B2       		.byte	0xb2
+ 616 0403 07040000 		.4byte	0x407
+ 617 0407 20       		.uleb128 0x20
+ 618 0408 E0030000 		.4byte	0x3e0
+ 619 040c 1D       		.uleb128 0x1d
+ 620 040d F2040000 		.4byte	.LASF58
+ 621 0411 06       		.byte	0x6
+ 622 0412 B3       		.byte	0xb3
+ 623 0413 17040000 		.4byte	0x417
+ 624 0417 20       		.uleb128 0x20
+ 625 0418 E0030000 		.4byte	0x3e0
+ 626 041c 1E       		.uleb128 0x1e
+ 627 041d A9000000 		.4byte	0xa9
+ 628 0421 2C040000 		.4byte	0x42c
+ 629 0425 1F       		.uleb128 0x1f
+ 630 0426 F0030000 		.4byte	0x3f0
+ 631 042a 04       		.byte	0x4
+ 632 042b 00       		.byte	0
+ 633 042c 1D       		.uleb128 0x1d
+ 634 042d 41050000 		.4byte	.LASF59
+ 635 0431 06       		.byte	0x6
+ 636 0432 CA       		.byte	0xca
+ 637 0433 1C040000 		.4byte	0x41c
+ 638 0437 1E       		.uleb128 0x1e
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 25
+
+
+ 639 0438 CA000000 		.4byte	0xca
+ 640 043c 47040000 		.4byte	0x447
+ 641 0440 1F       		.uleb128 0x1f
+ 642 0441 F0030000 		.4byte	0x3f0
+ 643 0445 04       		.byte	0x4
+ 644 0446 00       		.byte	0
+ 645 0447 1D       		.uleb128 0x1d
+ 646 0448 53050000 		.4byte	.LASF60
+ 647 044c 06       		.byte	0x6
+ 648 044d D2       		.byte	0xd2
+ 649 044e 37040000 		.4byte	0x437
+ 650 0452 1D       		.uleb128 0x1d
+ 651 0453 00040000 		.4byte	.LASF61
+ 652 0457 06       		.byte	0x6
+ 653 0458 DA       		.byte	0xda
+ 654 0459 1C040000 		.4byte	0x41c
+ 655 045d 1D       		.uleb128 0x1d
+ 656 045e 29050000 		.4byte	.LASF62
+ 657 0462 06       		.byte	0x6
+ 658 0463 DE       		.byte	0xde
+ 659 0464 37040000 		.4byte	0x437
+ 660 0468 1D       		.uleb128 0x1d
+ 661 0469 C9040000 		.4byte	.LASF63
+ 662 046d 06       		.byte	0x6
+ 663 046e E2       		.byte	0xe2
+ 664 046f CA000000 		.4byte	0xca
+ 665 0473 1D       		.uleb128 0x1d
+ 666 0474 F4020000 		.4byte	.LASF64
+ 667 0478 06       		.byte	0x6
+ 668 0479 F7       		.byte	0xf7
+ 669 047a A9000000 		.4byte	0xa9
+ 670 047e 21       		.uleb128 0x21
+ 671 047f 54000000 		.4byte	.LASF65
+ 672 0483 06       		.byte	0x6
+ 673 0484 3F01     		.2byte	0x13f
+ 674 0486 D5000000 		.4byte	0xd5
+ 675 048a 21       		.uleb128 0x21
+ 676 048b 77000000 		.4byte	.LASF66
+ 677 048f 06       		.byte	0x6
+ 678 0490 5C01     		.2byte	0x15c
+ 679 0492 1C040000 		.4byte	0x41c
+ 680 0496 1E       		.uleb128 0x1e
+ 681 0497 BF000000 		.4byte	0xbf
+ 682 049b A6040000 		.4byte	0x4a6
+ 683 049f 1F       		.uleb128 0x1f
+ 684 04a0 F0030000 		.4byte	0x3f0
+ 685 04a4 04       		.byte	0x4
+ 686 04a5 00       		.byte	0
+ 687 04a6 21       		.uleb128 0x21
+ 688 04a7 9E000000 		.4byte	.LASF67
+ 689 04ab 06       		.byte	0x6
+ 690 04ac 6701     		.2byte	0x167
+ 691 04ae 96040000 		.4byte	0x496
+ 692 04b2 1E       		.uleb128 0x1e
+ 693 04b3 A9000000 		.4byte	0xa9
+ 694 04b7 C2040000 		.4byte	0x4c2
+ 695 04bb 1F       		.uleb128 0x1f
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 26
+
+
+ 696 04bc F0030000 		.4byte	0x3f0
+ 697 04c0 05       		.byte	0x5
+ 698 04c1 00       		.byte	0
+ 699 04c2 21       		.uleb128 0x21
+ 700 04c3 B5040000 		.4byte	.LASF68
+ 701 04c7 06       		.byte	0x6
+ 702 04c8 BA01     		.2byte	0x1ba
+ 703 04ca B2040000 		.4byte	0x4b2
+ 704 04ce 1E       		.uleb128 0x1e
+ 705 04cf DE040000 		.4byte	0x4de
+ 706 04d3 DE040000 		.4byte	0x4de
+ 707 04d7 1F       		.uleb128 0x1f
+ 708 04d8 F0030000 		.4byte	0x3f0
+ 709 04dc 00       		.byte	0
+ 710 04dd 00       		.byte	0
+ 711 04de 20       		.uleb128 0x20
+ 712 04df 36010000 		.4byte	0x136
+ 713 04e3 21       		.uleb128 0x21
+ 714 04e4 21030000 		.4byte	.LASF69
+ 715 04e8 06       		.byte	0x6
+ 716 04e9 CA02     		.2byte	0x2ca
+ 717 04eb EF040000 		.4byte	0x4ef
+ 718 04ef 20       		.uleb128 0x20
+ 719 04f0 CE040000 		.4byte	0x4ce
+ 720 04f4 1E       		.uleb128 0x1e
+ 721 04f5 04050000 		.4byte	0x504
+ 722 04f9 04050000 		.4byte	0x504
+ 723 04fd 1F       		.uleb128 0x1f
+ 724 04fe F0030000 		.4byte	0x3f0
+ 725 0502 00       		.byte	0
+ 726 0503 00       		.byte	0
+ 727 0504 20       		.uleb128 0x20
+ 728 0505 D3010000 		.4byte	0x1d3
+ 729 0509 21       		.uleb128 0x21
+ 730 050a 8D010000 		.4byte	.LASF70
+ 731 050e 06       		.byte	0x6
+ 732 050f DD02     		.2byte	0x2dd
+ 733 0511 15050000 		.4byte	0x515
+ 734 0515 20       		.uleb128 0x20
+ 735 0516 F4040000 		.4byte	0x4f4
+ 736 051a 1E       		.uleb128 0x1e
+ 737 051b 66010000 		.4byte	0x166
+ 738 051f 2A050000 		.4byte	0x52a
+ 739 0523 1F       		.uleb128 0x1f
+ 740 0524 F0030000 		.4byte	0x3f0
+ 741 0528 00       		.byte	0
+ 742 0529 00       		.byte	0
+ 743 052a 21       		.uleb128 0x21
+ 744 052b 75040000 		.4byte	.LASF71
+ 745 052f 06       		.byte	0x6
+ 746 0530 FB02     		.2byte	0x2fb
+ 747 0532 1A050000 		.4byte	0x51a
+ 748 0536 1E       		.uleb128 0x1e
+ 749 0537 1D020000 		.4byte	0x21d
+ 750 053b 46050000 		.4byte	0x546
+ 751 053f 1F       		.uleb128 0x1f
+ 752 0540 F0030000 		.4byte	0x3f0
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 27
+
+
+ 753 0544 00       		.byte	0
+ 754 0545 00       		.byte	0
+ 755 0546 21       		.uleb128 0x21
+ 756 0547 8A030000 		.4byte	.LASF72
+ 757 054b 06       		.byte	0x6
+ 758 054c 0403     		.2byte	0x304
+ 759 054e 36050000 		.4byte	0x536
+ 760 0552 1D       		.uleb128 0x1d
+ 761 0553 F5050000 		.4byte	.LASF73
+ 762 0557 09       		.byte	0x9
+ 763 0558 40       		.byte	0x40
+ 764 0559 A9000000 		.4byte	0xa9
+ 765 055d 1D       		.uleb128 0x1d
+ 766 055e 3F020000 		.4byte	.LASF74
+ 767 0562 09       		.byte	0x9
+ 768 0563 47       		.byte	0x47
+ 769 0564 B4000000 		.4byte	0xb4
+ 770 0568 1D       		.uleb128 0x1d
+ 771 0569 84040000 		.4byte	.LASF75
+ 772 056d 09       		.byte	0x9
+ 773 056e 4A       		.byte	0x4a
+ 774 056f A9000000 		.4byte	0xa9
+ 775 0573 1E       		.uleb128 0x1e
+ 776 0574 83050000 		.4byte	0x583
+ 777 0578 83050000 		.4byte	0x583
+ 778 057c 1F       		.uleb128 0x1f
+ 779 057d F0030000 		.4byte	0x3f0
+ 780 0581 FF       		.byte	0xff
+ 781 0582 00       		.byte	0
+ 782 0583 20       		.uleb128 0x20
+ 783 0584 7D000000 		.4byte	0x7d
+ 784 0588 21       		.uleb128 0x21
+ 785 0589 1C020000 		.4byte	.LASF76
+ 786 058d 03       		.byte	0x3
+ 787 058e AB01     		.2byte	0x1ab
+ 788 0590 94050000 		.4byte	0x594
+ 789 0594 20       		.uleb128 0x20
+ 790 0595 73050000 		.4byte	0x573
+ 791 0599 21       		.uleb128 0x21
+ 792 059a C7020000 		.4byte	.LASF77
+ 793 059e 03       		.byte	0x3
+ 794 059f 1602     		.2byte	0x216
+ 795 05a1 A9000000 		.4byte	0xa9
+ 796 05a5 22       		.uleb128 0x22
+ 797 05a6 D5020000 		.4byte	.LASF84
+ 798 05aa D5020000 		.4byte	.LASF84
+ 799 05ae 07       		.byte	0x7
+ 800 05af C0       		.byte	0xc0
+ 801 05b0 00       		.byte	0
+ 802              		.section	.debug_abbrev,"",%progbits
+ 803              	.Ldebug_abbrev0:
+ 804 0000 01       		.uleb128 0x1
+ 805 0001 11       		.uleb128 0x11
+ 806 0002 01       		.byte	0x1
+ 807 0003 25       		.uleb128 0x25
+ 808 0004 0E       		.uleb128 0xe
+ 809 0005 13       		.uleb128 0x13
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 28
+
+
+ 810 0006 0B       		.uleb128 0xb
+ 811 0007 03       		.uleb128 0x3
+ 812 0008 0E       		.uleb128 0xe
+ 813 0009 1B       		.uleb128 0x1b
+ 814 000a 0E       		.uleb128 0xe
+ 815 000b 55       		.uleb128 0x55
+ 816 000c 17       		.uleb128 0x17
+ 817 000d 11       		.uleb128 0x11
+ 818 000e 01       		.uleb128 0x1
+ 819 000f 10       		.uleb128 0x10
+ 820 0010 17       		.uleb128 0x17
+ 821 0011 00       		.byte	0
+ 822 0012 00       		.byte	0
+ 823 0013 02       		.uleb128 0x2
+ 824 0014 24       		.uleb128 0x24
+ 825 0015 00       		.byte	0
+ 826 0016 0B       		.uleb128 0xb
+ 827 0017 0B       		.uleb128 0xb
+ 828 0018 3E       		.uleb128 0x3e
+ 829 0019 0B       		.uleb128 0xb
+ 830 001a 03       		.uleb128 0x3
+ 831 001b 0E       		.uleb128 0xe
+ 832 001c 00       		.byte	0
+ 833 001d 00       		.byte	0
+ 834 001e 03       		.uleb128 0x3
+ 835 001f 24       		.uleb128 0x24
+ 836 0020 00       		.byte	0
+ 837 0021 0B       		.uleb128 0xb
+ 838 0022 0B       		.uleb128 0xb
+ 839 0023 3E       		.uleb128 0x3e
+ 840 0024 0B       		.uleb128 0xb
+ 841 0025 03       		.uleb128 0x3
+ 842 0026 08       		.uleb128 0x8
+ 843 0027 00       		.byte	0
+ 844 0028 00       		.byte	0
+ 845 0029 04       		.uleb128 0x4
+ 846 002a 16       		.uleb128 0x16
+ 847 002b 00       		.byte	0
+ 848 002c 03       		.uleb128 0x3
+ 849 002d 0E       		.uleb128 0xe
+ 850 002e 3A       		.uleb128 0x3a
+ 851 002f 0B       		.uleb128 0xb
+ 852 0030 3B       		.uleb128 0x3b
+ 853 0031 0B       		.uleb128 0xb
+ 854 0032 49       		.uleb128 0x49
+ 855 0033 13       		.uleb128 0x13
+ 856 0034 00       		.byte	0
+ 857 0035 00       		.byte	0
+ 858 0036 05       		.uleb128 0x5
+ 859 0037 16       		.uleb128 0x16
+ 860 0038 00       		.byte	0
+ 861 0039 03       		.uleb128 0x3
+ 862 003a 0E       		.uleb128 0xe
+ 863 003b 3A       		.uleb128 0x3a
+ 864 003c 0B       		.uleb128 0xb
+ 865 003d 3B       		.uleb128 0x3b
+ 866 003e 05       		.uleb128 0x5
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 29
+
+
+ 867 003f 49       		.uleb128 0x49
+ 868 0040 13       		.uleb128 0x13
+ 869 0041 00       		.byte	0
+ 870 0042 00       		.byte	0
+ 871 0043 06       		.uleb128 0x6
+ 872 0044 13       		.uleb128 0x13
+ 873 0045 01       		.byte	0x1
+ 874 0046 0B       		.uleb128 0xb
+ 875 0047 0B       		.uleb128 0xb
+ 876 0048 3A       		.uleb128 0x3a
+ 877 0049 0B       		.uleb128 0xb
+ 878 004a 3B       		.uleb128 0x3b
+ 879 004b 05       		.uleb128 0x5
+ 880 004c 01       		.uleb128 0x1
+ 881 004d 13       		.uleb128 0x13
+ 882 004e 00       		.byte	0
+ 883 004f 00       		.byte	0
+ 884 0050 07       		.uleb128 0x7
+ 885 0051 0D       		.uleb128 0xd
+ 886 0052 00       		.byte	0
+ 887 0053 03       		.uleb128 0x3
+ 888 0054 0E       		.uleb128 0xe
+ 889 0055 3A       		.uleb128 0x3a
+ 890 0056 0B       		.uleb128 0xb
+ 891 0057 3B       		.uleb128 0x3b
+ 892 0058 05       		.uleb128 0x5
+ 893 0059 49       		.uleb128 0x49
+ 894 005a 13       		.uleb128 0x13
+ 895 005b 38       		.uleb128 0x38
+ 896 005c 0B       		.uleb128 0xb
+ 897 005d 00       		.byte	0
+ 898 005e 00       		.byte	0
+ 899 005f 08       		.uleb128 0x8
+ 900 0060 04       		.uleb128 0x4
+ 901 0061 01       		.byte	0x1
+ 902 0062 0B       		.uleb128 0xb
+ 903 0063 0B       		.uleb128 0xb
+ 904 0064 49       		.uleb128 0x49
+ 905 0065 13       		.uleb128 0x13
+ 906 0066 3A       		.uleb128 0x3a
+ 907 0067 0B       		.uleb128 0xb
+ 908 0068 3B       		.uleb128 0x3b
+ 909 0069 05       		.uleb128 0x5
+ 910 006a 01       		.uleb128 0x1
+ 911 006b 13       		.uleb128 0x13
+ 912 006c 00       		.byte	0
+ 913 006d 00       		.byte	0
+ 914 006e 09       		.uleb128 0x9
+ 915 006f 28       		.uleb128 0x28
+ 916 0070 00       		.byte	0
+ 917 0071 03       		.uleb128 0x3
+ 918 0072 0E       		.uleb128 0xe
+ 919 0073 1C       		.uleb128 0x1c
+ 920 0074 0B       		.uleb128 0xb
+ 921 0075 00       		.byte	0
+ 922 0076 00       		.byte	0
+ 923 0077 0A       		.uleb128 0xa
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 30
+
+
+ 924 0078 0D       		.uleb128 0xd
+ 925 0079 00       		.byte	0
+ 926 007a 03       		.uleb128 0x3
+ 927 007b 08       		.uleb128 0x8
+ 928 007c 3A       		.uleb128 0x3a
+ 929 007d 0B       		.uleb128 0xb
+ 930 007e 3B       		.uleb128 0x3b
+ 931 007f 05       		.uleb128 0x5
+ 932 0080 49       		.uleb128 0x49
+ 933 0081 13       		.uleb128 0x13
+ 934 0082 38       		.uleb128 0x38
+ 935 0083 0B       		.uleb128 0xb
+ 936 0084 00       		.byte	0
+ 937 0085 00       		.byte	0
+ 938 0086 0B       		.uleb128 0xb
+ 939 0087 2E       		.uleb128 0x2e
+ 940 0088 01       		.byte	0x1
+ 941 0089 03       		.uleb128 0x3
+ 942 008a 0E       		.uleb128 0xe
+ 943 008b 3A       		.uleb128 0x3a
+ 944 008c 0B       		.uleb128 0xb
+ 945 008d 3B       		.uleb128 0x3b
+ 946 008e 0B       		.uleb128 0xb
+ 947 008f 27       		.uleb128 0x27
+ 948 0090 19       		.uleb128 0x19
+ 949 0091 49       		.uleb128 0x49
+ 950 0092 13       		.uleb128 0x13
+ 951 0093 20       		.uleb128 0x20
+ 952 0094 0B       		.uleb128 0xb
+ 953 0095 01       		.uleb128 0x1
+ 954 0096 13       		.uleb128 0x13
+ 955 0097 00       		.byte	0
+ 956 0098 00       		.byte	0
+ 957 0099 0C       		.uleb128 0xc
+ 958 009a 34       		.uleb128 0x34
+ 959 009b 00       		.byte	0
+ 960 009c 03       		.uleb128 0x3
+ 961 009d 0E       		.uleb128 0xe
+ 962 009e 3A       		.uleb128 0x3a
+ 963 009f 0B       		.uleb128 0xb
+ 964 00a0 3B       		.uleb128 0x3b
+ 965 00a1 0B       		.uleb128 0xb
+ 966 00a2 49       		.uleb128 0x49
+ 967 00a3 13       		.uleb128 0x13
+ 968 00a4 00       		.byte	0
+ 969 00a5 00       		.byte	0
+ 970 00a6 0D       		.uleb128 0xd
+ 971 00a7 2E       		.uleb128 0x2e
+ 972 00a8 01       		.byte	0x1
+ 973 00a9 03       		.uleb128 0x3
+ 974 00aa 0E       		.uleb128 0xe
+ 975 00ab 3A       		.uleb128 0x3a
+ 976 00ac 0B       		.uleb128 0xb
+ 977 00ad 3B       		.uleb128 0x3b
+ 978 00ae 0B       		.uleb128 0xb
+ 979 00af 27       		.uleb128 0x27
+ 980 00b0 19       		.uleb128 0x19
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 31
+
+
+ 981 00b1 20       		.uleb128 0x20
+ 982 00b2 0B       		.uleb128 0xb
+ 983 00b3 01       		.uleb128 0x1
+ 984 00b4 13       		.uleb128 0x13
+ 985 00b5 00       		.byte	0
+ 986 00b6 00       		.byte	0
+ 987 00b7 0E       		.uleb128 0xe
+ 988 00b8 05       		.uleb128 0x5
+ 989 00b9 00       		.byte	0
+ 990 00ba 03       		.uleb128 0x3
+ 991 00bb 08       		.uleb128 0x8
+ 992 00bc 3A       		.uleb128 0x3a
+ 993 00bd 0B       		.uleb128 0xb
+ 994 00be 3B       		.uleb128 0x3b
+ 995 00bf 0B       		.uleb128 0xb
+ 996 00c0 49       		.uleb128 0x49
+ 997 00c1 13       		.uleb128 0x13
+ 998 00c2 00       		.byte	0
+ 999 00c3 00       		.byte	0
+ 1000 00c4 0F       		.uleb128 0xf
+ 1001 00c5 2E       		.uleb128 0x2e
+ 1002 00c6 01       		.byte	0x1
+ 1003 00c7 03       		.uleb128 0x3
+ 1004 00c8 0E       		.uleb128 0xe
+ 1005 00c9 3A       		.uleb128 0x3a
+ 1006 00ca 0B       		.uleb128 0xb
+ 1007 00cb 3B       		.uleb128 0x3b
+ 1008 00cc 05       		.uleb128 0x5
+ 1009 00cd 27       		.uleb128 0x27
+ 1010 00ce 19       		.uleb128 0x19
+ 1011 00cf 20       		.uleb128 0x20
+ 1012 00d0 0B       		.uleb128 0xb
+ 1013 00d1 01       		.uleb128 0x1
+ 1014 00d2 13       		.uleb128 0x13
+ 1015 00d3 00       		.byte	0
+ 1016 00d4 00       		.byte	0
+ 1017 00d5 10       		.uleb128 0x10
+ 1018 00d6 05       		.uleb128 0x5
+ 1019 00d7 00       		.byte	0
+ 1020 00d8 03       		.uleb128 0x3
+ 1021 00d9 08       		.uleb128 0x8
+ 1022 00da 3A       		.uleb128 0x3a
+ 1023 00db 0B       		.uleb128 0xb
+ 1024 00dc 3B       		.uleb128 0x3b
+ 1025 00dd 05       		.uleb128 0x5
+ 1026 00de 49       		.uleb128 0x49
+ 1027 00df 13       		.uleb128 0x13
+ 1028 00e0 00       		.byte	0
+ 1029 00e1 00       		.byte	0
+ 1030 00e2 11       		.uleb128 0x11
+ 1031 00e3 2E       		.uleb128 0x2e
+ 1032 00e4 00       		.byte	0
+ 1033 00e5 03       		.uleb128 0x3
+ 1034 00e6 0E       		.uleb128 0xe
+ 1035 00e7 3A       		.uleb128 0x3a
+ 1036 00e8 0B       		.uleb128 0xb
+ 1037 00e9 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 32
+
+
+ 1038 00ea 0B       		.uleb128 0xb
+ 1039 00eb 27       		.uleb128 0x27
+ 1040 00ec 19       		.uleb128 0x19
+ 1041 00ed 49       		.uleb128 0x49
+ 1042 00ee 13       		.uleb128 0x13
+ 1043 00ef 20       		.uleb128 0x20
+ 1044 00f0 0B       		.uleb128 0xb
+ 1045 00f1 00       		.byte	0
+ 1046 00f2 00       		.byte	0
+ 1047 00f3 12       		.uleb128 0x12
+ 1048 00f4 2E       		.uleb128 0x2e
+ 1049 00f5 00       		.byte	0
+ 1050 00f6 03       		.uleb128 0x3
+ 1051 00f7 0E       		.uleb128 0xe
+ 1052 00f8 3A       		.uleb128 0x3a
+ 1053 00f9 0B       		.uleb128 0xb
+ 1054 00fa 3B       		.uleb128 0x3b
+ 1055 00fb 05       		.uleb128 0x5
+ 1056 00fc 27       		.uleb128 0x27
+ 1057 00fd 19       		.uleb128 0x19
+ 1058 00fe 20       		.uleb128 0x20
+ 1059 00ff 0B       		.uleb128 0xb
+ 1060 0100 00       		.byte	0
+ 1061 0101 00       		.byte	0
+ 1062 0102 13       		.uleb128 0x13
+ 1063 0103 2E       		.uleb128 0x2e
+ 1064 0104 01       		.byte	0x1
+ 1065 0105 3F       		.uleb128 0x3f
+ 1066 0106 19       		.uleb128 0x19
+ 1067 0107 03       		.uleb128 0x3
+ 1068 0108 0E       		.uleb128 0xe
+ 1069 0109 3A       		.uleb128 0x3a
+ 1070 010a 0B       		.uleb128 0xb
+ 1071 010b 3B       		.uleb128 0x3b
+ 1072 010c 0B       		.uleb128 0xb
+ 1073 010d 27       		.uleb128 0x27
+ 1074 010e 19       		.uleb128 0x19
+ 1075 010f 49       		.uleb128 0x49
+ 1076 0110 13       		.uleb128 0x13
+ 1077 0111 11       		.uleb128 0x11
+ 1078 0112 01       		.uleb128 0x1
+ 1079 0113 12       		.uleb128 0x12
+ 1080 0114 06       		.uleb128 0x6
+ 1081 0115 40       		.uleb128 0x40
+ 1082 0116 18       		.uleb128 0x18
+ 1083 0117 9742     		.uleb128 0x2117
+ 1084 0119 19       		.uleb128 0x19
+ 1085 011a 01       		.uleb128 0x1
+ 1086 011b 13       		.uleb128 0x13
+ 1087 011c 00       		.byte	0
+ 1088 011d 00       		.byte	0
+ 1089 011e 14       		.uleb128 0x14
+ 1090 011f 34       		.uleb128 0x34
+ 1091 0120 00       		.byte	0
+ 1092 0121 03       		.uleb128 0x3
+ 1093 0122 08       		.uleb128 0x8
+ 1094 0123 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 33
+
+
+ 1095 0124 0B       		.uleb128 0xb
+ 1096 0125 3B       		.uleb128 0x3b
+ 1097 0126 0B       		.uleb128 0xb
+ 1098 0127 49       		.uleb128 0x49
+ 1099 0128 13       		.uleb128 0x13
+ 1100 0129 02       		.uleb128 0x2
+ 1101 012a 17       		.uleb128 0x17
+ 1102 012b 00       		.byte	0
+ 1103 012c 00       		.byte	0
+ 1104 012d 15       		.uleb128 0x15
+ 1105 012e 34       		.uleb128 0x34
+ 1106 012f 00       		.byte	0
+ 1107 0130 03       		.uleb128 0x3
+ 1108 0131 0E       		.uleb128 0xe
+ 1109 0132 3A       		.uleb128 0x3a
+ 1110 0133 0B       		.uleb128 0xb
+ 1111 0134 3B       		.uleb128 0x3b
+ 1112 0135 0B       		.uleb128 0xb
+ 1113 0136 49       		.uleb128 0x49
+ 1114 0137 13       		.uleb128 0x13
+ 1115 0138 02       		.uleb128 0x2
+ 1116 0139 18       		.uleb128 0x18
+ 1117 013a 00       		.byte	0
+ 1118 013b 00       		.byte	0
+ 1119 013c 16       		.uleb128 0x16
+ 1120 013d 1D       		.uleb128 0x1d
+ 1121 013e 01       		.byte	0x1
+ 1122 013f 31       		.uleb128 0x31
+ 1123 0140 13       		.uleb128 0x13
+ 1124 0141 11       		.uleb128 0x11
+ 1125 0142 01       		.uleb128 0x1
+ 1126 0143 12       		.uleb128 0x12
+ 1127 0144 06       		.uleb128 0x6
+ 1128 0145 58       		.uleb128 0x58
+ 1129 0146 0B       		.uleb128 0xb
+ 1130 0147 59       		.uleb128 0x59
+ 1131 0148 0B       		.uleb128 0xb
+ 1132 0149 01       		.uleb128 0x1
+ 1133 014a 13       		.uleb128 0x13
+ 1134 014b 00       		.byte	0
+ 1135 014c 00       		.byte	0
+ 1136 014d 17       		.uleb128 0x17
+ 1137 014e 1D       		.uleb128 0x1d
+ 1138 014f 01       		.byte	0x1
+ 1139 0150 31       		.uleb128 0x31
+ 1140 0151 13       		.uleb128 0x13
+ 1141 0152 11       		.uleb128 0x11
+ 1142 0153 01       		.uleb128 0x1
+ 1143 0154 12       		.uleb128 0x12
+ 1144 0155 06       		.uleb128 0x6
+ 1145 0156 58       		.uleb128 0x58
+ 1146 0157 0B       		.uleb128 0xb
+ 1147 0158 59       		.uleb128 0x59
+ 1148 0159 0B       		.uleb128 0xb
+ 1149 015a 00       		.byte	0
+ 1150 015b 00       		.byte	0
+ 1151 015c 18       		.uleb128 0x18
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 34
+
+
+ 1152 015d 0B       		.uleb128 0xb
+ 1153 015e 01       		.byte	0x1
+ 1154 015f 11       		.uleb128 0x11
+ 1155 0160 01       		.uleb128 0x1
+ 1156 0161 12       		.uleb128 0x12
+ 1157 0162 06       		.uleb128 0x6
+ 1158 0163 00       		.byte	0
+ 1159 0164 00       		.byte	0
+ 1160 0165 19       		.uleb128 0x19
+ 1161 0166 34       		.uleb128 0x34
+ 1162 0167 00       		.byte	0
+ 1163 0168 31       		.uleb128 0x31
+ 1164 0169 13       		.uleb128 0x13
+ 1165 016a 02       		.uleb128 0x2
+ 1166 016b 17       		.uleb128 0x17
+ 1167 016c 00       		.byte	0
+ 1168 016d 00       		.byte	0
+ 1169 016e 1A       		.uleb128 0x1a
+ 1170 016f 1D       		.uleb128 0x1d
+ 1171 0170 00       		.byte	0
+ 1172 0171 31       		.uleb128 0x31
+ 1173 0172 13       		.uleb128 0x13
+ 1174 0173 11       		.uleb128 0x11
+ 1175 0174 01       		.uleb128 0x1
+ 1176 0175 12       		.uleb128 0x12
+ 1177 0176 06       		.uleb128 0x6
+ 1178 0177 58       		.uleb128 0x58
+ 1179 0178 0B       		.uleb128 0xb
+ 1180 0179 59       		.uleb128 0x59
+ 1181 017a 0B       		.uleb128 0xb
+ 1182 017b 00       		.byte	0
+ 1183 017c 00       		.byte	0
+ 1184 017d 1B       		.uleb128 0x1b
+ 1185 017e 05       		.uleb128 0x5
+ 1186 017f 00       		.byte	0
+ 1187 0180 31       		.uleb128 0x31
+ 1188 0181 13       		.uleb128 0x13
+ 1189 0182 02       		.uleb128 0x2
+ 1190 0183 17       		.uleb128 0x17
+ 1191 0184 00       		.byte	0
+ 1192 0185 00       		.byte	0
+ 1193 0186 1C       		.uleb128 0x1c
+ 1194 0187 898201   		.uleb128 0x4109
+ 1195 018a 00       		.byte	0
+ 1196 018b 11       		.uleb128 0x11
+ 1197 018c 01       		.uleb128 0x1
+ 1198 018d 31       		.uleb128 0x31
+ 1199 018e 13       		.uleb128 0x13
+ 1200 018f 00       		.byte	0
+ 1201 0190 00       		.byte	0
+ 1202 0191 1D       		.uleb128 0x1d
+ 1203 0192 34       		.uleb128 0x34
+ 1204 0193 00       		.byte	0
+ 1205 0194 03       		.uleb128 0x3
+ 1206 0195 0E       		.uleb128 0xe
+ 1207 0196 3A       		.uleb128 0x3a
+ 1208 0197 0B       		.uleb128 0xb
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 35
+
+
+ 1209 0198 3B       		.uleb128 0x3b
+ 1210 0199 0B       		.uleb128 0xb
+ 1211 019a 49       		.uleb128 0x49
+ 1212 019b 13       		.uleb128 0x13
+ 1213 019c 3F       		.uleb128 0x3f
+ 1214 019d 19       		.uleb128 0x19
+ 1215 019e 3C       		.uleb128 0x3c
+ 1216 019f 19       		.uleb128 0x19
+ 1217 01a0 00       		.byte	0
+ 1218 01a1 00       		.byte	0
+ 1219 01a2 1E       		.uleb128 0x1e
+ 1220 01a3 01       		.uleb128 0x1
+ 1221 01a4 01       		.byte	0x1
+ 1222 01a5 49       		.uleb128 0x49
+ 1223 01a6 13       		.uleb128 0x13
+ 1224 01a7 01       		.uleb128 0x1
+ 1225 01a8 13       		.uleb128 0x13
+ 1226 01a9 00       		.byte	0
+ 1227 01aa 00       		.byte	0
+ 1228 01ab 1F       		.uleb128 0x1f
+ 1229 01ac 21       		.uleb128 0x21
+ 1230 01ad 00       		.byte	0
+ 1231 01ae 49       		.uleb128 0x49
+ 1232 01af 13       		.uleb128 0x13
+ 1233 01b0 2F       		.uleb128 0x2f
+ 1234 01b1 0B       		.uleb128 0xb
+ 1235 01b2 00       		.byte	0
+ 1236 01b3 00       		.byte	0
+ 1237 01b4 20       		.uleb128 0x20
+ 1238 01b5 26       		.uleb128 0x26
+ 1239 01b6 00       		.byte	0
+ 1240 01b7 49       		.uleb128 0x49
+ 1241 01b8 13       		.uleb128 0x13
+ 1242 01b9 00       		.byte	0
+ 1243 01ba 00       		.byte	0
+ 1244 01bb 21       		.uleb128 0x21
+ 1245 01bc 34       		.uleb128 0x34
+ 1246 01bd 00       		.byte	0
+ 1247 01be 03       		.uleb128 0x3
+ 1248 01bf 0E       		.uleb128 0xe
+ 1249 01c0 3A       		.uleb128 0x3a
+ 1250 01c1 0B       		.uleb128 0xb
+ 1251 01c2 3B       		.uleb128 0x3b
+ 1252 01c3 05       		.uleb128 0x5
+ 1253 01c4 49       		.uleb128 0x49
+ 1254 01c5 13       		.uleb128 0x13
+ 1255 01c6 3F       		.uleb128 0x3f
+ 1256 01c7 19       		.uleb128 0x19
+ 1257 01c8 3C       		.uleb128 0x3c
+ 1258 01c9 19       		.uleb128 0x19
+ 1259 01ca 00       		.byte	0
+ 1260 01cb 00       		.byte	0
+ 1261 01cc 22       		.uleb128 0x22
+ 1262 01cd 2E       		.uleb128 0x2e
+ 1263 01ce 00       		.byte	0
+ 1264 01cf 3F       		.uleb128 0x3f
+ 1265 01d0 19       		.uleb128 0x19
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 36
+
+
+ 1266 01d1 3C       		.uleb128 0x3c
+ 1267 01d2 19       		.uleb128 0x19
+ 1268 01d3 6E       		.uleb128 0x6e
+ 1269 01d4 0E       		.uleb128 0xe
+ 1270 01d5 03       		.uleb128 0x3
+ 1271 01d6 0E       		.uleb128 0xe
+ 1272 01d7 3A       		.uleb128 0x3a
+ 1273 01d8 0B       		.uleb128 0xb
+ 1274 01d9 3B       		.uleb128 0x3b
+ 1275 01da 0B       		.uleb128 0xb
+ 1276 01db 00       		.byte	0
+ 1277 01dc 00       		.byte	0
+ 1278 01dd 00       		.byte	0
+ 1279              		.section	.debug_loc,"",%progbits
+ 1280              	.Ldebug_loc0:
+ 1281              	.LLST0:
+ 1282 0000 28000000 		.4byte	.LVL2
+ 1283 0004 2C000000 		.4byte	.LVL3
+ 1284 0008 0200     		.2byte	0x2
+ 1285 000a 30       		.byte	0x30
+ 1286 000b 9F       		.byte	0x9f
+ 1287 000c 32000000 		.4byte	.LVL4
+ 1288 0010 36000000 		.4byte	.LVL5
+ 1289 0014 0100     		.2byte	0x1
+ 1290 0016 50       		.byte	0x50
+ 1291 0017 3A000000 		.4byte	.LVL6
+ 1292 001b 50000000 		.4byte	.LFE71
+ 1293 001f 0100     		.2byte	0x1
+ 1294 0021 50       		.byte	0x50
+ 1295 0022 00000000 		.4byte	0
+ 1296 0026 00000000 		.4byte	0
+ 1297              	.LLST1:
+ 1298 002a 06000000 		.4byte	.LVL0
+ 1299 002e 08000000 		.4byte	.LVL1
+ 1300 0032 0100     		.2byte	0x1
+ 1301 0034 52       		.byte	0x52
+ 1302 0035 00000000 		.4byte	0
+ 1303 0039 00000000 		.4byte	0
+ 1304              	.LLST2:
+ 1305 003d 3A000000 		.4byte	.LVL6
+ 1306 0041 3E000000 		.4byte	.LVL7
+ 1307 0045 0100     		.2byte	0x1
+ 1308 0047 52       		.byte	0x52
+ 1309 0048 00000000 		.4byte	0
+ 1310 004c 00000000 		.4byte	0
+ 1311              		.section	.debug_aranges,"",%progbits
+ 1312 0000 1C000000 		.4byte	0x1c
+ 1313 0004 0200     		.2byte	0x2
+ 1314 0006 00000000 		.4byte	.Ldebug_info0
+ 1315 000a 04       		.byte	0x4
+ 1316 000b 00       		.byte	0
+ 1317 000c 0000     		.2byte	0
+ 1318 000e 0000     		.2byte	0
+ 1319 0010 00000000 		.4byte	.LFB71
+ 1320 0014 50000000 		.4byte	.LFE71-.LFB71
+ 1321 0018 00000000 		.4byte	0
+ 1322 001c 00000000 		.4byte	0
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 37
+
+
+ 1323              		.section	.debug_ranges,"",%progbits
+ 1324              	.Ldebug_ranges0:
+ 1325 0000 00000000 		.4byte	.LFB71
+ 1326 0004 50000000 		.4byte	.LFE71
+ 1327 0008 00000000 		.4byte	0
+ 1328 000c 00000000 		.4byte	0
+ 1329              		.section	.debug_line,"",%progbits
+ 1330              	.Ldebug_line0:
+ 1331 0000 AC010000 		.section	.debug_str,"MS",%progbits,1
+ 1331      02006401 
+ 1331      00000201 
+ 1331      FB0E0D00 
+ 1331      01010101 
+ 1332              	.LASF55:
+ 1333 0000 45455F73 		.ascii	"EE_std_endcycle_next_tid\000"
+ 1333      74645F65 
+ 1333      6E646379 
+ 1333      636C655F 
+ 1333      6E657874 
+ 1334              	.LASF79:
+ 1335 0019 47656E65 		.ascii	"Generated_Source\\PSoC5\\ErikaOS_ee_terminat.c\000"
+ 1335      72617465 
+ 1335      645F536F 
+ 1335      75726365 
+ 1335      5C50536F 
+ 1336              	.LASF35:
+ 1337 0046 6B696E64 		.ascii	"kind\000"
+ 1337      00
+ 1338              	.LASF10:
+ 1339 004b 45455F55 		.ascii	"EE_UINT8\000"
+ 1339      494E5438 
+ 1339      00
+ 1340              	.LASF65:
+ 1341 0054 45455F72 		.ascii	"EE_rq_bitmask\000"
+ 1341      715F6269 
+ 1341      746D6173 
+ 1341      6B00
+ 1342              	.LASF15:
+ 1343 0062 45455F55 		.ascii	"EE_UREG\000"
+ 1343      52454700 
+ 1344              	.LASF24:
+ 1345 006a 7469636B 		.ascii	"ticksperbase\000"
+ 1345      73706572 
+ 1345      62617365 
+ 1345      00
+ 1346              	.LASF66:
+ 1347 0077 45455F74 		.ascii	"EE_th_event_active\000"
+ 1347      685F6576 
+ 1347      656E745F 
+ 1347      61637469 
+ 1347      766500
+ 1348              	.LASF44:
+ 1349 008a 45455F4F 		.ascii	"EE_ORTI_set_service\000"
+ 1349      5254495F 
+ 1349      7365745F 
+ 1349      73657276 
+ 1349      69636500 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 38
+
+
+ 1350              	.LASF67:
+ 1351 009e 45455F74 		.ascii	"EE_th_waswaiting\000"
+ 1351      685F7761 
+ 1351      73776169 
+ 1351      74696E67 
+ 1351      00
+ 1352              	.LASF2:
+ 1353 00af 73686F72 		.ascii	"short int\000"
+ 1353      7420696E 
+ 1353      7400
+ 1354              	.LASF42:
+ 1355 00b9 53746174 		.ascii	"StatusType\000"
+ 1355      75735479 
+ 1355      706500
+ 1356              	.LASF39:
+ 1357 00c4 64656C74 		.ascii	"delta\000"
+ 1357      6100
+ 1358              	.LASF34:
+ 1359 00ca 73706563 		.ascii	"spec_id\000"
+ 1359      5F696400 
+ 1360              	.LASF16:
+ 1361 00d2 45455F46 		.ascii	"EE_FREG\000"
+ 1361      52454700 
+ 1362              	.LASF80:
+ 1363 00da 443A5C57 		.ascii	"D:\\WS25\\AMAEOS\\Lab\\Lab3\\Lab 3 Task Description"
+ 1363      5332355C 
+ 1363      414D4145 
+ 1363      4F535C4C 
+ 1363      61625C4C 
+ 1364 0108 20616E64 		.ascii	" and Starting Code-20251209\\Lab3.cydsn\\TaskComms_"
+ 1364      20537461 
+ 1364      7274696E 
+ 1364      6720436F 
+ 1364      64652D32 
+ 1365 0139 42756666 		.ascii	"Buffer.cydsn\000"
+ 1365      65722E63 
+ 1365      7964736E 
+ 1365      00
+ 1366              	.LASF33:
+ 1367 0146 436F756E 		.ascii	"CounterObjectKindType\000"
+ 1367      7465724F 
+ 1367      626A6563 
+ 1367      744B696E 
+ 1367      64547970 
+ 1368              	.LASF14:
+ 1369 015c 45455F55 		.ascii	"EE_UINT32\000"
+ 1369      494E5433 
+ 1369      3200
+ 1370              	.LASF57:
+ 1371 0166 45455F74 		.ascii	"EE_th_ready_prio\000"
+ 1371      685F7265 
+ 1371      6164795F 
+ 1371      7072696F 
+ 1371      00
+ 1372              	.LASF18:
+ 1373 0177 45455F54 		.ascii	"EE_TID\000"
+ 1373      494400
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 39
+
+
+ 1374              	.LASF25:
+ 1375 017e 6D696E63 		.ascii	"mincycle\000"
+ 1375      79636C65 
+ 1375      00
+ 1376              	.LASF27:
+ 1377 0187 76616C75 		.ascii	"value\000"
+ 1377      6500
+ 1378              	.LASF70:
+ 1379 018d 45455F6F 		.ascii	"EE_oo_counter_object_ROM\000"
+ 1379      6F5F636F 
+ 1379      756E7465 
+ 1379      725F6F62 
+ 1379      6A656374 
+ 1380              	.LASF32:
+ 1381 01a6 45455F6F 		.ascii	"EE_oo_counter_object_kind_type\000"
+ 1381      6F5F636F 
+ 1381      756E7465 
+ 1381      725F6F62 
+ 1381      6A656374 
+ 1382              	.LASF54:
+ 1383 01c5 45455F49 		.ascii	"EE_IRQ_nesting_level\000"
+ 1383      52515F6E 
+ 1383      65737469 
+ 1383      6E675F6C 
+ 1383      6576656C 
+ 1384              	.LASF83:
+ 1385 01da 45455F6F 		.ascii	"EE_oo_TerminateTask\000"
+ 1385      6F5F5465 
+ 1385      726D696E 
+ 1385      61746554 
+ 1385      61736B00 
+ 1386              	.LASF47:
+ 1387 01ee 45455F4F 		.ascii	"EE_ORTI_set_service_in\000"
+ 1387      5254495F 
+ 1387      7365745F 
+ 1387      73657276 
+ 1387      6963655F 
+ 1388              	.LASF29:
+ 1389 0205 45455F6F 		.ascii	"EE_oo_counter_RAM_type\000"
+ 1389      6F5F636F 
+ 1389      756E7465 
+ 1389      725F5241 
+ 1389      4D5F7479 
+ 1390              	.LASF76:
+ 1391 021c 45455F72 		.ascii	"EE_rq_lookup\000"
+ 1391      715F6C6F 
+ 1391      6F6B7570 
+ 1391      00
+ 1392              	.LASF6:
+ 1393 0229 6C6F6E67 		.ascii	"long long int\000"
+ 1393      206C6F6E 
+ 1393      6720696E 
+ 1393      7400
+ 1394              	.LASF11:
+ 1395 0237 45455F49 		.ascii	"EE_INT8\000"
+ 1395      4E543800 
+ 1396              	.LASF74:
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 40
+
+
+ 1397 023f 45455F6F 		.ascii	"EE_oo_IRQ_suspend_status\000"
+ 1397      6F5F4952 
+ 1397      515F7375 
+ 1397      7370656E 
+ 1397      645F7374 
+ 1398              	.LASF19:
+ 1399 0258 45455F54 		.ascii	"EE_TYPE_RQ_MASK\000"
+ 1399      5950455F 
+ 1399      52515F4D 
+ 1399      41534B00 
+ 1400              	.LASF31:
+ 1401 0268 45455F53 		.ascii	"EE_SCHEDULETABLE\000"
+ 1401      43484544 
+ 1401      554C4554 
+ 1401      41424C45 
+ 1401      00
+ 1402              	.LASF4:
+ 1403 0279 6C6F6E67 		.ascii	"long int\000"
+ 1403      20696E74 
+ 1403      00
+ 1404              	.LASF23:
+ 1405 0282 6D617861 		.ascii	"maxallowedvalue\000"
+ 1405      6C6C6F77 
+ 1405      65647661 
+ 1405      6C756500 
+ 1406              	.LASF41:
+ 1407 0292 45455F6F 		.ascii	"EE_oo_counter_object_RAM_type\000"
+ 1407      6F5F636F 
+ 1407      756E7465 
+ 1407      725F6F62 
+ 1407      6A656374 
+ 1408              	.LASF26:
+ 1409 02b0 45455F6F 		.ascii	"EE_oo_counter_ROM_type\000"
+ 1409      6F5F636F 
+ 1409      756E7465 
+ 1409      725F524F 
+ 1409      4D5F7479 
+ 1410              	.LASF77:
+ 1411 02c7 45455F69 		.ascii	"EE_isr2_index\000"
+ 1411      7372325F 
+ 1411      696E6465 
+ 1411      7800
+ 1412              	.LASF84:
+ 1413 02d5 45455F68 		.ascii	"EE_hal_terminate_task\000"
+ 1413      616C5F74 
+ 1413      65726D69 
+ 1413      6E617465 
+ 1413      5F746173 
+ 1414              	.LASF20:
+ 1415 02eb 5469636B 		.ascii	"TickType\000"
+ 1415      54797065 
+ 1415      00
+ 1416              	.LASF64:
+ 1417 02f4 45455F73 		.ascii	"EE_sys_ceiling\000"
+ 1417      79735F63 
+ 1417      65696C69 
+ 1417      6E6700
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 41
+
+
+ 1418              	.LASF21:
+ 1419 0303 436F756E 		.ascii	"CounterObjectType\000"
+ 1419      7465724F 
+ 1419      626A6563 
+ 1419      74547970 
+ 1419      6500
+ 1420              	.LASF9:
+ 1421 0315 6C6F6E67 		.ascii	"long double\000"
+ 1421      20646F75 
+ 1421      626C6500 
+ 1422              	.LASF69:
+ 1423 0321 45455F63 		.ascii	"EE_counter_ROM\000"
+ 1423      6F756E74 
+ 1423      65725F52 
+ 1423      4F4D00
+ 1424              	.LASF1:
+ 1425 0330 756E7369 		.ascii	"unsigned char\000"
+ 1425      676E6564 
+ 1425      20636861 
+ 1425      7200
+ 1426              	.LASF50:
+ 1427 033e 45455F68 		.ascii	"EE_hal_end_nested_primitive\000"
+ 1427      616C5F65 
+ 1427      6E645F6E 
+ 1427      65737465 
+ 1427      645F7072 
+ 1428              	.LASF49:
+ 1429 035a 45455F4F 		.ascii	"EE_ORTI_set_service_out\000"
+ 1429      5254495F 
+ 1429      7365745F 
+ 1429      73657276 
+ 1429      6963655F 
+ 1430              	.LASF81:
+ 1431 0372 45455F63 		.ascii	"EE_cortex_mx_suspendIRQ\000"
+ 1431      6F727465 
+ 1431      785F6D78 
+ 1431      5F737573 
+ 1431      70656E64 
+ 1432              	.LASF72:
+ 1433 038a 45455F6F 		.ascii	"EE_oo_counter_object_RAM\000"
+ 1433      6F5F636F 
+ 1433      756E7465 
+ 1433      725F6F62 
+ 1433      6A656374 
+ 1434              	.LASF0:
+ 1435 03a3 7369676E 		.ascii	"signed char\000"
+ 1435      65642063 
+ 1435      68617200 
+ 1436              	.LASF7:
+ 1437 03af 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1437      206C6F6E 
+ 1437      6720756E 
+ 1437      7369676E 
+ 1437      65642069 
+ 1438              	.LASF82:
+ 1439 03c6 45455F61 		.ascii	"EE_as_monitoring_the_stack\000"
+ 1439      735F6D6F 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 42
+
+
+ 1439      6E69746F 
+ 1439      72696E67 
+ 1439      5F746865 
+ 1440              	.LASF46:
+ 1441 03e1 45455F73 		.ascii	"EE_stk_queryfirst\000"
+ 1441      746B5F71 
+ 1441      75657279 
+ 1441      66697273 
+ 1441      7400
+ 1442              	.LASF8:
+ 1443 03f3 756E7369 		.ascii	"unsigned int\000"
+ 1443      676E6564 
+ 1443      20696E74 
+ 1443      00
+ 1444              	.LASF61:
+ 1445 0400 45455F74 		.ascii	"EE_th_rnact\000"
+ 1445      685F726E 
+ 1445      61637400 
+ 1446              	.LASF52:
+ 1447 040c 63757272 		.ascii	"current\000"
+ 1447      656E7400 
+ 1448              	.LASF13:
+ 1449 0414 45455F49 		.ascii	"EE_INT32\000"
+ 1449      4E543332 
+ 1449      00
+ 1450              	.LASF51:
+ 1451 041d 69737461 		.ascii	"istat\000"
+ 1451      7400
+ 1452              	.LASF3:
+ 1453 0423 73686F72 		.ascii	"short unsigned int\000"
+ 1453      7420756E 
+ 1453      7369676E 
+ 1453      65642069 
+ 1453      6E7400
+ 1454              	.LASF36:
+ 1455 0436 45455F6F 		.ascii	"EE_oo_counter_object_ROM_type\000"
+ 1455      6F5F636F 
+ 1455      756E7465 
+ 1455      725F6F62 
+ 1455      6A656374 
+ 1456              	.LASF12:
+ 1457 0454 45455F55 		.ascii	"EE_UINT16\000"
+ 1457      494E5431 
+ 1457      3600
+ 1458              	.LASF43:
+ 1459 045e 45455F63 		.ascii	"EE_cortex_mx_resumeIRQ\000"
+ 1459      6F727465 
+ 1459      785F6D78 
+ 1459      5F726573 
+ 1459      756D6549 
+ 1460              	.LASF71:
+ 1461 0475 45455F63 		.ascii	"EE_counter_RAM\000"
+ 1461      6F756E74 
+ 1461      65725F52 
+ 1461      414D00
+ 1462              	.LASF75:
+ 1463 0484 45455F41 		.ascii	"EE_ApplicationMode\000"
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 43
+
+
+ 1463      70706C69 
+ 1463      63617469 
+ 1463      6F6E4D6F 
+ 1463      646500
+ 1464              	.LASF5:
+ 1465 0497 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1465      20756E73 
+ 1465      69676E65 
+ 1465      6420696E 
+ 1465      7400
+ 1466              	.LASF17:
+ 1467 04a9 45455F54 		.ascii	"EE_TYPEBOOL\000"
+ 1467      59504542 
+ 1467      4F4F4C00 
+ 1468              	.LASF68:
+ 1469 04b5 45455F74 		.ascii	"EE_th_resource_last\000"
+ 1469      685F7265 
+ 1469      736F7572 
+ 1469      63655F6C 
+ 1469      61737400 
+ 1470              	.LASF63:
+ 1471 04c9 45455F73 		.ascii	"EE_stkfirst\000"
+ 1471      746B6669 
+ 1471      72737400 
+ 1472              	.LASF45:
+ 1473 04d5 45455F68 		.ascii	"EE_hal_get_IRQ_nesting_level\000"
+ 1473      616C5F67 
+ 1473      65745F49 
+ 1473      52515F6E 
+ 1473      65737469 
+ 1474              	.LASF58:
+ 1475 04f2 45455F74 		.ascii	"EE_th_dispatch_prio\000"
+ 1475      685F6469 
+ 1475      73706174 
+ 1475      63685F70 
+ 1475      72696F00 
+ 1476              	.LASF30:
+ 1477 0506 45455F41 		.ascii	"EE_ALARM\000"
+ 1477      4C41524D 
+ 1477      00
+ 1478              	.LASF37:
+ 1479 050f 75736564 		.ascii	"used\000"
+ 1479      00
+ 1480              	.LASF56:
+ 1481 0514 73697A65 		.ascii	"sizetype\000"
+ 1481      74797065 
+ 1481      00
+ 1482              	.LASF22:
+ 1483 051d 436F756E 		.ascii	"CounterType\000"
+ 1483      74657254 
+ 1483      79706500 
+ 1484              	.LASF62:
+ 1485 0529 45455F74 		.ascii	"EE_th_terminate_nextask\000"
+ 1485      685F7465 
+ 1485      726D696E 
+ 1485      6174655F 
+ 1485      6E657874 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccgcVpfl.s 			page 44
+
+
+ 1486              	.LASF59:
+ 1487 0541 45455F74 		.ascii	"EE_th_status\000"
+ 1487      685F7374 
+ 1487      61747573 
+ 1487      00
+ 1488              	.LASF53:
+ 1489 054e 666C6167 		.ascii	"flag\000"
+ 1489      00
+ 1490              	.LASF60:
+ 1491 0553 45455F74 		.ascii	"EE_th_next\000"
+ 1491      685F6E65 
+ 1491      787400
+ 1492              	.LASF78:
+ 1493 055e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1493      43313120 
+ 1493      352E342E 
+ 1493      31203230 
+ 1493      31363036 
+ 1494 0591 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1494      20726576 
+ 1494      6973696F 
+ 1494      6E203233 
+ 1494      37373135 
+ 1495 05c4 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1495      66756E63 
+ 1495      74696F6E 
+ 1495      2D736563 
+ 1495      74696F6E 
+ 1496              	.LASF38:
+ 1497 05ec 636E7463 		.ascii	"cntcycle\000"
+ 1497      79636C65 
+ 1497      00
+ 1498              	.LASF73:
+ 1499 05f5 45455F6F 		.ascii	"EE_oo_IRQ_disable_count\000"
+ 1499      6F5F4952 
+ 1499      515F6469 
+ 1499      7361626C 
+ 1499      655F636F 
+ 1500              	.LASF40:
+ 1501 060d 6E657874 		.ascii	"next\000"
+ 1501      00
+ 1502              	.LASF48:
+ 1503 0612 45455F68 		.ascii	"EE_hal_begin_nested_primitive\000"
+ 1503      616C5F62 
+ 1503      6567696E 
+ 1503      5F6E6573 
+ 1503      7465645F 
+ 1504              	.LASF28:
+ 1505 0630 66697273 		.ascii	"first\000"
+ 1505      7400
+ 1506              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
