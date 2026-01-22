@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 1
 
 
    1              		.syntax unified
@@ -26,7 +26,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
   23              		.thumb_func
   24              		.type	RB_init, %function
   25              	RB_init:
-  26              	.LFB110:
+  26              	.LFB102:
   27              		.file 1 "source\\bsw\\services\\ringbuffer.c"
    1:source\bsw\services/ringbuffer.c **** /**
    2:source\bsw\services/ringbuffer.c **** * \file ringbuffer.c
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
   28:source\bsw\services/ringbuffer.c **** 
   29:source\bsw\services/ringbuffer.c **** /**
   30:source\bsw\services/ringbuffer.c ****  * \brief initializes a ringbuffer handle / Clearing of a ringbuffer
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 2
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 2
 
 
   31:source\bsw\services/ringbuffer.c ****  * @param RB_t * const me : IN/OUT - pointer to ringbuffer object 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
   48:source\bsw\services/ringbuffer.c ****     }
   49:source\bsw\services/ringbuffer.c ****     
   50:source\bsw\services/ringbuffer.c ****     return RC_SUCCESS;
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 3
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 3
 
 
   63              		.loc 1 50 0 is_stmt 1
@@ -137,7 +137,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
   74              		.loc 1 51 0
   75 0028 7047     		bx	lr
   76              		.cfi_endproc
-  77              	.LFE110:
+  77              	.LFE102:
   78              		.size	RB_init, .-RB_init
   79 002a 00BF     		.section	.text.RB_write,"ax",%progbits
   80              		.align	2
@@ -146,7 +146,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
   83              		.thumb_func
   84              		.type	RB_write, %function
   85              	RB_write:
-  86              	.LFB111:
+  86              	.LFB103:
   52:source\bsw\services/ringbuffer.c **** 
   53:source\bsw\services/ringbuffer.c **** /**
   54:source\bsw\services/ringbuffer.c ****  * Write one element to the ringbuffer
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
   67:source\bsw\services/ringbuffer.c ****     } else if (me->m_fillLevel < RB_SIZE)
  100              		.loc 1 67 0
  101 000a C72C     		cmp	r4, #199
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 4
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 4
 
 
  102 000c 17D8     		bhi	.L9
@@ -238,10 +238,10 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  143              	.L11:
  144 0044 1F85EB51 		.word	1374389535
  145              		.cfi_endproc
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 5
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 5
 
 
- 146              	.LFE111:
+ 146              	.LFE103:
  147              		.size	RB_write, .-RB_write
  148              		.section	.text.RB_read,"ax",%progbits
  149              		.align	2
@@ -250,7 +250,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  152              		.thumb_func
  153              		.type	RB_read, %function
  154              	RB_read:
- 155              	.LFB112:
+ 155              	.LFB104:
   80:source\bsw\services/ringbuffer.c **** 
   81:source\bsw\services/ringbuffer.c **** /**
   82:source\bsw\services/ringbuffer.c ****  * Read one element from the ringbuffer
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  180 0024 01FB1233 		mls	r3, r1, r2, r3
  181 0028 C0F8C830 		str	r3, [r0, #200]
  100:source\bsw\services/ringbuffer.c ****         me->m_fillLevel--;
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 6
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 6
 
 
  182              		.loc 1 100 0
@@ -336,7 +336,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  205              	.L17:
  206 0044 1F85EB51 		.word	1374389535
  207              		.cfi_endproc
- 208              	.LFE112:
+ 208              	.LFE104:
  209              		.size	RB_read, .-RB_read
  210              		.section	.text.RB_getCapacity,"ax",%progbits
  211              		.align	2
@@ -345,7 +345,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  214              		.thumb_func
  215              		.type	RB_getCapacity, %function
  216              	RB_getCapacity:
- 217              	.LFB113:
+ 217              	.LFB105:
  109:source\bsw\services/ringbuffer.c **** 
  110:source\bsw\services/ringbuffer.c **** /**
  111:source\bsw\services/ringbuffer.c ****  * Provide available space in buffer
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  219              		.cfi_startproc
  220              		@ args = 0, pretend = 0, frame = 0
  221              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 7
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 7
 
 
  222              		@ link register save eliminated.
@@ -374,7 +374,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  229 0008 80B2     		uxth	r0, r0
  230 000a 7047     		bx	lr
  231              		.cfi_endproc
- 232              	.LFE113:
+ 232              	.LFE105:
  233              		.size	RB_getCapacity, .-RB_getCapacity
  234              		.section	.text.RB_getNumberOfStoredElements,"ax",%progbits
  235              		.align	2
@@ -383,7 +383,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  238              		.thumb_func
  239              		.type	RB_getNumberOfStoredElements, %function
  240              	RB_getNumberOfStoredElements:
- 241              	.LFB114:
+ 241              	.LFB106:
  120:source\bsw\services/ringbuffer.c **** 
  121:source\bsw\services/ringbuffer.c **** /**
  122:source\bsw\services/ringbuffer.c ****  * Check how much data is stored
@@ -405,7 +405,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  250              	.LVL25:
  251 0004 7047     		bx	lr
  252              		.cfi_endproc
- 253              	.LFE114:
+ 253              	.LFE106:
  254              		.size	RB_getNumberOfStoredElements, .-RB_getNumberOfStoredElements
  255 0006 00BF     		.text
  256              	.Letext0:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  263              		.file 8 "Generated_Source\\PSoC5/ErikaOS_ee_oo_intfunc.inc"
  264              		.file 9 "Generated_Source\\PSoC5/ErikaOS_cortex_mx_ee_context.inc"
  265              		.file 10 "Generated_Source\\PSoC5/ErikaOS_common_ee_primitives.inc"
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 8
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 8
 
 
  266              		.file 11 "Generated_Source\\PSoC5/core_cm3.h"
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  320 0070 74000000 		.4byte	0x74
  321 0074 02       		.uleb128 0x2
  322 0075 04       		.byte	0x4
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 9
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 9
 
 
  323 0076 07       		.byte	0x7
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  377 00df 02       		.uleb128 0x2
  378 00e0 04       		.byte	0x4
  379 00e1 07       		.byte	0x7
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 10
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 10
 
 
  380 00e2 6B000000 		.4byte	.LASF21
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  434 0154 08       		.uleb128 0x8
  435 0155 37010000 		.4byte	.LASF33
  436 0159 7B       		.sleb128 -5
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 11
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 11
 
 
  437 015a 08       		.uleb128 0x8
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  491 01c6 08       		.uleb128 0x8
  492 01c7 A7010000 		.4byte	.LASF52
  493 01cb 68       		.sleb128 -24
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 12
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 12
 
 
  494 01cc 08       		.uleb128 0x8
@@ -718,15 +718,15 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  548 0238 30       		.byte	0x30
  549 0239 E9010000 		.4byte	0x1e9
  550 023d 0D       		.uleb128 0xd
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 13
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 13
 
 
  551 023e 8C010000 		.4byte	.LASF61
  552 0242 01       		.byte	0x1
  553 0243 22       		.byte	0x22
  554 0244 D3010000 		.4byte	0x1d3
- 555 0248 00000000 		.4byte	.LFB110
- 556 024c 2A000000 		.4byte	.LFE110-.LFB110
+ 555 0248 00000000 		.4byte	.LFB102
+ 556 024c 2A000000 		.4byte	.LFE102-.LFB102
  557 0250 01       		.uleb128 0x1
  558 0251 9C       		.byte	0x9c
  559 0252 78020000 		.4byte	0x278
@@ -756,8 +756,8 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  583 0288 01       		.byte	0x1
  584 0289 3B       		.byte	0x3b
  585 028a D3010000 		.4byte	0x1d3
- 586 028e 00000000 		.4byte	.LFB111
- 587 0292 48000000 		.4byte	.LFE111-.LFB111
+ 586 028e 00000000 		.4byte	.LFB103
+ 587 0292 48000000 		.4byte	.LFE103-.LFB103
  588 0296 01       		.uleb128 0x1
  589 0297 9C       		.byte	0x9c
  590 0298 BA020000 		.4byte	0x2ba
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  605 02bb 04       		.byte	0x4
  606 02bc C0020000 		.4byte	0x2c0
  607 02c0 12       		.uleb128 0x12
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 14
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 14
 
 
  608 02c1 DE010000 		.4byte	0x1de
@@ -789,8 +789,8 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  613 02cf 01       		.byte	0x1
  614 02d0 57       		.byte	0x57
  615 02d1 D3010000 		.4byte	0x1d3
- 616 02d5 00000000 		.4byte	.LFB112
- 617 02d9 48000000 		.4byte	.LFE112-.LFB112
+ 616 02d5 00000000 		.4byte	.LFB104
+ 617 02d9 48000000 		.4byte	.LFE104-.LFB104
  618 02dd 01       		.uleb128 0x1
  619 02de 9C       		.byte	0x9c
  620 02df 01030000 		.4byte	0x301
@@ -817,8 +817,8 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  641 0311 01       		.byte	0x1
  642 0312 73       		.byte	0x73
  643 0313 A2000000 		.4byte	0xa2
- 644 0317 00000000 		.4byte	.LFB113
- 645 031b 0C000000 		.4byte	.LFE113-.LFB113
+ 644 0317 00000000 		.4byte	.LFB105
+ 645 031b 0C000000 		.4byte	.LFE105-.LFB105
  646 031f 01       		.uleb128 0x1
  647 0320 9C       		.byte	0x9c
  648 0321 34030000 		.4byte	0x334
@@ -834,11 +834,11 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  658 0339 01       		.byte	0x1
  659 033a 7E       		.byte	0x7e
  660 033b A2000000 		.4byte	0xa2
- 661 033f 00000000 		.4byte	.LFB114
- 662 0343 06000000 		.4byte	.LFE114-.LFB114
+ 661 033f 00000000 		.4byte	.LFB106
+ 662 0343 06000000 		.4byte	.LFE106-.LFB106
  663 0347 01       		.uleb128 0x1
  664 0348 9C       		.byte	0x9c
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 15
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 15
 
 
  665 0349 5C030000 		.4byte	0x35c
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  719 000b 55       		.uleb128 0x55
  720 000c 17       		.uleb128 0x17
  721 000d 11       		.uleb128 0x11
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 16
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 16
 
 
  722 000e 01       		.uleb128 0x1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  776 0044 3A       		.uleb128 0x3a
  777 0045 0B       		.uleb128 0xb
  778 0046 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 17
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 17
 
 
  779 0047 0B       		.uleb128 0xb
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  833 007d 49       		.uleb128 0x49
  834 007e 13       		.uleb128 0x13
  835 007f 01       		.uleb128 0x1
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 18
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 18
 
 
  836 0080 13       		.uleb128 0x13
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  890 00b7 0F       		.uleb128 0xf
  891 00b8 0B       		.uleb128 0xb
  892 00b9 01       		.byte	0x1
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 19
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 19
 
 
  893 00ba 55       		.uleb128 0x55
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  947 00f0 0E       		.uleb128 0xe
  948 00f1 3A       		.uleb128 0x3a
  949 00f2 0B       		.uleb128 0xb
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 20
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 20
 
 
  950 00f3 3B       		.uleb128 0x3b
@@ -1192,13 +1192,13 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  998 001e 0100     		.2byte	0x1
  999 0020 50       		.byte	0x50
  1000 0021 28000000 		.4byte	.LVL7
- 1001 0025 2A000000 		.4byte	.LFE110
+ 1001 0025 2A000000 		.4byte	.LFE102
  1002 0029 0100     		.2byte	0x1
  1003 002b 51       		.byte	0x51
  1004 002c 00000000 		.4byte	0
  1005 0030 00000000 		.4byte	0
  1006              	.LLST1:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 21
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 21
 
 
  1007 0034 12000000 		.4byte	.LVL1
@@ -1244,7 +1244,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1047 0098 0100     		.2byte	0x1
  1048 009a 50       		.byte	0x50
  1049 009b 40000000 		.4byte	.LVL14
- 1050 009f 48000000 		.4byte	.LFE111
+ 1050 009f 48000000 		.4byte	.LFE103
  1051 00a3 0400     		.2byte	0x4
  1052 00a5 F3       		.byte	0xf3
  1053 00a6 01       		.uleb128 0x1
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1061 00b9 0100     		.2byte	0x1
  1062 00bb 51       		.byte	0x51
  1063 00bc 1A000000 		.4byte	.LVL9
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 22
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 22
 
 
  1064 00c0 38000000 		.4byte	.LVL11
@@ -1272,7 +1272,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1072 00d2 0100     		.2byte	0x1
  1073 00d4 51       		.byte	0x51
  1074 00d5 40000000 		.4byte	.LVL14
- 1075 00d9 48000000 		.4byte	.LFE111
+ 1075 00d9 48000000 		.4byte	.LFE103
  1076 00dd 0400     		.2byte	0x4
  1077 00df F3       		.byte	0xf3
  1078 00e0 01       		.uleb128 0x1
@@ -1308,7 +1308,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1108 0125 0100     		.2byte	0x1
  1109 0127 50       		.byte	0x50
  1110 0128 42000000 		.4byte	.LVL21
- 1111 012c 48000000 		.4byte	.LFE112
+ 1111 012c 48000000 		.4byte	.LFE104
  1112 0130 0400     		.2byte	0x4
  1113 0132 F3       		.byte	0xf3
  1114 0133 01       		.uleb128 0x1
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1118 013a 00000000 		.4byte	0
  1119              	.LLST5:
  1120 013e 00000000 		.4byte	.LVL15
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 23
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 23
 
 
  1121 0142 20000000 		.4byte	.LVL16
@@ -1332,7 +1332,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1129 0155 51       		.byte	0x51
  1130 0156 9F       		.byte	0x9f
  1131 0157 3A000000 		.4byte	.LVL18
- 1132 015b 48000000 		.4byte	.LFE112
+ 1132 015b 48000000 		.4byte	.LFE104
  1133 015f 0100     		.2byte	0x1
  1134 0161 51       		.byte	0x51
  1135 0162 00000000 		.4byte	0
@@ -1343,7 +1343,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1140 0172 0100     		.2byte	0x1
  1141 0174 50       		.byte	0x50
  1142 0175 04000000 		.4byte	.LVL23
- 1143 0179 0C000000 		.4byte	.LFE113
+ 1143 0179 0C000000 		.4byte	.LFE105
  1144 017d 0400     		.2byte	0x4
  1145 017f F3       		.byte	0xf3
  1146 0180 01       		.uleb128 0x1
@@ -1357,7 +1357,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1154 0193 0100     		.2byte	0x1
  1155 0195 50       		.byte	0x50
  1156 0196 04000000 		.4byte	.LVL25
- 1157 019a 06000000 		.4byte	.LFE114
+ 1157 019a 06000000 		.4byte	.LFE106
  1158 019e 0400     		.2byte	0x4
  1159 01a0 F3       		.byte	0xf3
  1160 01a1 01       		.uleb128 0x1
@@ -1373,19 +1373,19 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1170 000b 00       		.byte	0
  1171 000c 0000     		.2byte	0
  1172 000e 0000     		.2byte	0
- 1173 0010 00000000 		.4byte	.LFB110
- 1174 0014 2A000000 		.4byte	.LFE110-.LFB110
- 1175 0018 00000000 		.4byte	.LFB111
- 1176 001c 48000000 		.4byte	.LFE111-.LFB111
- 1177 0020 00000000 		.4byte	.LFB112
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 24
+ 1173 0010 00000000 		.4byte	.LFB102
+ 1174 0014 2A000000 		.4byte	.LFE102-.LFB102
+ 1175 0018 00000000 		.4byte	.LFB103
+ 1176 001c 48000000 		.4byte	.LFE103-.LFB103
+ 1177 0020 00000000 		.4byte	.LFB104
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 24
 
 
- 1178 0024 48000000 		.4byte	.LFE112-.LFB112
- 1179 0028 00000000 		.4byte	.LFB113
- 1180 002c 0C000000 		.4byte	.LFE113-.LFB113
- 1181 0030 00000000 		.4byte	.LFB114
- 1182 0034 06000000 		.4byte	.LFE114-.LFB114
+ 1178 0024 48000000 		.4byte	.LFE104-.LFB104
+ 1179 0028 00000000 		.4byte	.LFB105
+ 1180 002c 0C000000 		.4byte	.LFE105-.LFB105
+ 1181 0030 00000000 		.4byte	.LFB106
+ 1182 0034 06000000 		.4byte	.LFE106-.LFB106
  1183 0038 00000000 		.4byte	0
  1184 003c 00000000 		.4byte	0
  1185              		.section	.debug_ranges,"",%progbits
@@ -1396,16 +1396,16 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1190 000c 24000000 		.4byte	.LBE3
  1191 0010 00000000 		.4byte	0
  1192 0014 00000000 		.4byte	0
- 1193 0018 00000000 		.4byte	.LFB110
- 1194 001c 2A000000 		.4byte	.LFE110
- 1195 0020 00000000 		.4byte	.LFB111
- 1196 0024 48000000 		.4byte	.LFE111
- 1197 0028 00000000 		.4byte	.LFB112
- 1198 002c 48000000 		.4byte	.LFE112
- 1199 0030 00000000 		.4byte	.LFB113
- 1200 0034 0C000000 		.4byte	.LFE113
- 1201 0038 00000000 		.4byte	.LFB114
- 1202 003c 06000000 		.4byte	.LFE114
+ 1193 0018 00000000 		.4byte	.LFB102
+ 1194 001c 2A000000 		.4byte	.LFE102
+ 1195 0020 00000000 		.4byte	.LFB103
+ 1196 0024 48000000 		.4byte	.LFE103
+ 1197 0028 00000000 		.4byte	.LFB104
+ 1198 002c 48000000 		.4byte	.LFE104
+ 1199 0030 00000000 		.4byte	.LFB105
+ 1200 0034 0C000000 		.4byte	.LFE105
+ 1201 0038 00000000 		.4byte	.LFB106
+ 1202 003c 06000000 		.4byte	.LFE106
  1203 0040 00000000 		.4byte	0
  1204 0044 00000000 		.4byte	0
  1205              		.section	.debug_line,"",%progbits
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1215      4E4C5900 
  1216              	.LASF27:
  1217 003f 70766F69 		.ascii	"pvoid_t\000"
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 25
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 25
 
 
  1217      645F7400 
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1242              	.LASF13:
  1243 00ea 75696E74 		.ascii	"uint8_t\000"
  1243      385F7400 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 26
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 26
 
 
  1244              	.LASF51:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1265      52524F52 
  1265      5F554E4B 
  1265      4E4F574E 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 27
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 27
 
 
  1265      00
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1289 0248 52425F72 		.ascii	"RB_read\000"
  1289      65616400 
  1290              	.LASF0:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 28
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 28
 
 
  1291 0250 7369676E 		.ascii	"signed char\000"
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1312      6973696F 
  1312      6E203233 
  1312      37373135 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 29
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 29
 
 
  1313 0339 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1335      5F434845 
  1335      434B5355 
  1335      4D00
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 30
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 30
 
 
  1336              	.LASF24:
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 1
  1357      6F5F4952 
  1357      515F6469 
  1357      7361626C 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccWvU5Pj.s 			page 31
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccqFcpu8.s 			page 31
 
 
  1357      655F636F 

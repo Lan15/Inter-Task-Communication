@@ -222,7 +222,7 @@
 #if 0
 #define __OO_HAS_USERESSCHEDULER__
 #endif
-#if 1
+#if 0
 #define __USE_SYSTICK__
 #endif
 #define __ALLOW_NESTED_IRQ__

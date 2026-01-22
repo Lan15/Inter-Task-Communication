@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 1
 
 
    1              		.syntax unified
@@ -26,7 +26,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
   23              		.thumb_func
   24              		.type	LOG_Init, %function
   25              	LOG_Init:
-  26              	.LFB111:
+  26              	.LFB103:
   27              		.file 1 "source\\bsw\\services\\logging.c"
    1:source\bsw\services/logging.c **** /**
    2:source\bsw\services/logging.c ****  * \file 	logging.c
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
   28:source\bsw\services/logging.c ****     "Verbose",
   29:source\bsw\services/logging.c ****     "Info",
   30:source\bsw\services/logging.c ****     "Warning",
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 2
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 2
 
 
   31:source\bsw\services/logging.c ****     "Error",
@@ -118,13 +118,13 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
   58              	.L4:
   59 0022 00BF     		.align	2
   60              	.L3:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 3
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 3
 
 
   61 0024 00000000 		.word	.LC0
   62 0028 04000000 		.word	.LC1
   63              		.cfi_endproc
-  64              	.LFE111:
+  64              	.LFE103:
   65              		.size	LOG_Init, .-LOG_Init
   66              		.section	.text.LOG_send,"ax",%progbits
   67              		.align	2
@@ -133,7 +133,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
   70              		.thumb_func
   71              		.type	LOG_send, %function
   72              	LOG_send:
-  73              	.LFB112:
+  73              	.LFB104:
   55:source\bsw\services/logging.c **** 
   56:source\bsw\services/logging.c **** RC_t LOG_send(logging_t* entry){
   74              		.loc 1 56 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
   68:source\bsw\services/logging.c **** #endif
   69:source\bsw\services/logging.c **** 
   70:source\bsw\services/logging.c ****     return result;
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 4
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 4
 
 
   71:source\bsw\services/logging.c **** 
@@ -193,7 +193,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  109 0024 14000000 		.word	.LC2
  110 0028 00000000 		.word	.LC0
  111              		.cfi_endproc
- 112              	.LFE112:
+ 112              	.LFE104:
  113              		.size	LOG_send, .-LOG_send
  114              		.global	logLevel2String
  115              		.section	.rodata
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  146              		.file 6 ".\\source\\bsw/global.h"
  147              		.file 7 "source\\bsw\\services\\logging.h"
  148              		.file 8 "Generated_Source\\PSoC5/ErikaOS_ee_oo_intfunc.inc"
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 5
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 5
 
 
  149              		.file 9 "Generated_Source\\PSoC5/ErikaOS_cortex_mx_ee_context.inc"
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  203 0064 C8020000 		.4byte	.LASF7
  204 0068 04       		.uleb128 0x4
  205 0069 04       		.byte	0x4
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 6
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 6
 
 
  206 006a 05       		.byte	0x5
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  260 00d6 54010000 		.4byte	.LASF20
  261 00da 05       		.byte	0x5
  262 00db 78       		.byte	0x78
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 7
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 7
 
 
  263 00dc A9000000 		.4byte	0xa9
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  317 014b 71       		.sleb128 -15
  318 014c 08       		.uleb128 0x8
  319 014d 5C020000 		.4byte	.LASF37
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 8
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 8
 
 
  320 0151 70       		.sleb128 -16
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  374 01bd 04       		.byte	0x4
  375 01be 07       		.uleb128 0x7
  376 01bf 34000000 		.4byte	.LASF53
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 9
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 9
 
 
  377 01c3 05       		.byte	0x5
@@ -536,9 +536,9 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  429 022d 01       		.byte	0x1
  430 022e 28       		.byte	0x28
  431 022f 89010000 		.4byte	0x189
- 432 0233 00000000 		.4byte	.LFB111
- 433 0237 2C000000 		.4byte	.LFE111-.LFB111
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 10
+ 432 0233 00000000 		.4byte	.LFB103
+ 433 0237 2C000000 		.4byte	.LFE103-.LFB103
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 10
 
 
  434 023b 01       		.uleb128 0x1
@@ -596,9 +596,9 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  486 029f 01       		.byte	0x1
  487 02a0 38       		.byte	0x38
  488 02a1 89010000 		.4byte	0x189
- 489 02a5 00000000 		.4byte	.LFB112
- 490 02a9 2C000000 		.4byte	.LFE112-.LFB112
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 11
+ 489 02a5 00000000 		.4byte	.LFB104
+ 490 02a9 2C000000 		.4byte	.LFE104-.LFB104
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 11
 
 
  491 02ad 01       		.uleb128 0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  545 031c 05       		.uleb128 0x5
  546 031d 03       		.byte	0x3
  547 031e 00000000 		.4byte	.LC0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 12
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 12
 
 
  548 0322 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  602 0395 00000000 		.4byte	logLevel2String
  603 0399 05       		.uleb128 0x5
  604 039a 72030000 		.4byte	0x372
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 13
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 13
 
 
  605 039e 19       		.uleb128 0x19
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  659 0029 00       		.byte	0
  660 002a 00       		.byte	0
  661 002b 04       		.uleb128 0x4
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 14
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 14
 
 
  662 002c 24       		.uleb128 0x24
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  716 0062 0B       		.uleb128 0xb
  717 0063 3A       		.uleb128 0x3a
  718 0064 0B       		.uleb128 0xb
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 15
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 15
 
 
  719 0065 3B       		.uleb128 0x3b
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  773 009b 11       		.uleb128 0x11
  774 009c 01       		.uleb128 0x1
  775 009d 12       		.uleb128 0x12
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 16
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 16
 
 
  776 009e 06       		.uleb128 0x6
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  830 00de 3B       		.uleb128 0x3b
  831 00df 0B       		.uleb128 0xb
  832 00e0 49       		.uleb128 0x49
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 17
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 17
 
 
  833 00e1 13       		.uleb128 0x13
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  887 0117 05       		.uleb128 0x5
  888 0118 49       		.uleb128 0x49
  889 0119 13       		.uleb128 0x13
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 18
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 18
 
 
  890 011a 3F       		.uleb128 0x3f
@@ -1078,13 +1078,13 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  944 000a 50       		.byte	0x50
  945 000b 06000000 		.4byte	.LVL7
  946 000f 22000000 		.4byte	.LVL12
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 19
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 19
 
 
  947 0013 0100     		.2byte	0x1
  948 0015 54       		.byte	0x54
  949 0016 22000000 		.4byte	.LVL12
- 950 001a 2C000000 		.4byte	.LFE112
+ 950 001a 2C000000 		.4byte	.LFE104
  951 001e 0400     		.2byte	0x4
  952 0020 F3       		.byte	0xf3
  953 0021 01       		.uleb128 0x1
@@ -1100,7 +1100,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  963 0037 E9       		.byte	0xe9
  964 0038 9F       		.byte	0x9f
  965 0039 1E000000 		.4byte	.LVL11
- 966 003d 2C000000 		.4byte	.LFE112
+ 966 003d 2C000000 		.4byte	.LFE104
  967 0041 0200     		.2byte	0x2
  968 0043 30       		.byte	0x30
  969 0044 9F       		.byte	0x9f
@@ -1114,18 +1114,18 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  977 000b 00       		.byte	0
  978 000c 0000     		.2byte	0
  979 000e 0000     		.2byte	0
- 980 0010 00000000 		.4byte	.LFB111
- 981 0014 2C000000 		.4byte	.LFE111-.LFB111
- 982 0018 00000000 		.4byte	.LFB112
- 983 001c 2C000000 		.4byte	.LFE112-.LFB112
+ 980 0010 00000000 		.4byte	.LFB103
+ 981 0014 2C000000 		.4byte	.LFE103-.LFB103
+ 982 0018 00000000 		.4byte	.LFB104
+ 983 001c 2C000000 		.4byte	.LFE104-.LFB104
  984 0020 00000000 		.4byte	0
  985 0024 00000000 		.4byte	0
  986              		.section	.debug_ranges,"",%progbits
  987              	.Ldebug_ranges0:
- 988 0000 00000000 		.4byte	.LFB111
- 989 0004 2C000000 		.4byte	.LFE111
- 990 0008 00000000 		.4byte	.LFB112
- 991 000c 2C000000 		.4byte	.LFE112
+ 988 0000 00000000 		.4byte	.LFB103
+ 989 0004 2C000000 		.4byte	.LFE103
+ 990 0008 00000000 		.4byte	.LFB104
+ 991 000c 2C000000 		.4byte	.LFE104
  992 0010 00000000 		.4byte	0
  993 0014 00000000 		.4byte	0
  994              		.section	.debug_line,"",%progbits
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  997              	.LASF68:
  998 0000 55415254 		.ascii	"UART_LOG_Start\000"
  998      5F4C4F47 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 20
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 20
 
 
  998      5F537461 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  1022      52515F6E 
  1022      65737469 
  1022      6E675F6C 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 21
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 21
 
 
  1022      6576656C 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  1044 019a 45455F73 		.ascii	"EE_std_endcycle_next_tid\000"
  1044      74645F65 
  1044      6E646379 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 22
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 22
 
 
  1044      636C655F 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  1066      52524F52 
  1066      5F425553 
  1066      5900
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 23
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 23
 
 
  1067              	.LASF37:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  1089              	.LASF33:
  1090 02fc 52435F45 		.ascii	"RC_ERROR_OPEN\000"
  1090      52524F52 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 24
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 24
 
 
  1090      5F4F5045 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  1109              	.LASF10:
  1110 0404 696E7433 		.ascii	"int32_t\000"
  1110      325F7400 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 25
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 25
 
 
  1111              	.LASF59:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 1
  1136      00
  1137              	.LASF43:
  1138 04a2 52435F45 		.ascii	"RC_ERROR_CANCELED\000"
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccTywtNg.s 			page 26
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cciPtEX1.s 			page 26
 
 
  1138      52524F52 

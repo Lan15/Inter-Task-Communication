@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 1
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 1
 
 
    1              		.syntax unified
@@ -26,7 +26,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 1
   23              		.thumb_func
   24              		.type	EE_system_init, %function
   25              	EE_system_init:
-  26              	.LFB77:
+  26              	.LFB69:
   27              		.file 1 "Generated_Source\\PSoC5\\ErikaOS_cortex_mx_ee_utils.c"
    1:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** /* ###*B*###
    2:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****  * ERIKA Enterprise - a tiny RTOS for small microcontrollers
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 1
   28:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****  * exception statement from your version.
   29:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****  *
   30:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****  * ERIKA Enterprise is distributed in the hope that it will be
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 2
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 2
 
 
   31:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****  * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
@@ -118,13 +118,13 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 1
   35              		.cfi_offset 4, -12
   36              		.cfi_offset 5, -8
   37              		.cfi_offset 14, -4
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 3
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 3
 
 
   78:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** #if (Number_of_ISRs > 0)
   79:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****   cyisraddress *ramVectorTable = *CY_INT_VECT_TABLE;
   38              		.loc 1 79 0
-  39 0002 0D4B     		ldr	r3, .L3
+  39 0002 0A4B     		ldr	r3, .L3
   40 0004 1D68     		ldr	r5, [r3]
   41              	.LVL0:
   42              	.LBB14:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 1
   45:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	@author Giuseppe Serano
   46:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	@date 2011
   47:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** */ 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 4
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 4
 
 
   48:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****     
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 1
  102:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
  103:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* Get current SP */
  104:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** __INLINE__ EE_UINT32  __current_sp(void)
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 5
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 5
 
 
  105:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 1
  159:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** extern struct EE_TOS EE_cortex_mx_system_tos[];
  160:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** //#define	EE_std_system_tos EE_cortex_mx_system_tos
  161:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 6
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 6
 
 
  162:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /* Index of the current stack */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 1
  216:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
  217:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /**
  218:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * Resume interrupts
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 7
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 7
 
 
  219:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 1
   57              	.LBE16:
   58              	.LBE15:
   59              	.LBE14:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 8
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 8
 
 
   80:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** #endif
@@ -440,11 +440,6 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 1
   93:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** #ifdef	EE_CORTEX_MX_SYSTICK_ISR
   94:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** #ifdef	EE_CORTEX_MX_SYSTICK_ISR_PRI
   95:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** 	NVIC_SYS_PRI3_R |= (
-  63              		.loc 1 95 0
-  64 0010 0A4A     		ldr	r2, .L3+4
-  65 0012 1368     		ldr	r3, [r2]
-  66 0014 43F07F43 		orr	r3, r3, #-16777216
-  67 0018 1360     		str	r3, [r2]
   96:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** 	  EE_CORTEX_MX_SYSTICK_ISR_PRI << NVIC_SYS_PRI3_TICK_S
   97:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** 	);
   98:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** #endif
@@ -454,1658 +449,1657 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 1
  102:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** 
  103:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** #if (Number_of_ISRs > 0) && defined isr_uartRX__INTC_NUMBER
  104:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****     ramVectorTable[CY_INT_IRQ_BASE + (isr_uartRX__INTC_NUMBER & CY_INT_NUMBER_MASK)] = isr_uartRX;
-  68              		.loc 1 104 0
-  69 001a 094B     		ldr	r3, .L3+8
-  70 001c 2B64     		str	r3, [r5, #64]
+  63              		.loc 1 104 0
+  64 0010 074B     		ldr	r3, .L3+4
+  65 0012 2B64     		str	r3, [r5, #64]
  105:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** 	//PF v2.5.3
  106:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****     //NVIC_SET_PRI(isr_uartRX__INTC_NUMBER, (ISR_MIN_PRI - 7));
  107:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****     CyIntSetPriority(isr_uartRX__INTC_NUMBER, ISR_SCALE(7));
-  71              		.loc 1 107 0
-  72 001e 0721     		movs	r1, #7
-  73 0020 0020     		movs	r0, #0
-  74 0022 FFF7FEFF 		bl	CyIntSetPriority
-  75              	.LVL2:
+  66              		.loc 1 107 0
+  67 0014 0721     		movs	r1, #7
+  68 0016 0020     		movs	r0, #0
+  69 0018 FFF7FEFF 		bl	CyIntSetPriority
+  70              	.LVL2:
  108:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c ****     //\PF
  109:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_utils.c **** 	NVIC_INT_ENABLE(isr_uartRX__INTC_NUMBER);
-  76              		.loc 1 109 0
-  77 0026 074A     		ldr	r2, .L3+12
-  78 0028 1368     		ldr	r3, [r2]
-  79 002a 43F00103 		orr	r3, r3, #1
-  80 002e 1360     		str	r3, [r2]
-  81              	.LBB17:
-  82              	.LBB18:
-  83              	.LBB19:
+  71              		.loc 1 109 0
+  72 001c 054A     		ldr	r2, .L3+8
+  73 001e 1368     		ldr	r3, [r2]
+  74 0020 43F00103 		orr	r3, r3, #1
+  75 0024 1360     		str	r3, [r2]
+  76              	.LBB17:
+  77              	.LBB18:
+  78              	.LBB19:
  232:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #endif	/* !__KEIL__ */
-  84              		.loc 2 232 0
+  79              		.loc 2 232 0
+  80              		.syntax unified
+  81              	@ 232 "Generated_Source\PSoC5\ErikaOS_cortex_mx_ee_cpu.inc" 1
+  82 0026 84F31088 		msr primask, r4
+  83              	@ 0 "" 2
+  84              		.thumb
   85              		.syntax unified
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 9
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 9
 
 
-  86              	@ 232 "Generated_Source\PSoC5\ErikaOS_cortex_mx_ee_cpu.inc" 1
-  87 0030 84F31088 		msr primask, r4
-  88              	@ 0 "" 2
-  89              		.thumb
-  90              		.syntax unified
-  91 0034 38BD     		pop	{r3, r4, r5, pc}
-  92              	.LVL3:
-  93              	.L4:
-  94 0036 00BF     		.align	2
-  95              	.L3:
-  96 0038 08ED00E0 		.word	-536810232
-  97 003c 20ED00E0 		.word	-536810208
-  98 0040 00000000 		.word	isr_uartRX
-  99 0044 00E100E0 		.word	-536813312
- 100              	.LBE19:
- 101              	.LBE18:
- 102              	.LBE17:
- 103              		.cfi_endproc
- 104              	.LFE77:
- 105              		.size	EE_system_init, .-EE_system_init
- 106              		.text
- 107              	.Letext0:
- 108              		.file 3 "Generated_Source\\PSoC5\\ErikaOS_common_ee_types.inc"
- 109              		.file 4 "Generated_Source\\PSoC5\\ErikaOS_ee_oo_common.inc"
- 110              		.file 5 "Generated_Source\\PSoC5\\cytypes.h"
- 111              		.file 6 "Generated_Source\\PSoC5\\ErikaOS_common_ee_primitives.inc"
- 112              		.file 7 "Generated_Source\\PSoC5\\ErikaOS_cortex_mx_ee_context.inc"
- 113              		.file 8 "Generated_Source\\PSoC5\\ErikaOS_ee_oo_intfunc.inc"
- 114              		.file 9 "Generated_Source\\PSoC5\\ErikaOS_ee_oo_internal.inc"
- 115              		.file 10 "Generated_Source\\PSoC5\\cylib.h"
- 116              		.section	.debug_info,"",%progbits
- 117              	.Ldebug_info0:
- 118 0000 1B050000 		.4byte	0x51b
- 119 0004 0400     		.2byte	0x4
- 120 0006 00000000 		.4byte	.Ldebug_abbrev0
- 121 000a 04       		.byte	0x4
- 122 000b 01       		.uleb128 0x1
- 123 000c C9040000 		.4byte	.LASF73
- 124 0010 0C       		.byte	0xc
- 125 0011 3F040000 		.4byte	.LASF74
- 126 0015 84000000 		.4byte	.LASF75
- 127 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 128 001d 00000000 		.4byte	0
- 129 0021 00000000 		.4byte	.Ldebug_line0
- 130 0025 02       		.uleb128 0x2
- 131 0026 01       		.byte	0x1
- 132 0027 06       		.byte	0x6
- 133 0028 C8020000 		.4byte	.LASF0
- 134 002c 02       		.uleb128 0x2
- 135 002d 01       		.byte	0x1
- 136 002e 08       		.byte	0x8
- 137 002f F7010000 		.4byte	.LASF1
- 138 0033 02       		.uleb128 0x2
- 139 0034 02       		.byte	0x2
- 140 0035 05       		.byte	0x5
- 141 0036 5B000000 		.4byte	.LASF2
- 142 003a 02       		.uleb128 0x2
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 10
+  86 002a 38BD     		pop	{r3, r4, r5, pc}
+  87              	.LVL3:
+  88              	.L4:
+  89              		.align	2
+  90              	.L3:
+  91 002c 08ED00E0 		.word	-536810232
+  92 0030 00000000 		.word	isr_uartRX
+  93 0034 00E100E0 		.word	-536813312
+  94              	.LBE19:
+  95              	.LBE18:
+  96              	.LBE17:
+  97              		.cfi_endproc
+  98              	.LFE69:
+  99              		.size	EE_system_init, .-EE_system_init
+ 100              		.text
+ 101              	.Letext0:
+ 102              		.file 3 "Generated_Source\\PSoC5\\ErikaOS_common_ee_types.inc"
+ 103              		.file 4 "Generated_Source\\PSoC5\\ErikaOS_ee_oo_common.inc"
+ 104              		.file 5 "Generated_Source\\PSoC5\\cytypes.h"
+ 105              		.file 6 "Generated_Source\\PSoC5\\ErikaOS_common_ee_primitives.inc"
+ 106              		.file 7 "Generated_Source\\PSoC5\\ErikaOS_cortex_mx_ee_context.inc"
+ 107              		.file 8 "Generated_Source\\PSoC5\\ErikaOS_ee_oo_intfunc.inc"
+ 108              		.file 9 "Generated_Source\\PSoC5\\ErikaOS_ee_oo_internal.inc"
+ 109              		.file 10 "Generated_Source\\PSoC5\\cylib.h"
+ 110              		.section	.debug_info,"",%progbits
+ 111              	.Ldebug_info0:
+ 112 0000 1B050000 		.4byte	0x51b
+ 113 0004 0400     		.2byte	0x4
+ 114 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 115 000a 04       		.byte	0x4
+ 116 000b 01       		.uleb128 0x1
+ 117 000c C9040000 		.4byte	.LASF73
+ 118 0010 0C       		.byte	0xc
+ 119 0011 3F040000 		.4byte	.LASF74
+ 120 0015 84000000 		.4byte	.LASF75
+ 121 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 122 001d 00000000 		.4byte	0
+ 123 0021 00000000 		.4byte	.Ldebug_line0
+ 124 0025 02       		.uleb128 0x2
+ 125 0026 01       		.byte	0x1
+ 126 0027 06       		.byte	0x6
+ 127 0028 C8020000 		.4byte	.LASF0
+ 128 002c 02       		.uleb128 0x2
+ 129 002d 01       		.byte	0x1
+ 130 002e 08       		.byte	0x8
+ 131 002f F7010000 		.4byte	.LASF1
+ 132 0033 02       		.uleb128 0x2
+ 133 0034 02       		.byte	0x2
+ 134 0035 05       		.byte	0x5
+ 135 0036 5B000000 		.4byte	.LASF2
+ 136 003a 02       		.uleb128 0x2
+ 137 003b 02       		.byte	0x2
+ 138 003c 07       		.byte	0x7
+ 139 003d 7B030000 		.4byte	.LASF3
+ 140 0041 02       		.uleb128 0x2
+ 141 0042 04       		.byte	0x4
+ 142 0043 05       		.byte	0x5
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 10
 
 
- 143 003b 02       		.byte	0x2
- 144 003c 07       		.byte	0x7
- 145 003d 7B030000 		.4byte	.LASF3
- 146 0041 02       		.uleb128 0x2
- 147 0042 04       		.byte	0x4
- 148 0043 05       		.byte	0x5
- 149 0044 DE010000 		.4byte	.LASF4
- 150 0048 02       		.uleb128 0x2
- 151 0049 04       		.byte	0x4
- 152 004a 07       		.byte	0x7
- 153 004b F4030000 		.4byte	.LASF5
- 154 004f 02       		.uleb128 0x2
- 155 0050 08       		.byte	0x8
- 156 0051 05       		.byte	0x5
- 157 0052 7C010000 		.4byte	.LASF6
- 158 0056 02       		.uleb128 0x2
- 159 0057 08       		.byte	0x8
- 160 0058 07       		.byte	0x7
- 161 0059 DA020000 		.4byte	.LASF7
- 162 005d 03       		.uleb128 0x3
- 163 005e 04       		.byte	0x4
- 164 005f 05       		.byte	0x5
- 165 0060 696E7400 		.ascii	"int\000"
- 166 0064 02       		.uleb128 0x2
- 167 0065 04       		.byte	0x4
- 168 0066 07       		.byte	0x7
- 169 0067 08030000 		.4byte	.LASF8
- 170 006b 02       		.uleb128 0x2
- 171 006c 08       		.byte	0x8
- 172 006d 04       		.byte	0x4
- 173 006e 6F020000 		.4byte	.LASF9
- 174 0072 04       		.uleb128 0x4
- 175 0073 D6010000 		.4byte	.LASF10
- 176 0077 03       		.byte	0x3
- 177 0078 3F       		.byte	0x3f
- 178 0079 25000000 		.4byte	0x25
- 179 007d 04       		.uleb128 0x4
- 180 007e B1030000 		.4byte	.LASF11
- 181 0082 03       		.byte	0x3
- 182 0083 52       		.byte	0x52
- 183 0084 3A000000 		.4byte	0x3a
- 184 0088 04       		.uleb128 0x4
- 185 0089 5A030000 		.4byte	.LASF12
- 186 008d 03       		.byte	0x3
- 187 008e 53       		.byte	0x53
- 188 008f 5D000000 		.4byte	0x5d
- 189 0093 04       		.uleb128 0x4
- 190 0094 06010000 		.4byte	.LASF13
- 191 0098 03       		.byte	0x3
- 192 0099 54       		.byte	0x54
- 193 009a 64000000 		.4byte	0x64
- 194 009e 05       		.uleb128 0x5
- 195 009f 04       		.byte	0x4
- 196 00a0 A4000000 		.4byte	0xa4
- 197 00a4 06       		.uleb128 0x6
- 198 00a5 04       		.uleb128 0x4
- 199 00a6 13000000 		.4byte	.LASF14
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 11
+ 143 0044 DE010000 		.4byte	.LASF4
+ 144 0048 02       		.uleb128 0x2
+ 145 0049 04       		.byte	0x4
+ 146 004a 07       		.byte	0x7
+ 147 004b F4030000 		.4byte	.LASF5
+ 148 004f 02       		.uleb128 0x2
+ 149 0050 08       		.byte	0x8
+ 150 0051 05       		.byte	0x5
+ 151 0052 7C010000 		.4byte	.LASF6
+ 152 0056 02       		.uleb128 0x2
+ 153 0057 08       		.byte	0x8
+ 154 0058 07       		.byte	0x7
+ 155 0059 DA020000 		.4byte	.LASF7
+ 156 005d 03       		.uleb128 0x3
+ 157 005e 04       		.byte	0x4
+ 158 005f 05       		.byte	0x5
+ 159 0060 696E7400 		.ascii	"int\000"
+ 160 0064 02       		.uleb128 0x2
+ 161 0065 04       		.byte	0x4
+ 162 0066 07       		.byte	0x7
+ 163 0067 08030000 		.4byte	.LASF8
+ 164 006b 02       		.uleb128 0x2
+ 165 006c 08       		.byte	0x8
+ 166 006d 04       		.byte	0x4
+ 167 006e 6F020000 		.4byte	.LASF9
+ 168 0072 04       		.uleb128 0x4
+ 169 0073 D6010000 		.4byte	.LASF10
+ 170 0077 03       		.byte	0x3
+ 171 0078 3F       		.byte	0x3f
+ 172 0079 25000000 		.4byte	0x25
+ 173 007d 04       		.uleb128 0x4
+ 174 007e B1030000 		.4byte	.LASF11
+ 175 0082 03       		.byte	0x3
+ 176 0083 52       		.byte	0x52
+ 177 0084 3A000000 		.4byte	0x3a
+ 178 0088 04       		.uleb128 0x4
+ 179 0089 5A030000 		.4byte	.LASF12
+ 180 008d 03       		.byte	0x3
+ 181 008e 53       		.byte	0x53
+ 182 008f 5D000000 		.4byte	0x5d
+ 183 0093 04       		.uleb128 0x4
+ 184 0094 06010000 		.4byte	.LASF13
+ 185 0098 03       		.byte	0x3
+ 186 0099 54       		.byte	0x54
+ 187 009a 64000000 		.4byte	0x64
+ 188 009e 05       		.uleb128 0x5
+ 189 009f 04       		.byte	0x4
+ 190 00a0 A4000000 		.4byte	0xa4
+ 191 00a4 06       		.uleb128 0x6
+ 192 00a5 04       		.uleb128 0x4
+ 193 00a6 13000000 		.4byte	.LASF14
+ 194 00aa 02       		.byte	0x2
+ 195 00ab 4D       		.byte	0x4d
+ 196 00ac 93000000 		.4byte	0x93
+ 197 00b0 04       		.uleb128 0x4
+ 198 00b1 7C000000 		.4byte	.LASF15
+ 199 00b5 02       		.byte	0x2
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 11
 
 
- 200 00aa 02       		.byte	0x2
- 201 00ab 4D       		.byte	0x4d
- 202 00ac 93000000 		.4byte	0x93
- 203 00b0 04       		.uleb128 0x4
- 204 00b1 7C000000 		.4byte	.LASF15
- 205 00b5 02       		.byte	0x2
- 206 00b6 4F       		.byte	0x4f
- 207 00b7 93000000 		.4byte	0x93
- 208 00bb 04       		.uleb128 0x4
- 209 00bc 0D040000 		.4byte	.LASF16
- 210 00c0 02       		.byte	0x2
- 211 00c1 54       		.byte	0x54
- 212 00c2 A5000000 		.4byte	0xa5
- 213 00c6 04       		.uleb128 0x4
- 214 00c7 21010000 		.4byte	.LASF17
- 215 00cb 02       		.byte	0x2
- 216 00cc 78       		.byte	0x78
- 217 00cd 88000000 		.4byte	0x88
- 218 00d1 07       		.uleb128 0x7
- 219 00d2 B5010000 		.4byte	.LASF18
- 220 00d6 04       		.byte	0x4
- 221 00d7 1101     		.2byte	0x111
- 222 00d9 7D000000 		.4byte	0x7d
- 223 00dd 07       		.uleb128 0x7
- 224 00de 57020000 		.4byte	.LASF19
- 225 00e2 04       		.byte	0x4
- 226 00e3 3502     		.2byte	0x235
- 227 00e5 A5000000 		.4byte	0xa5
- 228 00e9 07       		.uleb128 0x7
- 229 00ea 8A010000 		.4byte	.LASF20
- 230 00ee 04       		.byte	0x4
- 231 00ef 5D02     		.2byte	0x25d
- 232 00f1 A5000000 		.4byte	0xa5
- 233 00f5 07       		.uleb128 0x7
- 234 00f6 33040000 		.4byte	.LASF21
- 235 00fa 04       		.byte	0x4
- 236 00fb 6C02     		.2byte	0x26c
- 237 00fd A5000000 		.4byte	0xa5
- 238 0101 08       		.uleb128 0x8
- 239 0102 0C       		.byte	0xc
- 240 0103 04       		.byte	0x4
- 241 0104 7202     		.2byte	0x272
- 242 0106 32010000 		.4byte	0x132
- 243 010a 09       		.uleb128 0x9
- 244 010b E7010000 		.4byte	.LASF22
- 245 010f 04       		.byte	0x4
- 246 0110 7302     		.2byte	0x273
- 247 0112 DD000000 		.4byte	0xdd
- 248 0116 00       		.byte	0
- 249 0117 09       		.uleb128 0x9
- 250 0118 2A000000 		.4byte	.LASF23
- 251 011c 04       		.byte	0x4
- 252 011d 7402     		.2byte	0x274
- 253 011f DD000000 		.4byte	0xdd
- 254 0123 04       		.byte	0x4
- 255 0124 09       		.uleb128 0x9
- 256 0125 28010000 		.4byte	.LASF24
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 12
+ 200 00b6 4F       		.byte	0x4f
+ 201 00b7 93000000 		.4byte	0x93
+ 202 00bb 04       		.uleb128 0x4
+ 203 00bc 0D040000 		.4byte	.LASF16
+ 204 00c0 02       		.byte	0x2
+ 205 00c1 54       		.byte	0x54
+ 206 00c2 A5000000 		.4byte	0xa5
+ 207 00c6 04       		.uleb128 0x4
+ 208 00c7 21010000 		.4byte	.LASF17
+ 209 00cb 02       		.byte	0x2
+ 210 00cc 78       		.byte	0x78
+ 211 00cd 88000000 		.4byte	0x88
+ 212 00d1 07       		.uleb128 0x7
+ 213 00d2 B5010000 		.4byte	.LASF18
+ 214 00d6 04       		.byte	0x4
+ 215 00d7 1101     		.2byte	0x111
+ 216 00d9 7D000000 		.4byte	0x7d
+ 217 00dd 07       		.uleb128 0x7
+ 218 00de 57020000 		.4byte	.LASF19
+ 219 00e2 04       		.byte	0x4
+ 220 00e3 3502     		.2byte	0x235
+ 221 00e5 A5000000 		.4byte	0xa5
+ 222 00e9 07       		.uleb128 0x7
+ 223 00ea 8A010000 		.4byte	.LASF20
+ 224 00ee 04       		.byte	0x4
+ 225 00ef 5D02     		.2byte	0x25d
+ 226 00f1 A5000000 		.4byte	0xa5
+ 227 00f5 07       		.uleb128 0x7
+ 228 00f6 33040000 		.4byte	.LASF21
+ 229 00fa 04       		.byte	0x4
+ 230 00fb 6C02     		.2byte	0x26c
+ 231 00fd A5000000 		.4byte	0xa5
+ 232 0101 08       		.uleb128 0x8
+ 233 0102 0C       		.byte	0xc
+ 234 0103 04       		.byte	0x4
+ 235 0104 7202     		.2byte	0x272
+ 236 0106 32010000 		.4byte	0x132
+ 237 010a 09       		.uleb128 0x9
+ 238 010b E7010000 		.4byte	.LASF22
+ 239 010f 04       		.byte	0x4
+ 240 0110 7302     		.2byte	0x273
+ 241 0112 DD000000 		.4byte	0xdd
+ 242 0116 00       		.byte	0
+ 243 0117 09       		.uleb128 0x9
+ 244 0118 2A000000 		.4byte	.LASF23
+ 245 011c 04       		.byte	0x4
+ 246 011d 7402     		.2byte	0x274
+ 247 011f DD000000 		.4byte	0xdd
+ 248 0123 04       		.byte	0x4
+ 249 0124 09       		.uleb128 0x9
+ 250 0125 28010000 		.4byte	.LASF24
+ 251 0129 04       		.byte	0x4
+ 252 012a 7502     		.2byte	0x275
+ 253 012c DD000000 		.4byte	0xdd
+ 254 0130 08       		.byte	0x8
+ 255 0131 00       		.byte	0
+ 256 0132 07       		.uleb128 0x7
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 12
 
 
- 257 0129 04       		.byte	0x4
- 258 012a 7502     		.2byte	0x275
- 259 012c DD000000 		.4byte	0xdd
- 260 0130 08       		.byte	0x8
- 261 0131 00       		.byte	0
- 262 0132 07       		.uleb128 0x7
- 263 0133 32020000 		.4byte	.LASF25
- 264 0137 04       		.byte	0x4
- 265 0138 7A02     		.2byte	0x27a
- 266 013a 01010000 		.4byte	0x101
- 267 013e 08       		.uleb128 0x8
- 268 013f 08       		.byte	0x8
- 269 0140 04       		.byte	0x4
- 270 0141 7D02     		.2byte	0x27d
- 271 0143 62010000 		.4byte	0x162
- 272 0147 09       		.uleb128 0x9
- 273 0148 31010000 		.4byte	.LASF26
- 274 014c 04       		.byte	0x4
- 275 014d 7E02     		.2byte	0x27e
- 276 014f DD000000 		.4byte	0xdd
- 277 0153 00       		.byte	0
- 278 0154 09       		.uleb128 0x9
- 279 0155 8A050000 		.4byte	.LASF27
- 280 0159 04       		.byte	0x4
- 281 015a 7F02     		.2byte	0x27f
- 282 015c E9000000 		.4byte	0xe9
- 283 0160 04       		.byte	0x4
- 284 0161 00       		.byte	0
- 285 0162 07       		.uleb128 0x7
- 286 0163 F1020000 		.4byte	.LASF28
- 287 0167 04       		.byte	0x4
- 288 0168 8002     		.2byte	0x280
- 289 016a 3E010000 		.4byte	0x13e
- 290 016e 0A       		.uleb128 0xa
- 291 016f 01       		.byte	0x1
- 292 0170 2C000000 		.4byte	0x2c
- 293 0174 04       		.byte	0x4
- 294 0175 8A02     		.2byte	0x28a
- 295 0177 88010000 		.4byte	0x188
- 296 017b 0B       		.uleb128 0xb
- 297 017c 25040000 		.4byte	.LASF29
- 298 0180 00       		.byte	0
- 299 0181 0B       		.uleb128 0xb
- 300 0182 C5010000 		.4byte	.LASF30
- 301 0186 01       		.byte	0x1
- 302 0187 00       		.byte	0
- 303 0188 07       		.uleb128 0x7
- 304 0189 15030000 		.4byte	.LASF31
- 305 018d 04       		.byte	0x4
- 306 018e 8D02     		.2byte	0x28d
- 307 0190 6E010000 		.4byte	0x16e
- 308 0194 07       		.uleb128 0x7
- 309 0195 F0000000 		.4byte	.LASF32
- 310 0199 04       		.byte	0x4
- 311 019a 9002     		.2byte	0x290
- 312 019c 88010000 		.4byte	0x188
- 313 01a0 08       		.uleb128 0x8
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 13
+ 257 0133 32020000 		.4byte	.LASF25
+ 258 0137 04       		.byte	0x4
+ 259 0138 7A02     		.2byte	0x27a
+ 260 013a 01010000 		.4byte	0x101
+ 261 013e 08       		.uleb128 0x8
+ 262 013f 08       		.byte	0x8
+ 263 0140 04       		.byte	0x4
+ 264 0141 7D02     		.2byte	0x27d
+ 265 0143 62010000 		.4byte	0x162
+ 266 0147 09       		.uleb128 0x9
+ 267 0148 31010000 		.4byte	.LASF26
+ 268 014c 04       		.byte	0x4
+ 269 014d 7E02     		.2byte	0x27e
+ 270 014f DD000000 		.4byte	0xdd
+ 271 0153 00       		.byte	0
+ 272 0154 09       		.uleb128 0x9
+ 273 0155 8A050000 		.4byte	.LASF27
+ 274 0159 04       		.byte	0x4
+ 275 015a 7F02     		.2byte	0x27f
+ 276 015c E9000000 		.4byte	0xe9
+ 277 0160 04       		.byte	0x4
+ 278 0161 00       		.byte	0
+ 279 0162 07       		.uleb128 0x7
+ 280 0163 F1020000 		.4byte	.LASF28
+ 281 0167 04       		.byte	0x4
+ 282 0168 8002     		.2byte	0x280
+ 283 016a 3E010000 		.4byte	0x13e
+ 284 016e 0A       		.uleb128 0xa
+ 285 016f 01       		.byte	0x1
+ 286 0170 2C000000 		.4byte	0x2c
+ 287 0174 04       		.byte	0x4
+ 288 0175 8A02     		.2byte	0x28a
+ 289 0177 88010000 		.4byte	0x188
+ 290 017b 0B       		.uleb128 0xb
+ 291 017c 25040000 		.4byte	.LASF29
+ 292 0180 00       		.byte	0
+ 293 0181 0B       		.uleb128 0xb
+ 294 0182 C5010000 		.4byte	.LASF30
+ 295 0186 01       		.byte	0x1
+ 296 0187 00       		.byte	0
+ 297 0188 07       		.uleb128 0x7
+ 298 0189 15030000 		.4byte	.LASF31
+ 299 018d 04       		.byte	0x4
+ 300 018e 8D02     		.2byte	0x28d
+ 301 0190 6E010000 		.4byte	0x16e
+ 302 0194 07       		.uleb128 0x7
+ 303 0195 F0000000 		.4byte	.LASF32
+ 304 0199 04       		.byte	0x4
+ 305 019a 9002     		.2byte	0x290
+ 306 019c 88010000 		.4byte	0x188
+ 307 01a0 08       		.uleb128 0x8
+ 308 01a1 0C       		.byte	0xc
+ 309 01a2 04       		.byte	0x4
+ 310 01a3 9402     		.2byte	0x294
+ 311 01a5 CF010000 		.4byte	0x1cf
+ 312 01a9 0C       		.uleb128 0xc
+ 313 01aa 6300     		.ascii	"c\000"
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 13
 
 
- 314 01a1 0C       		.byte	0xc
- 315 01a2 04       		.byte	0x4
- 316 01a3 9402     		.2byte	0x294
- 317 01a5 CF010000 		.4byte	0x1cf
- 318 01a9 0C       		.uleb128 0xc
- 319 01aa 6300     		.ascii	"c\000"
- 320 01ac 04       		.byte	0x4
- 321 01ad 9602     		.2byte	0x296
- 322 01af F5000000 		.4byte	0xf5
- 323 01b3 00       		.byte	0
- 324 01b4 09       		.uleb128 0x9
- 325 01b5 74000000 		.4byte	.LASF33
- 326 01b9 04       		.byte	0x4
- 327 01ba 9802     		.2byte	0x298
- 328 01bc E9000000 		.4byte	0xe9
- 329 01c0 04       		.byte	0x4
- 330 01c1 09       		.uleb128 0x9
- 331 01c2 00000000 		.4byte	.LASF34
- 332 01c6 04       		.byte	0x4
- 333 01c7 9A02     		.2byte	0x29a
- 334 01c9 94010000 		.4byte	0x194
- 335 01cd 08       		.byte	0x8
- 336 01ce 00       		.byte	0
- 337 01cf 07       		.uleb128 0x7
- 338 01d0 8E030000 		.4byte	.LASF35
- 339 01d4 04       		.byte	0x4
- 340 01d5 9B02     		.2byte	0x29b
- 341 01d7 A0010000 		.4byte	0x1a0
- 342 01db 08       		.uleb128 0x8
- 343 01dc 10       		.byte	0x10
- 344 01dd 04       		.byte	0x4
- 345 01de 9F02     		.2byte	0x29f
- 346 01e0 19020000 		.4byte	0x219
- 347 01e4 09       		.uleb128 0x9
- 348 01e5 2E040000 		.4byte	.LASF36
- 349 01e9 04       		.byte	0x4
- 350 01ea A002     		.2byte	0x2a0
- 351 01ec BB000000 		.4byte	0xbb
- 352 01f0 00       		.byte	0
- 353 01f1 09       		.uleb128 0x9
- 354 01f2 57050000 		.4byte	.LASF37
- 355 01f6 04       		.byte	0x4
- 356 01f7 A102     		.2byte	0x2a1
- 357 01f9 DD000000 		.4byte	0xdd
- 358 01fd 04       		.byte	0x4
- 359 01fe 09       		.uleb128 0x9
- 360 01ff 6E000000 		.4byte	.LASF38
- 361 0203 04       		.byte	0x4
- 362 0204 A202     		.2byte	0x2a2
- 363 0206 DD000000 		.4byte	0xdd
- 364 020a 08       		.byte	0x8
- 365 020b 09       		.uleb128 0x9
- 366 020c 78050000 		.4byte	.LASF39
- 367 0210 04       		.byte	0x4
- 368 0211 A302     		.2byte	0x2a3
- 369 0213 E9000000 		.4byte	0xe9
- 370 0217 0C       		.byte	0xc
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 14
+ 314 01ac 04       		.byte	0x4
+ 315 01ad 9602     		.2byte	0x296
+ 316 01af F5000000 		.4byte	0xf5
+ 317 01b3 00       		.byte	0
+ 318 01b4 09       		.uleb128 0x9
+ 319 01b5 74000000 		.4byte	.LASF33
+ 320 01b9 04       		.byte	0x4
+ 321 01ba 9802     		.2byte	0x298
+ 322 01bc E9000000 		.4byte	0xe9
+ 323 01c0 04       		.byte	0x4
+ 324 01c1 09       		.uleb128 0x9
+ 325 01c2 00000000 		.4byte	.LASF34
+ 326 01c6 04       		.byte	0x4
+ 327 01c7 9A02     		.2byte	0x29a
+ 328 01c9 94010000 		.4byte	0x194
+ 329 01cd 08       		.byte	0x8
+ 330 01ce 00       		.byte	0
+ 331 01cf 07       		.uleb128 0x7
+ 332 01d0 8E030000 		.4byte	.LASF35
+ 333 01d4 04       		.byte	0x4
+ 334 01d5 9B02     		.2byte	0x29b
+ 335 01d7 A0010000 		.4byte	0x1a0
+ 336 01db 08       		.uleb128 0x8
+ 337 01dc 10       		.byte	0x10
+ 338 01dd 04       		.byte	0x4
+ 339 01de 9F02     		.2byte	0x29f
+ 340 01e0 19020000 		.4byte	0x219
+ 341 01e4 09       		.uleb128 0x9
+ 342 01e5 2E040000 		.4byte	.LASF36
+ 343 01e9 04       		.byte	0x4
+ 344 01ea A002     		.2byte	0x2a0
+ 345 01ec BB000000 		.4byte	0xbb
+ 346 01f0 00       		.byte	0
+ 347 01f1 09       		.uleb128 0x9
+ 348 01f2 57050000 		.4byte	.LASF37
+ 349 01f6 04       		.byte	0x4
+ 350 01f7 A102     		.2byte	0x2a1
+ 351 01f9 DD000000 		.4byte	0xdd
+ 352 01fd 04       		.byte	0x4
+ 353 01fe 09       		.uleb128 0x9
+ 354 01ff 6E000000 		.4byte	.LASF38
+ 355 0203 04       		.byte	0x4
+ 356 0204 A202     		.2byte	0x2a2
+ 357 0206 DD000000 		.4byte	0xdd
+ 358 020a 08       		.byte	0x8
+ 359 020b 09       		.uleb128 0x9
+ 360 020c 78050000 		.4byte	.LASF39
+ 361 0210 04       		.byte	0x4
+ 362 0211 A302     		.2byte	0x2a3
+ 363 0213 E9000000 		.4byte	0xe9
+ 364 0217 0C       		.byte	0xc
+ 365 0218 00       		.byte	0
+ 366 0219 07       		.uleb128 0x7
+ 367 021a 05020000 		.4byte	.LASF40
+ 368 021e 04       		.byte	0x4
+ 369 021f A402     		.2byte	0x2a4
+ 370 0221 DB010000 		.4byte	0x1db
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 14
 
 
- 371 0218 00       		.byte	0
- 372 0219 07       		.uleb128 0x7
- 373 021a 05020000 		.4byte	.LASF40
- 374 021e 04       		.byte	0x4
- 375 021f A402     		.2byte	0x2a4
- 376 0221 DB010000 		.4byte	0x1db
- 377 0225 02       		.uleb128 0x2
- 378 0226 04       		.byte	0x4
- 379 0227 07       		.byte	0x7
- 380 0228 65000000 		.4byte	.LASF41
- 381 022c 02       		.uleb128 0x2
- 382 022d 01       		.byte	0x1
- 383 022e 08       		.byte	0x8
- 384 022f AC030000 		.4byte	.LASF42
- 385 0233 02       		.uleb128 0x2
- 386 0234 04       		.byte	0x4
- 387 0235 04       		.byte	0x4
- 388 0236 76010000 		.4byte	.LASF43
- 389 023a 02       		.uleb128 0x2
- 390 023b 08       		.byte	0x8
- 391 023c 04       		.byte	0x4
- 392 023d 06040000 		.4byte	.LASF44
- 393 0241 07       		.uleb128 0x7
- 394 0242 8A020000 		.4byte	.LASF45
- 395 0246 05       		.byte	0x5
- 396 0247 A502     		.2byte	0x2a5
- 397 0249 9E000000 		.4byte	0x9e
- 398 024d 0D       		.uleb128 0xd
- 399 024e BB030000 		.4byte	.LASF46
- 400 0252 02       		.byte	0x2
- 401 0253 DC       		.byte	0xdc
- 402 0254 03       		.byte	0x3
- 403 0255 63020000 		.4byte	0x263
- 404 0259 0E       		.uleb128 0xe
- 405 025a 6600     		.ascii	"f\000"
- 406 025c 02       		.byte	0x2
- 407 025d DC       		.byte	0xdc
- 408 025e B0000000 		.4byte	0xb0
- 409 0262 00       		.byte	0
- 410 0263 0F       		.uleb128 0xf
- 411 0264 97020000 		.4byte	.LASF76
- 412 0268 02       		.byte	0x2
- 413 0269 F1       		.byte	0xf1
- 414 026a B0000000 		.4byte	0xb0
- 415 026e 03       		.byte	0x3
- 416 026f 7F020000 		.4byte	0x27f
- 417 0273 10       		.uleb128 0x10
- 418 0274 75030000 		.4byte	.LASF48
- 419 0278 02       		.byte	0x2
- 420 0279 F4       		.byte	0xf4
- 421 027a B0000000 		.4byte	0xb0
- 422 027e 00       		.byte	0
- 423 027f 11       		.uleb128 0x11
- 424 0280 AD040000 		.4byte	.LASF47
- 425 0284 02       		.byte	0x2
- 426 0285 A201     		.2byte	0x1a2
- 427 0287 03       		.byte	0x3
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 15
+ 371 0225 02       		.uleb128 0x2
+ 372 0226 04       		.byte	0x4
+ 373 0227 07       		.byte	0x7
+ 374 0228 65000000 		.4byte	.LASF41
+ 375 022c 02       		.uleb128 0x2
+ 376 022d 01       		.byte	0x1
+ 377 022e 08       		.byte	0x8
+ 378 022f AC030000 		.4byte	.LASF42
+ 379 0233 02       		.uleb128 0x2
+ 380 0234 04       		.byte	0x4
+ 381 0235 04       		.byte	0x4
+ 382 0236 76010000 		.4byte	.LASF43
+ 383 023a 02       		.uleb128 0x2
+ 384 023b 08       		.byte	0x8
+ 385 023c 04       		.byte	0x4
+ 386 023d 06040000 		.4byte	.LASF44
+ 387 0241 07       		.uleb128 0x7
+ 388 0242 8A020000 		.4byte	.LASF45
+ 389 0246 05       		.byte	0x5
+ 390 0247 A502     		.2byte	0x2a5
+ 391 0249 9E000000 		.4byte	0x9e
+ 392 024d 0D       		.uleb128 0xd
+ 393 024e BB030000 		.4byte	.LASF46
+ 394 0252 02       		.byte	0x2
+ 395 0253 DC       		.byte	0xdc
+ 396 0254 03       		.byte	0x3
+ 397 0255 63020000 		.4byte	0x263
+ 398 0259 0E       		.uleb128 0xe
+ 399 025a 6600     		.ascii	"f\000"
+ 400 025c 02       		.byte	0x2
+ 401 025d DC       		.byte	0xdc
+ 402 025e B0000000 		.4byte	0xb0
+ 403 0262 00       		.byte	0
+ 404 0263 0F       		.uleb128 0xf
+ 405 0264 97020000 		.4byte	.LASF76
+ 406 0268 02       		.byte	0x2
+ 407 0269 F1       		.byte	0xf1
+ 408 026a B0000000 		.4byte	0xb0
+ 409 026e 03       		.byte	0x3
+ 410 026f 7F020000 		.4byte	0x27f
+ 411 0273 10       		.uleb128 0x10
+ 412 0274 75030000 		.4byte	.LASF48
+ 413 0278 02       		.byte	0x2
+ 414 0279 F4       		.byte	0xf4
+ 415 027a B0000000 		.4byte	0xb0
+ 416 027e 00       		.byte	0
+ 417 027f 11       		.uleb128 0x11
+ 418 0280 AD040000 		.4byte	.LASF47
+ 419 0284 02       		.byte	0x2
+ 420 0285 A201     		.2byte	0x1a2
+ 421 0287 03       		.byte	0x3
+ 422 0288 97020000 		.4byte	0x297
+ 423 028c 12       		.uleb128 0x12
+ 424 028d 6600     		.ascii	"f\000"
+ 425 028f 02       		.byte	0x2
+ 426 0290 A201     		.2byte	0x1a2
+ 427 0292 B0000000 		.4byte	0xb0
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 15
 
 
- 428 0288 97020000 		.4byte	0x297
- 429 028c 12       		.uleb128 0x12
- 430 028d 6600     		.ascii	"f\000"
- 431 028f 02       		.byte	0x2
- 432 0290 A201     		.2byte	0x1a2
- 433 0292 B0000000 		.4byte	0xb0
- 434 0296 00       		.byte	0
- 435 0297 13       		.uleb128 0x13
- 436 0298 63030000 		.4byte	.LASF77
- 437 029c 02       		.byte	0x2
- 438 029d A801     		.2byte	0x1a8
- 439 029f B0000000 		.4byte	0xb0
- 440 02a3 03       		.byte	0x3
- 441 02a4 14       		.uleb128 0x14
- 442 02a5 1B000000 		.4byte	.LASF78
- 443 02a9 01       		.byte	0x1
- 444 02aa 4C       		.byte	0x4c
- 445 02ab 00000000 		.4byte	.LFB77
- 446 02af 48000000 		.4byte	.LFE77-.LFB77
- 447 02b3 01       		.uleb128 0x1
- 448 02b4 9C       		.byte	0x9c
- 449 02b5 55030000 		.4byte	0x355
- 450 02b9 15       		.uleb128 0x15
- 451 02ba 23020000 		.4byte	.LASF79
- 452 02be 01       		.byte	0x1
- 453 02bf 4F       		.byte	0x4f
- 454 02c0 55030000 		.4byte	0x355
- 455 02c4 00000000 		.4byte	.LLST0
- 456 02c8 10       		.uleb128 0x10
- 457 02c9 D4020000 		.4byte	.LASF49
- 458 02cd 01       		.byte	0x1
- 459 02ce 51       		.byte	0x51
- 460 02cf A5000000 		.4byte	0xa5
- 461 02d3 16       		.uleb128 0x16
- 462 02d4 97020000 		.4byte	0x297
- 463 02d8 06000000 		.4byte	.LBB14
- 464 02dc 06000000 		.4byte	.LBE14-.LBB14
- 465 02e0 01       		.byte	0x1
- 466 02e1 53       		.byte	0x53
- 467 02e2 07030000 		.4byte	0x307
- 468 02e6 17       		.uleb128 0x17
- 469 02e7 63020000 		.4byte	0x263
- 470 02eb 06000000 		.4byte	.LBB15
- 471 02ef 06000000 		.4byte	.LBE15-.LBB15
- 472 02f3 02       		.byte	0x2
- 473 02f4 AA01     		.2byte	0x1aa
- 474 02f6 18       		.uleb128 0x18
- 475 02f7 06000000 		.4byte	.LBB16
- 476 02fb 06000000 		.4byte	.LBE16-.LBB16
- 477 02ff 19       		.uleb128 0x19
- 478 0300 73020000 		.4byte	0x273
- 479 0304 00       		.byte	0
- 480 0305 00       		.byte	0
- 481 0306 00       		.byte	0
- 482 0307 1A       		.uleb128 0x1a
- 483 0308 7F020000 		.4byte	0x27f
- 484 030c 30000000 		.4byte	.LBB17
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 16
+ 428 0296 00       		.byte	0
+ 429 0297 13       		.uleb128 0x13
+ 430 0298 63030000 		.4byte	.LASF77
+ 431 029c 02       		.byte	0x2
+ 432 029d A801     		.2byte	0x1a8
+ 433 029f B0000000 		.4byte	0xb0
+ 434 02a3 03       		.byte	0x3
+ 435 02a4 14       		.uleb128 0x14
+ 436 02a5 1B000000 		.4byte	.LASF78
+ 437 02a9 01       		.byte	0x1
+ 438 02aa 4C       		.byte	0x4c
+ 439 02ab 00000000 		.4byte	.LFB69
+ 440 02af 38000000 		.4byte	.LFE69-.LFB69
+ 441 02b3 01       		.uleb128 0x1
+ 442 02b4 9C       		.byte	0x9c
+ 443 02b5 55030000 		.4byte	0x355
+ 444 02b9 15       		.uleb128 0x15
+ 445 02ba 23020000 		.4byte	.LASF79
+ 446 02be 01       		.byte	0x1
+ 447 02bf 4F       		.byte	0x4f
+ 448 02c0 55030000 		.4byte	0x355
+ 449 02c4 00000000 		.4byte	.LLST0
+ 450 02c8 10       		.uleb128 0x10
+ 451 02c9 D4020000 		.4byte	.LASF49
+ 452 02cd 01       		.byte	0x1
+ 453 02ce 51       		.byte	0x51
+ 454 02cf A5000000 		.4byte	0xa5
+ 455 02d3 16       		.uleb128 0x16
+ 456 02d4 97020000 		.4byte	0x297
+ 457 02d8 06000000 		.4byte	.LBB14
+ 458 02dc 06000000 		.4byte	.LBE14-.LBB14
+ 459 02e0 01       		.byte	0x1
+ 460 02e1 53       		.byte	0x53
+ 461 02e2 07030000 		.4byte	0x307
+ 462 02e6 17       		.uleb128 0x17
+ 463 02e7 63020000 		.4byte	0x263
+ 464 02eb 06000000 		.4byte	.LBB15
+ 465 02ef 06000000 		.4byte	.LBE15-.LBB15
+ 466 02f3 02       		.byte	0x2
+ 467 02f4 AA01     		.2byte	0x1aa
+ 468 02f6 18       		.uleb128 0x18
+ 469 02f7 06000000 		.4byte	.LBB16
+ 470 02fb 06000000 		.4byte	.LBE16-.LBB16
+ 471 02ff 19       		.uleb128 0x19
+ 472 0300 73020000 		.4byte	0x273
+ 473 0304 00       		.byte	0
+ 474 0305 00       		.byte	0
+ 475 0306 00       		.byte	0
+ 476 0307 1A       		.uleb128 0x1a
+ 477 0308 7F020000 		.4byte	0x27f
+ 478 030c 26000000 		.4byte	.LBB17
+ 479 0310 12000000 		.4byte	.LBE17-.LBB17
+ 480 0314 01       		.byte	0x1
+ 481 0315 1901     		.2byte	0x119
+ 482 0317 37030000 		.4byte	0x337
+ 483 031b 1B       		.uleb128 0x1b
+ 484 031c 8C020000 		.4byte	0x28c
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 16
 
 
- 485 0310 18000000 		.4byte	.LBE17-.LBB17
- 486 0314 01       		.byte	0x1
- 487 0315 1901     		.2byte	0x119
- 488 0317 37030000 		.4byte	0x337
- 489 031b 1B       		.uleb128 0x1b
- 490 031c 8C020000 		.4byte	0x28c
- 491 0320 17       		.uleb128 0x17
- 492 0321 4D020000 		.4byte	0x24d
- 493 0325 30000000 		.4byte	.LBB18
- 494 0329 18000000 		.4byte	.LBE18-.LBB18
- 495 032d 02       		.byte	0x2
- 496 032e A401     		.2byte	0x1a4
- 497 0330 1B       		.uleb128 0x1b
- 498 0331 59020000 		.4byte	0x259
- 499 0335 00       		.byte	0
- 500 0336 00       		.byte	0
- 501 0337 1C       		.uleb128 0x1c
- 502 0338 10000000 		.4byte	.LVL1
- 503 033c 08050000 		.4byte	0x508
- 504 0340 1D       		.uleb128 0x1d
- 505 0341 26000000 		.4byte	.LVL2
- 506 0345 13050000 		.4byte	0x513
- 507 0349 1E       		.uleb128 0x1e
- 508 034a 01       		.uleb128 0x1
- 509 034b 50       		.byte	0x50
- 510 034c 01       		.uleb128 0x1
- 511 034d 30       		.byte	0x30
- 512 034e 1E       		.uleb128 0x1e
- 513 034f 01       		.uleb128 0x1
- 514 0350 51       		.byte	0x51
- 515 0351 01       		.uleb128 0x1
- 516 0352 37       		.byte	0x37
- 517 0353 00       		.byte	0
- 518 0354 00       		.byte	0
- 519 0355 05       		.uleb128 0x5
- 520 0356 04       		.byte	0x4
- 521 0357 41020000 		.4byte	0x241
- 522 035b 1F       		.uleb128 0x1f
- 523 035c 61010000 		.4byte	.LASF50
- 524 0360 06       		.byte	0x6
- 525 0361 44       		.byte	0x44
- 526 0362 A5000000 		.4byte	0xa5
- 527 0366 1F       		.uleb128 0x1f
- 528 0367 41030000 		.4byte	.LASF51
- 529 036b 07       		.byte	0x7
- 530 036c 48       		.byte	0x48
- 531 036d C6000000 		.4byte	0xc6
- 532 0371 20       		.uleb128 0x20
- 533 0372 81030000 		.4byte	0x381
- 534 0376 81030000 		.4byte	0x381
- 535 037a 21       		.uleb128 0x21
- 536 037b 25020000 		.4byte	0x225
- 537 037f 04       		.byte	0x4
- 538 0380 00       		.byte	0
- 539 0381 22       		.uleb128 0x22
- 540 0382 A5000000 		.4byte	0xa5
- 541 0386 1F       		.uleb128 0x1f
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 17
+ 485 0320 17       		.uleb128 0x17
+ 486 0321 4D020000 		.4byte	0x24d
+ 487 0325 26000000 		.4byte	.LBB18
+ 488 0329 12000000 		.4byte	.LBE18-.LBB18
+ 489 032d 02       		.byte	0x2
+ 490 032e A401     		.2byte	0x1a4
+ 491 0330 1B       		.uleb128 0x1b
+ 492 0331 59020000 		.4byte	0x259
+ 493 0335 00       		.byte	0
+ 494 0336 00       		.byte	0
+ 495 0337 1C       		.uleb128 0x1c
+ 496 0338 10000000 		.4byte	.LVL1
+ 497 033c 08050000 		.4byte	0x508
+ 498 0340 1D       		.uleb128 0x1d
+ 499 0341 1C000000 		.4byte	.LVL2
+ 500 0345 13050000 		.4byte	0x513
+ 501 0349 1E       		.uleb128 0x1e
+ 502 034a 01       		.uleb128 0x1
+ 503 034b 50       		.byte	0x50
+ 504 034c 01       		.uleb128 0x1
+ 505 034d 30       		.byte	0x30
+ 506 034e 1E       		.uleb128 0x1e
+ 507 034f 01       		.uleb128 0x1
+ 508 0350 51       		.byte	0x51
+ 509 0351 01       		.uleb128 0x1
+ 510 0352 37       		.byte	0x37
+ 511 0353 00       		.byte	0
+ 512 0354 00       		.byte	0
+ 513 0355 05       		.uleb128 0x5
+ 514 0356 04       		.byte	0x4
+ 515 0357 41020000 		.4byte	0x241
+ 516 035b 1F       		.uleb128 0x1f
+ 517 035c 61010000 		.4byte	.LASF50
+ 518 0360 06       		.byte	0x6
+ 519 0361 44       		.byte	0x44
+ 520 0362 A5000000 		.4byte	0xa5
+ 521 0366 1F       		.uleb128 0x1f
+ 522 0367 41030000 		.4byte	.LASF51
+ 523 036b 07       		.byte	0x7
+ 524 036c 48       		.byte	0x48
+ 525 036d C6000000 		.4byte	0xc6
+ 526 0371 20       		.uleb128 0x20
+ 527 0372 81030000 		.4byte	0x381
+ 528 0376 81030000 		.4byte	0x381
+ 529 037a 21       		.uleb128 0x21
+ 530 037b 25020000 		.4byte	0x225
+ 531 037f 04       		.byte	0x4
+ 532 0380 00       		.byte	0
+ 533 0381 22       		.uleb128 0x22
+ 534 0382 A5000000 		.4byte	0xa5
+ 535 0386 1F       		.uleb128 0x1f
+ 536 0387 10010000 		.4byte	.LASF52
+ 537 038b 04       		.byte	0x4
+ 538 038c B2       		.byte	0xb2
+ 539 038d 91030000 		.4byte	0x391
+ 540 0391 22       		.uleb128 0x22
+ 541 0392 71030000 		.4byte	0x371
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 17
 
 
- 542 0387 10010000 		.4byte	.LASF52
- 543 038b 04       		.byte	0x4
- 544 038c B2       		.byte	0xb2
- 545 038d 91030000 		.4byte	0x391
- 546 0391 22       		.uleb128 0x22
- 547 0392 71030000 		.4byte	0x371
- 548 0396 1F       		.uleb128 0x1f
- 549 0397 99040000 		.4byte	.LASF53
- 550 039b 04       		.byte	0x4
- 551 039c B3       		.byte	0xb3
- 552 039d A1030000 		.4byte	0x3a1
- 553 03a1 22       		.uleb128 0x22
- 554 03a2 71030000 		.4byte	0x371
- 555 03a6 20       		.uleb128 0x20
- 556 03a7 A5000000 		.4byte	0xa5
- 557 03ab B6030000 		.4byte	0x3b6
- 558 03af 21       		.uleb128 0x21
- 559 03b0 25020000 		.4byte	0x225
- 560 03b4 04       		.byte	0x4
- 561 03b5 00       		.byte	0
- 562 03b6 1F       		.uleb128 0x1f
- 563 03b7 34030000 		.4byte	.LASF54
- 564 03bb 04       		.byte	0x4
- 565 03bc CA       		.byte	0xca
- 566 03bd A6030000 		.4byte	0x3a6
- 567 03c1 20       		.uleb128 0x20
- 568 03c2 C6000000 		.4byte	0xc6
- 569 03c6 D1030000 		.4byte	0x3d1
- 570 03ca 21       		.uleb128 0x21
- 571 03cb 25020000 		.4byte	0x225
- 572 03cf 04       		.byte	0x4
- 573 03d0 00       		.byte	0
- 574 03d1 1F       		.uleb128 0x1f
- 575 03d2 BE040000 		.4byte	.LASF55
- 576 03d6 04       		.byte	0x4
- 577 03d7 D2       		.byte	0xd2
- 578 03d8 C1030000 		.4byte	0x3c1
- 579 03dc 1F       		.uleb128 0x1f
- 580 03dd 8D040000 		.4byte	.LASF56
- 581 03e1 04       		.byte	0x4
- 582 03e2 DA       		.byte	0xda
- 583 03e3 A6030000 		.4byte	0x3a6
- 584 03e7 1F       		.uleb128 0x1f
- 585 03e8 19040000 		.4byte	.LASF57
- 586 03ec 04       		.byte	0x4
- 587 03ed E2       		.byte	0xe2
- 588 03ee C6000000 		.4byte	0xc6
- 589 03f2 1F       		.uleb128 0x1f
- 590 03f3 60020000 		.4byte	.LASF58
- 591 03f7 04       		.byte	0x4
- 592 03f8 F7       		.byte	0xf7
- 593 03f9 A5000000 		.4byte	0xa5
- 594 03fd 23       		.uleb128 0x23
- 595 03fe 05000000 		.4byte	.LASF59
- 596 0402 04       		.byte	0x4
- 597 0403 3F01     		.2byte	0x13f
- 598 0405 D1000000 		.4byte	0xd1
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 18
+ 542 0396 1F       		.uleb128 0x1f
+ 543 0397 99040000 		.4byte	.LASF53
+ 544 039b 04       		.byte	0x4
+ 545 039c B3       		.byte	0xb3
+ 546 039d A1030000 		.4byte	0x3a1
+ 547 03a1 22       		.uleb128 0x22
+ 548 03a2 71030000 		.4byte	0x371
+ 549 03a6 20       		.uleb128 0x20
+ 550 03a7 A5000000 		.4byte	0xa5
+ 551 03ab B6030000 		.4byte	0x3b6
+ 552 03af 21       		.uleb128 0x21
+ 553 03b0 25020000 		.4byte	0x225
+ 554 03b4 04       		.byte	0x4
+ 555 03b5 00       		.byte	0
+ 556 03b6 1F       		.uleb128 0x1f
+ 557 03b7 34030000 		.4byte	.LASF54
+ 558 03bb 04       		.byte	0x4
+ 559 03bc CA       		.byte	0xca
+ 560 03bd A6030000 		.4byte	0x3a6
+ 561 03c1 20       		.uleb128 0x20
+ 562 03c2 C6000000 		.4byte	0xc6
+ 563 03c6 D1030000 		.4byte	0x3d1
+ 564 03ca 21       		.uleb128 0x21
+ 565 03cb 25020000 		.4byte	0x225
+ 566 03cf 04       		.byte	0x4
+ 567 03d0 00       		.byte	0
+ 568 03d1 1F       		.uleb128 0x1f
+ 569 03d2 BE040000 		.4byte	.LASF55
+ 570 03d6 04       		.byte	0x4
+ 571 03d7 D2       		.byte	0xd2
+ 572 03d8 C1030000 		.4byte	0x3c1
+ 573 03dc 1F       		.uleb128 0x1f
+ 574 03dd 8D040000 		.4byte	.LASF56
+ 575 03e1 04       		.byte	0x4
+ 576 03e2 DA       		.byte	0xda
+ 577 03e3 A6030000 		.4byte	0x3a6
+ 578 03e7 1F       		.uleb128 0x1f
+ 579 03e8 19040000 		.4byte	.LASF57
+ 580 03ec 04       		.byte	0x4
+ 581 03ed E2       		.byte	0xe2
+ 582 03ee C6000000 		.4byte	0xc6
+ 583 03f2 1F       		.uleb128 0x1f
+ 584 03f3 60020000 		.4byte	.LASF58
+ 585 03f7 04       		.byte	0x4
+ 586 03f8 F7       		.byte	0xf7
+ 587 03f9 A5000000 		.4byte	0xa5
+ 588 03fd 23       		.uleb128 0x23
+ 589 03fe 05000000 		.4byte	.LASF59
+ 590 0402 04       		.byte	0x4
+ 591 0403 3F01     		.2byte	0x13f
+ 592 0405 D1000000 		.4byte	0xd1
+ 593 0409 23       		.uleb128 0x23
+ 594 040a 37000000 		.4byte	.LASF60
+ 595 040e 04       		.byte	0x4
+ 596 040f 5C01     		.2byte	0x15c
+ 597 0411 A6030000 		.4byte	0x3a6
+ 598 0415 20       		.uleb128 0x20
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 18
 
 
- 599 0409 23       		.uleb128 0x23
- 600 040a 37000000 		.4byte	.LASF60
- 601 040e 04       		.byte	0x4
- 602 040f 5C01     		.2byte	0x15c
- 603 0411 A6030000 		.4byte	0x3a6
- 604 0415 20       		.uleb128 0x20
- 605 0416 BB000000 		.4byte	0xbb
- 606 041a 25040000 		.4byte	0x425
- 607 041e 21       		.uleb128 0x21
- 608 041f 25020000 		.4byte	0x225
- 609 0423 04       		.byte	0x4
- 610 0424 00       		.byte	0
- 611 0425 23       		.uleb128 0x23
- 612 0426 4A000000 		.4byte	.LASF61
- 613 042a 04       		.byte	0x4
- 614 042b 6701     		.2byte	0x167
- 615 042d 15040000 		.4byte	0x415
- 616 0431 20       		.uleb128 0x20
- 617 0432 41040000 		.4byte	0x441
- 618 0436 41040000 		.4byte	0x441
- 619 043a 21       		.uleb128 0x21
- 620 043b 25020000 		.4byte	0x225
- 621 043f 00       		.byte	0
- 622 0440 00       		.byte	0
- 623 0441 22       		.uleb128 0x22
- 624 0442 32010000 		.4byte	0x132
- 625 0446 23       		.uleb128 0x23
- 626 0447 7B020000 		.4byte	.LASF62
- 627 044b 04       		.byte	0x4
- 628 044c CA02     		.2byte	0x2ca
- 629 044e 52040000 		.4byte	0x452
- 630 0452 22       		.uleb128 0x22
- 631 0453 31040000 		.4byte	0x431
- 632 0457 20       		.uleb128 0x20
- 633 0458 67040000 		.4byte	0x467
- 634 045c 67040000 		.4byte	0x467
- 635 0460 21       		.uleb128 0x21
- 636 0461 25020000 		.4byte	0x225
- 637 0465 00       		.byte	0
- 638 0466 00       		.byte	0
- 639 0467 22       		.uleb128 0x22
- 640 0468 CF010000 		.4byte	0x1cf
- 641 046c 23       		.uleb128 0x23
- 642 046d 37010000 		.4byte	.LASF63
- 643 0471 04       		.byte	0x4
- 644 0472 DD02     		.2byte	0x2dd
- 645 0474 78040000 		.4byte	0x478
- 646 0478 22       		.uleb128 0x22
- 647 0479 57040000 		.4byte	0x457
- 648 047d 20       		.uleb128 0x20
- 649 047e 62010000 		.4byte	0x162
- 650 0482 8D040000 		.4byte	0x48d
- 651 0486 21       		.uleb128 0x21
- 652 0487 25020000 		.4byte	0x225
- 653 048b 00       		.byte	0
- 654 048c 00       		.byte	0
- 655 048d 23       		.uleb128 0x23
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 19
+ 599 0416 BB000000 		.4byte	0xbb
+ 600 041a 25040000 		.4byte	0x425
+ 601 041e 21       		.uleb128 0x21
+ 602 041f 25020000 		.4byte	0x225
+ 603 0423 04       		.byte	0x4
+ 604 0424 00       		.byte	0
+ 605 0425 23       		.uleb128 0x23
+ 606 0426 4A000000 		.4byte	.LASF61
+ 607 042a 04       		.byte	0x4
+ 608 042b 6701     		.2byte	0x167
+ 609 042d 15040000 		.4byte	0x415
+ 610 0431 20       		.uleb128 0x20
+ 611 0432 41040000 		.4byte	0x441
+ 612 0436 41040000 		.4byte	0x441
+ 613 043a 21       		.uleb128 0x21
+ 614 043b 25020000 		.4byte	0x225
+ 615 043f 00       		.byte	0
+ 616 0440 00       		.byte	0
+ 617 0441 22       		.uleb128 0x22
+ 618 0442 32010000 		.4byte	0x132
+ 619 0446 23       		.uleb128 0x23
+ 620 0447 7B020000 		.4byte	.LASF62
+ 621 044b 04       		.byte	0x4
+ 622 044c CA02     		.2byte	0x2ca
+ 623 044e 52040000 		.4byte	0x452
+ 624 0452 22       		.uleb128 0x22
+ 625 0453 31040000 		.4byte	0x431
+ 626 0457 20       		.uleb128 0x20
+ 627 0458 67040000 		.4byte	0x467
+ 628 045c 67040000 		.4byte	0x467
+ 629 0460 21       		.uleb128 0x21
+ 630 0461 25020000 		.4byte	0x225
+ 631 0465 00       		.byte	0
+ 632 0466 00       		.byte	0
+ 633 0467 22       		.uleb128 0x22
+ 634 0468 CF010000 		.4byte	0x1cf
+ 635 046c 23       		.uleb128 0x23
+ 636 046d 37010000 		.4byte	.LASF63
+ 637 0471 04       		.byte	0x4
+ 638 0472 DD02     		.2byte	0x2dd
+ 639 0474 78040000 		.4byte	0x478
+ 640 0478 22       		.uleb128 0x22
+ 641 0479 57040000 		.4byte	0x457
+ 642 047d 20       		.uleb128 0x20
+ 643 047e 62010000 		.4byte	0x162
+ 644 0482 8D040000 		.4byte	0x48d
+ 645 0486 21       		.uleb128 0x21
+ 646 0487 25020000 		.4byte	0x225
+ 647 048b 00       		.byte	0
+ 648 048c 00       		.byte	0
+ 649 048d 23       		.uleb128 0x23
+ 650 048e D2030000 		.4byte	.LASF64
+ 651 0492 04       		.byte	0x4
+ 652 0493 FB02     		.2byte	0x2fb
+ 653 0495 7D040000 		.4byte	0x47d
+ 654 0499 20       		.uleb128 0x20
+ 655 049a 19020000 		.4byte	0x219
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 19
 
 
- 656 048e D2030000 		.4byte	.LASF64
- 657 0492 04       		.byte	0x4
- 658 0493 FB02     		.2byte	0x2fb
- 659 0495 7D040000 		.4byte	0x47d
- 660 0499 20       		.uleb128 0x20
- 661 049a 19020000 		.4byte	0x219
- 662 049e A9040000 		.4byte	0x4a9
- 663 04a2 21       		.uleb128 0x21
- 664 04a3 25020000 		.4byte	0x225
- 665 04a7 00       		.byte	0
- 666 04a8 00       		.byte	0
- 667 04a9 23       		.uleb128 0x23
- 668 04aa AF020000 		.4byte	.LASF65
- 669 04ae 04       		.byte	0x4
- 670 04af 0403     		.2byte	0x304
- 671 04b1 99040000 		.4byte	0x499
- 672 04b5 1F       		.uleb128 0x1f
- 673 04b6 60050000 		.4byte	.LASF66
- 674 04ba 08       		.byte	0x8
- 675 04bb 40       		.byte	0x40
- 676 04bc A5000000 		.4byte	0xa5
- 677 04c0 1F       		.uleb128 0x1f
- 678 04c1 9C010000 		.4byte	.LASF67
- 679 04c5 08       		.byte	0x8
- 680 04c6 47       		.byte	0x47
- 681 04c7 B0000000 		.4byte	0xb0
- 682 04cb 1F       		.uleb128 0x1f
- 683 04cc E1030000 		.4byte	.LASF68
- 684 04d0 08       		.byte	0x8
- 685 04d1 4A       		.byte	0x4a
- 686 04d2 A5000000 		.4byte	0xa5
- 687 04d6 20       		.uleb128 0x20
- 688 04d7 E6040000 		.4byte	0x4e6
- 689 04db E6040000 		.4byte	0x4e6
- 690 04df 21       		.uleb128 0x21
- 691 04e0 25020000 		.4byte	0x225
- 692 04e4 FF       		.byte	0xff
- 693 04e5 00       		.byte	0
- 694 04e6 22       		.uleb128 0x22
- 695 04e7 72000000 		.4byte	0x72
- 696 04eb 23       		.uleb128 0x23
- 697 04ec 7D050000 		.4byte	.LASF69
- 698 04f0 09       		.byte	0x9
- 699 04f1 AB01     		.2byte	0x1ab
- 700 04f3 F7040000 		.4byte	0x4f7
- 701 04f7 22       		.uleb128 0x22
- 702 04f8 D6040000 		.4byte	0x4d6
- 703 04fc 23       		.uleb128 0x23
- 704 04fd 49020000 		.4byte	.LASF70
- 705 0501 09       		.byte	0x9
- 706 0502 1602     		.2byte	0x216
- 707 0504 A5000000 		.4byte	0xa5
- 708 0508 24       		.uleb128 0x24
- 709 0509 73040000 		.4byte	.LASF71
- 710 050d 73040000 		.4byte	.LASF71
- 711 0511 01       		.byte	0x1
- 712 0512 49       		.byte	0x49
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 20
+ 656 049e A9040000 		.4byte	0x4a9
+ 657 04a2 21       		.uleb128 0x21
+ 658 04a3 25020000 		.4byte	0x225
+ 659 04a7 00       		.byte	0
+ 660 04a8 00       		.byte	0
+ 661 04a9 23       		.uleb128 0x23
+ 662 04aa AF020000 		.4byte	.LASF65
+ 663 04ae 04       		.byte	0x4
+ 664 04af 0403     		.2byte	0x304
+ 665 04b1 99040000 		.4byte	0x499
+ 666 04b5 1F       		.uleb128 0x1f
+ 667 04b6 60050000 		.4byte	.LASF66
+ 668 04ba 08       		.byte	0x8
+ 669 04bb 40       		.byte	0x40
+ 670 04bc A5000000 		.4byte	0xa5
+ 671 04c0 1F       		.uleb128 0x1f
+ 672 04c1 9C010000 		.4byte	.LASF67
+ 673 04c5 08       		.byte	0x8
+ 674 04c6 47       		.byte	0x47
+ 675 04c7 B0000000 		.4byte	0xb0
+ 676 04cb 1F       		.uleb128 0x1f
+ 677 04cc E1030000 		.4byte	.LASF68
+ 678 04d0 08       		.byte	0x8
+ 679 04d1 4A       		.byte	0x4a
+ 680 04d2 A5000000 		.4byte	0xa5
+ 681 04d6 20       		.uleb128 0x20
+ 682 04d7 E6040000 		.4byte	0x4e6
+ 683 04db E6040000 		.4byte	0x4e6
+ 684 04df 21       		.uleb128 0x21
+ 685 04e0 25020000 		.4byte	0x225
+ 686 04e4 FF       		.byte	0xff
+ 687 04e5 00       		.byte	0
+ 688 04e6 22       		.uleb128 0x22
+ 689 04e7 72000000 		.4byte	0x72
+ 690 04eb 23       		.uleb128 0x23
+ 691 04ec 7D050000 		.4byte	.LASF69
+ 692 04f0 09       		.byte	0x9
+ 693 04f1 AB01     		.2byte	0x1ab
+ 694 04f3 F7040000 		.4byte	0x4f7
+ 695 04f7 22       		.uleb128 0x22
+ 696 04f8 D6040000 		.4byte	0x4d6
+ 697 04fc 23       		.uleb128 0x23
+ 698 04fd 49020000 		.4byte	.LASF70
+ 699 0501 09       		.byte	0x9
+ 700 0502 1602     		.2byte	0x216
+ 701 0504 A5000000 		.4byte	0xa5
+ 702 0508 24       		.uleb128 0x24
+ 703 0509 73040000 		.4byte	.LASF71
+ 704 050d 73040000 		.4byte	.LASF71
+ 705 0511 01       		.byte	0x1
+ 706 0512 49       		.byte	0x49
+ 707 0513 24       		.uleb128 0x24
+ 708 0514 50010000 		.4byte	.LASF72
+ 709 0518 50010000 		.4byte	.LASF72
+ 710 051c 0A       		.byte	0xa
+ 711 051d 8B       		.byte	0x8b
+ 712 051e 00       		.byte	0
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 20
 
 
- 713 0513 24       		.uleb128 0x24
- 714 0514 50010000 		.4byte	.LASF72
- 715 0518 50010000 		.4byte	.LASF72
- 716 051c 0A       		.byte	0xa
- 717 051d 8B       		.byte	0x8b
- 718 051e 00       		.byte	0
- 719              		.section	.debug_abbrev,"",%progbits
- 720              	.Ldebug_abbrev0:
- 721 0000 01       		.uleb128 0x1
- 722 0001 11       		.uleb128 0x11
- 723 0002 01       		.byte	0x1
- 724 0003 25       		.uleb128 0x25
- 725 0004 0E       		.uleb128 0xe
- 726 0005 13       		.uleb128 0x13
- 727 0006 0B       		.uleb128 0xb
- 728 0007 03       		.uleb128 0x3
- 729 0008 0E       		.uleb128 0xe
- 730 0009 1B       		.uleb128 0x1b
- 731 000a 0E       		.uleb128 0xe
- 732 000b 55       		.uleb128 0x55
- 733 000c 17       		.uleb128 0x17
- 734 000d 11       		.uleb128 0x11
- 735 000e 01       		.uleb128 0x1
- 736 000f 10       		.uleb128 0x10
- 737 0010 17       		.uleb128 0x17
- 738 0011 00       		.byte	0
- 739 0012 00       		.byte	0
- 740 0013 02       		.uleb128 0x2
- 741 0014 24       		.uleb128 0x24
- 742 0015 00       		.byte	0
- 743 0016 0B       		.uleb128 0xb
- 744 0017 0B       		.uleb128 0xb
- 745 0018 3E       		.uleb128 0x3e
- 746 0019 0B       		.uleb128 0xb
- 747 001a 03       		.uleb128 0x3
- 748 001b 0E       		.uleb128 0xe
- 749 001c 00       		.byte	0
- 750 001d 00       		.byte	0
- 751 001e 03       		.uleb128 0x3
- 752 001f 24       		.uleb128 0x24
- 753 0020 00       		.byte	0
- 754 0021 0B       		.uleb128 0xb
- 755 0022 0B       		.uleb128 0xb
- 756 0023 3E       		.uleb128 0x3e
- 757 0024 0B       		.uleb128 0xb
- 758 0025 03       		.uleb128 0x3
- 759 0026 08       		.uleb128 0x8
- 760 0027 00       		.byte	0
- 761 0028 00       		.byte	0
- 762 0029 04       		.uleb128 0x4
- 763 002a 16       		.uleb128 0x16
- 764 002b 00       		.byte	0
- 765 002c 03       		.uleb128 0x3
- 766 002d 0E       		.uleb128 0xe
- 767 002e 3A       		.uleb128 0x3a
- 768 002f 0B       		.uleb128 0xb
- 769 0030 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 21
+ 713              		.section	.debug_abbrev,"",%progbits
+ 714              	.Ldebug_abbrev0:
+ 715 0000 01       		.uleb128 0x1
+ 716 0001 11       		.uleb128 0x11
+ 717 0002 01       		.byte	0x1
+ 718 0003 25       		.uleb128 0x25
+ 719 0004 0E       		.uleb128 0xe
+ 720 0005 13       		.uleb128 0x13
+ 721 0006 0B       		.uleb128 0xb
+ 722 0007 03       		.uleb128 0x3
+ 723 0008 0E       		.uleb128 0xe
+ 724 0009 1B       		.uleb128 0x1b
+ 725 000a 0E       		.uleb128 0xe
+ 726 000b 55       		.uleb128 0x55
+ 727 000c 17       		.uleb128 0x17
+ 728 000d 11       		.uleb128 0x11
+ 729 000e 01       		.uleb128 0x1
+ 730 000f 10       		.uleb128 0x10
+ 731 0010 17       		.uleb128 0x17
+ 732 0011 00       		.byte	0
+ 733 0012 00       		.byte	0
+ 734 0013 02       		.uleb128 0x2
+ 735 0014 24       		.uleb128 0x24
+ 736 0015 00       		.byte	0
+ 737 0016 0B       		.uleb128 0xb
+ 738 0017 0B       		.uleb128 0xb
+ 739 0018 3E       		.uleb128 0x3e
+ 740 0019 0B       		.uleb128 0xb
+ 741 001a 03       		.uleb128 0x3
+ 742 001b 0E       		.uleb128 0xe
+ 743 001c 00       		.byte	0
+ 744 001d 00       		.byte	0
+ 745 001e 03       		.uleb128 0x3
+ 746 001f 24       		.uleb128 0x24
+ 747 0020 00       		.byte	0
+ 748 0021 0B       		.uleb128 0xb
+ 749 0022 0B       		.uleb128 0xb
+ 750 0023 3E       		.uleb128 0x3e
+ 751 0024 0B       		.uleb128 0xb
+ 752 0025 03       		.uleb128 0x3
+ 753 0026 08       		.uleb128 0x8
+ 754 0027 00       		.byte	0
+ 755 0028 00       		.byte	0
+ 756 0029 04       		.uleb128 0x4
+ 757 002a 16       		.uleb128 0x16
+ 758 002b 00       		.byte	0
+ 759 002c 03       		.uleb128 0x3
+ 760 002d 0E       		.uleb128 0xe
+ 761 002e 3A       		.uleb128 0x3a
+ 762 002f 0B       		.uleb128 0xb
+ 763 0030 3B       		.uleb128 0x3b
+ 764 0031 0B       		.uleb128 0xb
+ 765 0032 49       		.uleb128 0x49
+ 766 0033 13       		.uleb128 0x13
+ 767 0034 00       		.byte	0
+ 768 0035 00       		.byte	0
+ 769 0036 05       		.uleb128 0x5
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 21
 
 
- 770 0031 0B       		.uleb128 0xb
- 771 0032 49       		.uleb128 0x49
- 772 0033 13       		.uleb128 0x13
- 773 0034 00       		.byte	0
- 774 0035 00       		.byte	0
- 775 0036 05       		.uleb128 0x5
- 776 0037 0F       		.uleb128 0xf
- 777 0038 00       		.byte	0
- 778 0039 0B       		.uleb128 0xb
- 779 003a 0B       		.uleb128 0xb
- 780 003b 49       		.uleb128 0x49
- 781 003c 13       		.uleb128 0x13
- 782 003d 00       		.byte	0
- 783 003e 00       		.byte	0
- 784 003f 06       		.uleb128 0x6
- 785 0040 15       		.uleb128 0x15
- 786 0041 00       		.byte	0
- 787 0042 27       		.uleb128 0x27
- 788 0043 19       		.uleb128 0x19
- 789 0044 00       		.byte	0
- 790 0045 00       		.byte	0
- 791 0046 07       		.uleb128 0x7
- 792 0047 16       		.uleb128 0x16
- 793 0048 00       		.byte	0
- 794 0049 03       		.uleb128 0x3
- 795 004a 0E       		.uleb128 0xe
- 796 004b 3A       		.uleb128 0x3a
- 797 004c 0B       		.uleb128 0xb
- 798 004d 3B       		.uleb128 0x3b
- 799 004e 05       		.uleb128 0x5
- 800 004f 49       		.uleb128 0x49
- 801 0050 13       		.uleb128 0x13
- 802 0051 00       		.byte	0
- 803 0052 00       		.byte	0
- 804 0053 08       		.uleb128 0x8
- 805 0054 13       		.uleb128 0x13
- 806 0055 01       		.byte	0x1
- 807 0056 0B       		.uleb128 0xb
- 808 0057 0B       		.uleb128 0xb
- 809 0058 3A       		.uleb128 0x3a
- 810 0059 0B       		.uleb128 0xb
- 811 005a 3B       		.uleb128 0x3b
- 812 005b 05       		.uleb128 0x5
- 813 005c 01       		.uleb128 0x1
- 814 005d 13       		.uleb128 0x13
- 815 005e 00       		.byte	0
- 816 005f 00       		.byte	0
- 817 0060 09       		.uleb128 0x9
- 818 0061 0D       		.uleb128 0xd
- 819 0062 00       		.byte	0
- 820 0063 03       		.uleb128 0x3
- 821 0064 0E       		.uleb128 0xe
- 822 0065 3A       		.uleb128 0x3a
- 823 0066 0B       		.uleb128 0xb
- 824 0067 3B       		.uleb128 0x3b
- 825 0068 05       		.uleb128 0x5
- 826 0069 49       		.uleb128 0x49
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 22
+ 770 0037 0F       		.uleb128 0xf
+ 771 0038 00       		.byte	0
+ 772 0039 0B       		.uleb128 0xb
+ 773 003a 0B       		.uleb128 0xb
+ 774 003b 49       		.uleb128 0x49
+ 775 003c 13       		.uleb128 0x13
+ 776 003d 00       		.byte	0
+ 777 003e 00       		.byte	0
+ 778 003f 06       		.uleb128 0x6
+ 779 0040 15       		.uleb128 0x15
+ 780 0041 00       		.byte	0
+ 781 0042 27       		.uleb128 0x27
+ 782 0043 19       		.uleb128 0x19
+ 783 0044 00       		.byte	0
+ 784 0045 00       		.byte	0
+ 785 0046 07       		.uleb128 0x7
+ 786 0047 16       		.uleb128 0x16
+ 787 0048 00       		.byte	0
+ 788 0049 03       		.uleb128 0x3
+ 789 004a 0E       		.uleb128 0xe
+ 790 004b 3A       		.uleb128 0x3a
+ 791 004c 0B       		.uleb128 0xb
+ 792 004d 3B       		.uleb128 0x3b
+ 793 004e 05       		.uleb128 0x5
+ 794 004f 49       		.uleb128 0x49
+ 795 0050 13       		.uleb128 0x13
+ 796 0051 00       		.byte	0
+ 797 0052 00       		.byte	0
+ 798 0053 08       		.uleb128 0x8
+ 799 0054 13       		.uleb128 0x13
+ 800 0055 01       		.byte	0x1
+ 801 0056 0B       		.uleb128 0xb
+ 802 0057 0B       		.uleb128 0xb
+ 803 0058 3A       		.uleb128 0x3a
+ 804 0059 0B       		.uleb128 0xb
+ 805 005a 3B       		.uleb128 0x3b
+ 806 005b 05       		.uleb128 0x5
+ 807 005c 01       		.uleb128 0x1
+ 808 005d 13       		.uleb128 0x13
+ 809 005e 00       		.byte	0
+ 810 005f 00       		.byte	0
+ 811 0060 09       		.uleb128 0x9
+ 812 0061 0D       		.uleb128 0xd
+ 813 0062 00       		.byte	0
+ 814 0063 03       		.uleb128 0x3
+ 815 0064 0E       		.uleb128 0xe
+ 816 0065 3A       		.uleb128 0x3a
+ 817 0066 0B       		.uleb128 0xb
+ 818 0067 3B       		.uleb128 0x3b
+ 819 0068 05       		.uleb128 0x5
+ 820 0069 49       		.uleb128 0x49
+ 821 006a 13       		.uleb128 0x13
+ 822 006b 38       		.uleb128 0x38
+ 823 006c 0B       		.uleb128 0xb
+ 824 006d 00       		.byte	0
+ 825 006e 00       		.byte	0
+ 826 006f 0A       		.uleb128 0xa
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 22
 
 
- 827 006a 13       		.uleb128 0x13
- 828 006b 38       		.uleb128 0x38
- 829 006c 0B       		.uleb128 0xb
- 830 006d 00       		.byte	0
- 831 006e 00       		.byte	0
- 832 006f 0A       		.uleb128 0xa
- 833 0070 04       		.uleb128 0x4
- 834 0071 01       		.byte	0x1
- 835 0072 0B       		.uleb128 0xb
- 836 0073 0B       		.uleb128 0xb
- 837 0074 49       		.uleb128 0x49
- 838 0075 13       		.uleb128 0x13
- 839 0076 3A       		.uleb128 0x3a
- 840 0077 0B       		.uleb128 0xb
- 841 0078 3B       		.uleb128 0x3b
- 842 0079 05       		.uleb128 0x5
- 843 007a 01       		.uleb128 0x1
- 844 007b 13       		.uleb128 0x13
- 845 007c 00       		.byte	0
- 846 007d 00       		.byte	0
- 847 007e 0B       		.uleb128 0xb
- 848 007f 28       		.uleb128 0x28
- 849 0080 00       		.byte	0
- 850 0081 03       		.uleb128 0x3
- 851 0082 0E       		.uleb128 0xe
- 852 0083 1C       		.uleb128 0x1c
- 853 0084 0B       		.uleb128 0xb
- 854 0085 00       		.byte	0
- 855 0086 00       		.byte	0
- 856 0087 0C       		.uleb128 0xc
- 857 0088 0D       		.uleb128 0xd
- 858 0089 00       		.byte	0
- 859 008a 03       		.uleb128 0x3
- 860 008b 08       		.uleb128 0x8
- 861 008c 3A       		.uleb128 0x3a
- 862 008d 0B       		.uleb128 0xb
- 863 008e 3B       		.uleb128 0x3b
- 864 008f 05       		.uleb128 0x5
- 865 0090 49       		.uleb128 0x49
- 866 0091 13       		.uleb128 0x13
- 867 0092 38       		.uleb128 0x38
- 868 0093 0B       		.uleb128 0xb
- 869 0094 00       		.byte	0
- 870 0095 00       		.byte	0
- 871 0096 0D       		.uleb128 0xd
- 872 0097 2E       		.uleb128 0x2e
- 873 0098 01       		.byte	0x1
- 874 0099 03       		.uleb128 0x3
- 875 009a 0E       		.uleb128 0xe
- 876 009b 3A       		.uleb128 0x3a
- 877 009c 0B       		.uleb128 0xb
- 878 009d 3B       		.uleb128 0x3b
- 879 009e 0B       		.uleb128 0xb
- 880 009f 27       		.uleb128 0x27
- 881 00a0 19       		.uleb128 0x19
- 882 00a1 20       		.uleb128 0x20
- 883 00a2 0B       		.uleb128 0xb
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 23
+ 827 0070 04       		.uleb128 0x4
+ 828 0071 01       		.byte	0x1
+ 829 0072 0B       		.uleb128 0xb
+ 830 0073 0B       		.uleb128 0xb
+ 831 0074 49       		.uleb128 0x49
+ 832 0075 13       		.uleb128 0x13
+ 833 0076 3A       		.uleb128 0x3a
+ 834 0077 0B       		.uleb128 0xb
+ 835 0078 3B       		.uleb128 0x3b
+ 836 0079 05       		.uleb128 0x5
+ 837 007a 01       		.uleb128 0x1
+ 838 007b 13       		.uleb128 0x13
+ 839 007c 00       		.byte	0
+ 840 007d 00       		.byte	0
+ 841 007e 0B       		.uleb128 0xb
+ 842 007f 28       		.uleb128 0x28
+ 843 0080 00       		.byte	0
+ 844 0081 03       		.uleb128 0x3
+ 845 0082 0E       		.uleb128 0xe
+ 846 0083 1C       		.uleb128 0x1c
+ 847 0084 0B       		.uleb128 0xb
+ 848 0085 00       		.byte	0
+ 849 0086 00       		.byte	0
+ 850 0087 0C       		.uleb128 0xc
+ 851 0088 0D       		.uleb128 0xd
+ 852 0089 00       		.byte	0
+ 853 008a 03       		.uleb128 0x3
+ 854 008b 08       		.uleb128 0x8
+ 855 008c 3A       		.uleb128 0x3a
+ 856 008d 0B       		.uleb128 0xb
+ 857 008e 3B       		.uleb128 0x3b
+ 858 008f 05       		.uleb128 0x5
+ 859 0090 49       		.uleb128 0x49
+ 860 0091 13       		.uleb128 0x13
+ 861 0092 38       		.uleb128 0x38
+ 862 0093 0B       		.uleb128 0xb
+ 863 0094 00       		.byte	0
+ 864 0095 00       		.byte	0
+ 865 0096 0D       		.uleb128 0xd
+ 866 0097 2E       		.uleb128 0x2e
+ 867 0098 01       		.byte	0x1
+ 868 0099 03       		.uleb128 0x3
+ 869 009a 0E       		.uleb128 0xe
+ 870 009b 3A       		.uleb128 0x3a
+ 871 009c 0B       		.uleb128 0xb
+ 872 009d 3B       		.uleb128 0x3b
+ 873 009e 0B       		.uleb128 0xb
+ 874 009f 27       		.uleb128 0x27
+ 875 00a0 19       		.uleb128 0x19
+ 876 00a1 20       		.uleb128 0x20
+ 877 00a2 0B       		.uleb128 0xb
+ 878 00a3 01       		.uleb128 0x1
+ 879 00a4 13       		.uleb128 0x13
+ 880 00a5 00       		.byte	0
+ 881 00a6 00       		.byte	0
+ 882 00a7 0E       		.uleb128 0xe
+ 883 00a8 05       		.uleb128 0x5
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 23
 
 
- 884 00a3 01       		.uleb128 0x1
- 885 00a4 13       		.uleb128 0x13
- 886 00a5 00       		.byte	0
- 887 00a6 00       		.byte	0
- 888 00a7 0E       		.uleb128 0xe
- 889 00a8 05       		.uleb128 0x5
- 890 00a9 00       		.byte	0
- 891 00aa 03       		.uleb128 0x3
- 892 00ab 08       		.uleb128 0x8
- 893 00ac 3A       		.uleb128 0x3a
- 894 00ad 0B       		.uleb128 0xb
- 895 00ae 3B       		.uleb128 0x3b
- 896 00af 0B       		.uleb128 0xb
- 897 00b0 49       		.uleb128 0x49
- 898 00b1 13       		.uleb128 0x13
- 899 00b2 00       		.byte	0
- 900 00b3 00       		.byte	0
- 901 00b4 0F       		.uleb128 0xf
- 902 00b5 2E       		.uleb128 0x2e
- 903 00b6 01       		.byte	0x1
- 904 00b7 03       		.uleb128 0x3
- 905 00b8 0E       		.uleb128 0xe
- 906 00b9 3A       		.uleb128 0x3a
- 907 00ba 0B       		.uleb128 0xb
- 908 00bb 3B       		.uleb128 0x3b
- 909 00bc 0B       		.uleb128 0xb
- 910 00bd 27       		.uleb128 0x27
- 911 00be 19       		.uleb128 0x19
- 912 00bf 49       		.uleb128 0x49
- 913 00c0 13       		.uleb128 0x13
- 914 00c1 20       		.uleb128 0x20
- 915 00c2 0B       		.uleb128 0xb
- 916 00c3 01       		.uleb128 0x1
- 917 00c4 13       		.uleb128 0x13
- 918 00c5 00       		.byte	0
- 919 00c6 00       		.byte	0
- 920 00c7 10       		.uleb128 0x10
- 921 00c8 34       		.uleb128 0x34
- 922 00c9 00       		.byte	0
- 923 00ca 03       		.uleb128 0x3
- 924 00cb 0E       		.uleb128 0xe
- 925 00cc 3A       		.uleb128 0x3a
- 926 00cd 0B       		.uleb128 0xb
- 927 00ce 3B       		.uleb128 0x3b
- 928 00cf 0B       		.uleb128 0xb
- 929 00d0 49       		.uleb128 0x49
- 930 00d1 13       		.uleb128 0x13
- 931 00d2 00       		.byte	0
- 932 00d3 00       		.byte	0
- 933 00d4 11       		.uleb128 0x11
- 934 00d5 2E       		.uleb128 0x2e
- 935 00d6 01       		.byte	0x1
- 936 00d7 03       		.uleb128 0x3
- 937 00d8 0E       		.uleb128 0xe
- 938 00d9 3A       		.uleb128 0x3a
- 939 00da 0B       		.uleb128 0xb
- 940 00db 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 24
+ 884 00a9 00       		.byte	0
+ 885 00aa 03       		.uleb128 0x3
+ 886 00ab 08       		.uleb128 0x8
+ 887 00ac 3A       		.uleb128 0x3a
+ 888 00ad 0B       		.uleb128 0xb
+ 889 00ae 3B       		.uleb128 0x3b
+ 890 00af 0B       		.uleb128 0xb
+ 891 00b0 49       		.uleb128 0x49
+ 892 00b1 13       		.uleb128 0x13
+ 893 00b2 00       		.byte	0
+ 894 00b3 00       		.byte	0
+ 895 00b4 0F       		.uleb128 0xf
+ 896 00b5 2E       		.uleb128 0x2e
+ 897 00b6 01       		.byte	0x1
+ 898 00b7 03       		.uleb128 0x3
+ 899 00b8 0E       		.uleb128 0xe
+ 900 00b9 3A       		.uleb128 0x3a
+ 901 00ba 0B       		.uleb128 0xb
+ 902 00bb 3B       		.uleb128 0x3b
+ 903 00bc 0B       		.uleb128 0xb
+ 904 00bd 27       		.uleb128 0x27
+ 905 00be 19       		.uleb128 0x19
+ 906 00bf 49       		.uleb128 0x49
+ 907 00c0 13       		.uleb128 0x13
+ 908 00c1 20       		.uleb128 0x20
+ 909 00c2 0B       		.uleb128 0xb
+ 910 00c3 01       		.uleb128 0x1
+ 911 00c4 13       		.uleb128 0x13
+ 912 00c5 00       		.byte	0
+ 913 00c6 00       		.byte	0
+ 914 00c7 10       		.uleb128 0x10
+ 915 00c8 34       		.uleb128 0x34
+ 916 00c9 00       		.byte	0
+ 917 00ca 03       		.uleb128 0x3
+ 918 00cb 0E       		.uleb128 0xe
+ 919 00cc 3A       		.uleb128 0x3a
+ 920 00cd 0B       		.uleb128 0xb
+ 921 00ce 3B       		.uleb128 0x3b
+ 922 00cf 0B       		.uleb128 0xb
+ 923 00d0 49       		.uleb128 0x49
+ 924 00d1 13       		.uleb128 0x13
+ 925 00d2 00       		.byte	0
+ 926 00d3 00       		.byte	0
+ 927 00d4 11       		.uleb128 0x11
+ 928 00d5 2E       		.uleb128 0x2e
+ 929 00d6 01       		.byte	0x1
+ 930 00d7 03       		.uleb128 0x3
+ 931 00d8 0E       		.uleb128 0xe
+ 932 00d9 3A       		.uleb128 0x3a
+ 933 00da 0B       		.uleb128 0xb
+ 934 00db 3B       		.uleb128 0x3b
+ 935 00dc 05       		.uleb128 0x5
+ 936 00dd 27       		.uleb128 0x27
+ 937 00de 19       		.uleb128 0x19
+ 938 00df 20       		.uleb128 0x20
+ 939 00e0 0B       		.uleb128 0xb
+ 940 00e1 01       		.uleb128 0x1
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 24
 
 
- 941 00dc 05       		.uleb128 0x5
- 942 00dd 27       		.uleb128 0x27
- 943 00de 19       		.uleb128 0x19
- 944 00df 20       		.uleb128 0x20
- 945 00e0 0B       		.uleb128 0xb
- 946 00e1 01       		.uleb128 0x1
- 947 00e2 13       		.uleb128 0x13
- 948 00e3 00       		.byte	0
- 949 00e4 00       		.byte	0
- 950 00e5 12       		.uleb128 0x12
- 951 00e6 05       		.uleb128 0x5
- 952 00e7 00       		.byte	0
- 953 00e8 03       		.uleb128 0x3
- 954 00e9 08       		.uleb128 0x8
- 955 00ea 3A       		.uleb128 0x3a
- 956 00eb 0B       		.uleb128 0xb
- 957 00ec 3B       		.uleb128 0x3b
- 958 00ed 05       		.uleb128 0x5
- 959 00ee 49       		.uleb128 0x49
- 960 00ef 13       		.uleb128 0x13
- 961 00f0 00       		.byte	0
- 962 00f1 00       		.byte	0
- 963 00f2 13       		.uleb128 0x13
- 964 00f3 2E       		.uleb128 0x2e
- 965 00f4 00       		.byte	0
- 966 00f5 03       		.uleb128 0x3
- 967 00f6 0E       		.uleb128 0xe
- 968 00f7 3A       		.uleb128 0x3a
- 969 00f8 0B       		.uleb128 0xb
- 970 00f9 3B       		.uleb128 0x3b
- 971 00fa 05       		.uleb128 0x5
- 972 00fb 27       		.uleb128 0x27
- 973 00fc 19       		.uleb128 0x19
- 974 00fd 49       		.uleb128 0x49
- 975 00fe 13       		.uleb128 0x13
- 976 00ff 20       		.uleb128 0x20
- 977 0100 0B       		.uleb128 0xb
- 978 0101 00       		.byte	0
- 979 0102 00       		.byte	0
- 980 0103 14       		.uleb128 0x14
- 981 0104 2E       		.uleb128 0x2e
- 982 0105 01       		.byte	0x1
- 983 0106 3F       		.uleb128 0x3f
- 984 0107 19       		.uleb128 0x19
- 985 0108 03       		.uleb128 0x3
- 986 0109 0E       		.uleb128 0xe
- 987 010a 3A       		.uleb128 0x3a
- 988 010b 0B       		.uleb128 0xb
- 989 010c 3B       		.uleb128 0x3b
- 990 010d 0B       		.uleb128 0xb
- 991 010e 27       		.uleb128 0x27
- 992 010f 19       		.uleb128 0x19
- 993 0110 11       		.uleb128 0x11
- 994 0111 01       		.uleb128 0x1
- 995 0112 12       		.uleb128 0x12
- 996 0113 06       		.uleb128 0x6
- 997 0114 40       		.uleb128 0x40
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 25
+ 941 00e2 13       		.uleb128 0x13
+ 942 00e3 00       		.byte	0
+ 943 00e4 00       		.byte	0
+ 944 00e5 12       		.uleb128 0x12
+ 945 00e6 05       		.uleb128 0x5
+ 946 00e7 00       		.byte	0
+ 947 00e8 03       		.uleb128 0x3
+ 948 00e9 08       		.uleb128 0x8
+ 949 00ea 3A       		.uleb128 0x3a
+ 950 00eb 0B       		.uleb128 0xb
+ 951 00ec 3B       		.uleb128 0x3b
+ 952 00ed 05       		.uleb128 0x5
+ 953 00ee 49       		.uleb128 0x49
+ 954 00ef 13       		.uleb128 0x13
+ 955 00f0 00       		.byte	0
+ 956 00f1 00       		.byte	0
+ 957 00f2 13       		.uleb128 0x13
+ 958 00f3 2E       		.uleb128 0x2e
+ 959 00f4 00       		.byte	0
+ 960 00f5 03       		.uleb128 0x3
+ 961 00f6 0E       		.uleb128 0xe
+ 962 00f7 3A       		.uleb128 0x3a
+ 963 00f8 0B       		.uleb128 0xb
+ 964 00f9 3B       		.uleb128 0x3b
+ 965 00fa 05       		.uleb128 0x5
+ 966 00fb 27       		.uleb128 0x27
+ 967 00fc 19       		.uleb128 0x19
+ 968 00fd 49       		.uleb128 0x49
+ 969 00fe 13       		.uleb128 0x13
+ 970 00ff 20       		.uleb128 0x20
+ 971 0100 0B       		.uleb128 0xb
+ 972 0101 00       		.byte	0
+ 973 0102 00       		.byte	0
+ 974 0103 14       		.uleb128 0x14
+ 975 0104 2E       		.uleb128 0x2e
+ 976 0105 01       		.byte	0x1
+ 977 0106 3F       		.uleb128 0x3f
+ 978 0107 19       		.uleb128 0x19
+ 979 0108 03       		.uleb128 0x3
+ 980 0109 0E       		.uleb128 0xe
+ 981 010a 3A       		.uleb128 0x3a
+ 982 010b 0B       		.uleb128 0xb
+ 983 010c 3B       		.uleb128 0x3b
+ 984 010d 0B       		.uleb128 0xb
+ 985 010e 27       		.uleb128 0x27
+ 986 010f 19       		.uleb128 0x19
+ 987 0110 11       		.uleb128 0x11
+ 988 0111 01       		.uleb128 0x1
+ 989 0112 12       		.uleb128 0x12
+ 990 0113 06       		.uleb128 0x6
+ 991 0114 40       		.uleb128 0x40
+ 992 0115 18       		.uleb128 0x18
+ 993 0116 9742     		.uleb128 0x2117
+ 994 0118 19       		.uleb128 0x19
+ 995 0119 01       		.uleb128 0x1
+ 996 011a 13       		.uleb128 0x13
+ 997 011b 00       		.byte	0
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 25
 
 
- 998 0115 18       		.uleb128 0x18
- 999 0116 9742     		.uleb128 0x2117
- 1000 0118 19       		.uleb128 0x19
- 1001 0119 01       		.uleb128 0x1
- 1002 011a 13       		.uleb128 0x13
- 1003 011b 00       		.byte	0
- 1004 011c 00       		.byte	0
- 1005 011d 15       		.uleb128 0x15
- 1006 011e 34       		.uleb128 0x34
- 1007 011f 00       		.byte	0
- 1008 0120 03       		.uleb128 0x3
- 1009 0121 0E       		.uleb128 0xe
- 1010 0122 3A       		.uleb128 0x3a
- 1011 0123 0B       		.uleb128 0xb
- 1012 0124 3B       		.uleb128 0x3b
- 1013 0125 0B       		.uleb128 0xb
- 1014 0126 49       		.uleb128 0x49
- 1015 0127 13       		.uleb128 0x13
- 1016 0128 02       		.uleb128 0x2
- 1017 0129 17       		.uleb128 0x17
- 1018 012a 00       		.byte	0
- 1019 012b 00       		.byte	0
- 1020 012c 16       		.uleb128 0x16
- 1021 012d 1D       		.uleb128 0x1d
- 1022 012e 01       		.byte	0x1
- 1023 012f 31       		.uleb128 0x31
- 1024 0130 13       		.uleb128 0x13
- 1025 0131 11       		.uleb128 0x11
- 1026 0132 01       		.uleb128 0x1
- 1027 0133 12       		.uleb128 0x12
- 1028 0134 06       		.uleb128 0x6
- 1029 0135 58       		.uleb128 0x58
- 1030 0136 0B       		.uleb128 0xb
- 1031 0137 59       		.uleb128 0x59
- 1032 0138 0B       		.uleb128 0xb
- 1033 0139 01       		.uleb128 0x1
- 1034 013a 13       		.uleb128 0x13
- 1035 013b 00       		.byte	0
- 1036 013c 00       		.byte	0
- 1037 013d 17       		.uleb128 0x17
- 1038 013e 1D       		.uleb128 0x1d
- 1039 013f 01       		.byte	0x1
- 1040 0140 31       		.uleb128 0x31
- 1041 0141 13       		.uleb128 0x13
- 1042 0142 11       		.uleb128 0x11
- 1043 0143 01       		.uleb128 0x1
- 1044 0144 12       		.uleb128 0x12
- 1045 0145 06       		.uleb128 0x6
- 1046 0146 58       		.uleb128 0x58
- 1047 0147 0B       		.uleb128 0xb
- 1048 0148 59       		.uleb128 0x59
- 1049 0149 05       		.uleb128 0x5
- 1050 014a 00       		.byte	0
- 1051 014b 00       		.byte	0
- 1052 014c 18       		.uleb128 0x18
- 1053 014d 0B       		.uleb128 0xb
- 1054 014e 01       		.byte	0x1
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 26
+ 998 011c 00       		.byte	0
+ 999 011d 15       		.uleb128 0x15
+ 1000 011e 34       		.uleb128 0x34
+ 1001 011f 00       		.byte	0
+ 1002 0120 03       		.uleb128 0x3
+ 1003 0121 0E       		.uleb128 0xe
+ 1004 0122 3A       		.uleb128 0x3a
+ 1005 0123 0B       		.uleb128 0xb
+ 1006 0124 3B       		.uleb128 0x3b
+ 1007 0125 0B       		.uleb128 0xb
+ 1008 0126 49       		.uleb128 0x49
+ 1009 0127 13       		.uleb128 0x13
+ 1010 0128 02       		.uleb128 0x2
+ 1011 0129 17       		.uleb128 0x17
+ 1012 012a 00       		.byte	0
+ 1013 012b 00       		.byte	0
+ 1014 012c 16       		.uleb128 0x16
+ 1015 012d 1D       		.uleb128 0x1d
+ 1016 012e 01       		.byte	0x1
+ 1017 012f 31       		.uleb128 0x31
+ 1018 0130 13       		.uleb128 0x13
+ 1019 0131 11       		.uleb128 0x11
+ 1020 0132 01       		.uleb128 0x1
+ 1021 0133 12       		.uleb128 0x12
+ 1022 0134 06       		.uleb128 0x6
+ 1023 0135 58       		.uleb128 0x58
+ 1024 0136 0B       		.uleb128 0xb
+ 1025 0137 59       		.uleb128 0x59
+ 1026 0138 0B       		.uleb128 0xb
+ 1027 0139 01       		.uleb128 0x1
+ 1028 013a 13       		.uleb128 0x13
+ 1029 013b 00       		.byte	0
+ 1030 013c 00       		.byte	0
+ 1031 013d 17       		.uleb128 0x17
+ 1032 013e 1D       		.uleb128 0x1d
+ 1033 013f 01       		.byte	0x1
+ 1034 0140 31       		.uleb128 0x31
+ 1035 0141 13       		.uleb128 0x13
+ 1036 0142 11       		.uleb128 0x11
+ 1037 0143 01       		.uleb128 0x1
+ 1038 0144 12       		.uleb128 0x12
+ 1039 0145 06       		.uleb128 0x6
+ 1040 0146 58       		.uleb128 0x58
+ 1041 0147 0B       		.uleb128 0xb
+ 1042 0148 59       		.uleb128 0x59
+ 1043 0149 05       		.uleb128 0x5
+ 1044 014a 00       		.byte	0
+ 1045 014b 00       		.byte	0
+ 1046 014c 18       		.uleb128 0x18
+ 1047 014d 0B       		.uleb128 0xb
+ 1048 014e 01       		.byte	0x1
+ 1049 014f 11       		.uleb128 0x11
+ 1050 0150 01       		.uleb128 0x1
+ 1051 0151 12       		.uleb128 0x12
+ 1052 0152 06       		.uleb128 0x6
+ 1053 0153 00       		.byte	0
+ 1054 0154 00       		.byte	0
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 26
 
 
- 1055 014f 11       		.uleb128 0x11
- 1056 0150 01       		.uleb128 0x1
- 1057 0151 12       		.uleb128 0x12
- 1058 0152 06       		.uleb128 0x6
- 1059 0153 00       		.byte	0
- 1060 0154 00       		.byte	0
- 1061 0155 19       		.uleb128 0x19
- 1062 0156 34       		.uleb128 0x34
- 1063 0157 00       		.byte	0
- 1064 0158 31       		.uleb128 0x31
- 1065 0159 13       		.uleb128 0x13
- 1066 015a 00       		.byte	0
- 1067 015b 00       		.byte	0
- 1068 015c 1A       		.uleb128 0x1a
- 1069 015d 1D       		.uleb128 0x1d
- 1070 015e 01       		.byte	0x1
- 1071 015f 31       		.uleb128 0x31
- 1072 0160 13       		.uleb128 0x13
- 1073 0161 11       		.uleb128 0x11
- 1074 0162 01       		.uleb128 0x1
- 1075 0163 12       		.uleb128 0x12
- 1076 0164 06       		.uleb128 0x6
- 1077 0165 58       		.uleb128 0x58
- 1078 0166 0B       		.uleb128 0xb
- 1079 0167 59       		.uleb128 0x59
- 1080 0168 05       		.uleb128 0x5
- 1081 0169 01       		.uleb128 0x1
- 1082 016a 13       		.uleb128 0x13
- 1083 016b 00       		.byte	0
- 1084 016c 00       		.byte	0
- 1085 016d 1B       		.uleb128 0x1b
- 1086 016e 05       		.uleb128 0x5
- 1087 016f 00       		.byte	0
- 1088 0170 31       		.uleb128 0x31
- 1089 0171 13       		.uleb128 0x13
- 1090 0172 00       		.byte	0
- 1091 0173 00       		.byte	0
- 1092 0174 1C       		.uleb128 0x1c
- 1093 0175 898201   		.uleb128 0x4109
- 1094 0178 00       		.byte	0
- 1095 0179 11       		.uleb128 0x11
- 1096 017a 01       		.uleb128 0x1
- 1097 017b 31       		.uleb128 0x31
- 1098 017c 13       		.uleb128 0x13
- 1099 017d 00       		.byte	0
- 1100 017e 00       		.byte	0
- 1101 017f 1D       		.uleb128 0x1d
- 1102 0180 898201   		.uleb128 0x4109
- 1103 0183 01       		.byte	0x1
- 1104 0184 11       		.uleb128 0x11
- 1105 0185 01       		.uleb128 0x1
- 1106 0186 31       		.uleb128 0x31
- 1107 0187 13       		.uleb128 0x13
- 1108 0188 00       		.byte	0
- 1109 0189 00       		.byte	0
- 1110 018a 1E       		.uleb128 0x1e
- 1111 018b 8A8201   		.uleb128 0x410a
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 27
+ 1055 0155 19       		.uleb128 0x19
+ 1056 0156 34       		.uleb128 0x34
+ 1057 0157 00       		.byte	0
+ 1058 0158 31       		.uleb128 0x31
+ 1059 0159 13       		.uleb128 0x13
+ 1060 015a 00       		.byte	0
+ 1061 015b 00       		.byte	0
+ 1062 015c 1A       		.uleb128 0x1a
+ 1063 015d 1D       		.uleb128 0x1d
+ 1064 015e 01       		.byte	0x1
+ 1065 015f 31       		.uleb128 0x31
+ 1066 0160 13       		.uleb128 0x13
+ 1067 0161 11       		.uleb128 0x11
+ 1068 0162 01       		.uleb128 0x1
+ 1069 0163 12       		.uleb128 0x12
+ 1070 0164 06       		.uleb128 0x6
+ 1071 0165 58       		.uleb128 0x58
+ 1072 0166 0B       		.uleb128 0xb
+ 1073 0167 59       		.uleb128 0x59
+ 1074 0168 05       		.uleb128 0x5
+ 1075 0169 01       		.uleb128 0x1
+ 1076 016a 13       		.uleb128 0x13
+ 1077 016b 00       		.byte	0
+ 1078 016c 00       		.byte	0
+ 1079 016d 1B       		.uleb128 0x1b
+ 1080 016e 05       		.uleb128 0x5
+ 1081 016f 00       		.byte	0
+ 1082 0170 31       		.uleb128 0x31
+ 1083 0171 13       		.uleb128 0x13
+ 1084 0172 00       		.byte	0
+ 1085 0173 00       		.byte	0
+ 1086 0174 1C       		.uleb128 0x1c
+ 1087 0175 898201   		.uleb128 0x4109
+ 1088 0178 00       		.byte	0
+ 1089 0179 11       		.uleb128 0x11
+ 1090 017a 01       		.uleb128 0x1
+ 1091 017b 31       		.uleb128 0x31
+ 1092 017c 13       		.uleb128 0x13
+ 1093 017d 00       		.byte	0
+ 1094 017e 00       		.byte	0
+ 1095 017f 1D       		.uleb128 0x1d
+ 1096 0180 898201   		.uleb128 0x4109
+ 1097 0183 01       		.byte	0x1
+ 1098 0184 11       		.uleb128 0x11
+ 1099 0185 01       		.uleb128 0x1
+ 1100 0186 31       		.uleb128 0x31
+ 1101 0187 13       		.uleb128 0x13
+ 1102 0188 00       		.byte	0
+ 1103 0189 00       		.byte	0
+ 1104 018a 1E       		.uleb128 0x1e
+ 1105 018b 8A8201   		.uleb128 0x410a
+ 1106 018e 00       		.byte	0
+ 1107 018f 02       		.uleb128 0x2
+ 1108 0190 18       		.uleb128 0x18
+ 1109 0191 9142     		.uleb128 0x2111
+ 1110 0193 18       		.uleb128 0x18
+ 1111 0194 00       		.byte	0
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 27
 
 
- 1112 018e 00       		.byte	0
- 1113 018f 02       		.uleb128 0x2
- 1114 0190 18       		.uleb128 0x18
- 1115 0191 9142     		.uleb128 0x2111
- 1116 0193 18       		.uleb128 0x18
- 1117 0194 00       		.byte	0
- 1118 0195 00       		.byte	0
- 1119 0196 1F       		.uleb128 0x1f
- 1120 0197 34       		.uleb128 0x34
- 1121 0198 00       		.byte	0
- 1122 0199 03       		.uleb128 0x3
- 1123 019a 0E       		.uleb128 0xe
- 1124 019b 3A       		.uleb128 0x3a
- 1125 019c 0B       		.uleb128 0xb
- 1126 019d 3B       		.uleb128 0x3b
- 1127 019e 0B       		.uleb128 0xb
- 1128 019f 49       		.uleb128 0x49
- 1129 01a0 13       		.uleb128 0x13
- 1130 01a1 3F       		.uleb128 0x3f
- 1131 01a2 19       		.uleb128 0x19
- 1132 01a3 3C       		.uleb128 0x3c
- 1133 01a4 19       		.uleb128 0x19
- 1134 01a5 00       		.byte	0
- 1135 01a6 00       		.byte	0
- 1136 01a7 20       		.uleb128 0x20
- 1137 01a8 01       		.uleb128 0x1
- 1138 01a9 01       		.byte	0x1
- 1139 01aa 49       		.uleb128 0x49
- 1140 01ab 13       		.uleb128 0x13
- 1141 01ac 01       		.uleb128 0x1
- 1142 01ad 13       		.uleb128 0x13
- 1143 01ae 00       		.byte	0
- 1144 01af 00       		.byte	0
- 1145 01b0 21       		.uleb128 0x21
- 1146 01b1 21       		.uleb128 0x21
- 1147 01b2 00       		.byte	0
- 1148 01b3 49       		.uleb128 0x49
- 1149 01b4 13       		.uleb128 0x13
- 1150 01b5 2F       		.uleb128 0x2f
- 1151 01b6 0B       		.uleb128 0xb
- 1152 01b7 00       		.byte	0
- 1153 01b8 00       		.byte	0
- 1154 01b9 22       		.uleb128 0x22
- 1155 01ba 26       		.uleb128 0x26
- 1156 01bb 00       		.byte	0
- 1157 01bc 49       		.uleb128 0x49
- 1158 01bd 13       		.uleb128 0x13
- 1159 01be 00       		.byte	0
- 1160 01bf 00       		.byte	0
- 1161 01c0 23       		.uleb128 0x23
- 1162 01c1 34       		.uleb128 0x34
- 1163 01c2 00       		.byte	0
- 1164 01c3 03       		.uleb128 0x3
- 1165 01c4 0E       		.uleb128 0xe
- 1166 01c5 3A       		.uleb128 0x3a
- 1167 01c6 0B       		.uleb128 0xb
- 1168 01c7 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 28
+ 1112 0195 00       		.byte	0
+ 1113 0196 1F       		.uleb128 0x1f
+ 1114 0197 34       		.uleb128 0x34
+ 1115 0198 00       		.byte	0
+ 1116 0199 03       		.uleb128 0x3
+ 1117 019a 0E       		.uleb128 0xe
+ 1118 019b 3A       		.uleb128 0x3a
+ 1119 019c 0B       		.uleb128 0xb
+ 1120 019d 3B       		.uleb128 0x3b
+ 1121 019e 0B       		.uleb128 0xb
+ 1122 019f 49       		.uleb128 0x49
+ 1123 01a0 13       		.uleb128 0x13
+ 1124 01a1 3F       		.uleb128 0x3f
+ 1125 01a2 19       		.uleb128 0x19
+ 1126 01a3 3C       		.uleb128 0x3c
+ 1127 01a4 19       		.uleb128 0x19
+ 1128 01a5 00       		.byte	0
+ 1129 01a6 00       		.byte	0
+ 1130 01a7 20       		.uleb128 0x20
+ 1131 01a8 01       		.uleb128 0x1
+ 1132 01a9 01       		.byte	0x1
+ 1133 01aa 49       		.uleb128 0x49
+ 1134 01ab 13       		.uleb128 0x13
+ 1135 01ac 01       		.uleb128 0x1
+ 1136 01ad 13       		.uleb128 0x13
+ 1137 01ae 00       		.byte	0
+ 1138 01af 00       		.byte	0
+ 1139 01b0 21       		.uleb128 0x21
+ 1140 01b1 21       		.uleb128 0x21
+ 1141 01b2 00       		.byte	0
+ 1142 01b3 49       		.uleb128 0x49
+ 1143 01b4 13       		.uleb128 0x13
+ 1144 01b5 2F       		.uleb128 0x2f
+ 1145 01b6 0B       		.uleb128 0xb
+ 1146 01b7 00       		.byte	0
+ 1147 01b8 00       		.byte	0
+ 1148 01b9 22       		.uleb128 0x22
+ 1149 01ba 26       		.uleb128 0x26
+ 1150 01bb 00       		.byte	0
+ 1151 01bc 49       		.uleb128 0x49
+ 1152 01bd 13       		.uleb128 0x13
+ 1153 01be 00       		.byte	0
+ 1154 01bf 00       		.byte	0
+ 1155 01c0 23       		.uleb128 0x23
+ 1156 01c1 34       		.uleb128 0x34
+ 1157 01c2 00       		.byte	0
+ 1158 01c3 03       		.uleb128 0x3
+ 1159 01c4 0E       		.uleb128 0xe
+ 1160 01c5 3A       		.uleb128 0x3a
+ 1161 01c6 0B       		.uleb128 0xb
+ 1162 01c7 3B       		.uleb128 0x3b
+ 1163 01c8 05       		.uleb128 0x5
+ 1164 01c9 49       		.uleb128 0x49
+ 1165 01ca 13       		.uleb128 0x13
+ 1166 01cb 3F       		.uleb128 0x3f
+ 1167 01cc 19       		.uleb128 0x19
+ 1168 01cd 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 28
 
 
- 1169 01c8 05       		.uleb128 0x5
- 1170 01c9 49       		.uleb128 0x49
- 1171 01ca 13       		.uleb128 0x13
- 1172 01cb 3F       		.uleb128 0x3f
- 1173 01cc 19       		.uleb128 0x19
- 1174 01cd 3C       		.uleb128 0x3c
- 1175 01ce 19       		.uleb128 0x19
- 1176 01cf 00       		.byte	0
- 1177 01d0 00       		.byte	0
- 1178 01d1 24       		.uleb128 0x24
- 1179 01d2 2E       		.uleb128 0x2e
- 1180 01d3 00       		.byte	0
- 1181 01d4 3F       		.uleb128 0x3f
- 1182 01d5 19       		.uleb128 0x19
- 1183 01d6 3C       		.uleb128 0x3c
- 1184 01d7 19       		.uleb128 0x19
- 1185 01d8 6E       		.uleb128 0x6e
- 1186 01d9 0E       		.uleb128 0xe
- 1187 01da 03       		.uleb128 0x3
- 1188 01db 0E       		.uleb128 0xe
- 1189 01dc 3A       		.uleb128 0x3a
- 1190 01dd 0B       		.uleb128 0xb
- 1191 01de 3B       		.uleb128 0x3b
- 1192 01df 0B       		.uleb128 0xb
- 1193 01e0 00       		.byte	0
- 1194 01e1 00       		.byte	0
- 1195 01e2 00       		.byte	0
- 1196              		.section	.debug_loc,"",%progbits
- 1197              	.Ldebug_loc0:
- 1198              	.LLST0:
- 1199 0000 06000000 		.4byte	.LVL0
- 1200 0004 36000000 		.4byte	.LVL3
- 1201 0008 0100     		.2byte	0x1
- 1202 000a 55       		.byte	0x55
- 1203 000b 00000000 		.4byte	0
- 1204 000f 00000000 		.4byte	0
- 1205              		.section	.debug_aranges,"",%progbits
- 1206 0000 1C000000 		.4byte	0x1c
- 1207 0004 0200     		.2byte	0x2
- 1208 0006 00000000 		.4byte	.Ldebug_info0
- 1209 000a 04       		.byte	0x4
- 1210 000b 00       		.byte	0
- 1211 000c 0000     		.2byte	0
- 1212 000e 0000     		.2byte	0
- 1213 0010 00000000 		.4byte	.LFB77
- 1214 0014 48000000 		.4byte	.LFE77-.LFB77
- 1215 0018 00000000 		.4byte	0
- 1216 001c 00000000 		.4byte	0
- 1217              		.section	.debug_ranges,"",%progbits
- 1218              	.Ldebug_ranges0:
- 1219 0000 00000000 		.4byte	.LFB77
- 1220 0004 48000000 		.4byte	.LFE77
- 1221 0008 00000000 		.4byte	0
- 1222 000c 00000000 		.4byte	0
- 1223              		.section	.debug_line,"",%progbits
- 1224              	.Ldebug_line0:
- 1225 0000 70010000 		.section	.debug_str,"MS",%progbits,1
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 29
+ 1169 01ce 19       		.uleb128 0x19
+ 1170 01cf 00       		.byte	0
+ 1171 01d0 00       		.byte	0
+ 1172 01d1 24       		.uleb128 0x24
+ 1173 01d2 2E       		.uleb128 0x2e
+ 1174 01d3 00       		.byte	0
+ 1175 01d4 3F       		.uleb128 0x3f
+ 1176 01d5 19       		.uleb128 0x19
+ 1177 01d6 3C       		.uleb128 0x3c
+ 1178 01d7 19       		.uleb128 0x19
+ 1179 01d8 6E       		.uleb128 0x6e
+ 1180 01d9 0E       		.uleb128 0xe
+ 1181 01da 03       		.uleb128 0x3
+ 1182 01db 0E       		.uleb128 0xe
+ 1183 01dc 3A       		.uleb128 0x3a
+ 1184 01dd 0B       		.uleb128 0xb
+ 1185 01de 3B       		.uleb128 0x3b
+ 1186 01df 0B       		.uleb128 0xb
+ 1187 01e0 00       		.byte	0
+ 1188 01e1 00       		.byte	0
+ 1189 01e2 00       		.byte	0
+ 1190              		.section	.debug_loc,"",%progbits
+ 1191              	.Ldebug_loc0:
+ 1192              	.LLST0:
+ 1193 0000 06000000 		.4byte	.LVL0
+ 1194 0004 2C000000 		.4byte	.LVL3
+ 1195 0008 0100     		.2byte	0x1
+ 1196 000a 55       		.byte	0x55
+ 1197 000b 00000000 		.4byte	0
+ 1198 000f 00000000 		.4byte	0
+ 1199              		.section	.debug_aranges,"",%progbits
+ 1200 0000 1C000000 		.4byte	0x1c
+ 1201 0004 0200     		.2byte	0x2
+ 1202 0006 00000000 		.4byte	.Ldebug_info0
+ 1203 000a 04       		.byte	0x4
+ 1204 000b 00       		.byte	0
+ 1205 000c 0000     		.2byte	0
+ 1206 000e 0000     		.2byte	0
+ 1207 0010 00000000 		.4byte	.LFB69
+ 1208 0014 38000000 		.4byte	.LFE69-.LFB69
+ 1209 0018 00000000 		.4byte	0
+ 1210 001c 00000000 		.4byte	0
+ 1211              		.section	.debug_ranges,"",%progbits
+ 1212              	.Ldebug_ranges0:
+ 1213 0000 00000000 		.4byte	.LFB69
+ 1214 0004 38000000 		.4byte	.LFE69
+ 1215 0008 00000000 		.4byte	0
+ 1216 000c 00000000 		.4byte	0
+ 1217              		.section	.debug_line,"",%progbits
+ 1218              	.Ldebug_line0:
+ 1219 0000 6F010000 		.section	.debug_str,"MS",%progbits,1
+ 1219      02004001 
+ 1219      00000201 
+ 1219      FB0E0D00 
+ 1219      01010101 
+ 1220              	.LASF34:
+ 1221 0000 6B696E64 		.ascii	"kind\000"
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 29
 
 
- 1225      02004001 
- 1225      00000201 
- 1225      FB0E0D00 
- 1225      01010101 
- 1226              	.LASF34:
- 1227 0000 6B696E64 		.ascii	"kind\000"
- 1227      00
- 1228              	.LASF59:
- 1229 0005 45455F72 		.ascii	"EE_rq_bitmask\000"
- 1229      715F6269 
- 1229      746D6173 
- 1229      6B00
- 1230              	.LASF14:
- 1231 0013 45455F55 		.ascii	"EE_UREG\000"
- 1231      52454700 
- 1232              	.LASF78:
- 1233 001b 45455F73 		.ascii	"EE_system_init\000"
- 1233      79737465 
- 1233      6D5F696E 
- 1233      697400
- 1234              	.LASF23:
- 1235 002a 7469636B 		.ascii	"ticksperbase\000"
- 1235      73706572 
- 1235      62617365 
- 1235      00
- 1236              	.LASF60:
- 1237 0037 45455F74 		.ascii	"EE_th_event_active\000"
- 1237      685F6576 
- 1237      656E745F 
- 1237      61637469 
- 1237      766500
- 1238              	.LASF61:
- 1239 004a 45455F74 		.ascii	"EE_th_waswaiting\000"
- 1239      685F7761 
- 1239      73776169 
- 1239      74696E67 
- 1239      00
- 1240              	.LASF2:
- 1241 005b 73686F72 		.ascii	"short int\000"
- 1241      7420696E 
- 1241      7400
- 1242              	.LASF41:
- 1243 0065 73697A65 		.ascii	"sizetype\000"
- 1243      74797065 
- 1243      00
- 1244              	.LASF38:
- 1245 006e 64656C74 		.ascii	"delta\000"
- 1245      6100
- 1246              	.LASF33:
- 1247 0074 73706563 		.ascii	"spec_id\000"
- 1247      5F696400 
- 1248              	.LASF15:
- 1249 007c 45455F46 		.ascii	"EE_FREG\000"
- 1249      52454700 
- 1250              	.LASF75:
- 1251 0084 443A5C57 		.ascii	"D:\\WS25\\AMAEOS\\Lab\\Lab3\\Lab 3 Task Description"
- 1251      5332355C 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 30
+ 1221      00
+ 1222              	.LASF59:
+ 1223 0005 45455F72 		.ascii	"EE_rq_bitmask\000"
+ 1223      715F6269 
+ 1223      746D6173 
+ 1223      6B00
+ 1224              	.LASF14:
+ 1225 0013 45455F55 		.ascii	"EE_UREG\000"
+ 1225      52454700 
+ 1226              	.LASF78:
+ 1227 001b 45455F73 		.ascii	"EE_system_init\000"
+ 1227      79737465 
+ 1227      6D5F696E 
+ 1227      697400
+ 1228              	.LASF23:
+ 1229 002a 7469636B 		.ascii	"ticksperbase\000"
+ 1229      73706572 
+ 1229      62617365 
+ 1229      00
+ 1230              	.LASF60:
+ 1231 0037 45455F74 		.ascii	"EE_th_event_active\000"
+ 1231      685F6576 
+ 1231      656E745F 
+ 1231      61637469 
+ 1231      766500
+ 1232              	.LASF61:
+ 1233 004a 45455F74 		.ascii	"EE_th_waswaiting\000"
+ 1233      685F7761 
+ 1233      73776169 
+ 1233      74696E67 
+ 1233      00
+ 1234              	.LASF2:
+ 1235 005b 73686F72 		.ascii	"short int\000"
+ 1235      7420696E 
+ 1235      7400
+ 1236              	.LASF41:
+ 1237 0065 73697A65 		.ascii	"sizetype\000"
+ 1237      74797065 
+ 1237      00
+ 1238              	.LASF38:
+ 1239 006e 64656C74 		.ascii	"delta\000"
+ 1239      6100
+ 1240              	.LASF33:
+ 1241 0074 73706563 		.ascii	"spec_id\000"
+ 1241      5F696400 
+ 1242              	.LASF15:
+ 1243 007c 45455F46 		.ascii	"EE_FREG\000"
+ 1243      52454700 
+ 1244              	.LASF75:
+ 1245 0084 443A5C57 		.ascii	"D:\\WS25\\AMAEOS\\Lab\\Lab3\\Lab 3 Task Description"
+ 1245      5332355C 
+ 1245      414D4145 
+ 1245      4F535C4C 
+ 1245      61625C4C 
+ 1246 00b2 20616E64 		.ascii	" and Starting Code-20251209\\Lab3.cydsn\\TaskComms_"
+ 1246      20537461 
+ 1246      7274696E 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 30
 
 
- 1251      414D4145 
- 1251      4F535C4C 
- 1251      61625C4C 
- 1252 00b2 20616E64 		.ascii	" and Starting Code-20251209\\Lab3.cydsn\\TaskComms_"
- 1252      20537461 
- 1252      7274696E 
- 1252      6720436F 
- 1252      64652D32 
- 1253 00e3 42756666 		.ascii	"Buffer.cydsn\000"
- 1253      65722E63 
- 1253      7964736E 
+ 1246      6720436F 
+ 1246      64652D32 
+ 1247 00e3 42756666 		.ascii	"Buffer.cydsn\000"
+ 1247      65722E63 
+ 1247      7964736E 
+ 1247      00
+ 1248              	.LASF32:
+ 1249 00f0 436F756E 		.ascii	"CounterObjectKindType\000"
+ 1249      7465724F 
+ 1249      626A6563 
+ 1249      744B696E 
+ 1249      64547970 
+ 1250              	.LASF13:
+ 1251 0106 45455F55 		.ascii	"EE_UINT32\000"
+ 1251      494E5433 
+ 1251      3200
+ 1252              	.LASF52:
+ 1253 0110 45455F74 		.ascii	"EE_th_ready_prio\000"
+ 1253      685F7265 
+ 1253      6164795F 
+ 1253      7072696F 
  1253      00
- 1254              	.LASF32:
- 1255 00f0 436F756E 		.ascii	"CounterObjectKindType\000"
- 1255      7465724F 
- 1255      626A6563 
- 1255      744B696E 
- 1255      64547970 
- 1256              	.LASF13:
- 1257 0106 45455F55 		.ascii	"EE_UINT32\000"
- 1257      494E5433 
- 1257      3200
- 1258              	.LASF52:
- 1259 0110 45455F74 		.ascii	"EE_th_ready_prio\000"
- 1259      685F7265 
- 1259      6164795F 
- 1259      7072696F 
- 1259      00
- 1260              	.LASF17:
- 1261 0121 45455F54 		.ascii	"EE_TID\000"
- 1261      494400
- 1262              	.LASF24:
- 1263 0128 6D696E63 		.ascii	"mincycle\000"
- 1263      79636C65 
+ 1254              	.LASF17:
+ 1255 0121 45455F54 		.ascii	"EE_TID\000"
+ 1255      494400
+ 1256              	.LASF24:
+ 1257 0128 6D696E63 		.ascii	"mincycle\000"
+ 1257      79636C65 
+ 1257      00
+ 1258              	.LASF26:
+ 1259 0131 76616C75 		.ascii	"value\000"
+ 1259      6500
+ 1260              	.LASF63:
+ 1261 0137 45455F6F 		.ascii	"EE_oo_counter_object_ROM\000"
+ 1261      6F5F636F 
+ 1261      756E7465 
+ 1261      725F6F62 
+ 1261      6A656374 
+ 1262              	.LASF72:
+ 1263 0150 4379496E 		.ascii	"CyIntSetPriority\000"
+ 1263      74536574 
+ 1263      5072696F 
+ 1263      72697479 
  1263      00
- 1264              	.LASF26:
- 1265 0131 76616C75 		.ascii	"value\000"
- 1265      6500
- 1266              	.LASF63:
- 1267 0137 45455F6F 		.ascii	"EE_oo_counter_object_ROM\000"
- 1267      6F5F636F 
- 1267      756E7465 
- 1267      725F6F62 
- 1267      6A656374 
- 1268              	.LASF72:
- 1269 0150 4379496E 		.ascii	"CyIntSetPriority\000"
- 1269      74536574 
- 1269      5072696F 
- 1269      72697479 
- 1269      00
- 1270              	.LASF50:
- 1271 0161 45455F49 		.ascii	"EE_IRQ_nesting_level\000"
- 1271      52515F6E 
- 1271      65737469 
- 1271      6E675F6C 
- 1271      6576656C 
- 1272              	.LASF43:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 31
+ 1264              	.LASF50:
+ 1265 0161 45455F49 		.ascii	"EE_IRQ_nesting_level\000"
+ 1265      52515F6E 
+ 1265      65737469 
+ 1265      6E675F6C 
+ 1265      6576656C 
+ 1266              	.LASF43:
+ 1267 0176 666C6F61 		.ascii	"float\000"
+ 1267      7400
+ 1268              	.LASF6:
+ 1269 017c 6C6F6E67 		.ascii	"long long int\000"
+ 1269      206C6F6E 
+ 1269      6720696E 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 31
 
 
- 1273 0176 666C6F61 		.ascii	"float\000"
- 1273      7400
- 1274              	.LASF6:
- 1275 017c 6C6F6E67 		.ascii	"long long int\000"
- 1275      206C6F6E 
- 1275      6720696E 
- 1275      7400
- 1276              	.LASF20:
- 1277 018a 436F756E 		.ascii	"CounterObjectType\000"
- 1277      7465724F 
- 1277      626A6563 
- 1277      74547970 
- 1277      6500
- 1278              	.LASF67:
- 1279 019c 45455F6F 		.ascii	"EE_oo_IRQ_suspend_status\000"
- 1279      6F5F4952 
- 1279      515F7375 
- 1279      7370656E 
- 1279      645F7374 
- 1280              	.LASF18:
- 1281 01b5 45455F54 		.ascii	"EE_TYPE_RQ_MASK\000"
- 1281      5950455F 
- 1281      52515F4D 
- 1281      41534B00 
- 1282              	.LASF30:
- 1283 01c5 45455F53 		.ascii	"EE_SCHEDULETABLE\000"
- 1283      43484544 
- 1283      554C4554 
- 1283      41424C45 
- 1283      00
- 1284              	.LASF10:
- 1285 01d6 45455F49 		.ascii	"EE_INT8\000"
- 1285      4E543800 
- 1286              	.LASF4:
- 1287 01de 6C6F6E67 		.ascii	"long int\000"
- 1287      20696E74 
- 1287      00
- 1288              	.LASF22:
- 1289 01e7 6D617861 		.ascii	"maxallowedvalue\000"
- 1289      6C6C6F77 
- 1289      65647661 
- 1289      6C756500 
- 1290              	.LASF1:
- 1291 01f7 756E7369 		.ascii	"unsigned char\000"
- 1291      676E6564 
- 1291      20636861 
- 1291      7200
- 1292              	.LASF40:
- 1293 0205 45455F6F 		.ascii	"EE_oo_counter_object_RAM_type\000"
- 1293      6F5F636F 
- 1293      756E7465 
- 1293      725F6F62 
- 1293      6A656374 
- 1294              	.LASF79:
- 1295 0223 72616D56 		.ascii	"ramVectorTable\000"
- 1295      6563746F 
- 1295      72546162 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 32
+ 1269      7400
+ 1270              	.LASF20:
+ 1271 018a 436F756E 		.ascii	"CounterObjectType\000"
+ 1271      7465724F 
+ 1271      626A6563 
+ 1271      74547970 
+ 1271      6500
+ 1272              	.LASF67:
+ 1273 019c 45455F6F 		.ascii	"EE_oo_IRQ_suspend_status\000"
+ 1273      6F5F4952 
+ 1273      515F7375 
+ 1273      7370656E 
+ 1273      645F7374 
+ 1274              	.LASF18:
+ 1275 01b5 45455F54 		.ascii	"EE_TYPE_RQ_MASK\000"
+ 1275      5950455F 
+ 1275      52515F4D 
+ 1275      41534B00 
+ 1276              	.LASF30:
+ 1277 01c5 45455F53 		.ascii	"EE_SCHEDULETABLE\000"
+ 1277      43484544 
+ 1277      554C4554 
+ 1277      41424C45 
+ 1277      00
+ 1278              	.LASF10:
+ 1279 01d6 45455F49 		.ascii	"EE_INT8\000"
+ 1279      4E543800 
+ 1280              	.LASF4:
+ 1281 01de 6C6F6E67 		.ascii	"long int\000"
+ 1281      20696E74 
+ 1281      00
+ 1282              	.LASF22:
+ 1283 01e7 6D617861 		.ascii	"maxallowedvalue\000"
+ 1283      6C6C6F77 
+ 1283      65647661 
+ 1283      6C756500 
+ 1284              	.LASF1:
+ 1285 01f7 756E7369 		.ascii	"unsigned char\000"
+ 1285      676E6564 
+ 1285      20636861 
+ 1285      7200
+ 1286              	.LASF40:
+ 1287 0205 45455F6F 		.ascii	"EE_oo_counter_object_RAM_type\000"
+ 1287      6F5F636F 
+ 1287      756E7465 
+ 1287      725F6F62 
+ 1287      6A656374 
+ 1288              	.LASF79:
+ 1289 0223 72616D56 		.ascii	"ramVectorTable\000"
+ 1289      6563746F 
+ 1289      72546162 
+ 1289      6C6500
+ 1290              	.LASF25:
+ 1291 0232 45455F6F 		.ascii	"EE_oo_counter_ROM_type\000"
+ 1291      6F5F636F 
+ 1291      756E7465 
+ 1291      725F524F 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 32
 
 
- 1295      6C6500
- 1296              	.LASF25:
- 1297 0232 45455F6F 		.ascii	"EE_oo_counter_ROM_type\000"
- 1297      6F5F636F 
- 1297      756E7465 
- 1297      725F524F 
- 1297      4D5F7479 
- 1298              	.LASF70:
- 1299 0249 45455F69 		.ascii	"EE_isr2_index\000"
- 1299      7372325F 
- 1299      696E6465 
- 1299      7800
- 1300              	.LASF19:
- 1301 0257 5469636B 		.ascii	"TickType\000"
- 1301      54797065 
- 1301      00
- 1302              	.LASF58:
- 1303 0260 45455F73 		.ascii	"EE_sys_ceiling\000"
- 1303      79735F63 
- 1303      65696C69 
- 1303      6E6700
- 1304              	.LASF9:
- 1305 026f 6C6F6E67 		.ascii	"long double\000"
- 1305      20646F75 
- 1305      626C6500 
- 1306              	.LASF62:
- 1307 027b 45455F63 		.ascii	"EE_counter_ROM\000"
- 1307      6F756E74 
- 1307      65725F52 
- 1307      4F4D00
- 1308              	.LASF45:
- 1309 028a 63796973 		.ascii	"cyisraddress\000"
- 1309      72616464 
- 1309      72657373 
- 1309      00
- 1310              	.LASF76:
- 1311 0297 45455F63 		.ascii	"EE_cortex_mx_suspendIRQ\000"
- 1311      6F727465 
- 1311      785F6D78 
- 1311      5F737573 
- 1311      70656E64 
- 1312              	.LASF65:
- 1313 02af 45455F6F 		.ascii	"EE_oo_counter_object_RAM\000"
- 1313      6F5F636F 
- 1313      756E7465 
- 1313      725F6F62 
- 1313      6A656374 
- 1314              	.LASF0:
- 1315 02c8 7369676E 		.ascii	"signed char\000"
- 1315      65642063 
- 1315      68617200 
- 1316              	.LASF49:
- 1317 02d4 666C6167 		.ascii	"flags\000"
- 1317      7300
- 1318              	.LASF7:
- 1319 02da 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1319      206C6F6E 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 33
+ 1291      4D5F7479 
+ 1292              	.LASF70:
+ 1293 0249 45455F69 		.ascii	"EE_isr2_index\000"
+ 1293      7372325F 
+ 1293      696E6465 
+ 1293      7800
+ 1294              	.LASF19:
+ 1295 0257 5469636B 		.ascii	"TickType\000"
+ 1295      54797065 
+ 1295      00
+ 1296              	.LASF58:
+ 1297 0260 45455F73 		.ascii	"EE_sys_ceiling\000"
+ 1297      79735F63 
+ 1297      65696C69 
+ 1297      6E6700
+ 1298              	.LASF9:
+ 1299 026f 6C6F6E67 		.ascii	"long double\000"
+ 1299      20646F75 
+ 1299      626C6500 
+ 1300              	.LASF62:
+ 1301 027b 45455F63 		.ascii	"EE_counter_ROM\000"
+ 1301      6F756E74 
+ 1301      65725F52 
+ 1301      4F4D00
+ 1302              	.LASF45:
+ 1303 028a 63796973 		.ascii	"cyisraddress\000"
+ 1303      72616464 
+ 1303      72657373 
+ 1303      00
+ 1304              	.LASF76:
+ 1305 0297 45455F63 		.ascii	"EE_cortex_mx_suspendIRQ\000"
+ 1305      6F727465 
+ 1305      785F6D78 
+ 1305      5F737573 
+ 1305      70656E64 
+ 1306              	.LASF65:
+ 1307 02af 45455F6F 		.ascii	"EE_oo_counter_object_RAM\000"
+ 1307      6F5F636F 
+ 1307      756E7465 
+ 1307      725F6F62 
+ 1307      6A656374 
+ 1308              	.LASF0:
+ 1309 02c8 7369676E 		.ascii	"signed char\000"
+ 1309      65642063 
+ 1309      68617200 
+ 1310              	.LASF49:
+ 1311 02d4 666C6167 		.ascii	"flags\000"
+ 1311      7300
+ 1312              	.LASF7:
+ 1313 02da 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1313      206C6F6E 
+ 1313      6720756E 
+ 1313      7369676E 
+ 1313      65642069 
+ 1314              	.LASF28:
+ 1315 02f1 45455F6F 		.ascii	"EE_oo_counter_RAM_type\000"
+ 1315      6F5F636F 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 33
 
 
- 1319      6720756E 
- 1319      7369676E 
- 1319      65642069 
- 1320              	.LASF28:
- 1321 02f1 45455F6F 		.ascii	"EE_oo_counter_RAM_type\000"
- 1321      6F5F636F 
- 1321      756E7465 
- 1321      725F5241 
- 1321      4D5F7479 
- 1322              	.LASF8:
- 1323 0308 756E7369 		.ascii	"unsigned int\000"
- 1323      676E6564 
- 1323      20696E74 
- 1323      00
- 1324              	.LASF31:
- 1325 0315 45455F6F 		.ascii	"EE_oo_counter_object_kind_type\000"
- 1325      6F5F636F 
- 1325      756E7465 
- 1325      725F6F62 
- 1325      6A656374 
- 1326              	.LASF54:
- 1327 0334 45455F74 		.ascii	"EE_th_status\000"
- 1327      685F7374 
- 1327      61747573 
- 1327      00
- 1328              	.LASF51:
- 1329 0341 45455F73 		.ascii	"EE_std_endcycle_next_tid\000"
- 1329      74645F65 
- 1329      6E646379 
- 1329      636C655F 
- 1329      6E657874 
- 1330              	.LASF12:
- 1331 035a 45455F49 		.ascii	"EE_INT32\000"
- 1331      4E543332 
- 1331      00
- 1332              	.LASF77:
- 1333 0363 45455F68 		.ascii	"EE_hal_suspendIRQ\000"
- 1333      616C5F73 
- 1333      75737065 
- 1333      6E644952 
- 1333      5100
- 1334              	.LASF48:
- 1335 0375 69737461 		.ascii	"istat\000"
- 1335      7400
- 1336              	.LASF3:
- 1337 037b 73686F72 		.ascii	"short unsigned int\000"
- 1337      7420756E 
- 1337      7369676E 
- 1337      65642069 
- 1337      6E7400
- 1338              	.LASF35:
- 1339 038e 45455F6F 		.ascii	"EE_oo_counter_object_ROM_type\000"
- 1339      6F5F636F 
- 1339      756E7465 
- 1339      725F6F62 
- 1339      6A656374 
- 1340              	.LASF42:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 34
+ 1315      756E7465 
+ 1315      725F5241 
+ 1315      4D5F7479 
+ 1316              	.LASF8:
+ 1317 0308 756E7369 		.ascii	"unsigned int\000"
+ 1317      676E6564 
+ 1317      20696E74 
+ 1317      00
+ 1318              	.LASF31:
+ 1319 0315 45455F6F 		.ascii	"EE_oo_counter_object_kind_type\000"
+ 1319      6F5F636F 
+ 1319      756E7465 
+ 1319      725F6F62 
+ 1319      6A656374 
+ 1320              	.LASF54:
+ 1321 0334 45455F74 		.ascii	"EE_th_status\000"
+ 1321      685F7374 
+ 1321      61747573 
+ 1321      00
+ 1322              	.LASF51:
+ 1323 0341 45455F73 		.ascii	"EE_std_endcycle_next_tid\000"
+ 1323      74645F65 
+ 1323      6E646379 
+ 1323      636C655F 
+ 1323      6E657874 
+ 1324              	.LASF12:
+ 1325 035a 45455F49 		.ascii	"EE_INT32\000"
+ 1325      4E543332 
+ 1325      00
+ 1326              	.LASF77:
+ 1327 0363 45455F68 		.ascii	"EE_hal_suspendIRQ\000"
+ 1327      616C5F73 
+ 1327      75737065 
+ 1327      6E644952 
+ 1327      5100
+ 1328              	.LASF48:
+ 1329 0375 69737461 		.ascii	"istat\000"
+ 1329      7400
+ 1330              	.LASF3:
+ 1331 037b 73686F72 		.ascii	"short unsigned int\000"
+ 1331      7420756E 
+ 1331      7369676E 
+ 1331      65642069 
+ 1331      6E7400
+ 1332              	.LASF35:
+ 1333 038e 45455F6F 		.ascii	"EE_oo_counter_object_ROM_type\000"
+ 1333      6F5F636F 
+ 1333      756E7465 
+ 1333      725F6F62 
+ 1333      6A656374 
+ 1334              	.LASF42:
+ 1335 03ac 63686172 		.ascii	"char\000"
+ 1335      00
+ 1336              	.LASF11:
+ 1337 03b1 45455F55 		.ascii	"EE_UINT16\000"
+ 1337      494E5431 
+ 1337      3600
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 34
 
 
- 1341 03ac 63686172 		.ascii	"char\000"
- 1341      00
- 1342              	.LASF11:
- 1343 03b1 45455F55 		.ascii	"EE_UINT16\000"
- 1343      494E5431 
- 1343      3600
- 1344              	.LASF46:
- 1345 03bb 45455F63 		.ascii	"EE_cortex_mx_resumeIRQ\000"
- 1345      6F727465 
- 1345      785F6D78 
- 1345      5F726573 
- 1345      756D6549 
- 1346              	.LASF64:
- 1347 03d2 45455F63 		.ascii	"EE_counter_RAM\000"
- 1347      6F756E74 
- 1347      65725F52 
- 1347      414D00
- 1348              	.LASF68:
- 1349 03e1 45455F41 		.ascii	"EE_ApplicationMode\000"
- 1349      70706C69 
- 1349      63617469 
- 1349      6F6E4D6F 
- 1349      646500
- 1350              	.LASF5:
- 1351 03f4 6C6F6E67 		.ascii	"long unsigned int\000"
- 1351      20756E73 
- 1351      69676E65 
- 1351      6420696E 
- 1351      7400
- 1352              	.LASF44:
- 1353 0406 646F7562 		.ascii	"double\000"
- 1353      6C6500
- 1354              	.LASF16:
- 1355 040d 45455F54 		.ascii	"EE_TYPEBOOL\000"
- 1355      59504542 
- 1355      4F4F4C00 
- 1356              	.LASF57:
- 1357 0419 45455F73 		.ascii	"EE_stkfirst\000"
- 1357      746B6669 
- 1357      72737400 
- 1358              	.LASF29:
- 1359 0425 45455F41 		.ascii	"EE_ALARM\000"
- 1359      4C41524D 
- 1359      00
- 1360              	.LASF36:
- 1361 042e 75736564 		.ascii	"used\000"
- 1361      00
- 1362              	.LASF21:
- 1363 0433 436F756E 		.ascii	"CounterType\000"
- 1363      74657254 
- 1363      79706500 
- 1364              	.LASF74:
- 1365 043f 47656E65 		.ascii	"Generated_Source\\PSoC5\\ErikaOS_cortex_mx_ee_utils"
- 1365      72617465 
- 1365      645F536F 
- 1365      75726365 
- 1365      5C50536F 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 35
+ 1338              	.LASF46:
+ 1339 03bb 45455F63 		.ascii	"EE_cortex_mx_resumeIRQ\000"
+ 1339      6F727465 
+ 1339      785F6D78 
+ 1339      5F726573 
+ 1339      756D6549 
+ 1340              	.LASF64:
+ 1341 03d2 45455F63 		.ascii	"EE_counter_RAM\000"
+ 1341      6F756E74 
+ 1341      65725F52 
+ 1341      414D00
+ 1342              	.LASF68:
+ 1343 03e1 45455F41 		.ascii	"EE_ApplicationMode\000"
+ 1343      70706C69 
+ 1343      63617469 
+ 1343      6F6E4D6F 
+ 1343      646500
+ 1344              	.LASF5:
+ 1345 03f4 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1345      20756E73 
+ 1345      69676E65 
+ 1345      6420696E 
+ 1345      7400
+ 1346              	.LASF44:
+ 1347 0406 646F7562 		.ascii	"double\000"
+ 1347      6C6500
+ 1348              	.LASF16:
+ 1349 040d 45455F54 		.ascii	"EE_TYPEBOOL\000"
+ 1349      59504542 
+ 1349      4F4F4C00 
+ 1350              	.LASF57:
+ 1351 0419 45455F73 		.ascii	"EE_stkfirst\000"
+ 1351      746B6669 
+ 1351      72737400 
+ 1352              	.LASF29:
+ 1353 0425 45455F41 		.ascii	"EE_ALARM\000"
+ 1353      4C41524D 
+ 1353      00
+ 1354              	.LASF36:
+ 1355 042e 75736564 		.ascii	"used\000"
+ 1355      00
+ 1356              	.LASF21:
+ 1357 0433 436F756E 		.ascii	"CounterType\000"
+ 1357      74657254 
+ 1357      79706500 
+ 1358              	.LASF74:
+ 1359 043f 47656E65 		.ascii	"Generated_Source\\PSoC5\\ErikaOS_cortex_mx_ee_utils"
+ 1359      72617465 
+ 1359      645F536F 
+ 1359      75726365 
+ 1359      5C50536F 
+ 1360 0470 2E6300   		.ascii	".c\000"
+ 1361              	.LASF71:
+ 1362 0473 45455F73 		.ascii	"EE_set_switch_context_pri\000"
+ 1362      65745F73 
+ 1362      77697463 
+ 1362      685F636F 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 35
 
 
- 1366 0470 2E6300   		.ascii	".c\000"
- 1367              	.LASF71:
- 1368 0473 45455F73 		.ascii	"EE_set_switch_context_pri\000"
- 1368      65745F73 
- 1368      77697463 
- 1368      685F636F 
- 1368      6E746578 
- 1369              	.LASF56:
- 1370 048d 45455F74 		.ascii	"EE_th_rnact\000"
- 1370      685F726E 
- 1370      61637400 
- 1371              	.LASF53:
- 1372 0499 45455F74 		.ascii	"EE_th_dispatch_prio\000"
- 1372      685F6469 
- 1372      73706174 
- 1372      63685F70 
- 1372      72696F00 
- 1373              	.LASF47:
- 1374 04ad 45455F68 		.ascii	"EE_hal_resumeIRQ\000"
- 1374      616C5F72 
- 1374      6573756D 
- 1374      65495251 
- 1374      00
- 1375              	.LASF55:
- 1376 04be 45455F74 		.ascii	"EE_th_next\000"
- 1376      685F6E65 
- 1376      787400
- 1377              	.LASF73:
- 1378 04c9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1378      43313120 
- 1378      352E342E 
- 1378      31203230 
- 1378      31363036 
- 1379 04fc 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1379      20726576 
- 1379      6973696F 
- 1379      6E203233 
- 1379      37373135 
- 1380 052f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1380      66756E63 
- 1380      74696F6E 
- 1380      2D736563 
- 1380      74696F6E 
- 1381              	.LASF37:
- 1382 0557 636E7463 		.ascii	"cntcycle\000"
- 1382      79636C65 
+ 1362      6E746578 
+ 1363              	.LASF56:
+ 1364 048d 45455F74 		.ascii	"EE_th_rnact\000"
+ 1364      685F726E 
+ 1364      61637400 
+ 1365              	.LASF53:
+ 1366 0499 45455F74 		.ascii	"EE_th_dispatch_prio\000"
+ 1366      685F6469 
+ 1366      73706174 
+ 1366      63685F70 
+ 1366      72696F00 
+ 1367              	.LASF47:
+ 1368 04ad 45455F68 		.ascii	"EE_hal_resumeIRQ\000"
+ 1368      616C5F72 
+ 1368      6573756D 
+ 1368      65495251 
+ 1368      00
+ 1369              	.LASF55:
+ 1370 04be 45455F74 		.ascii	"EE_th_next\000"
+ 1370      685F6E65 
+ 1370      787400
+ 1371              	.LASF73:
+ 1372 04c9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1372      43313120 
+ 1372      352E342E 
+ 1372      31203230 
+ 1372      31363036 
+ 1373 04fc 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1373      20726576 
+ 1373      6973696F 
+ 1373      6E203233 
+ 1373      37373135 
+ 1374 052f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1374      66756E63 
+ 1374      74696F6E 
+ 1374      2D736563 
+ 1374      74696F6E 
+ 1375              	.LASF37:
+ 1376 0557 636E7463 		.ascii	"cntcycle\000"
+ 1376      79636C65 
+ 1376      00
+ 1377              	.LASF66:
+ 1378 0560 45455F6F 		.ascii	"EE_oo_IRQ_disable_count\000"
+ 1378      6F5F4952 
+ 1378      515F6469 
+ 1378      7361626C 
+ 1378      655F636F 
+ 1379              	.LASF39:
+ 1380 0578 6E657874 		.ascii	"next\000"
+ 1380      00
+ 1381              	.LASF69:
+ 1382 057d 45455F72 		.ascii	"EE_rq_lookup\000"
+ 1382      715F6C6F 
+ 1382      6F6B7570 
  1382      00
- 1383              	.LASF66:
- 1384 0560 45455F6F 		.ascii	"EE_oo_IRQ_disable_count\000"
- 1384      6F5F4952 
- 1384      515F6469 
- 1384      7361626C 
- 1384      655F636F 
- 1385              	.LASF39:
- 1386 0578 6E657874 		.ascii	"next\000"
- 1386      00
- 1387              	.LASF69:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cceVBuig.s 			page 36
+ 1383              	.LASF27:
+ 1384 058a 66697273 		.ascii	"first\000"
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccKXpAnv.s 			page 36
 
 
- 1388 057d 45455F72 		.ascii	"EE_rq_lookup\000"
- 1388      715F6C6F 
- 1388      6F6B7570 
- 1388      00
- 1389              	.LASF27:
- 1390 058a 66697273 		.ascii	"first\000"
- 1390      7400
- 1391              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1384      7400
+ 1385              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

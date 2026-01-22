@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 1
 
 
    1              		.syntax unified
@@ -26,7 +26,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
   23              		.thumb_func
   24              		.type	EE_oo_SetEvent, %function
   25              	EE_oo_SetEvent:
-  26              	.LFB71:
+  26              	.LFB63:
   27              		.file 1 "Generated_Source\\PSoC5\\ErikaOS_ee_evset.c"
    1:Generated_Source\PSoC5/ErikaOS_ee_evset.c **** /* ###*B*###
    2:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****  * ERIKA Enterprise - a tiny RTOS for small microcontrollers
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
   28:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****  * exception statement from your version.
   29:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****  *
   30:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****  * ERIKA Enterprise is distributed in the hope that it will be
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 2
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 2
 
 
   31:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****  * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
   34              		.cfi_def_cfa_offset 16
   35              		.cfi_offset 3, -16
   36              		.cfi_offset 4, -12
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 3
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 3
 
 
   37              		.cfi_offset 5, -8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
   49:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /*
   50:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * PSoC Port and API Generation
   51:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * Carlos Fernando Meier Martinez
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 4
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 4
 
 
   52:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc ****  * Hochschule Darmstadt, Germany. 2017.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  106:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** EE_UINT32 temp;
  107:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** __ASM ("mov %0, sp" : "=r" (temp) : );
  108:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** return temp;
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 5
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 5
 
 
  109:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  163:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** extern EE_UREG EE_cortex_mx_active_tos;
  164:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #define	EE_hal_active_tos EE_cortex_mx_active_tos
  165:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 6
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 6
 
 
  166:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** /*extern	EE_UREG EE_pic30_thread_tos[];
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  220:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** __INLINE__ void  EE_cortex_mx_resumeIRQ(EE_FREG f)
  221:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** {
  222:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** #ifdef __IAR__
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 7
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 7
 
 
  223:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc **** 	__set_PRIMASK(f);
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
   58              	.LBE58:
   79:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****   /* Error Value */
   80:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****   register StatusType ev;
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 8
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 8
 
 
   81:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****   /* Primitive Lock Procedure */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  135:Generated_Source\PSoC5/ErikaOS_ee_evset.c **** #else /* EE_AS_RPC__ */
  136:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****     /* Forward the request to another CPU when the task does
  137:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****        not belong to the current CPU */
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 9
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 9
 
 
  138:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****     register EE_TYPERN_PARAM par;
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  174:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****        * WARNING:
  175:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****        * the test with status==WAITING is FUNDAMENTAL to avoid double
  176:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****        * insertion of the task in the ready queue!!! Example, when I call
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 10
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 10
 
 
  177:Generated_Source\PSoC5/ErikaOS_ee_evset.c ****        * two times the same setevent... the first time the task must go in
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
   18:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * As a special exception, the copyright holders of this library give you
   19:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * permission to link this code with independent modules to produce an
   20:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * executable, regardless of the license terms of these independent
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 11
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 11
 
 
   21:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc ****  * modules, and to copy and distribute the resulting executable under
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
   75:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** 
   76:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** /* can be called with interrupt enabled */
   77:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** __INLINE__ EE_UREG  EE_hal_get_IRQ_nesting_level(void)
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 12
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 12
 
 
   78:Generated_Source\PSoC5/ErikaOS_common_ee_primitives.inc **** {
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
   37:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
   38:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * Boston, MA 02110-1301 USA.
   39:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  * ###*E*### */
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 13
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 13
 
 
   40:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
   94:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #else /* __OO_HAS_ERRORHOOK__ */
   95:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS()                                    ((void)0)
   96:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 14
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 14
 
 
   97:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #define EE_OS_ERROR_PARAMETERS_INIT(param1_in,param2_in,param3_in)  ((void)0)
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  151:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   }
  152:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** }
  153:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #else /* !__EE_MEMORY_PROTECTION__ */
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 15
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 15
 
 
  154:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /* If MemMap.h support is enabled (i.e. because memory protection): use it */
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  208:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   do {                                            \
  209:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     EE_as_tp_active_update_budgets_and_restart(); \
  210:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     EE_hal_end_nested_primitive(flag);            \
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 16
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 16
 
 
  211:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   } while ( 0 )
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  260:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #if (!defined(__OO_NO_ALARMS__)) || (defined(EE_AS_SCHEDULETABLES__))
  261:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
  262:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** StatusType EE_oo_IncrementCounterHardware(CounterType CounterID);
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 17
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 17
 
 
  263:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** void       EE_oo_IncrementCounterImplementation(CounterType CounterID);
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  317:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   EE_oo_counter_object_RAM[ObjectID].cntcycle = relcycle;
  318:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
  319:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   /* then, insert the task into the delta queue with an increment equal
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 18
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 18
 
 
  320:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****      (increment - 1U) increment equal to 0 means next tick */
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  374:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****       EE_oo_preemption_point() execute task preemption if is needed
  375:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     - EE_oo_shutdown() if not redefined it does for(;;);
  376:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     - All the alarm constants listed in 13.6.4
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 19
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 19
 
 
  377:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****  */
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  431:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** {
  432:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   /* Lookup at bits 15-9 */
  433:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   EE_INT8 x = EE_rq_lookup[(EE_rq_bitmask & 0xFF00U) >> 8];
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 20
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 20
 
 
  434:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   if (x == (EE_INT8)-1) {
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  488:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #ifndef __PRIVATE_RQ2STK_EXCHANGE__
  489:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** EE_TID EE_rq2stk_exchange(void);
  490:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #endif
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 21
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 21
 
 
  491:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  545:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** 
  546:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** #if (defined(__OO_ECC1__)) || (defined(__OO_ECC2__))
  547:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** /*
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 22
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 22
 
 
  548:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     Reset Active Events  THREAD utility method.
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  602:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   */
  603:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** __INLINE__ void  EE_oo_set_th_status_ready(TaskType TaskID)
  604:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc **** {
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 23
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 23
 
 
  605:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****     if (EE_th_status[TaskID] == SUSPENDED) {
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  656:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****      function. To avoid this, the scheduling of other Tasks which belong to
  657:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****      the same OS-Application as the caller needs to be restricted, as well as
  658:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****      the availability of interrupts of the same OS-Application. */
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 24
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 24
 
 
  659:Generated_Source\PSoC5/ErikaOS_ee_oo_internal.inc ****   /* [SWS_Os_00563]: The OperatingSystem shall not schedule any other Tasks
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  141 0084 0022     		movs	r2, #0
  142 0086 154B     		ldr	r3, .L14+4
  143 0088 43F82020 		str	r2, [r3, r0, lsl #2]
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 25
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 25
 
 
  144              	.LBB67:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
   35:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_context.inc ****  * You should have received a copy of the GNU General Public License
   36:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_context.inc ****  * version 2 along with ERIKA Enterprise; if not, write to the
   37:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_context.inc ****  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 26
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 26
 
 
   38:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_context.inc ****  * Boston, MA 02110-1301 USA.
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
   92:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_context.inc **** 
   93:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_context.inc ****       Please notice that the "goto begin" is actually a recursive call to
   94:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_context.inc ****       EE_std_change_context_multi(), but in this way there is no stack growing.
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 27
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 27
 
 
   95:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_context.inc ****       
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  149:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_context.inc **** 
  150:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_context.inc **** extern int EE_std_need_context_change(EE_TID tid);
  151:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_context.inc **** 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 28
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 28
 
 
  152:Generated_Source\PSoC5/ErikaOS_cortex_mx_ee_context.inc **** __INLINE__ void  EE_hal_stkchange(EE_TID tid)
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  193 00b0 0020     		movs	r0, #0
  194 00b2 0EE0     		b	.L2
  195              	.LVL11:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 29
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 29
 
 
  196              	.L5:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  246              	.LVL26:
  247              		.thumb
  248              		.syntax unified
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 30
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 30
 
 
  249              	.LBE79:
@@ -1775,7 +1775,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  265 00f8 00000000 		.word	EE_th_dispatch_prio
  266 00fc 00000000 		.word	EE_th_waswaiting
  267              		.cfi_endproc
- 268              	.LFE71:
+ 268              	.LFE63:
  269              		.size	EE_oo_SetEvent, .-EE_oo_SetEvent
  270              		.text
  271              	.Letext0:
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  288 0019 30000000 		.4byte	.Ldebug_ranges0+0x30
  289 001d 00000000 		.4byte	0
  290 0021 00000000 		.4byte	.Ldebug_line0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 31
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 31
 
 
  291 0025 02       		.uleb128 0x2
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  345 0088 04       		.uleb128 0x4
  346 0089 E5040000 		.4byte	.LASF12
  347 008d 06       		.byte	0x6
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 32
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 32
 
 
  348 008e 52       		.byte	0x52
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  402 010a 07       		.byte	0x7
  403 010b 5D02     		.2byte	0x25d
  404 010d A9000000 		.4byte	0xa9
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 33
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 33
 
 
  405 0111 05       		.uleb128 0x5
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  459 0183 07       		.byte	0x7
  460 0184 8002     		.2byte	0x280
  461 0186 5A010000 		.4byte	0x15a
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 34
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 34
 
 
  462 018a 08       		.uleb128 0x8
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  516 01f9 07       		.byte	0x7
  517 01fa 9F02     		.2byte	0x29f
  518 01fc 35020000 		.4byte	0x235
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 35
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 35
 
 
  519 0200 07       		.uleb128 0x7
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  573 0273 C4030000 		.4byte	.LASF49
  574 0277 04       		.byte	0x4
  575 0278 09       		.uleb128 0x9
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 36
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 36
 
 
  576 0279 82030000 		.4byte	.LASF50
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  630 02e8 10       		.uleb128 0x10
  631 02e9 73727600 		.ascii	"srv\000"
  632 02ed 07       		.byte	0x7
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 37
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 37
 
 
  633 02ee 9703     		.2byte	0x397
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  687 035c 03       		.byte	0x3
  688 035d 0F       		.uleb128 0xf
  689 035e 98060000 		.4byte	.LASF64
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 38
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 38
 
 
  690 0362 07       		.byte	0x7
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  744 03cd A803     		.2byte	0x3a8
  745 03cf 03       		.byte	0x3
  746 03d0 E0030000 		.4byte	0x3e0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 39
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 39
 
 
  747 03d4 10       		.uleb128 0x10
@@ -2321,8 +2321,8 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  784 0424 01       		.byte	0x1
  785 0425 4D       		.byte	0x4d
  786 0426 41020000 		.4byte	0x241
- 787 042a 00000000 		.4byte	.LFB71
- 788 042e 00010000 		.4byte	.LFE71-.LFB71
+ 787 042a 00000000 		.4byte	.LFB63
+ 788 042e 00010000 		.4byte	.LFE63-.LFB63
  789 0432 01       		.uleb128 0x1
  790 0433 9C       		.byte	0x9c
  791 0434 B9050000 		.4byte	0x5b9
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  801 044d 4D       		.byte	0x4d
  802 044e ED000000 		.4byte	0xed
  803 0452 9E000000 		.4byte	.LLST1
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 40
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 40
 
 
  804 0456 17       		.uleb128 0x17
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  858 04d3 F9030000 		.4byte	0x3f9
  859 04d7 EB000000 		.4byte	.LLST3
  860 04db 21       		.uleb128 0x21
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 41
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 41
 
 
  861 04dc 48030000 		.4byte	0x348
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  915 0570 00       		.byte	0
  916 0571 19       		.uleb128 0x19
  917 0572 B1030000 		.4byte	0x3b1
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 42
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 42
 
 
  918 0576 D2000000 		.4byte	.LBB77
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  972 05eb 28       		.uleb128 0x28
  973 05ec D2070000 		.4byte	.LASF82
  974 05f0 07       		.byte	0x7
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 43
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 43
 
 
  975 05f1 B2       		.byte	0xb2
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1029 066a D5000000 		.4byte	0xd5
  1030 066e 2C       		.uleb128 0x2c
  1031 066f 50050000 		.4byte	.LASF90
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 44
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 44
 
 
  1032 0673 07       		.byte	0x7
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1086 06f3 FE060000 		.4byte	0x6fe
  1087 06f7 2A       		.uleb128 0x2a
  1088 06f8 DF050000 		.4byte	0x5df
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 45
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 45
 
 
  1089 06fc 00       		.byte	0
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1143 0777 DF050000 		.4byte	0x5df
  1144 077b FF       		.byte	0xff
  1145 077c 00       		.byte	0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 46
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 46
 
 
  1146 077d 2B       		.uleb128 0x2b
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1200 0011 00       		.byte	0
  1201 0012 00       		.byte	0
  1202 0013 02       		.uleb128 0x2
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 47
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 47
 
 
  1203 0014 24       		.uleb128 0x24
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1257 004a 3B       		.uleb128 0x3b
  1258 004b 05       		.uleb128 0x5
  1259 004c 01       		.uleb128 0x1
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 48
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 48
 
 
  1260 004d 13       		.uleb128 0x13
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1314 0083 0B       		.uleb128 0xb
  1315 0084 00       		.byte	0
  1316 0085 00       		.byte	0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 49
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 49
 
 
  1317 0086 0B       		.uleb128 0xb
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1371 00bc 3A       		.uleb128 0x3a
  1372 00bd 0B       		.uleb128 0xb
  1373 00be 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 50
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 50
 
 
  1374 00bf 0B       		.uleb128 0xb
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1428 00f5 0E       		.uleb128 0xe
  1429 00f6 3A       		.uleb128 0x3a
  1430 00f7 0B       		.uleb128 0xb
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 51
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 51
 
 
  1431 00f8 3B       		.uleb128 0x3b
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1485 012e 06       		.uleb128 0x6
  1486 012f 40       		.uleb128 0x40
  1487 0130 18       		.uleb128 0x18
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 52
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 52
 
 
  1488 0131 9742     		.uleb128 0x2117
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1542 0168 31       		.uleb128 0x31
  1543 0169 13       		.uleb128 0x13
  1544 016a 11       		.uleb128 0x11
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 53
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 53
 
 
  1545 016b 01       		.uleb128 0x1
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1599 01a1 0B       		.uleb128 0xb
  1600 01a2 59       		.uleb128 0x59
  1601 01a3 0B       		.uleb128 0xb
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 54
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 54
 
 
  1602 01a4 00       		.byte	0
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1656 01da 01       		.uleb128 0x1
  1657 01db 55       		.uleb128 0x55
  1658 01dc 17       		.uleb128 0x17
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 55
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 55
 
 
  1659 01dd 58       		.uleb128 0x58
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1713 0219 00       		.byte	0
  1714 021a 02       		.uleb128 0x2
  1715 021b 18       		.uleb128 0x18
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 56
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 56
 
 
  1716 021c 9142     		.uleb128 0x2111
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1770 0253 05       		.uleb128 0x5
  1771 0254 49       		.uleb128 0x49
  1772 0255 13       		.uleb128 0x13
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 57
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 57
 
 
  1773 0256 3F       		.uleb128 0x3f
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1827 0018 9F       		.byte	0x9f
  1828 0019 B4000000 		.4byte	.LVL11
  1829 001d B6000000 		.4byte	.LVL12
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 58
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 58
 
 
  1830 0021 0100     		.2byte	0x1
@@ -3468,7 +3468,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1874 0085 0100     		.2byte	0x1
  1875 0087 50       		.byte	0x50
  1876 0088 C6000000 		.4byte	.LVL20
- 1877 008c 00010000 		.4byte	.LFE71
+ 1877 008c 00010000 		.4byte	.LFE63
  1878 0090 0400     		.2byte	0x4
  1879 0092 F3       		.byte	0xf3
  1880 0093 01       		.uleb128 0x1
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1884 009a 00000000 		.4byte	0
  1885              	.LLST1:
  1886 009e 00000000 		.4byte	.LVL0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 59
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 59
 
 
  1887 00a2 45000000 		.4byte	.LVL3-1
@@ -3496,7 +3496,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1899 00bf 0100     		.2byte	0x1
  1900 00c1 51       		.byte	0x51
  1901 00c2 C8000000 		.4byte	.LVL21
- 1902 00c6 00010000 		.4byte	.LFE71
+ 1902 00c6 00010000 		.4byte	.LFE63
  1903 00ca 0400     		.2byte	0x4
  1904 00cc F3       		.byte	0xf3
  1905 00cd 01       		.uleb128 0x1
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1941 012a 00000000 		.4byte	0
  1942 012e 00000000 		.4byte	0
  1943              	.LLST5:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 60
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 60
 
 
  1944 0132 A0000000 		.4byte	.LVL6
@@ -3569,8 +3569,8 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1969 000b 00       		.byte	0
  1970 000c 0000     		.2byte	0
  1971 000e 0000     		.2byte	0
- 1972 0010 00000000 		.4byte	.LFB71
- 1973 0014 00010000 		.4byte	.LFE71-.LFB71
+ 1972 0010 00000000 		.4byte	.LFB63
+ 1973 0014 00010000 		.4byte	.LFE63-.LFB63
  1974 0018 00000000 		.4byte	0
  1975 001c 00000000 		.4byte	0
  1976              		.section	.debug_ranges,"",%progbits
@@ -3587,8 +3587,8 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1987 0024 B0000000 		.4byte	.LBE74
  1988 0028 00000000 		.4byte	0
  1989 002c 00000000 		.4byte	0
- 1990 0030 00000000 		.4byte	.LFB71
- 1991 0034 00010000 		.4byte	.LFE71
+ 1990 0030 00000000 		.4byte	.LFB63
+ 1991 0034 00010000 		.4byte	.LFE63
  1992 0038 00000000 		.4byte	0
  1993 003c 00000000 		.4byte	0
  1994              		.section	.debug_line,"",%progbits
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  1996      00000201 
  1996      FB0E0D00 
  1996      01010101 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 61
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 61
 
 
  1997              	.LASF47:
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  2018 00e9 45455F68 		.ascii	"EE_hal_ready2stacked\000"
  2018      616C5F72 
  2018      65616479 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 62
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 62
 
 
  2018      32737461 
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  2041              	.LASF101:
  2042 01a3 45455F72 		.ascii	"EE_rq_lookup\000"
  2042      715F6C6F 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 63
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 63
 
 
  2042      6F6B7570 
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  2064      746B5F71 
  2064      75657279 
  2064      66697273 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 64
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 64
 
 
  2064      7400
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  2086      61747573 
  2086      00
  2087              	.LASF35:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 65
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 65
 
 
  2088 031a 436F756E 		.ascii	"CounterObjectKindType\000"
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  2108      65637469 
  2108      6F6E486F 
  2108      6F6B5F43 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 66
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 66
 
 
  2108      6F6E7465 
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  2130      79735F63 
  2130      65696C69 
  2130      6E6700
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 67
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 67
 
 
  2131              	.LASF43:
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  2152      685F6576 
  2152      656E745F 
  2152      61637469 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 68
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 68
 
 
  2152      766500
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  2172      6B00
  2173              	.LASF30:
  2174 066c 66697273 		.ascii	"first\000"
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 69
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 69
 
 
  2174      7400
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  2196      616E6765 
  2196      00
  2197              	.LASF69:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 70
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 70
 
 
  2198 072c 45455F68 		.ascii	"EE_hal_get_IRQ_nesting_level\000"
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 1
  2219              	.LASF110:
  2220 07e3 45455F63 		.ascii	"EE_cortex_mx_suspendIRQ\000"
  2220      6F727465 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc4UYFbb.s 			page 71
+ARM GAS  C:\Users\agila\AppData\Local\Temp\cckpPc3b.s 			page 71
 
 
  2220      785F6D78 

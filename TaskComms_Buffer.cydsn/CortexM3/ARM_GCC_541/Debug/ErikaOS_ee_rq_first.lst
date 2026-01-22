@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 1
 
 
    1              		.syntax unified
@@ -26,7 +26,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
   23              		.thumb_func
   24              		.type	EE_rq_queryfirst, %function
   25              	EE_rq_queryfirst:
-  26              	.LFB71:
+  26              	.LFB63:
   27              		.file 1 "Generated_Source\\PSoC5\\ErikaOS_ee_rq_first.c"
    1:Generated_Source\PSoC5/ErikaOS_ee_rq_first.c **** /* ###*B*###
    2:Generated_Source\PSoC5/ErikaOS_ee_rq_first.c ****  * ERIKA Enterprise - a tiny RTOS for small microcontrollers
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
   28:Generated_Source\PSoC5/ErikaOS_ee_rq_first.c ****  * exception statement from your version.
   29:Generated_Source\PSoC5/ErikaOS_ee_rq_first.c ****  *
   30:Generated_Source\PSoC5/ErikaOS_ee_rq_first.c ****  * ERIKA Enterprise is distributed in the hope that it will be
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 2
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 2
 
 
   31:Generated_Source\PSoC5/ErikaOS_ee_rq_first.c ****  * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
   47              	.L2:
   66:Generated_Source\PSoC5/ErikaOS_ee_rq_first.c ****   } else {
   67:Generated_Source\PSoC5/ErikaOS_ee_rq_first.c ****     x += (EE_INT8)8;
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 3
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 3
 
 
   48              		.loc 1 67 0
@@ -164,7 +164,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
   75 003c 00000000 		.word	EE_rq_queues_head
   76 0040 00000000 		.word	EE_rq_pairs_tid
   77              		.cfi_endproc
-  78              	.LFE71:
+  78              	.LFE63:
   79              		.size	EE_rq_queryfirst, .-EE_rq_queryfirst
   80              		.text
   81              	.Letext0:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
   89              		.section	.debug_info,"",%progbits
   90              	.Ldebug_info0:
   91 0000 29040000 		.4byte	0x429
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 4
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 4
 
 
   92 0004 0400     		.2byte	0x4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  146 006e 66020000 		.4byte	.LASF9
  147 0072 04       		.uleb128 0x4
  148 0073 9E010000 		.4byte	.LASF10
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 5
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 5
 
 
  149 0077 02       		.byte	0x2
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  203 00ee 54020000 		.4byte	.LASF21
  204 00f2 04       		.byte	0x4
  205 00f3 5D02     		.2byte	0x25d
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 6
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 6
 
 
  206 00f5 9E000000 		.4byte	0x9e
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  260 0167 79010000 		.4byte	.LASF29
  261 016b 04       		.byte	0x4
  262 016c 8002     		.2byte	0x280
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 7
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 7
 
 
  263 016e 42010000 		.4byte	0x142
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  317 01e0 10       		.byte	0x10
  318 01e1 04       		.byte	0x4
  319 01e2 9F02     		.2byte	0x29f
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 8
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 8
 
 
  320 01e4 1D020000 		.4byte	0x21d
@@ -457,8 +457,8 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  353 022e 01       		.byte	0x1
  354 022f 39       		.byte	0x39
  355 0230 CA000000 		.4byte	0xca
- 356 0234 00000000 		.4byte	.LFB71
- 357 0238 44000000 		.4byte	.LFE71-.LFB71
+ 356 0234 00000000 		.4byte	.LFB63
+ 357 0238 44000000 		.4byte	.LFE63-.LFB63
  358 023c 01       		.uleb128 0x1
  359 023d 9C       		.byte	0x9c
  360 023e 50020000 		.4byte	0x250
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  374 025c F1020000 		.4byte	.LASF43
  375 0260 06       		.byte	0x6
  376 0261 48       		.byte	0x48
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 9
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 9
 
 
  377 0262 CA000000 		.4byte	0xca
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  431 02dd 04       		.byte	0x4
  432 02de DA       		.byte	0xda
  433 02df A2020000 		.4byte	0x2a2
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 10
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 10
 
 
  434 02e3 0D       		.uleb128 0xd
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  488 0363 00       		.byte	0
  489 0364 00       		.byte	0
  490 0365 10       		.uleb128 0x10
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 11
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 11
 
 
  491 0366 36010000 		.4byte	0x136
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  545 03e5 A6010000 		.4byte	.LASF62
  546 03e9 07       		.byte	0x7
  547 03ea 47       		.byte	0x47
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 12
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 12
 
 
  548 03eb B4000000 		.4byte	0xb4
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  602 0018 3E       		.uleb128 0x3e
  603 0019 0B       		.uleb128 0xb
  604 001a 03       		.uleb128 0x3
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 13
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 13
 
 
  605 001b 0E       		.uleb128 0xe
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  659 0051 0D       		.uleb128 0xd
  660 0052 00       		.byte	0
  661 0053 03       		.uleb128 0x3
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 14
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 14
 
 
  662 0054 0E       		.uleb128 0xe
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  716 008a 19       		.uleb128 0x19
  717 008b 03       		.uleb128 0x3
  718 008c 0E       		.uleb128 0xe
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 15
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 15
 
 
  719 008d 3A       		.uleb128 0x3a
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  773 00c4 01       		.byte	0x1
  774 00c5 49       		.uleb128 0x49
  775 00c6 13       		.uleb128 0x13
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 16
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 16
 
 
  776 00c7 01       		.uleb128 0x1
@@ -957,8 +957,8 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  829 0020 0100     		.2byte	0x1
  830 0022 53       		.byte	0x53
  831 0023 2C000000 		.4byte	.LVL5
- 832 0027 44000000 		.4byte	.LFE71
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 17
+ 832 0027 44000000 		.4byte	.LFE63
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 17
 
 
  833 002b 0100     		.2byte	0x1
@@ -973,14 +973,14 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  842 000b 00       		.byte	0
  843 000c 0000     		.2byte	0
  844 000e 0000     		.2byte	0
- 845 0010 00000000 		.4byte	.LFB71
- 846 0014 44000000 		.4byte	.LFE71-.LFB71
+ 845 0010 00000000 		.4byte	.LFB63
+ 846 0014 44000000 		.4byte	.LFE63-.LFB63
  847 0018 00000000 		.4byte	0
  848 001c 00000000 		.4byte	0
  849              		.section	.debug_ranges,"",%progbits
  850              	.Ldebug_ranges0:
- 851 0000 00000000 		.4byte	.LFB71
- 852 0004 44000000 		.4byte	.LFE71
+ 851 0000 00000000 		.4byte	.LFB63
+ 852 0004 44000000 		.4byte	.LFE63
  853 0008 00000000 		.4byte	0
  854 000c 00000000 		.4byte	0
  855              		.section	.debug_line,"",%progbits
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  869      7420696E 
  869      7400
  870              	.LASF44:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 18
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 18
 
 
  871 0048 73697A65 		.ascii	"sizetype\000"
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  893      79636C65 
  893      00
  894              	.LASF27:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 19
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 19
 
 
  895 0126 76616C75 		.ascii	"value\000"
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  915      00
  916              	.LASF23:
  917 01e9 6D617861 		.ascii	"maxallowedvalue\000"
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 20
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 20
 
 
  917      6C6C6F77 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  939      6F5F636F 
  939      756E7465 
  939      725F6F62 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 21
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 21
 
 
  939      6A656374 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  961      00
  962              	.LASF59:
  963 035f 45455F63 		.ascii	"EE_counter_RAM\000"
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 22
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 22
 
 
  963      6F756E74 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 1
  985      685F6469 
  985      73706174 
  985      63685F70 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cc1WoGCu.s 			page 23
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccCwjvVg.s 			page 23
 
 
  985      72696F00 

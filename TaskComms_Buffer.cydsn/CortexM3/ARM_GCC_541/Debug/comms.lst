@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 1
 
 
    1              		.syntax unified
@@ -26,62 +26,62 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
   23              		.thumb_func
   24              		.type	streamRB_init, %function
   25              	streamRB_init:
-  26              	.LFB110:
-  27              		.file 1 "comms.c"
-   1:comms.c       **** /* ========================================
-   2:comms.c       ****  *
-   3:comms.c       ****  * \file comms.c
-   4:comms.c       ****  * \author V.S. Agilan
-   5:comms.c       ****  * \date 21.01.26
-   6:comms.c       ****  *
-   7:comms.c       ****  * Copyright YOUR COMPANY, THE YEAR
-   8:comms.c       ****  * All Rights Reserved
-   9:comms.c       ****  * UNPUBLISHED, LICENSED SOFTWARE.
-  10:comms.c       ****  *
-  11:comms.c       ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
-  12:comms.c       ****  * WHICH IS THE PROPERTY OF your company.
-  13:comms.c       ****  *
-  14:comms.c       ****  * ========================================
-  15:comms.c       **** */
-  16:comms.c       **** 
-  17:comms.c       **** #include "comms.h"
-  18:comms.c       **** 
-  19:comms.c       **** /* ========================================
-  20:comms.c       ****  *  Streaming Buffer
-  21:comms.c       ****  * ========================================
-  22:comms.c       **** */
-  23:comms.c       **** 
-  24:comms.c       **** /**
-  25:comms.c       ****  * Initialize a streaming ring buffer instance.
-  26:comms.c       ****  * 
-  27:comms.c       ****  * @param rb Pointer to streaming ring buffer object to be initialized.
-  28:comms.c       ****  * @return RC_SUCCESS on successful initialization.
-  29:comms.c       ****  */
-  30:comms.c       **** RC_t streamRB_init(StreamingRB_t *rb) 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 2
+  26              	.LFB102:
+  27              		.file 1 "source\\asw\\comms.c"
+   1:source\asw/comms.c **** /* ========================================
+   2:source\asw/comms.c ****  *
+   3:source\asw/comms.c ****  * \file comms.c
+   4:source\asw/comms.c ****  * \author V.S. Agilan
+   5:source\asw/comms.c ****  * \date 21.01.26
+   6:source\asw/comms.c ****  *
+   7:source\asw/comms.c ****  * Copyright YOUR COMPANY, THE YEAR
+   8:source\asw/comms.c ****  * All Rights Reserved
+   9:source\asw/comms.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+  10:source\asw/comms.c ****  *
+  11:source\asw/comms.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+  12:source\asw/comms.c ****  * WHICH IS THE PROPERTY OF your company.
+  13:source\asw/comms.c ****  *
+  14:source\asw/comms.c ****  * ========================================
+  15:source\asw/comms.c **** */
+  16:source\asw/comms.c **** 
+  17:source\asw/comms.c **** #include "comms.h"
+  18:source\asw/comms.c **** 
+  19:source\asw/comms.c **** /* ========================================
+  20:source\asw/comms.c ****  *  Streaming Buffer
+  21:source\asw/comms.c ****  * ========================================
+  22:source\asw/comms.c **** */
+  23:source\asw/comms.c **** 
+  24:source\asw/comms.c **** /**
+  25:source\asw/comms.c ****  * Initialize a streaming ring buffer instance.
+  26:source\asw/comms.c ****  * 
+  27:source\asw/comms.c ****  * @param rb Pointer to streaming ring buffer object to be initialized.
+  28:source\asw/comms.c ****  * @return RC_SUCCESS on successful initialization.
+  29:source\asw/comms.c ****  */
+  30:source\asw/comms.c **** RC_t streamRB_init(StreamingRB_t *rb) 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 2
 
 
-  31:comms.c       **** {
+  31:source\asw/comms.c **** {
   28              		.loc 1 31 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   32              		@ link register save eliminated.
   33              	.LVL0:
-  32:comms.c       ****     rb->readIdx = rb->writeIdx = rb->fillLevel = 0;
+  32:source\asw/comms.c ****     rb->readIdx = rb->writeIdx = rb->fillLevel = 0;
   34              		.loc 1 32 0
   35 0000 0023     		movs	r3, #0
   36 0002 A0F80431 		strh	r3, [r0, #260]	@ movhi
   37 0006 A0F80231 		strh	r3, [r0, #258]	@ movhi
   38 000a A0F80031 		strh	r3, [r0, #256]	@ movhi
-  33:comms.c       ****     return RC_SUCCESS;
-  34:comms.c       **** }
+  33:source\asw/comms.c ****     return RC_SUCCESS;
+  34:source\asw/comms.c **** }
   39              		.loc 1 34 0
   40 000e 1846     		mov	r0, r3
   41              	.LVL1:
   42 0010 7047     		bx	lr
   43              		.cfi_endproc
-  44              	.LFE110:
+  44              	.LFE102:
   45              		.size	streamRB_init, .-streamRB_init
   46 0012 00BF     		.section	.text.streamRB_write,"ax",%progbits
   47              		.align	2
@@ -90,70 +90,70 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
   50              		.thumb_func
   51              		.type	streamRB_write, %function
   52              	streamRB_write:
-  53              	.LFB111:
-  35:comms.c       **** 
-  36:comms.c       **** /**
-  37:comms.c       ****  * Write one byte into the streaming ring buffer.
-  38:comms.c       ****  * 
-  39:comms.c       ****  * @param rb   Pointer to streaming ring buffer instance (IN/OUT).
-  40:comms.c       ****  * @param byte Pointer to byte value to be written into the buffer (IN).
-  41:comms.c       ****  * @return RC_SUCCESS if written, RC_ERROR_BUFFER_FULL if no space is available.
-  42:comms.c       ****  */
-  43:comms.c       **** RC_t streamRB_write(StreamingRB_t *rb, uint8_t *byte) 
-  44:comms.c       **** {
+  53              	.LFB103:
+  35:source\asw/comms.c **** 
+  36:source\asw/comms.c **** /**
+  37:source\asw/comms.c ****  * Write one byte into the streaming ring buffer.
+  38:source\asw/comms.c ****  * 
+  39:source\asw/comms.c ****  * @param rb   Pointer to streaming ring buffer instance (IN/OUT).
+  40:source\asw/comms.c ****  * @param byte Pointer to byte value to be written into the buffer (IN).
+  41:source\asw/comms.c ****  * @return RC_SUCCESS if written, RC_ERROR_BUFFER_FULL if no space is available.
+  42:source\asw/comms.c ****  */
+  43:source\asw/comms.c **** RC_t streamRB_write(StreamingRB_t *rb, uint8_t *byte) 
+  44:source\asw/comms.c **** {
   54              		.loc 1 44 0
   55              		.cfi_startproc
   56              		@ args = 0, pretend = 0, frame = 0
   57              		@ frame_needed = 0, uses_anonymous_args = 0
   58              		@ link register save eliminated.
   59              	.LVL2:
-  45:comms.c       ****     if (rb->fillLevel < RB_SIZE) {
+  45:source\asw/comms.c ****     if (rb->fillLevel < RB_SIZE) {
   60              		.loc 1 45 0
   61 0000 B0F80431 		ldrh	r3, [r0, #260]
   62 0004 9BB2     		uxth	r3, r3
   63 0006 FF2B     		cmp	r3, #255
   64 0008 16D8     		bhi	.L4
-  46:comms.c       ****         rb->buffer[rb->writeIdx++] = *byte;
+  46:source\asw/comms.c ****         rb->buffer[rb->writeIdx++] = *byte;
   65              		.loc 1 46 0
   66 000a B0F80231 		ldrh	r3, [r0, #258]
   67 000e 9BB2     		uxth	r3, r3
   68 0010 5A1C     		adds	r2, r3, #1
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 3
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 3
 
 
   69 0012 92B2     		uxth	r2, r2
   70 0014 A0F80221 		strh	r2, [r0, #258]	@ movhi
   71 0018 0A78     		ldrb	r2, [r1]	@ zero_extendqisi2
   72 001a C254     		strb	r2, [r0, r3]
-  47:comms.c       ****         rb->writeIdx %= RB_SIZE;
+  47:source\asw/comms.c ****         rb->writeIdx %= RB_SIZE;
   73              		.loc 1 47 0
   74 001c B0F80231 		ldrh	r3, [r0, #258]
   75 0020 DBB2     		uxtb	r3, r3
   76 0022 A0F80231 		strh	r3, [r0, #258]	@ movhi
-  48:comms.c       ****         rb->fillLevel++;
+  48:source\asw/comms.c ****         rb->fillLevel++;
   77              		.loc 1 48 0
   78 0026 B0F80431 		ldrh	r3, [r0, #260]
   79 002a 9BB2     		uxth	r3, r3
   80 002c 0133     		adds	r3, r3, #1
   81 002e 9BB2     		uxth	r3, r3
   82 0030 A0F80431 		strh	r3, [r0, #260]	@ movhi
-  49:comms.c       ****         return RC_SUCCESS;
+  49:source\asw/comms.c ****         return RC_SUCCESS;
   83              		.loc 1 49 0
   84 0034 0020     		movs	r0, #0
   85              	.LVL3:
   86 0036 7047     		bx	lr
   87              	.LVL4:
   88              	.L4:
-  50:comms.c       ****     }
-  51:comms.c       ****     return RC_ERROR_BUFFER_FULL;
+  50:source\asw/comms.c ****     }
+  51:source\asw/comms.c ****     return RC_ERROR_BUFFER_FULL;
   89              		.loc 1 51 0
   90 0038 6FF00700 		mvn	r0, #7
   91              	.LVL5:
-  52:comms.c       **** }
+  52:source\asw/comms.c **** }
   92              		.loc 1 52 0
   93 003c 7047     		bx	lr
   94              		.cfi_endproc
-  95              	.LFE111:
+  95              	.LFE103:
   96              		.size	streamRB_write, .-streamRB_write
   97 003e 00BF     		.section	.text.streamRB_read_byte,"ax",%progbits
   98              		.align	2
@@ -162,75 +162,75 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  101              		.thumb_func
  102              		.type	streamRB_read_byte, %function
  103              	streamRB_read_byte:
- 104              	.LFB113:
-  53:comms.c       **** 
-  54:comms.c       **** /**
-  55:comms.c       ****  * Read one complete message from the streaming ring buffer.
-  56:comms.c       ****  * 
-  57:comms.c       ****  * A message is defined as a contiguous sequence of bytes ending with the
-  58:comms.c       ****  * EOM_MARKER. The function copies bytes into the provided buffer until
-  59:comms.c       ****  * the marker is found or an error occurs.
-  60:comms.c       ****  * 
-  61:comms.c       ****  * @param rb      Pointer to streaming ring buffer instance (IN/OUT).
-  62:comms.c       ****  * @param msg     Destination buffer for the assembled message (OUT).
-  63:comms.c       ****  * @param msg_len Pointer to variable that receives the message length (OUT).
-  64:comms.c       ****  * @return RC_SUCCESS on complete message, RC_ERROR_WRITE_FAILS if too long,
-  65:comms.c       ****  *         RC_ERROR_READ_FAILS if EOM not found.
-  66:comms.c       ****  */
-  67:comms.c       **** RC_t streamRB_read_message(StreamingRB_t *rb, uint8_t *msg, uint16_t *msg_len) 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 4
+ 104              	.LFB105:
+  53:source\asw/comms.c **** 
+  54:source\asw/comms.c **** /**
+  55:source\asw/comms.c ****  * Read one complete message from the streaming ring buffer.
+  56:source\asw/comms.c ****  * 
+  57:source\asw/comms.c ****  * A message is defined as a contiguous sequence of bytes ending with the
+  58:source\asw/comms.c ****  * EOM_MARKER. The function copies bytes into the provided buffer until
+  59:source\asw/comms.c ****  * the marker is found or an error occurs.
+  60:source\asw/comms.c ****  * 
+  61:source\asw/comms.c ****  * @param rb      Pointer to streaming ring buffer instance (IN/OUT).
+  62:source\asw/comms.c ****  * @param msg     Destination buffer for the assembled message (OUT).
+  63:source\asw/comms.c ****  * @param msg_len Pointer to variable that receives the message length (OUT).
+  64:source\asw/comms.c ****  * @return RC_SUCCESS on complete message, RC_ERROR_WRITE_FAILS if too long,
+  65:source\asw/comms.c ****  *         RC_ERROR_READ_FAILS if EOM not found.
+  66:source\asw/comms.c ****  */
+  67:source\asw/comms.c **** RC_t streamRB_read_message(StreamingRB_t *rb, uint8_t *msg, uint16_t *msg_len) 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 4
 
 
-  68:comms.c       **** {
-  69:comms.c       ****     *msg_len = 0;
-  70:comms.c       ****     
-  71:comms.c       ****     /* Protect buffer access on task level with a resource. */
-  72:comms.c       ****     GetResource(res_stream);  // Protect task access
-  73:comms.c       ****     
-  74:comms.c       ****     /* Extract one complete message terminated with EOM_MARKER. */
-  75:comms.c       ****     while (rb->fillLevel > 0) 
-  76:comms.c       ****     {
-  77:comms.c       ****         uint8_t byte;
-  78:comms.c       ****         streamRB_read_byte(rb, &byte);
-  79:comms.c       ****         
-  80:comms.c       ****         msg[(*msg_len)++] = byte;
-  81:comms.c       ****         
-  82:comms.c       ****         if (byte == EOM_MARKER) {  // End of message found
-  83:comms.c       ****             ReleaseResource(res_stream);
-  84:comms.c       ****             return RC_SUCCESS;
-  85:comms.c       ****         }
-  86:comms.c       ****         
-  87:comms.c       ****         if (*msg_len >= MAX_MSG_LEN) {
-  88:comms.c       ****             ReleaseResource(res_stream);
-  89:comms.c       ****             return RC_ERROR_WRITE_FAILS;   // RC_ERROR_TOO_LONG
-  90:comms.c       ****         }
-  91:comms.c       ****     }
-  92:comms.c       ****     ReleaseResource(res_stream);
-  93:comms.c       ****     
-  94:comms.c       ****     return RC_ERROR_READ_FAILS;  // No EOM found - RC_ERROR_INCOMPLETE
-  95:comms.c       **** }
-  96:comms.c       **** 
-  97:comms.c       **** /**
-  98:comms.c       ****  * Read a single byte from the streaming ring buffer.
-  99:comms.c       ****  * 
- 100:comms.c       ****  * @param rb   Pointer to streaming ring buffer instance (IN/OUT).
- 101:comms.c       ****  * @param byte Pointer to destination byte receiving the read value (OUT).
- 102:comms.c       ****  * @return RC_SUCCESS if a byte was read, RC_ERROR_BUFFER_EMTPY if buffer is empty.
- 103:comms.c       ****  */
- 104:comms.c       **** RC_t streamRB_read_byte(StreamingRB_t *rb, uint8_t *byte) 
- 105:comms.c       **** {
+  68:source\asw/comms.c **** {
+  69:source\asw/comms.c ****     *msg_len = 0;
+  70:source\asw/comms.c ****     
+  71:source\asw/comms.c ****     /* Protect buffer access on task level with a resource. */
+  72:source\asw/comms.c ****     GetResource(res_stream);  // Protect task access
+  73:source\asw/comms.c ****     
+  74:source\asw/comms.c ****     /* Extract one complete message terminated with EOM_MARKER. */
+  75:source\asw/comms.c ****     while (rb->fillLevel > 0) 
+  76:source\asw/comms.c ****     {
+  77:source\asw/comms.c ****         uint8_t byte;
+  78:source\asw/comms.c ****         streamRB_read_byte(rb, &byte);
+  79:source\asw/comms.c ****         
+  80:source\asw/comms.c ****         msg[(*msg_len)++] = byte;
+  81:source\asw/comms.c ****         
+  82:source\asw/comms.c ****         if (byte == EOM_MARKER) {  // End of message found
+  83:source\asw/comms.c ****             ReleaseResource(res_stream);
+  84:source\asw/comms.c ****             return RC_SUCCESS;
+  85:source\asw/comms.c ****         }
+  86:source\asw/comms.c ****         
+  87:source\asw/comms.c ****         if (*msg_len >= MAX_MSG_LEN) {
+  88:source\asw/comms.c ****             ReleaseResource(res_stream);
+  89:source\asw/comms.c ****             return RC_ERROR_WRITE_FAILS;   // RC_ERROR_TOO_LONG
+  90:source\asw/comms.c ****         }
+  91:source\asw/comms.c ****     }
+  92:source\asw/comms.c ****     ReleaseResource(res_stream);
+  93:source\asw/comms.c ****     
+  94:source\asw/comms.c ****     return RC_ERROR_READ_FAILS;  // No EOM found - RC_ERROR_INCOMPLETE
+  95:source\asw/comms.c **** }
+  96:source\asw/comms.c **** 
+  97:source\asw/comms.c **** /**
+  98:source\asw/comms.c ****  * Read a single byte from the streaming ring buffer.
+  99:source\asw/comms.c ****  * 
+ 100:source\asw/comms.c ****  * @param rb   Pointer to streaming ring buffer instance (IN/OUT).
+ 101:source\asw/comms.c ****  * @param byte Pointer to destination byte receiving the read value (OUT).
+ 102:source\asw/comms.c ****  * @return RC_SUCCESS if a byte was read, RC_ERROR_BUFFER_EMTPY if buffer is empty.
+ 103:source\asw/comms.c ****  */
+ 104:source\asw/comms.c **** RC_t streamRB_read_byte(StreamingRB_t *rb, uint8_t *byte) 
+ 105:source\asw/comms.c **** {
  105              		.loc 1 105 0
  106              		.cfi_startproc
  107              		@ args = 0, pretend = 0, frame = 0
  108              		@ frame_needed = 0, uses_anonymous_args = 0
  109              		@ link register save eliminated.
  110              	.LVL6:
- 106:comms.c       ****     if (rb->fillLevel > 0) {
+ 106:source\asw/comms.c ****     if (rb->fillLevel > 0) {
  111              		.loc 1 106 0
  112 0000 B0F80431 		ldrh	r3, [r0, #260]
  113 0004 9BB2     		uxth	r3, r3
  114 0006 B3B1     		cbz	r3, .L7
- 107:comms.c       ****         *byte = rb->buffer[rb->readIdx++];
+ 107:source\asw/comms.c ****         *byte = rb->buffer[rb->readIdx++];
  115              		.loc 1 107 0
  116 0008 B0F80031 		ldrh	r3, [r0, #256]
  117 000c 9BB2     		uxth	r3, r3
@@ -238,39 +238,39 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  119 0010 92B2     		uxth	r2, r2
  120 0012 A0F80021 		strh	r2, [r0, #256]	@ movhi
  121 0016 C35C     		ldrb	r3, [r0, r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 5
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 5
 
 
  122 0018 0B70     		strb	r3, [r1]
- 108:comms.c       ****         rb->readIdx = rb->readIdx % RB_SIZE;
+ 108:source\asw/comms.c ****         rb->readIdx = rb->readIdx % RB_SIZE;
  123              		.loc 1 108 0
  124 001a B0F80031 		ldrh	r3, [r0, #256]
  125 001e DBB2     		uxtb	r3, r3
  126 0020 A0F80031 		strh	r3, [r0, #256]	@ movhi
- 109:comms.c       ****         rb->fillLevel--;
+ 109:source\asw/comms.c ****         rb->fillLevel--;
  127              		.loc 1 109 0
  128 0024 B0F80431 		ldrh	r3, [r0, #260]
  129 0028 9BB2     		uxth	r3, r3
  130 002a 013B     		subs	r3, r3, #1
  131 002c 9BB2     		uxth	r3, r3
  132 002e A0F80431 		strh	r3, [r0, #260]	@ movhi
- 110:comms.c       ****         return RC_SUCCESS;
+ 110:source\asw/comms.c ****         return RC_SUCCESS;
  133              		.loc 1 110 0
  134 0032 0020     		movs	r0, #0
  135              	.LVL7:
  136 0034 7047     		bx	lr
  137              	.LVL8:
  138              	.L7:
- 111:comms.c       ****     }
- 112:comms.c       ****     return RC_ERROR_BUFFER_EMTPY;
+ 111:source\asw/comms.c ****     }
+ 112:source\asw/comms.c ****     return RC_ERROR_BUFFER_EMTPY;
  139              		.loc 1 112 0
  140 0036 6FF00800 		mvn	r0, #8
  141              	.LVL9:
- 113:comms.c       **** }
+ 113:source\asw/comms.c **** }
  142              		.loc 1 113 0
  143 003a 7047     		bx	lr
  144              		.cfi_endproc
- 145              	.LFE113:
+ 145              	.LFE105:
  146              		.size	streamRB_read_byte, .-streamRB_read_byte
  147              		.section	.text.streamRB_read_message,"ax",%progbits
  148              		.align	2
@@ -279,8 +279,8 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  151              		.thumb_func
  152              		.type	streamRB_read_message, %function
  153              	streamRB_read_message:
- 154              	.LFB112:
-  68:comms.c       ****     *msg_len = 0;
+ 154              	.LFB104:
+  68:source\asw/comms.c ****     *msg_len = 0;
  155              		.loc 1 68 0
  156              		.cfi_startproc
  157              		@ args = 0, pretend = 0, frame = 8
@@ -297,68 +297,68 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  168 0004 0546     		mov	r5, r0
  169 0006 0E46     		mov	r6, r1
  170 0008 1446     		mov	r4, r2
-  69:comms.c       ****     
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 6
+  69:source\asw/comms.c ****     
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 6
 
 
  171              		.loc 1 69 0
  172 000a 0023     		movs	r3, #0
  173 000c 1380     		strh	r3, [r2]	@ movhi
-  72:comms.c       ****     
+  72:source\asw/comms.c ****     
  174              		.loc 1 72 0
  175 000e 0120     		movs	r0, #1
  176              	.LVL11:
  177 0010 FFF7FEFF 		bl	EE_oo_GetResource
  178              	.LVL12:
-  75:comms.c       ****     {
+  75:source\asw/comms.c ****     {
  179              		.loc 1 75 0
  180 0014 19E0     		b	.L9
  181              	.L14:
  182              	.LBB2:
-  78:comms.c       ****         
+  78:source\asw/comms.c ****         
  183              		.loc 1 78 0
  184 0016 0DF10701 		add	r1, sp, #7
  185 001a 2846     		mov	r0, r5
  186 001c FFF7FEFF 		bl	streamRB_read_byte
  187              	.LVL13:
-  80:comms.c       ****         
+  80:source\asw/comms.c ****         
  188              		.loc 1 80 0
  189 0020 2288     		ldrh	r2, [r4]
  190 0022 531C     		adds	r3, r2, #1
  191 0024 2380     		strh	r3, [r4]	@ movhi
  192 0026 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
  193 002a B354     		strb	r3, [r6, r2]
-  82:comms.c       ****             ReleaseResource(res_stream);
+  82:source\asw/comms.c ****             ReleaseResource(res_stream);
  194              		.loc 1 82 0
  195 002c 23B9     		cbnz	r3, .L10
-  83:comms.c       ****             return RC_SUCCESS;
+  83:source\asw/comms.c ****             return RC_SUCCESS;
  196              		.loc 1 83 0
  197 002e 0120     		movs	r0, #1
  198 0030 FFF7FEFF 		bl	EE_oo_ReleaseResource
  199              	.LVL14:
-  84:comms.c       ****         }
+  84:source\asw/comms.c ****         }
  200              		.loc 1 84 0
  201 0034 0020     		movs	r0, #0
  202 0036 12E0     		b	.L13
  203              	.L10:
-  87:comms.c       ****             ReleaseResource(res_stream);
+  87:source\asw/comms.c ****             ReleaseResource(res_stream);
  204              		.loc 1 87 0
  205 0038 2388     		ldrh	r3, [r4]
  206 003a 7F2B     		cmp	r3, #127
  207 003c 05D9     		bls	.L9
-  88:comms.c       ****             return RC_ERROR_WRITE_FAILS;   // RC_ERROR_TOO_LONG
+  88:source\asw/comms.c ****             return RC_ERROR_WRITE_FAILS;   // RC_ERROR_TOO_LONG
  208              		.loc 1 88 0
  209 003e 0120     		movs	r0, #1
  210 0040 FFF7FEFF 		bl	EE_oo_ReleaseResource
  211              	.LVL15:
-  89:comms.c       ****         }
+  89:source\asw/comms.c ****         }
  212              		.loc 1 89 0
  213 0044 6FF01100 		mvn	r0, #17
  214 0048 09E0     		b	.L13
  215              	.L9:
  216              	.LBE2:
-  75:comms.c       ****     {
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 7
+  75:source\asw/comms.c ****     {
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 7
 
 
  217              		.loc 1 75 0
@@ -366,23 +366,23 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  219 004e 9BB2     		uxth	r3, r3
  220 0050 002B     		cmp	r3, #0
  221 0052 E0D1     		bne	.L14
-  92:comms.c       ****     
+  92:source\asw/comms.c ****     
  222              		.loc 1 92 0
  223 0054 0120     		movs	r0, #1
  224 0056 FFF7FEFF 		bl	EE_oo_ReleaseResource
  225              	.LVL16:
-  94:comms.c       **** }
+  94:source\asw/comms.c **** }
  226              		.loc 1 94 0
  227 005a 6FF01000 		mvn	r0, #16
  228              	.L13:
-  95:comms.c       **** 
+  95:source\asw/comms.c **** 
  229              		.loc 1 95 0
  230 005e 02B0     		add	sp, sp, #8
  231              		.cfi_def_cfa_offset 16
  232              		@ sp needed
  233 0060 70BD     		pop	{r4, r5, r6, pc}
  234              		.cfi_endproc
- 235              	.LFE112:
+ 235              	.LFE104:
  236              		.size	streamRB_read_message, .-streamRB_read_message
  237 0062 00BF     		.section	.text.streamRB_flush,"ax",%progbits
  238              		.align	2
@@ -391,19 +391,19 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  241              		.thumb_func
  242              		.type	streamRB_flush, %function
  243              	streamRB_flush:
- 244              	.LFB114:
- 114:comms.c       **** 
- 115:comms.c       **** /**
- 116:comms.c       ****  * Flush all pending data in the streaming ring buffer.
- 117:comms.c       ****  * 
- 118:comms.c       ****  * Sets the read index equal to the write index and resets the fill level
- 119:comms.c       ****  * so that the buffer appears empty to all users.
- 120:comms.c       ****  * 
- 121:comms.c       ****  * @param rb Pointer to streaming ring buffer instance to be flushed (IN/OUT).
- 122:comms.c       ****  * @return RC_SUCCESS after the buffer is cleared.
- 123:comms.c       ****  */
- 124:comms.c       **** RC_t streamRB_flush(StreamingRB_t *rb) 
- 125:comms.c       **** {
+ 244              	.LFB106:
+ 114:source\asw/comms.c **** 
+ 115:source\asw/comms.c **** /**
+ 116:source\asw/comms.c ****  * Flush all pending data in the streaming ring buffer.
+ 117:source\asw/comms.c ****  * 
+ 118:source\asw/comms.c ****  * Sets the read index equal to the write index and resets the fill level
+ 119:source\asw/comms.c ****  * so that the buffer appears empty to all users.
+ 120:source\asw/comms.c ****  * 
+ 121:source\asw/comms.c ****  * @param rb Pointer to streaming ring buffer instance to be flushed (IN/OUT).
+ 122:source\asw/comms.c ****  * @return RC_SUCCESS after the buffer is cleared.
+ 123:source\asw/comms.c ****  */
+ 124:source\asw/comms.c **** RC_t streamRB_flush(StreamingRB_t *rb) 
+ 125:source\asw/comms.c **** {
  245              		.loc 1 125 0
  246              		.cfi_startproc
  247              		@ args = 0, pretend = 0, frame = 0
@@ -416,36 +416,36 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  254              		.cfi_offset 5, -8
  255              		.cfi_offset 14, -4
  256 0002 0446     		mov	r4, r0
- 126:comms.c       ****     GetResource(res_stream);
+ 126:source\asw/comms.c ****     GetResource(res_stream);
  257              		.loc 1 126 0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 8
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 8
 
 
  258 0004 0120     		movs	r0, #1
  259              	.LVL18:
  260 0006 FFF7FEFF 		bl	EE_oo_GetResource
  261              	.LVL19:
- 127:comms.c       ****     rb->readIdx = rb->writeIdx;   // Reader catches writer = empty
+ 127:source\asw/comms.c ****     rb->readIdx = rb->writeIdx;   // Reader catches writer = empty
  262              		.loc 1 127 0
  263 000a B4F80231 		ldrh	r3, [r4, #258]
  264 000e 9BB2     		uxth	r3, r3
  265 0010 A4F80031 		strh	r3, [r4, #256]	@ movhi
- 128:comms.c       ****     rb->fillLevel = 0;            // Force empty
+ 128:source\asw/comms.c ****     rb->fillLevel = 0;            // Force empty
  266              		.loc 1 128 0
  267 0014 0025     		movs	r5, #0
  268 0016 A4F80451 		strh	r5, [r4, #260]	@ movhi
- 129:comms.c       ****     ReleaseResource(res_stream);
+ 129:source\asw/comms.c ****     ReleaseResource(res_stream);
  269              		.loc 1 129 0
  270 001a 0120     		movs	r0, #1
  271 001c FFF7FEFF 		bl	EE_oo_ReleaseResource
  272              	.LVL20:
- 130:comms.c       ****     return RC_SUCCESS;
- 131:comms.c       **** }
+ 130:source\asw/comms.c ****     return RC_SUCCESS;
+ 131:source\asw/comms.c **** }
  273              		.loc 1 131 0
  274 0020 2846     		mov	r0, r5
  275 0022 38BD     		pop	{r3, r4, r5, pc}
  276              		.cfi_endproc
- 277              	.LFE114:
+ 277              	.LFE106:
  278              		.size	streamRB_flush, .-streamRB_flush
  279              		.section	.text.dynRB_init,"ax",%progbits
  280              		.align	2
@@ -454,40 +454,40 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  283              		.thumb_func
  284              		.type	dynRB_init, %function
  285              	dynRB_init:
- 286              	.LFB115:
- 132:comms.c       **** 
- 133:comms.c       **** /**
- 134:comms.c       ****  * Initialize dynamic payload ring buffer instance.
- 135:comms.c       ****  * 
- 136:comms.c       ****  * @param rb Pointer to dynamic payload ring buffer object (IN/OUT).
- 137:comms.c       ****  * @return RC_SUCCESS on successful initialization.
- 138:comms.c       ****  */
- 139:comms.c       **** RC_t dynRB_init(DynPayloadRB_t *rb) 
- 140:comms.c       **** {
+ 286              	.LFB107:
+ 132:source\asw/comms.c **** 
+ 133:source\asw/comms.c **** /**
+ 134:source\asw/comms.c ****  * Initialize dynamic payload ring buffer instance.
+ 135:source\asw/comms.c ****  * 
+ 136:source\asw/comms.c ****  * @param rb Pointer to dynamic payload ring buffer object (IN/OUT).
+ 137:source\asw/comms.c ****  * @return RC_SUCCESS on successful initialization.
+ 138:source\asw/comms.c ****  */
+ 139:source\asw/comms.c **** RC_t dynRB_init(DynPayloadRB_t *rb) 
+ 140:source\asw/comms.c **** {
  287              		.loc 1 140 0
  288              		.cfi_startproc
  289              		@ args = 0, pretend = 0, frame = 0
  290              		@ frame_needed = 0, uses_anonymous_args = 0
  291              		@ link register save eliminated.
  292              	.LVL21:
- 141:comms.c       ****     rb->readIdx_tft = rb->readIdx_uart = rb->writeIdx = rb->fillLevel = 0;
+ 141:source\asw/comms.c ****     rb->readIdx_tft = rb->readIdx_uart = rb->writeIdx = rb->fillLevel = 0;
  293              		.loc 1 141 0
  294 0000 0023     		movs	r3, #0
  295 0002 A0F86634 		strh	r3, [r0, #1126]	@ movhi
  296 0006 A0F86434 		strh	r3, [r0, #1124]	@ movhi
  297 000a A0F86234 		strh	r3, [r0, #1122]	@ movhi
  298 000e A0F86034 		strh	r3, [r0, #1120]	@ movhi
- 142:comms.c       ****     return RC_SUCCESS;
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 9
+ 142:source\asw/comms.c ****     return RC_SUCCESS;
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 9
 
 
- 143:comms.c       **** }
+ 143:source\asw/comms.c **** }
  299              		.loc 1 143 0
  300 0012 1846     		mov	r0, r3
  301              	.LVL22:
  302 0014 7047     		bx	lr
  303              		.cfi_endproc
- 304              	.LFE115:
+ 304              	.LFE107:
  305              		.size	dynRB_init, .-dynRB_init
  306 0016 00BF     		.section	.text.dynRB_send,"ax",%progbits
  307              		.align	2
@@ -496,34 +496,34 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  310              		.thumb_func
  311              		.type	dynRB_send, %function
  312              	dynRB_send:
- 313              	.LFB116:
- 144:comms.c       **** 
- 145:comms.c       **** /**
- 146:comms.c       ****  * Enqueue a payload into the dynamic payload ring buffer.
- 147:comms.c       ****  * 
- 148:comms.c       ****  * Stores the given data together with metadata identifying the consumer,
- 149:comms.c       ****  * event and target task, then triggers the corresponding event.
- 150:comms.c       ****  * 
- 151:comms.c       ****  * @param rb      Pointer to dynamic payload ring buffer instance (IN/OUT).
- 152:comms.c       ****  * @param data    Pointer to data buffer to be enqueued (IN).
- 153:comms.c       ****  * @param len     Length of the payload in bytes (IN).
- 154:comms.c       ****  * @param msg_id  Identifier of target consumer (e.g. TFT_ID, UART_ID) (IN).
- 155:comms.c       ****  * @param ev      Event mask to be set for the target task (IN).
- 156:comms.c       ****  * @param tsk     Task identifier that should receive the event (IN).
- 157:comms.c       ****  * @return RC_SUCCESS if enqueued, RC_ERROR if buffer is full or size exceeds limit.
- 158:comms.c       ****  */
- 159:comms.c       **** RC_t dynRB_send(DynPayloadRB_t *rb, uint8_t *data, uint16_t len, dyn_id_t msg_id, EventMaskType ev,
- 160:comms.c       **** {
+ 313              	.LFB108:
+ 144:source\asw/comms.c **** 
+ 145:source\asw/comms.c **** /**
+ 146:source\asw/comms.c ****  * Enqueue a payload into the dynamic payload ring buffer.
+ 147:source\asw/comms.c ****  * 
+ 148:source\asw/comms.c ****  * Stores the given data together with metadata identifying the consumer,
+ 149:source\asw/comms.c ****  * event and target task, then triggers the corresponding event.
+ 150:source\asw/comms.c ****  * 
+ 151:source\asw/comms.c ****  * @param rb      Pointer to dynamic payload ring buffer instance (IN/OUT).
+ 152:source\asw/comms.c ****  * @param data    Pointer to data buffer to be enqueued (IN).
+ 153:source\asw/comms.c ****  * @param len     Length of the payload in bytes (IN).
+ 154:source\asw/comms.c ****  * @param msg_id  Identifier of target consumer (e.g. TFT_ID, UART_ID) (IN).
+ 155:source\asw/comms.c ****  * @param ev      Event mask to be set for the target task (IN).
+ 156:source\asw/comms.c ****  * @param tsk     Task identifier that should receive the event (IN).
+ 157:source\asw/comms.c ****  * @return RC_SUCCESS if enqueued, RC_ERROR if buffer is full or size exceeds limit.
+ 158:source\asw/comms.c ****  */
+ 159:source\asw/comms.c **** RC_t dynRB_send(DynPayloadRB_t *rb, uint8_t *data, uint16_t len, dyn_id_t msg_id, EventMaskType ev,
+ 160:source\asw/comms.c **** {
  314              		.loc 1 160 0
  315              		.cfi_startproc
  316              		@ args = 8, pretend = 0, frame = 0
  317              		@ frame_needed = 0, uses_anonymous_args = 0
  318              	.LVL23:
- 161:comms.c       ****     if (len > DYN_MAX_SIZE || rb->fillLevel >= DYN_SLOTS) 
+ 161:source\asw/comms.c ****     if (len > DYN_MAX_SIZE || rb->fillLevel >= DYN_SLOTS) 
  319              		.loc 1 161 0
  320 0000 802A     		cmp	r2, #128
  321 0002 38D8     		bhi	.L21
- 160:comms.c       ****     if (len > DYN_MAX_SIZE || rb->fillLevel >= DYN_SLOTS) 
+ 160:source\asw/comms.c ****     if (len > DYN_MAX_SIZE || rb->fillLevel >= DYN_SLOTS) 
  322              		.loc 1 160 0 discriminator 1
  323 0004 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
  324              		.cfi_def_cfa_offset 24
@@ -538,27 +538,27 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  333 000c 072C     		cmp	r4, #7
  334 000e 35D8     		bhi	.L22
  335 0010 9846     		mov	r8, r3
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 10
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 10
 
 
  336 0012 1746     		mov	r7, r2
  337 0014 0E46     		mov	r6, r1
  338 0016 0446     		mov	r4, r0
- 162:comms.c       ****     {
- 163:comms.c       ****         return RC_ERROR;
- 164:comms.c       ****     }
- 165:comms.c       ****     
- 166:comms.c       ****     GetResource(res_dyn);
+ 162:source\asw/comms.c ****     {
+ 163:source\asw/comms.c ****         return RC_ERROR;
+ 164:source\asw/comms.c ****     }
+ 165:source\asw/comms.c ****     
+ 166:source\asw/comms.c ****     GetResource(res_dyn);
  339              		.loc 1 166 0
  340 0018 0020     		movs	r0, #0
  341              	.LVL24:
  342 001a FFF7FEFF 		bl	EE_oo_GetResource
  343              	.LVL25:
- 167:comms.c       ****     dyn_payload_t *slot = &rb->slots[rb->writeIdx];
+ 167:source\asw/comms.c ****     dyn_payload_t *slot = &rb->slots[rb->writeIdx];
  344              		.loc 1 167 0
  345 001e B4F86434 		ldrh	r3, [r4, #1124]
  346              	.LVL26:
- 168:comms.c       ****     memcpy(slot->payload, data, len);
+ 168:source\asw/comms.c ****     memcpy(slot->payload, data, len);
  347              		.loc 1 168 0
  348 0022 8C25     		movs	r5, #140
  349 0024 05FB0345 		mla	r5, r5, r3, r4
@@ -568,49 +568,49 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  353 002c 2846     		mov	r0, r5
  354 002e FFF7FEFF 		bl	memcpy
  355              	.LVL28:
- 169:comms.c       ****     slot->payload_len = len;
+ 169:source\asw/comms.c ****     slot->payload_len = len;
  356              		.loc 1 169 0
  357 0032 A5F88070 		strh	r7, [r5, #128]	@ movhi
- 170:comms.c       ****     slot->msg_id = msg_id;
+ 170:source\asw/comms.c ****     slot->msg_id = msg_id;
  358              		.loc 1 170 0
  359 0036 85F88280 		strb	r8, [r5, #130]
- 171:comms.c       ****     slot->event = ev;
+ 171:source\asw/comms.c ****     slot->event = ev;
  360              		.loc 1 171 0
  361 003a 069B     		ldr	r3, [sp, #24]
  362 003c C5F88430 		str	r3, [r5, #132]
- 172:comms.c       ****     slot->task = tsk;
+ 172:source\asw/comms.c ****     slot->task = tsk;
  363              		.loc 1 172 0
  364 0040 9DF81C30 		ldrb	r3, [sp, #28]	@ zero_extendqisi2
  365 0044 85F88830 		strb	r3, [r5, #136]
- 173:comms.c       ****     
- 174:comms.c       ****     rb->writeIdx = rb->writeIdx % DYN_SLOTS;
+ 173:source\asw/comms.c ****     
+ 174:source\asw/comms.c ****     rb->writeIdx = rb->writeIdx % DYN_SLOTS;
  366              		.loc 1 174 0
  367 0048 B4F86434 		ldrh	r3, [r4, #1124]
  368 004c 03F00703 		and	r3, r3, #7
  369 0050 A4F86434 		strh	r3, [r4, #1124]	@ movhi
- 175:comms.c       ****     rb->fillLevel++;
+ 175:source\asw/comms.c ****     rb->fillLevel++;
  370              		.loc 1 175 0
  371 0054 B4F86634 		ldrh	r3, [r4, #1126]
  372 0058 0133     		adds	r3, r3, #1
  373 005a A4F86634 		strh	r3, [r4, #1126]	@ movhi
- 176:comms.c       ****     ReleaseResource(res_dyn);
+ 176:source\asw/comms.c ****     ReleaseResource(res_dyn);
  374              		.loc 1 176 0
  375 005e 0020     		movs	r0, #0
  376 0060 FFF7FEFF 		bl	EE_oo_ReleaseResource
  377              	.LVL29:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 11
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 11
 
 
- 177:comms.c       ****     
- 178:comms.c       ****     /* Notify the destination task that a new payload is available. */
- 179:comms.c       ****     SetEvent(slot->task, slot->event);
+ 177:source\asw/comms.c ****     
+ 178:source\asw/comms.c ****     /* Notify the destination task that a new payload is available. */
+ 179:source\asw/comms.c ****     SetEvent(slot->task, slot->event);
  378              		.loc 1 179 0
  379 0064 D5F88410 		ldr	r1, [r5, #132]
  380 0068 95F88800 		ldrb	r0, [r5, #136]	@ zero_extendqisi2
  381 006c FFF7FEFF 		bl	EE_oo_SetEvent
  382              	.LVL30:
- 180:comms.c       ****     
- 181:comms.c       ****     return RC_SUCCESS;
+ 180:source\asw/comms.c ****     
+ 181:source\asw/comms.c ****     return RC_SUCCESS;
  383              		.loc 1 181 0
  384 0070 0020     		movs	r0, #0
  385 0072 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
@@ -623,11 +623,11 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  392              		.cfi_restore 7
  393              		.cfi_restore 8
  394              		.cfi_restore 14
- 163:comms.c       ****     }
+ 163:source\asw/comms.c ****     }
  395              		.loc 1 163 0
  396 0076 4FF0FF30 		mov	r0, #-1
  397              	.LVL32:
- 182:comms.c       **** }
+ 182:source\asw/comms.c **** }
  398              		.loc 1 182 0
  399 007a 7047     		bx	lr
  400              	.LVL33:
@@ -639,14 +639,14 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  406              		.cfi_offset 7, -12
  407              		.cfi_offset 8, -8
  408              		.cfi_offset 14, -4
- 163:comms.c       ****     }
+ 163:source\asw/comms.c ****     }
  409              		.loc 1 163 0
  410 007c 4FF0FF30 		mov	r0, #-1
  411              	.LVL34:
  412              		.loc 1 182 0
  413 0080 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
  414              		.cfi_endproc
- 415              	.LFE116:
+ 415              	.LFE108:
  416              		.size	dynRB_send, .-dynRB_send
  417              		.section	.text.dynRB_receive,"ax",%progbits
  418              		.align	2
@@ -655,25 +655,25 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  421              		.thumb_func
  422              		.type	dynRB_receive, %function
  423              	dynRB_receive:
- 424              	.LFB117:
- 183:comms.c       **** 
- 184:comms.c       **** /**
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 12
+ 424              	.LFB109:
+ 183:source\asw/comms.c **** 
+ 184:source\asw/comms.c **** /**
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 12
 
 
- 185:comms.c       ****  * Receive a payload from the dynamic payload ring buffer.
- 186:comms.c       ****  * 
- 187:comms.c       ****  * Selects the appropriate read index based on consumer ID, copies the
- 188:comms.c       ****  * payload into the destination buffer and updates read indices and fill level.
- 189:comms.c       ****  * 
- 190:comms.c       ****  * @param rb          Pointer to dynamic payload ring buffer instance (IN/OUT).
- 191:comms.c       ****  * @param consumer_id Identifier of the consumer (TFT_ID or UART_ID) (IN).
- 192:comms.c       ****  * @param data        Destination buffer for received payload (OUT).
- 193:comms.c       ****  * @param len         Pointer to variable receiving the payload length (OUT).
- 194:comms.c       ****  * @return RC_SUCCESS if a message was received, RC_ERROR_BUFFER_EMTPY if none.
- 195:comms.c       ****  */
- 196:comms.c       **** RC_t dynRB_receive(DynPayloadRB_t *rb, dyn_id_t consumer_id, uint8_t *data, uint16_t *len) 
- 197:comms.c       **** {
+ 185:source\asw/comms.c ****  * Receive a payload from the dynamic payload ring buffer.
+ 186:source\asw/comms.c ****  * 
+ 187:source\asw/comms.c ****  * Selects the appropriate read index based on consumer ID, copies the
+ 188:source\asw/comms.c ****  * payload into the destination buffer and updates read indices and fill level.
+ 189:source\asw/comms.c ****  * 
+ 190:source\asw/comms.c ****  * @param rb          Pointer to dynamic payload ring buffer instance (IN/OUT).
+ 191:source\asw/comms.c ****  * @param consumer_id Identifier of the consumer (TFT_ID or UART_ID) (IN).
+ 192:source\asw/comms.c ****  * @param data        Destination buffer for received payload (OUT).
+ 193:source\asw/comms.c ****  * @param len         Pointer to variable receiving the payload length (OUT).
+ 194:source\asw/comms.c ****  * @return RC_SUCCESS if a message was received, RC_ERROR_BUFFER_EMTPY if none.
+ 195:source\asw/comms.c ****  */
+ 196:source\asw/comms.c **** RC_t dynRB_receive(DynPayloadRB_t *rb, dyn_id_t consumer_id, uint8_t *data, uint16_t *len) 
+ 197:source\asw/comms.c **** {
  425              		.loc 1 197 0
  426              		.cfi_startproc
  427              		@ args = 0, pretend = 0, frame = 0
@@ -691,13 +691,13 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  439 0004 0D46     		mov	r5, r1
  440 0006 1646     		mov	r6, r2
  441 0008 1F46     		mov	r7, r3
- 198:comms.c       ****     GetResource(res_dyn);
+ 198:source\asw/comms.c ****     GetResource(res_dyn);
  442              		.loc 1 198 0
  443 000a 0020     		movs	r0, #0
  444              	.LVL36:
  445 000c FFF7FEFF 		bl	EE_oo_GetResource
  446              	.LVL37:
- 199:comms.c       ****     uint16_t *readIdx = (consumer_id == TFT_ID) ? &rb->readIdx_tft : &rb->readIdx_uart;
+ 199:source\asw/comms.c ****     uint16_t *readIdx = (consumer_id == TFT_ID) ? &rb->readIdx_tft : &rb->readIdx_uart;
  447              		.loc 1 199 0
  448 0010 012D     		cmp	r5, #1
  449 0012 02D1     		bne	.L25
@@ -709,67 +709,67 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  455 001a 04F26245 		addw	r5, r4, #1122
  456              	.L26:
  457              	.LVL38:
- 200:comms.c       ****     
- 201:comms.c       ****     if (rb->fillLevel == 0) {
+ 200:source\asw/comms.c ****     
+ 201:source\asw/comms.c ****     if (rb->fillLevel == 0) {
  458              		.loc 1 201 0 is_stmt 1 discriminator 4
  459 001e B4F86634 		ldrh	r3, [r4, #1126]
  460 0022 2BB9     		cbnz	r3, .L27
- 202:comms.c       ****         ReleaseResource(res_dyn);
+ 202:source\asw/comms.c ****         ReleaseResource(res_dyn);
  461              		.loc 1 202 0
  462 0024 0020     		movs	r0, #0
  463 0026 FFF7FEFF 		bl	EE_oo_ReleaseResource
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 13
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 13
 
 
  464              	.LVL39:
- 203:comms.c       ****         return RC_ERROR_BUFFER_EMTPY;   // RC_ERROR_EMPTY
+ 203:source\asw/comms.c ****         return RC_ERROR_BUFFER_EMTPY;   // RC_ERROR_EMPTY
  465              		.loc 1 203 0
  466 002a 6FF00800 		mvn	r0, #8
  467 002e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
  468              	.LVL40:
  469              	.L27:
- 204:comms.c       ****     }
- 205:comms.c       ****     
- 206:comms.c       ****     dyn_payload_t *slot = &rb->slots[*readIdx];
+ 204:source\asw/comms.c ****     }
+ 205:source\asw/comms.c ****     
+ 206:source\asw/comms.c ****     dyn_payload_t *slot = &rb->slots[*readIdx];
  470              		.loc 1 206 0
  471 0030 2B88     		ldrh	r3, [r5]
  472              	.LVL41:
- 207:comms.c       ****     *len = slot->payload_len;
+ 207:source\asw/comms.c ****     *len = slot->payload_len;
  473              		.loc 1 207 0
  474 0032 8C21     		movs	r1, #140
  475 0034 01FB0341 		mla	r1, r1, r3, r4
  476              	.LVL42:
  477 0038 B1F88020 		ldrh	r2, [r1, #128]
  478 003c 3A80     		strh	r2, [r7]	@ movhi
- 208:comms.c       ****     memcpy(data, slot->payload, *len);
+ 208:source\asw/comms.c ****     memcpy(data, slot->payload, *len);
  479              		.loc 1 208 0
  480 003e 3046     		mov	r0, r6
  481 0040 FFF7FEFF 		bl	memcpy
  482              	.LVL43:
- 209:comms.c       ****     
- 210:comms.c       ****     *readIdx = *readIdx % DYN_SLOTS;
+ 209:source\asw/comms.c ****     
+ 210:source\asw/comms.c ****     *readIdx = *readIdx % DYN_SLOTS;
  483              		.loc 1 210 0
  484 0044 2B88     		ldrh	r3, [r5]
  485 0046 03F00703 		and	r3, r3, #7
  486 004a 2B80     		strh	r3, [r5]	@ movhi
- 211:comms.c       ****     rb->fillLevel--;
+ 211:source\asw/comms.c ****     rb->fillLevel--;
  487              		.loc 1 211 0
  488 004c B4F86634 		ldrh	r3, [r4, #1126]
  489 0050 013B     		subs	r3, r3, #1
  490 0052 A4F86634 		strh	r3, [r4, #1126]	@ movhi
- 212:comms.c       ****     ReleaseResource(res_dyn);
+ 212:source\asw/comms.c ****     ReleaseResource(res_dyn);
  491              		.loc 1 212 0
  492 0056 0020     		movs	r0, #0
  493 0058 FFF7FEFF 		bl	EE_oo_ReleaseResource
  494              	.LVL44:
- 213:comms.c       ****     return RC_SUCCESS;
+ 213:source\asw/comms.c ****     return RC_SUCCESS;
  495              		.loc 1 213 0
  496 005c 0020     		movs	r0, #0
- 214:comms.c       **** }
+ 214:source\asw/comms.c **** }
  497              		.loc 1 214 0
  498 005e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
  499              		.cfi_endproc
- 500              	.LFE117:
+ 500              	.LFE109:
  501              		.size	dynRB_receive, .-dynRB_receive
  502              		.section	.text.dynRB_flush,"ax",%progbits
  503              		.align	2
@@ -778,22 +778,22 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  506              		.thumb_func
  507              		.type	dynRB_flush, %function
  508              	dynRB_flush:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 14
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 14
 
 
- 509              	.LFB118:
- 215:comms.c       **** 
- 216:comms.c       **** /**
- 217:comms.c       ****  * Flush the dynamic payload ring buffer.
- 218:comms.c       ****  * 
- 219:comms.c       ****  * Sets both TFT and UART read indices equal to the write index, drops
- 220:comms.c       ****  * all pending messages and resets the fill level.
- 221:comms.c       ****  * 
- 222:comms.c       ****  * @param rb Pointer to dynamic payload ring buffer instance (IN/OUT).
- 223:comms.c       ****  * @return RC_SUCCESS after the buffer is cleared.
- 224:comms.c       ****  */
- 225:comms.c       **** RC_t dynRB_flush(DynPayloadRB_t *rb) 
- 226:comms.c       **** {
+ 509              	.LFB110:
+ 215:source\asw/comms.c **** 
+ 216:source\asw/comms.c **** /**
+ 217:source\asw/comms.c ****  * Flush the dynamic payload ring buffer.
+ 218:source\asw/comms.c ****  * 
+ 219:source\asw/comms.c ****  * Sets both TFT and UART read indices equal to the write index, drops
+ 220:source\asw/comms.c ****  * all pending messages and resets the fill level.
+ 221:source\asw/comms.c ****  * 
+ 222:source\asw/comms.c ****  * @param rb Pointer to dynamic payload ring buffer instance (IN/OUT).
+ 223:source\asw/comms.c ****  * @return RC_SUCCESS after the buffer is cleared.
+ 224:source\asw/comms.c ****  */
+ 225:source\asw/comms.c **** RC_t dynRB_flush(DynPayloadRB_t *rb) 
+ 226:source\asw/comms.c **** {
  510              		.loc 1 226 0
  511              		.cfi_startproc
  512              		@ args = 0, pretend = 0, frame = 0
@@ -806,39 +806,39 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  519              		.cfi_offset 5, -8
  520              		.cfi_offset 14, -4
  521 0002 0446     		mov	r4, r0
- 227:comms.c       ****     GetResource(res_dyn);
+ 227:source\asw/comms.c ****     GetResource(res_dyn);
  522              		.loc 1 227 0
  523 0004 0020     		movs	r0, #0
  524              	.LVL46:
  525 0006 FFF7FEFF 		bl	EE_oo_GetResource
  526              	.LVL47:
- 228:comms.c       ****     rb->readIdx_tft = rb->writeIdx;   // TFT catches writer
+ 228:source\asw/comms.c ****     rb->readIdx_tft = rb->writeIdx;   // TFT catches writer
  527              		.loc 1 228 0
  528 000a B4F86434 		ldrh	r3, [r4, #1124]
  529 000e A4F86034 		strh	r3, [r4, #1120]	@ movhi
- 229:comms.c       ****     rb->readIdx_uart = rb->writeIdx;  // UART catches writer
+ 229:source\asw/comms.c ****     rb->readIdx_uart = rb->writeIdx;  // UART catches writer
  530              		.loc 1 229 0
  531 0012 A4F86234 		strh	r3, [r4, #1122]	@ movhi
- 230:comms.c       ****     rb->fillLevel = 0;
+ 230:source\asw/comms.c ****     rb->fillLevel = 0;
  532              		.loc 1 230 0
  533 0016 0025     		movs	r5, #0
  534 0018 A4F86654 		strh	r5, [r4, #1126]	@ movhi
- 231:comms.c       ****     ReleaseResource(res_dyn);
+ 231:source\asw/comms.c ****     ReleaseResource(res_dyn);
  535              		.loc 1 231 0
  536 001c 2846     		mov	r0, r5
  537 001e FFF7FEFF 		bl	EE_oo_ReleaseResource
  538              	.LVL48:
- 232:comms.c       ****     return RC_SUCCESS;
- 233:comms.c       **** }
+ 232:source\asw/comms.c ****     return RC_SUCCESS;
+ 233:source\asw/comms.c **** }
  539              		.loc 1 233 0
  540 0022 2846     		mov	r0, r5
  541 0024 38BD     		pop	{r3, r4, r5, pc}
  542              		.cfi_endproc
- 543              	.LFE118:
+ 543              	.LFE110:
  544              		.size	dynRB_flush, .-dynRB_flush
  545 0026 00BF     		.section	.text.RB_flush_all,"ax",%progbits
  546              		.align	2
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 15
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 15
 
 
  547              		.global	RB_flush_all
@@ -846,16 +846,16 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  549              		.thumb_func
  550              		.type	RB_flush_all, %function
  551              	RB_flush_all:
- 552              	.LFB119:
- 234:comms.c       **** 
- 235:comms.c       **** /**
- 236:comms.c       ****  * Flush both streaming and dynamic buffers.
- 237:comms.c       ****  * 
- 238:comms.c       ****  * Convenience function to clear all communication-related buffers and
- 239:comms.c       ****  * print a diagnostic message over UART.
- 240:comms.c       ****  */
- 241:comms.c       **** void RB_flush_all() 
- 242:comms.c       **** {
+ 552              	.LFB111:
+ 234:source\asw/comms.c **** 
+ 235:source\asw/comms.c **** /**
+ 236:source\asw/comms.c ****  * Flush both streaming and dynamic buffers.
+ 237:source\asw/comms.c ****  * 
+ 238:source\asw/comms.c ****  * Convenience function to clear all communication-related buffers and
+ 239:source\asw/comms.c ****  * print a diagnostic message over UART.
+ 240:source\asw/comms.c ****  */
+ 241:source\asw/comms.c **** void RB_flush_all() 
+ 242:source\asw/comms.c **** {
  553              		.loc 1 242 0
  554              		.cfi_startproc
  555              		@ args = 0, pretend = 0, frame = 0
@@ -864,17 +864,17 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  558              		.cfi_def_cfa_offset 8
  559              		.cfi_offset 3, -8
  560              		.cfi_offset 14, -4
- 243:comms.c       ****     streamRB_flush(&uartRB);      // Clear UART RX
+ 243:source\asw/comms.c ****     streamRB_flush(&uartRB);      // Clear UART RX
  561              		.loc 1 243 0
  562 0002 0548     		ldr	r0, .L34
  563 0004 FFF7FEFF 		bl	streamRB_flush
  564              	.LVL49:
- 244:comms.c       ****     dynRB_flush(&sharedRB);       // Clear shared payload
+ 244:source\asw/comms.c ****     dynRB_flush(&sharedRB);       // Clear shared payload
  565              		.loc 1 244 0
  566 0008 0448     		ldr	r0, .L34+4
  567 000a FFF7FEFF 		bl	dynRB_flush
  568              	.LVL50:
- 245:comms.c       ****     UART_LOG_PutString("\r\nAll Buffers flushed!\r\n");
+ 245:source\asw/comms.c ****     UART_LOG_PutString("\r\nAll Buffers flushed!\r\n");
  569              		.loc 1 245 0
  570 000e 0448     		ldr	r0, .L34+8
  571 0010 FFF7FEFF 		bl	UART_LOG_PutString
@@ -887,7 +887,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  578 001c 00000000 		.word	sharedRB
  579 0020 00000000 		.word	.LC0
  580              		.cfi_endproc
- 581              	.LFE119:
+ 581              	.LFE111:
  582              		.size	RB_flush_all, .-RB_flush_all
  583              		.section	.text.UART_LOG_PutInt,"ax",%progbits
  584              		.align	2
@@ -896,21 +896,21 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  587              		.thumb_func
  588              		.type	UART_LOG_PutInt, %function
  589              	UART_LOG_PutInt:
- 590              	.LFB120:
- 246:comms.c       **** }
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 16
+ 590              	.LFB112:
+ 246:source\asw/comms.c **** }
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 16
 
 
- 247:comms.c       **** 
- 248:comms.c       **** /**
- 249:comms.c       ****  * Print a 16-bit unsigned integer as ASCII via UART_LOG.
- 250:comms.c       ****  * 
- 251:comms.c       ****  * Performs decimal conversion into a local buffer, reverses the character
- 252:comms.c       ****  * order and transmits the resulting string using UART_LOG_PutString().
- 253:comms.c       ****  * 
- 254:comms.c       ****  * @param num Unsigned integer value to be printed (IN).
- 255:comms.c       ****  */
- 256:comms.c       **** void UART_LOG_PutInt(uint16_t num) {
+ 247:source\asw/comms.c **** 
+ 248:source\asw/comms.c **** /**
+ 249:source\asw/comms.c ****  * Print a 16-bit unsigned integer as ASCII via UART_LOG.
+ 250:source\asw/comms.c ****  * 
+ 251:source\asw/comms.c ****  * Performs decimal conversion into a local buffer, reverses the character
+ 252:source\asw/comms.c ****  * order and transmits the resulting string using UART_LOG_PutString().
+ 253:source\asw/comms.c ****  * 
+ 254:source\asw/comms.c ****  * @param num Unsigned integer value to be printed (IN).
+ 255:source\asw/comms.c ****  */
+ 256:source\asw/comms.c **** void UART_LOG_PutInt(uint16_t num) {
  591              		.loc 1 256 0
  592              		.cfi_startproc
  593              		@ args = 0, pretend = 0, frame = 8
@@ -924,10 +924,10 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  601              		.cfi_offset 14, -4
  602 0002 82B0     		sub	sp, sp, #8
  603              		.cfi_def_cfa_offset 24
- 257:comms.c       ****     if (num == 0) {
+ 257:source\asw/comms.c ****     if (num == 0) {
  604              		.loc 1 257 0
  605 0004 A0B9     		cbnz	r0, .L42
- 258:comms.c       ****         UART_LOG_PutString("0");
+ 258:source\asw/comms.c ****         UART_LOG_PutString("0");
  606              		.loc 1 258 0
  607 0006 1B48     		ldr	r0, .L44
  608              	.LVL53:
@@ -936,12 +936,12 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  611 000c 30E0     		b	.L36
  612              	.LVL55:
  613              	.L39:
- 259:comms.c       ****         return;
- 260:comms.c       ****     }
- 261:comms.c       ****     char buf[6];
- 262:comms.c       ****     uint8_t idx = 0;
- 263:comms.c       ****     while (num > 0) {
- 264:comms.c       ****         buf[idx++] = '0' + (num % 10);
+ 259:source\asw/comms.c ****         return;
+ 260:source\asw/comms.c ****     }
+ 261:source\asw/comms.c ****     char buf[6];
+ 262:source\asw/comms.c ****     uint8_t idx = 0;
+ 263:source\asw/comms.c ****     while (num > 0) {
+ 264:source\asw/comms.c ****         buf[idx++] = '0' + (num % 10);
  614              		.loc 1 264 0
  615 000e 4D1C     		adds	r5, r1, #1
  616              	.LVL56:
@@ -956,14 +956,14 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  625              	.LVL57:
  626 0024 3033     		adds	r3, r3, #48
  627 0026 01F8083C 		strb	r3, [r1, #-8]
- 265:comms.c       ****         num /= 10;
+ 265:source\asw/comms.c ****         num /= 10;
  628              		.loc 1 265 0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 17
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 17
 
 
  629 002a 93B2     		uxth	r3, r2
  630              	.LVL58:
- 264:comms.c       ****         num /= 10;
+ 264:source\asw/comms.c ****         num /= 10;
  631              		.loc 1 264 0
  632 002c E9B2     		uxtb	r1, r5
  633 002e 01E0     		b	.L37
@@ -973,12 +973,12 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  637 0032 0021     		movs	r1, #0
  638              	.LVL60:
  639              	.L37:
- 263:comms.c       ****         buf[idx++] = '0' + (num % 10);
+ 263:source\asw/comms.c ****         buf[idx++] = '0' + (num % 10);
  640              		.loc 1 263 0
  641 0034 002B     		cmp	r3, #0
  642 0036 EAD1     		bne	.L39
- 266:comms.c       ****     }
- 267:comms.c       ****     buf[idx] = '\0';
+ 266:source\asw/comms.c ****     }
+ 267:source\asw/comms.c ****     buf[idx] = '\0';
  643              		.loc 1 267 0
  644 0038 0E46     		mov	r6, r1
  645 003a 02AA     		add	r2, sp, #8
@@ -986,20 +986,20 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  647 003e 02F8083C 		strb	r3, [r2, #-8]
  648              	.LVL61:
  649              	.LBB3:
- 268:comms.c       ****     /* Reverse string in-place to restore correct digit order. */
- 269:comms.c       ****     for (uint8_t i = 0; i < idx / 2; i++) {
+ 268:source\asw/comms.c ****     /* Reverse string in-place to restore correct digit order. */
+ 269:source\asw/comms.c ****     for (uint8_t i = 0; i < idx / 2; i++) {
  650              		.loc 1 269 0
  651 0042 0FE0     		b	.L40
  652              	.LVL62:
  653              	.L41:
  654              	.LBB4:
- 270:comms.c       ****         char temp = buf[i];
+ 270:source\asw/comms.c ****         char temp = buf[i];
  655              		.loc 1 270 0 discriminator 3
  656 0044 02AA     		add	r2, sp, #8
  657 0046 D018     		adds	r0, r2, r3
  658 0048 10F8084C 		ldrb	r4, [r0, #-8]	@ zero_extendqisi2
  659              	.LVL63:
- 271:comms.c       ****         buf[i] = buf[idx - 1 - i];
+ 271:source\asw/comms.c ****         buf[i] = buf[idx - 1 - i];
  660              		.loc 1 271 0 discriminator 3
  661 004c 721E     		subs	r2, r6, #1
  662 004e D21A     		subs	r2, r2, r3
@@ -1007,33 +1007,33 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  664 0052 2A44     		add	r2, r2, r5
  665 0054 12F8085C 		ldrb	r5, [r2, #-8]	@ zero_extendqisi2
  666 0058 00F8085C 		strb	r5, [r0, #-8]
- 272:comms.c       ****         buf[idx - 1 - i] = temp;
+ 272:source\asw/comms.c ****         buf[idx - 1 - i] = temp;
  667              		.loc 1 272 0 discriminator 3
  668 005c 02F8084C 		strb	r4, [r2, #-8]
  669              	.LBE4:
- 269:comms.c       ****         char temp = buf[i];
+ 269:source\asw/comms.c ****         char temp = buf[i];
  670              		.loc 1 269 0 discriminator 3
  671 0060 0133     		adds	r3, r3, #1
  672              	.LVL64:
  673 0062 DBB2     		uxtb	r3, r3
  674              	.LVL65:
  675              	.L40:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 18
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 18
 
 
- 269:comms.c       ****         char temp = buf[i];
+ 269:source\asw/comms.c ****         char temp = buf[i];
  676              		.loc 1 269 0 is_stmt 0 discriminator 1
  677 0064 B3EB510F 		cmp	r3, r1, lsr #1
  678 0068 ECD3     		bcc	.L41
  679              	.LBE3:
- 273:comms.c       ****     }
- 274:comms.c       ****     UART_LOG_PutString(buf);
+ 273:source\asw/comms.c ****     }
+ 274:source\asw/comms.c ****     UART_LOG_PutString(buf);
  680              		.loc 1 274 0 is_stmt 1
  681 006a 6846     		mov	r0, sp
  682 006c FFF7FEFF 		bl	UART_LOG_PutString
  683              	.LVL66:
  684              	.L36:
- 275:comms.c       **** }
+ 275:source\asw/comms.c **** }
  685              		.loc 1 275 0
  686 0070 02B0     		add	sp, sp, #8
  687              		.cfi_def_cfa_offset 16
@@ -1045,7 +1045,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  693 0074 1C000000 		.word	.LC1
  694 0078 CDCCCCCC 		.word	-858993459
  695              		.cfi_endproc
- 696              	.LFE120:
+ 696              	.LFE112:
  697              		.size	UART_LOG_PutInt, .-UART_LOG_PutInt
  698              		.section	.rodata.str1.4,"aMS",%progbits,1
  699              		.align	2
@@ -1066,7 +1066,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  710              		.file 5 "Generated_Source\\PSoC5/ErikaOS_cortex_mx_ee_cpu.inc"
  711              		.file 6 "Generated_Source\\PSoC5/ErikaOS_ee_oo_common.inc"
  712              		.file 7 ".\\source\\bsw/global.h"
- 713              		.file 8 "comms.h"
+ 713              		.file 8 "source\\asw\\comms.h"
  714              		.file 9 "Generated_Source\\PSoC5/ErikaOS_ee_oo_intfunc.inc"
  715              		.file 10 "Generated_Source\\PSoC5/ErikaOS_cortex_mx_ee_context.inc"
  716              		.file 11 "Generated_Source\\PSoC5/ErikaOS_common_ee_primitives.inc"
@@ -1078,31 +1078,31 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  722 0000 4B080000 		.4byte	0x84b
  723 0004 0400     		.2byte	0x4
  724 0006 00000000 		.4byte	.Ldebug_abbrev0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 19
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 19
 
 
  725 000a 04       		.byte	0x4
  726 000b 01       		.uleb128 0x1
- 727 000c 2A040000 		.4byte	.LASF99
+ 727 000c D1030000 		.4byte	.LASF99
  728 0010 0C       		.byte	0xc
- 729 0011 5A050000 		.4byte	.LASF100
- 730 0015 8B020000 		.4byte	.LASF101
+ 729 0011 38010000 		.4byte	.LASF100
+ 730 0015 01050000 		.4byte	.LASF101
  731 0019 00000000 		.4byte	.Ldebug_ranges0+0
  732 001d 00000000 		.4byte	0
  733 0021 00000000 		.4byte	.Ldebug_line0
  734 0025 02       		.uleb128 0x2
  735 0026 01       		.byte	0x1
  736 0027 06       		.byte	0x6
- 737 0028 74030000 		.4byte	.LASF0
+ 737 0028 1B030000 		.4byte	.LASF0
  738 002c 03       		.uleb128 0x3
- 739 002d 59020000 		.4byte	.LASF3
+ 739 002d 6C020000 		.4byte	.LASF3
  740 0031 02       		.byte	0x2
  741 0032 1D       		.byte	0x1d
  742 0033 37000000 		.4byte	0x37
  743 0037 02       		.uleb128 0x2
  744 0038 01       		.byte	0x1
  745 0039 08       		.byte	0x8
- 746 003a 49030000 		.4byte	.LASF1
+ 746 003a F0020000 		.4byte	.LASF1
  747 003e 02       		.uleb128 0x2
  748 003f 02       		.byte	0x2
  749 0040 05       		.byte	0x5
@@ -1115,30 +1115,30 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  756 0050 02       		.uleb128 0x2
  757 0051 02       		.byte	0x2
  758 0052 07       		.byte	0x7
- 759 0053 09040000 		.4byte	.LASF5
+ 759 0053 B0030000 		.4byte	.LASF5
  760 0057 03       		.uleb128 0x3
- 761 0058 71050000 		.4byte	.LASF6
+ 761 0058 7C050000 		.4byte	.LASF6
  762 005c 02       		.byte	0x2
  763 005d 3F       		.byte	0x3f
  764 005e 62000000 		.4byte	0x62
  765 0062 02       		.uleb128 0x2
  766 0063 04       		.byte	0x4
  767 0064 05       		.byte	0x5
- 768 0065 2C020000 		.4byte	.LASF7
+ 768 0065 3F020000 		.4byte	.LASF7
  769 0069 02       		.uleb128 0x2
  770 006a 04       		.byte	0x4
  771 006b 07       		.byte	0x7
- 772 006c 1E050000 		.4byte	.LASF8
+ 772 006c C5040000 		.4byte	.LASF8
  773 0070 02       		.uleb128 0x2
  774 0071 08       		.byte	0x8
  775 0072 05       		.byte	0x5
- 776 0073 E4010000 		.4byte	.LASF9
+ 776 0073 F7010000 		.4byte	.LASF9
  777 0077 02       		.uleb128 0x2
  778 0078 08       		.byte	0x8
  779 0079 07       		.byte	0x7
- 780 007a 8E030000 		.4byte	.LASF10
+ 780 007a 35030000 		.4byte	.LASF10
  781 007e 04       		.uleb128 0x4
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 20
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 20
 
 
  782 007f 04       		.byte	0x4
@@ -1147,30 +1147,30 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  785 0085 02       		.uleb128 0x2
  786 0086 04       		.byte	0x4
  787 0087 07       		.byte	0x7
- 788 0088 A5030000 		.4byte	.LASF11
+ 788 0088 4C030000 		.4byte	.LASF11
  789 008c 03       		.uleb128 0x3
- 790 008d 44010000 		.4byte	.LASF12
+ 790 008d 57010000 		.4byte	.LASF12
  791 0091 03       		.byte	0x3
  792 0092 18       		.byte	0x18
  793 0093 2C000000 		.4byte	0x2c
  794 0097 03       		.uleb128 0x3
- 795 0098 C0030000 		.4byte	.LASF13
+ 795 0098 67030000 		.4byte	.LASF13
  796 009c 03       		.byte	0x3
  797 009d 24       		.byte	0x24
  798 009e 45000000 		.4byte	0x45
  799 00a2 03       		.uleb128 0x3
- 800 00a3 EE040000 		.4byte	.LASF14
+ 800 00a3 95040000 		.4byte	.LASF14
  801 00a7 03       		.byte	0x3
  802 00a8 2C       		.byte	0x2c
  803 00a9 57000000 		.4byte	0x57
  804 00ad 02       		.uleb128 0x2
  805 00ae 04       		.byte	0x4
  806 00af 04       		.byte	0x4
- 807 00b0 C4010000 		.4byte	.LASF15
+ 807 00b0 D7010000 		.4byte	.LASF15
  808 00b4 02       		.uleb128 0x2
  809 00b5 08       		.byte	0x8
  810 00b6 04       		.byte	0x4
- 811 00b7 30050000 		.4byte	.LASF16
+ 811 00b7 D7040000 		.4byte	.LASF16
  812 00bb 02       		.uleb128 0x2
  813 00bc 01       		.byte	0x1
  814 00bd 08       		.byte	0x8
@@ -1178,18 +1178,18 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  816 00c2 02       		.uleb128 0x2
  817 00c3 08       		.byte	0x8
  818 00c4 04       		.byte	0x4
- 819 00c5 0A030000 		.4byte	.LASF18
+ 819 00c5 B1020000 		.4byte	.LASF18
  820 00c9 02       		.uleb128 0x2
  821 00ca 04       		.byte	0x4
  822 00cb 07       		.byte	0x7
  823 00cc BF000000 		.4byte	.LASF19
  824 00d0 03       		.uleb128 0x3
- 825 00d1 00040000 		.4byte	.LASF20
+ 825 00d1 A7030000 		.4byte	.LASF20
  826 00d5 04       		.byte	0x4
  827 00d6 53       		.byte	0x53
  828 00d7 7E000000 		.4byte	0x7e
  829 00db 03       		.uleb128 0x3
- 830 00dc 6A030000 		.4byte	.LASF21
+ 830 00dc 11030000 		.4byte	.LASF21
  831 00e0 04       		.byte	0x4
  832 00e1 54       		.byte	0x54
  833 00e2 85000000 		.4byte	0x85
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  836 00eb 05       		.byte	0x5
  837 00ec 4D       		.byte	0x4d
  838 00ed DB000000 		.4byte	0xdb
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 21
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 21
 
 
  839 00f1 03       		.uleb128 0x3
@@ -1228,46 +1228,46 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  863 0125 49000000 		.4byte	.LASF26
  864 0129 00       		.byte	0
  865 012a 09       		.uleb128 0x9
- 866 012b D9050000 		.4byte	.LASF27
+ 866 012b E4050000 		.4byte	.LASF27
  867 012f 7F       		.sleb128 -1
  868 0130 09       		.uleb128 0x9
- 869 0131 DC030000 		.4byte	.LASF28
+ 869 0131 83030000 		.4byte	.LASF28
  870 0135 7E       		.sleb128 -2
  871 0136 09       		.uleb128 0x9
  872 0137 CD000000 		.4byte	.LASF29
  873 013b 7D       		.sleb128 -3
  874 013c 09       		.uleb128 0x9
- 875 013d E2050000 		.4byte	.LASF30
+ 875 013d ED050000 		.4byte	.LASF30
  876 0141 7C       		.sleb128 -4
  877 0142 09       		.uleb128 0x9
- 878 0143 62050000 		.4byte	.LASF31
+ 878 0143 6D050000 		.4byte	.LASF31
  879 0147 7B       		.sleb128 -5
  880 0148 09       		.uleb128 0x9
  881 0149 99000000 		.4byte	.LASF32
  882 014d 7A       		.sleb128 -6
  883 014e 09       		.uleb128 0x9
- 884 014f 16060000 		.4byte	.LASF33
+ 884 014f 21060000 		.4byte	.LASF33
  885 0153 79       		.sleb128 -7
  886 0154 09       		.uleb128 0x9
- 887 0155 D9040000 		.4byte	.LASF34
+ 887 0155 80040000 		.4byte	.LASF34
  888 0159 78       		.sleb128 -8
  889 015a 09       		.uleb128 0x9
- 890 015b EA030000 		.4byte	.LASF35
+ 890 015b 91030000 		.4byte	.LASF35
  891 015f 77       		.sleb128 -9
  892 0160 09       		.uleb128 0x9
- 893 0161 4B020000 		.4byte	.LASF36
+ 893 0161 5E020000 		.4byte	.LASF36
  894 0165 76       		.sleb128 -10
  895 0166 09       		.uleb128 0x9
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 22
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 22
 
 
- 896 0167 35060000 		.4byte	.LASF37
+ 896 0167 40060000 		.4byte	.LASF37
  897 016b 75       		.sleb128 -11
  898 016c 09       		.uleb128 0x9
- 899 016d B2030000 		.4byte	.LASF38
+ 899 016d 59030000 		.4byte	.LASF38
  900 0171 74       		.sleb128 -12
  901 0172 09       		.uleb128 0x9
- 902 0173 40050000 		.4byte	.LASF39
+ 902 0173 E7040000 		.4byte	.LASF39
  903 0177 73       		.sleb128 -13
  904 0178 09       		.uleb128 0x9
  905 0179 36000000 		.4byte	.LASF40
@@ -1276,7 +1276,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  908 017f 61000000 		.4byte	.LASF41
  909 0183 71       		.sleb128 -15
  910 0184 09       		.uleb128 0x9
- 911 0185 63020000 		.4byte	.LASF42
+ 911 0185 76020000 		.4byte	.LASF42
  912 0189 70       		.sleb128 -16
  913 018a 09       		.uleb128 0x9
  914 018b E3000000 		.4byte	.LASF43
@@ -1285,29 +1285,29 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  917 0191 AA000000 		.4byte	.LASF44
  918 0195 6E       		.sleb128 -18
  919 0196 09       		.uleb128 0x9
- 920 0197 08020000 		.4byte	.LASF45
+ 920 0197 1B020000 		.4byte	.LASF45
  921 019b 6D       		.sleb128 -19
  922 019c 09       		.uleb128 0x9
- 923 019d 57030000 		.4byte	.LASF46
+ 923 019d FE020000 		.4byte	.LASF46
  924 01a1 6C       		.sleb128 -20
  925 01a2 09       		.uleb128 0x9
- 926 01a3 74020000 		.4byte	.LASF47
+ 926 01a3 87020000 		.4byte	.LASF47
  927 01a7 6B       		.sleb128 -21
  928 01a8 09       		.uleb128 0x9
- 929 01a9 99050000 		.4byte	.LASF48
+ 929 01a9 A4050000 		.4byte	.LASF48
  930 01ad 6A       		.sleb128 -22
  931 01ae 09       		.uleb128 0x9
- 932 01af 4C010000 		.4byte	.LASF49
+ 932 01af 5F010000 		.4byte	.LASF49
  933 01b3 69       		.sleb128 -23
  934 01b4 09       		.uleb128 0x9
- 935 01b5 1B020000 		.4byte	.LASF50
+ 935 01b5 2E020000 		.4byte	.LASF50
  936 01b9 68       		.sleb128 -24
  937 01ba 09       		.uleb128 0x9
  938 01bb 0F010000 		.4byte	.LASF51
  939 01bf 67       		.sleb128 -25
  940 01c0 00       		.byte	0
  941 01c1 03       		.uleb128 0x3
- 942 01c2 30060000 		.4byte	.LASF52
+ 942 01c2 3B060000 		.4byte	.LASF52
  943 01c6 07       		.byte	0x7
  944 01c7 EA       		.byte	0xea
  945 01c8 18010000 		.4byte	0x118
@@ -1317,8 +1317,8 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  949 01d0 29       		.byte	0x29
  950 01d1 09020000 		.4byte	0x209
  951 01d5 0B       		.uleb128 0xb
- 952 01d6 04050000 		.4byte	.LASF53
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 23
+ 952 01d6 AB040000 		.4byte	.LASF53
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 23
 
 
  953 01da 08       		.byte	0x8
@@ -1326,19 +1326,19 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  955 01dc 09020000 		.4byte	0x209
  956 01e0 00       		.byte	0
  957 01e1 0C       		.uleb128 0xc
- 958 01e2 7B050000 		.4byte	.LASF54
+ 958 01e2 86050000 		.4byte	.LASF54
  959 01e6 08       		.byte	0x8
  960 01e7 2B       		.byte	0x2b
  961 01e8 13010000 		.4byte	0x113
  962 01ec 0001     		.2byte	0x100
  963 01ee 0C       		.uleb128 0xc
- 964 01ef 37050000 		.4byte	.LASF55
+ 964 01ef DE040000 		.4byte	.LASF55
  965 01f3 08       		.byte	0x8
  966 01f4 2B       		.byte	0x2b
  967 01f5 13010000 		.4byte	0x113
  968 01f9 0201     		.2byte	0x102
  969 01fb 0C       		.uleb128 0xc
- 970 01fc BA010000 		.4byte	.LASF56
+ 970 01fc CD010000 		.4byte	.LASF56
  971 0200 08       		.byte	0x8
  972 0201 2C       		.byte	0x2c
  973 0202 13010000 		.4byte	0x113
@@ -1352,7 +1352,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  981 0217 FF       		.byte	0xff
  982 0218 00       		.byte	0
  983 0219 03       		.uleb128 0x3
- 984 021a 80030000 		.4byte	.LASF57
+ 984 021a 27030000 		.4byte	.LASF57
  985 021e 08       		.byte	0x8
  986 021f 2D       		.byte	0x2d
  987 0220 CC010000 		.4byte	0x1cc
@@ -1363,22 +1363,22 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  992 022b 41       		.byte	0x41
  993 022c 43020000 		.4byte	0x243
  994 0230 08       		.uleb128 0x8
- 995 0231 52050000 		.4byte	.LASF58
+ 995 0231 F9040000 		.4byte	.LASF58
  996 0235 00       		.byte	0
  997 0236 08       		.uleb128 0x8
- 998 0237 DD010000 		.4byte	.LASF59
+ 998 0237 F0010000 		.4byte	.LASF59
  999 023b 01       		.byte	0x1
  1000 023c 08       		.uleb128 0x8
- 1001 023d 41030000 		.4byte	.LASF60
+ 1001 023d E8020000 		.4byte	.LASF60
  1002 0241 02       		.byte	0x2
  1003 0242 00       		.byte	0
  1004 0243 03       		.uleb128 0x3
- 1005 0244 F6040000 		.4byte	.LASF61
+ 1005 0244 9D040000 		.4byte	.LASF61
  1006 0248 08       		.byte	0x8
  1007 0249 45       		.byte	0x45
  1008 024a 24020000 		.4byte	0x224
  1009 024e 0F       		.uleb128 0xf
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 24
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 24
 
 
  1010 024f 8C       		.byte	0x8c
@@ -1386,13 +1386,13 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1012 0251 4D       		.byte	0x4d
  1013 0252 93020000 		.4byte	0x293
  1014 0256 0B       		.uleb128 0xb
- 1015 0257 28060000 		.4byte	.LASF62
+ 1015 0257 33060000 		.4byte	.LASF62
  1016 025b 08       		.byte	0x8
  1017 025c 4E       		.byte	0x4e
  1018 025d 93020000 		.4byte	0x293
  1019 0261 00       		.byte	0
  1020 0262 0B       		.uleb128 0xb
- 1021 0263 AB050000 		.4byte	.LASF63
+ 1021 0263 B6050000 		.4byte	.LASF63
  1022 0267 08       		.byte	0x8
  1023 0268 4F       		.byte	0x4f
  1024 0269 97000000 		.4byte	0x97
@@ -1424,7 +1424,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1050 02a1 7F       		.byte	0x7f
  1051 02a2 00       		.byte	0
  1052 02a3 03       		.uleb128 0x3
- 1053 02a4 C9030000 		.4byte	.LASF67
+ 1053 02a4 70030000 		.4byte	.LASF67
  1054 02a8 08       		.byte	0x8
  1055 02a9 53       		.byte	0x53
  1056 02aa 4E020000 		.4byte	0x24e
@@ -1434,34 +1434,34 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1060 02b2 5B       		.byte	0x5b
  1061 02b3 F8020000 		.4byte	0x2f8
  1062 02b7 0B       		.uleb128 0xb
- 1063 02b8 B7050000 		.4byte	.LASF68
+ 1063 02b8 C2050000 		.4byte	.LASF68
  1064 02bc 08       		.byte	0x8
  1065 02bd 5C       		.byte	0x5c
  1066 02be F8020000 		.4byte	0x2f8
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 25
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 25
 
 
  1067 02c2 00       		.byte	0
  1068 02c3 0C       		.uleb128 0xc
- 1069 02c4 0A060000 		.4byte	.LASF69
+ 1069 02c4 15060000 		.4byte	.LASF69
  1070 02c8 08       		.byte	0x8
  1071 02c9 5D       		.byte	0x5d
  1072 02ca 97000000 		.4byte	0x97
  1073 02ce 6004     		.2byte	0x460
  1074 02d0 0C       		.uleb128 0xc
- 1075 02d1 AD010000 		.4byte	.LASF70
+ 1075 02d1 C0010000 		.4byte	.LASF70
  1076 02d5 08       		.byte	0x8
  1077 02d6 5E       		.byte	0x5e
  1078 02d7 97000000 		.4byte	0x97
  1079 02db 6204     		.2byte	0x462
  1080 02dd 0C       		.uleb128 0xc
- 1081 02de 37050000 		.4byte	.LASF55
+ 1081 02de DE040000 		.4byte	.LASF55
  1082 02e2 08       		.byte	0x8
  1083 02e3 5F       		.byte	0x5f
  1084 02e4 97000000 		.4byte	0x97
  1085 02e8 6404     		.2byte	0x464
  1086 02ea 0C       		.uleb128 0xc
- 1087 02eb BA010000 		.4byte	.LASF56
+ 1087 02eb CD010000 		.4byte	.LASF56
  1088 02ef 08       		.byte	0x8
  1089 02f0 60       		.byte	0x60
  1090 02f1 97000000 		.4byte	0x97
@@ -1475,17 +1475,17 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1098 0306 07       		.byte	0x7
  1099 0307 00       		.byte	0
  1100 0308 03       		.uleb128 0x3
- 1101 0309 16030000 		.4byte	.LASF71
+ 1101 0309 BD020000 		.4byte	.LASF71
  1102 030d 08       		.byte	0x8
  1103 030e 61       		.byte	0x61
  1104 030f AE020000 		.4byte	0x2ae
  1105 0313 10       		.uleb128 0x10
- 1106 0314 1C040000 		.4byte	.LASF72
+ 1106 0314 C3030000 		.4byte	.LASF72
  1107 0318 01       		.byte	0x1
  1108 0319 1E       		.byte	0x1e
  1109 031a C1010000 		.4byte	0x1c1
- 1110 031e 00000000 		.4byte	.LFB110
- 1111 0322 12000000 		.4byte	.LFE110-.LFB110
+ 1110 031e 00000000 		.4byte	.LFB102
+ 1111 0322 12000000 		.4byte	.LFE102-.LFB102
  1112 0326 01       		.uleb128 0x1
  1113 0327 9C       		.byte	0x9c
  1114 0328 3B030000 		.4byte	0x33b
@@ -1498,17 +1498,17 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1121 033a 00       		.byte	0
  1122 033b 12       		.uleb128 0x12
  1123 033c 04       		.byte	0x4
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 26
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 26
 
 
  1124 033d 19020000 		.4byte	0x219
  1125 0341 10       		.uleb128 0x10
- 1126 0342 B8040000 		.4byte	.LASF73
+ 1126 0342 5F040000 		.4byte	.LASF73
  1127 0346 01       		.byte	0x1
  1128 0347 2B       		.byte	0x2b
  1129 0348 C1010000 		.4byte	0x1c1
- 1130 034c 00000000 		.4byte	.LFB111
- 1131 0350 3E000000 		.4byte	.LFE111-.LFB111
+ 1130 034c 00000000 		.4byte	.LFB103
+ 1131 0350 3E000000 		.4byte	.LFE103-.LFB103
  1132 0354 01       		.uleb128 0x1
  1133 0355 9C       		.byte	0x9c
  1134 0356 76030000 		.4byte	0x376
@@ -1519,7 +1519,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1139 0360 3B030000 		.4byte	0x33b
  1140 0364 21000000 		.4byte	.LLST1
  1141 0368 13       		.uleb128 0x13
- 1142 0369 86020000 		.4byte	.LASF74
+ 1142 0369 99020000 		.4byte	.LASF74
  1143 036d 01       		.byte	0x1
  1144 036e 2B       		.byte	0x2b
  1145 036f 76030000 		.4byte	0x376
@@ -1530,12 +1530,12 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1150 0377 04       		.byte	0x4
  1151 0378 8C000000 		.4byte	0x8c
  1152 037c 10       		.uleb128 0x10
- 1153 037d CA010000 		.4byte	.LASF75
+ 1153 037d DD010000 		.4byte	.LASF75
  1154 0381 01       		.byte	0x1
  1155 0382 68       		.byte	0x68
  1156 0383 C1010000 		.4byte	0x1c1
- 1157 0387 00000000 		.4byte	.LFB113
- 1158 038b 3C000000 		.4byte	.LFE113-.LFB113
+ 1157 0387 00000000 		.4byte	.LFB105
+ 1158 038b 3C000000 		.4byte	.LFE105-.LFB105
  1159 038f 01       		.uleb128 0x1
  1160 0390 9C       		.byte	0x9c
  1161 0391 B1030000 		.4byte	0x3b1
@@ -1546,7 +1546,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1166 039b 3B030000 		.4byte	0x33b
  1167 039f 5B000000 		.4byte	.LLST2
  1168 03a3 13       		.uleb128 0x13
- 1169 03a4 86020000 		.4byte	.LASF74
+ 1169 03a4 99020000 		.4byte	.LASF74
  1170 03a8 01       		.byte	0x1
  1171 03a9 68       		.byte	0x68
  1172 03aa 76030000 		.4byte	0x376
@@ -1554,15 +1554,15 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1174 03af 51       		.byte	0x51
  1175 03b0 00       		.byte	0
  1176 03b1 10       		.uleb128 0x10
- 1177 03b2 F2010000 		.4byte	.LASF76
+ 1177 03b2 05020000 		.4byte	.LASF76
  1178 03b6 01       		.byte	0x1
  1179 03b7 43       		.byte	0x43
  1180 03b8 C1010000 		.4byte	0x1c1
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 27
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 27
 
 
- 1181 03bc 00000000 		.4byte	.LFB112
- 1182 03c0 62000000 		.4byte	.LFE112-.LFB112
+ 1181 03bc 00000000 		.4byte	.LFB104
+ 1182 03c0 62000000 		.4byte	.LFE104-.LFB104
  1183 03c4 01       		.uleb128 0x1
  1184 03c5 9C       		.byte	0x9c
  1185 03c6 71040000 		.4byte	0x471
@@ -1589,7 +1589,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1206 03fb 34000000 		.4byte	.LBE2-.LBB2
  1207 03ff 4E040000 		.4byte	0x44e
  1208 0403 16       		.uleb128 0x16
- 1209 0404 86020000 		.4byte	.LASF74
+ 1209 0404 99020000 		.4byte	.LASF74
  1210 0408 01       		.byte	0x1
  1211 0409 4D       		.byte	0x4d
  1212 040a 8C000000 		.4byte	0x8c
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1235 0430 16080000 		.4byte	0x816
  1236 0434 3E040000 		.4byte	0x43e
  1237 0438 18       		.uleb128 0x18
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 28
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 28
 
 
  1238 0439 01       		.uleb128 0x1
@@ -1660,12 +1660,12 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1274 0472 04       		.byte	0x4
  1275 0473 97000000 		.4byte	0x97
  1276 0477 10       		.uleb128 0x10
- 1277 0478 32030000 		.4byte	.LASF78
+ 1277 0478 D9020000 		.4byte	.LASF78
  1278 047c 01       		.byte	0x1
  1279 047d 7C       		.byte	0x7c
  1280 047e C1010000 		.4byte	0x1c1
- 1281 0482 00000000 		.4byte	.LFB114
- 1282 0486 24000000 		.4byte	.LFE114-.LFB114
+ 1281 0482 00000000 		.4byte	.LFB106
+ 1282 0486 24000000 		.4byte	.LFE106-.LFB106
  1283 048a 01       		.uleb128 0x1
  1284 048b 9C       		.byte	0x9c
  1285 048c C1040000 		.4byte	0x4c1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1292 049e 17       		.uleb128 0x17
  1293 049f 0A000000 		.4byte	.LVL19
  1294 04a3 22080000 		.4byte	0x822
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 29
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 29
 
 
  1295 04a7 B1040000 		.4byte	0x4b1
@@ -1699,12 +1699,12 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1310 04bf 00       		.byte	0
  1311 04c0 00       		.byte	0
  1312 04c1 10       		.uleb128 0x10
- 1313 04c2 35020000 		.4byte	.LASF79
+ 1313 04c2 48020000 		.4byte	.LASF79
  1314 04c6 01       		.byte	0x1
  1315 04c7 8B       		.byte	0x8b
  1316 04c8 C1010000 		.4byte	0x1c1
- 1317 04cc 00000000 		.4byte	.LFB115
- 1318 04d0 16000000 		.4byte	.LFE115-.LFB115
+ 1317 04cc 00000000 		.4byte	.LFB107
+ 1318 04d0 16000000 		.4byte	.LFE107-.LFB107
  1319 04d4 01       		.uleb128 0x1
  1320 04d5 9C       		.byte	0x9c
  1321 04d6 E9040000 		.4byte	0x4e9
@@ -1719,12 +1719,12 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1330 04ea 04       		.byte	0x4
  1331 04eb 08030000 		.4byte	0x308
  1332 04ef 10       		.uleb128 0x10
- 1333 04f0 40020000 		.4byte	.LASF80
+ 1333 04f0 53020000 		.4byte	.LASF80
  1334 04f4 01       		.byte	0x1
  1335 04f5 9F       		.byte	0x9f
  1336 04f6 C1010000 		.4byte	0x1c1
- 1337 04fa 00000000 		.4byte	.LFB116
- 1338 04fe 84000000 		.4byte	.LFE116-.LFB116
+ 1337 04fa 00000000 		.4byte	.LFB108
+ 1338 04fe 84000000 		.4byte	.LFE108-.LFB108
  1339 0502 01       		.uleb128 0x1
  1340 0503 9C       		.byte	0x9c
  1341 0504 BF050000 		.4byte	0x5bf
@@ -1735,10 +1735,10 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1346 050e E9040000 		.4byte	0x4e9
  1347 0512 2E010000 		.4byte	.LLST8
  1348 0516 14       		.uleb128 0x14
- 1349 0517 FF040000 		.4byte	.LASF81
+ 1349 0517 A6040000 		.4byte	.LASF81
  1350 051b 01       		.byte	0x1
  1351 051c 9F       		.byte	0x9f
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 30
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 30
 
 
  1352 051d 76030000 		.4byte	0x376
@@ -1768,7 +1768,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1376 0558 BB000000 		.4byte	0xbb
  1377 055c 1F020000 		.4byte	.LLST13
  1378 0560 1A       		.uleb128 0x1a
- 1379 0561 D7030000 		.4byte	.LASF82
+ 1379 0561 7E030000 		.4byte	.LASF82
  1380 0565 01       		.byte	0x1
  1381 0566 A7       		.byte	0xa7
  1382 0567 BF050000 		.4byte	0x5bf
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1406 0597 51       		.byte	0x51
  1407 0598 02       		.uleb128 0x2
  1408 0599 76       		.byte	0x76
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 31
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 31
 
 
  1409 059a 00       		.sleb128 0
@@ -1831,8 +1831,8 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1436 05ca 01       		.byte	0x1
  1437 05cb C4       		.byte	0xc4
  1438 05cc C1010000 		.4byte	0x1c1
- 1439 05d0 00000000 		.4byte	.LFB117
- 1440 05d4 60000000 		.4byte	.LFE117-.LFB117
+ 1439 05d0 00000000 		.4byte	.LFB109
+ 1440 05d4 60000000 		.4byte	.LFE109-.LFB109
  1441 05d8 01       		.uleb128 0x1
  1442 05d9 9C       		.byte	0x9c
  1443 05da 7F060000 		.4byte	0x67f
@@ -1843,13 +1843,13 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1448 05e4 E9040000 		.4byte	0x4e9
  1449 05e8 65020000 		.4byte	.LLST15
  1450 05ec 14       		.uleb128 0x14
- 1451 05ed 63010000 		.4byte	.LASF84
+ 1451 05ed 76010000 		.4byte	.LASF84
  1452 05f1 01       		.byte	0x1
  1453 05f2 C4       		.byte	0xc4
  1454 05f3 43020000 		.4byte	0x243
  1455 05f7 83020000 		.4byte	.LLST16
  1456 05fb 14       		.uleb128 0x14
- 1457 05fc FF040000 		.4byte	.LASF81
+ 1457 05fc A6040000 		.4byte	.LASF81
  1458 0600 01       		.byte	0x1
  1459 0601 C4       		.byte	0xc4
  1460 0602 76030000 		.4byte	0x376
@@ -1858,20 +1858,20 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1463 060b 6C656E00 		.ascii	"len\000"
  1464 060f 01       		.byte	0x1
  1465 0610 C4       		.byte	0xc4
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 32
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 32
 
 
  1466 0611 71040000 		.4byte	0x471
  1467 0615 C2020000 		.4byte	.LLST18
  1468 0619 16       		.uleb128 0x16
- 1469 061a 7B050000 		.4byte	.LASF54
+ 1469 061a 86050000 		.4byte	.LASF54
  1470 061e 01       		.byte	0x1
  1471 061f C7       		.byte	0xc7
  1472 0620 71040000 		.4byte	0x471
  1473 0624 01       		.uleb128 0x1
  1474 0625 55       		.byte	0x55
  1475 0626 1A       		.uleb128 0x1a
- 1476 0627 D7030000 		.4byte	.LASF82
+ 1476 0627 7E030000 		.4byte	.LASF82
  1477 062b 01       		.byte	0x1
  1478 062c CE       		.byte	0xce
  1479 062d BF050000 		.4byte	0x5bf
@@ -1918,15 +1918,15 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1520 067d 00       		.byte	0
  1521 067e 00       		.byte	0
  1522 067f 10       		.uleb128 0x10
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 33
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 33
 
 
- 1523 0680 38010000 		.4byte	.LASF85
+ 1523 0680 4B010000 		.4byte	.LASF85
  1524 0684 01       		.byte	0x1
  1525 0685 E1       		.byte	0xe1
  1526 0686 C1010000 		.4byte	0x1c1
- 1527 068a 00000000 		.4byte	.LFB118
- 1528 068e 26000000 		.4byte	.LFE118-.LFB118
+ 1527 068a 00000000 		.4byte	.LFB110
+ 1528 068e 26000000 		.4byte	.LFE110-.LFB110
  1529 0692 01       		.uleb128 0x1
  1530 0693 9C       		.byte	0x9c
  1531 0694 CA060000 		.4byte	0x6ca
@@ -1958,11 +1958,11 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1557 06c8 00       		.byte	0
  1558 06c9 00       		.byte	0
  1559 06ca 1C       		.uleb128 0x1c
- 1560 06cb 25030000 		.4byte	.LASF102
+ 1560 06cb CC020000 		.4byte	.LASF102
  1561 06cf 01       		.byte	0x1
  1562 06d0 F1       		.byte	0xf1
- 1563 06d1 00000000 		.4byte	.LFB119
- 1564 06d5 24000000 		.4byte	.LFE119-.LFB119
+ 1563 06d1 00000000 		.4byte	.LFB111
+ 1564 06d5 24000000 		.4byte	.LFE111-.LFB111
  1565 06d9 01       		.uleb128 0x1
  1566 06da 9C       		.byte	0x9c
  1567 06db 05070000 		.4byte	0x705
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1577 06fa 18       		.uleb128 0x18
  1578 06fb 01       		.uleb128 0x1
  1579 06fc 50       		.byte	0x50
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 34
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 34
 
 
  1580 06fd 05       		.uleb128 0x5
@@ -1987,11 +1987,11 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1583 0703 00       		.byte	0
  1584 0704 00       		.byte	0
  1585 0705 1D       		.uleb128 0x1d
- 1586 0706 84010000 		.4byte	.LASF103
+ 1586 0706 97010000 		.4byte	.LASF103
  1587 070a 01       		.byte	0x1
  1588 070b 0001     		.2byte	0x100
- 1589 070d 00000000 		.4byte	.LFB120
- 1590 0711 7C000000 		.4byte	.LFE120-.LFB120
+ 1589 070d 00000000 		.4byte	.LFB112
+ 1590 0711 7C000000 		.4byte	.LFE112-.LFB112
  1591 0715 01       		.uleb128 0x1
  1592 0716 9C       		.byte	0x9c
  1593 0717 A8070000 		.4byte	0x7a8
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1634 077f 00       		.byte	0
  1635 0780 17       		.uleb128 0x17
  1636 0781 0C000000 		.4byte	.LVL54
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 35
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 35
 
 
  1637 0785 43080000 		.4byte	0x843
@@ -2069,17 +2069,17 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1662 07b6 05       		.byte	0x5
  1663 07b7 00       		.byte	0
  1664 07b8 23       		.uleb128 0x23
- 1665 07b9 F2050000 		.4byte	.LASF87
+ 1665 07b9 FD050000 		.4byte	.LASF87
  1666 07bd 09       		.byte	0x9
  1667 07be 40       		.byte	0x40
  1668 07bf E6000000 		.4byte	0xe6
  1669 07c3 23       		.uleb128 0x23
- 1670 07c4 94010000 		.4byte	.LASF88
+ 1670 07c4 A7010000 		.4byte	.LASF88
  1671 07c8 09       		.byte	0x9
  1672 07c9 47       		.byte	0x47
  1673 07ca F1000000 		.4byte	0xf1
  1674 07ce 23       		.uleb128 0x23
- 1675 07cf 0B050000 		.4byte	.LASF89
+ 1675 07cf B2040000 		.4byte	.LASF89
  1676 07d3 09       		.byte	0x9
  1677 07d4 4A       		.byte	0x4a
  1678 07d5 E6000000 		.4byte	0xe6
@@ -2089,16 +2089,16 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1682 07df 48       		.byte	0x48
  1683 07e0 FC000000 		.4byte	0xfc
  1684 07e4 23       		.uleb128 0x23
- 1685 07e5 6F010000 		.4byte	.LASF91
+ 1685 07e5 82010000 		.4byte	.LASF91
  1686 07e9 0B       		.byte	0xb
  1687 07ea 44       		.byte	0x44
  1688 07eb E6000000 		.4byte	0xe6
  1689 07ef 24       		.uleb128 0x24
- 1690 07f0 CC050000 		.4byte	.LASF92
+ 1690 07f0 D7050000 		.4byte	.LASF92
  1691 07f4 0C       		.byte	0xc
  1692 07f5 1207     		.2byte	0x712
  1693 07f7 FB070000 		.4byte	0x7fb
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 36
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 36
 
 
  1694 07fb 06       		.uleb128 0x6
@@ -2114,26 +2114,26 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1704 0811 64       		.byte	0x64
  1705 0812 08030000 		.4byte	0x308
  1706 0816 25       		.uleb128 0x25
- 1707 0817 83050000 		.4byte	.LASF95
- 1708 081b 83050000 		.4byte	.LASF95
+ 1707 0817 8E050000 		.4byte	.LASF95
+ 1708 081b 8E050000 		.4byte	.LASF95
  1709 081f 0D       		.byte	0xd
  1710 0820 1E01     		.2byte	0x11e
  1711 0822 25       		.uleb128 0x25
- 1712 0823 C7040000 		.4byte	.LASF96
- 1713 0827 C7040000 		.4byte	.LASF96
+ 1712 0823 6E040000 		.4byte	.LASF96
+ 1713 0827 6E040000 		.4byte	.LASF96
  1714 082b 0D       		.byte	0xd
  1715 082c 1901     		.2byte	0x119
  1716 082e 26       		.uleb128 0x26
  1717 082f F7000000 		.4byte	.LASF104
  1718 0833 F7000000 		.4byte	.LASF104
  1719 0837 25       		.uleb128 0x25
- 1720 0838 BD050000 		.4byte	.LASF97
- 1721 083c BD050000 		.4byte	.LASF97
+ 1720 0838 C8050000 		.4byte	.LASF97
+ 1721 083c C8050000 		.4byte	.LASF97
  1722 0840 0D       		.byte	0xd
  1723 0841 4A01     		.2byte	0x14a
  1724 0843 27       		.uleb128 0x27
- 1725 0844 F7020000 		.4byte	.LASF98
- 1726 0848 F7020000 		.4byte	.LASF98
+ 1725 0844 9E020000 		.4byte	.LASF98
+ 1726 0848 9E020000 		.4byte	.LASF98
  1727 084c 0E       		.byte	0xe
  1728 084d 8B       		.byte	0x8b
  1729 084e 00       		.byte	0
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1748 0010 17       		.uleb128 0x17
  1749 0011 00       		.byte	0
  1750 0012 00       		.byte	0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 37
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 37
 
 
  1751 0013 02       		.uleb128 0x2
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1805 0049 00       		.byte	0
  1806 004a 07       		.uleb128 0x7
  1807 004b 04       		.uleb128 0x4
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 38
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 38
 
 
  1808 004c 01       		.byte	0x1
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1862 0082 13       		.uleb128 0x13
  1863 0083 38       		.uleb128 0x38
  1864 0084 0B       		.uleb128 0xb
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 39
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 39
 
 
  1865 0085 00       		.byte	0
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1919 00bb 0E       		.uleb128 0xe
  1920 00bc 3A       		.uleb128 0x3a
  1921 00bd 0B       		.uleb128 0xb
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 40
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 40
 
 
  1922 00be 3B       		.uleb128 0x3b
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  1976 00f5 18       		.uleb128 0x18
  1977 00f6 00       		.byte	0
  1978 00f7 00       		.byte	0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 41
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 41
 
 
  1979 00f8 14       		.uleb128 0x14
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2033 0132 00       		.byte	0
  2034 0133 02       		.uleb128 0x2
  2035 0134 18       		.uleb128 0x18
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 42
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 42
 
 
  2036 0135 9142     		.uleb128 0x2111
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2090 0170 9742     		.uleb128 0x2117
  2091 0172 19       		.uleb128 0x19
  2092 0173 01       		.uleb128 0x1
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 43
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 43
 
 
  2093 0174 13       		.uleb128 0x13
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2147 01ab 02       		.uleb128 0x2
  2148 01ac 18       		.uleb128 0x18
  2149 01ad 00       		.byte	0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 44
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 44
 
 
  2150 01ae 00       		.byte	0
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2204 01e4 19       		.uleb128 0x19
  2205 01e5 00       		.byte	0
  2206 01e6 00       		.byte	0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 45
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 45
 
 
  2207 01e7 24       		.uleb128 0x24
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2261 021d 6E       		.uleb128 0x6e
  2262 021e 0E       		.uleb128 0xe
  2263 021f 03       		.uleb128 0x3
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 46
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 46
 
 
  2264 0220 0E       		.uleb128 0xe
@@ -2717,7 +2717,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2277 0008 0100     		.2byte	0x1
  2278 000a 50       		.byte	0x50
  2279 000b 10000000 		.4byte	.LVL1
- 2280 000f 12000000 		.4byte	.LFE110
+ 2280 000f 12000000 		.4byte	.LFE102
  2281 0013 0400     		.2byte	0x4
  2282 0015 F3       		.byte	0xf3
  2283 0016 01       		.uleb128 0x1
@@ -2742,7 +2742,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2302 0042 0100     		.2byte	0x1
  2303 0044 50       		.byte	0x50
  2304 0045 3C000000 		.4byte	.LVL5
- 2305 0049 3E000000 		.4byte	.LFE111
+ 2305 0049 3E000000 		.4byte	.LFE103
  2306 004d 0400     		.2byte	0x4
  2307 004f F3       		.byte	0xf3
  2308 0050 01       		.uleb128 0x1
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2318 0066 34000000 		.4byte	.LVL7
  2319 006a 36000000 		.4byte	.LVL8
  2320 006e 0400     		.2byte	0x4
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 47
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 47
 
 
  2321 0070 F3       		.byte	0xf3
@@ -2770,7 +2770,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2327 007c 0100     		.2byte	0x1
  2328 007e 50       		.byte	0x50
  2329 007f 3A000000 		.4byte	.LVL9
- 2330 0083 3C000000 		.4byte	.LFE113
+ 2330 0083 3C000000 		.4byte	.LFE105
  2331 0087 0400     		.2byte	0x4
  2332 0089 F3       		.byte	0xf3
  2333 008a 01       		.uleb128 0x1
@@ -2784,7 +2784,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2341 009d 0100     		.2byte	0x1
  2342 009f 50       		.byte	0x50
  2343 00a0 10000000 		.4byte	.LVL11
- 2344 00a4 62000000 		.4byte	.LFE112
+ 2344 00a4 62000000 		.4byte	.LFE104
  2345 00a8 0100     		.2byte	0x1
  2346 00aa 55       		.byte	0x55
  2347 00ab 00000000 		.4byte	0
@@ -2795,7 +2795,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2352 00bb 0100     		.2byte	0x1
  2353 00bd 51       		.byte	0x51
  2354 00be 13000000 		.4byte	.LVL12-1
- 2355 00c2 62000000 		.4byte	.LFE112
+ 2355 00c2 62000000 		.4byte	.LFE104
  2356 00c6 0100     		.2byte	0x1
  2357 00c8 56       		.byte	0x56
  2358 00c9 00000000 		.4byte	0
@@ -2806,7 +2806,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2363 00d9 0100     		.2byte	0x1
  2364 00db 52       		.byte	0x52
  2365 00dc 13000000 		.4byte	.LVL12-1
- 2366 00e0 62000000 		.4byte	.LFE112
+ 2366 00e0 62000000 		.4byte	.LFE104
  2367 00e4 0100     		.2byte	0x1
  2368 00e6 54       		.byte	0x54
  2369 00e7 00000000 		.4byte	0
@@ -2817,8 +2817,8 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2374 00f7 0100     		.2byte	0x1
  2375 00f9 50       		.byte	0x50
  2376 00fa 06000000 		.4byte	.LVL18
- 2377 00fe 24000000 		.4byte	.LFE114
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 48
+ 2377 00fe 24000000 		.4byte	.LFE106
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 48
 
 
  2378 0102 0100     		.2byte	0x1
@@ -2831,7 +2831,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2385 0115 0100     		.2byte	0x1
  2386 0117 50       		.byte	0x50
  2387 0118 14000000 		.4byte	.LVL22
- 2388 011c 16000000 		.4byte	.LFE115
+ 2388 011c 16000000 		.4byte	.LFE107
  2389 0120 0400     		.2byte	0x4
  2390 0122 F3       		.byte	0xf3
  2391 0123 01       		.uleb128 0x1
@@ -2864,7 +2864,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2418 0165 0100     		.2byte	0x1
  2419 0167 50       		.byte	0x50
  2420 0168 80000000 		.4byte	.LVL34
- 2421 016c 84000000 		.4byte	.LFE116
+ 2421 016c 84000000 		.4byte	.LFE108
  2422 0170 0400     		.2byte	0x4
  2423 0172 F3       		.byte	0xf3
  2424 0173 01       		.uleb128 0x1
@@ -2878,14 +2878,14 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2432 0186 0100     		.2byte	0x1
  2433 0188 51       		.byte	0x51
  2434 0189 1D000000 		.4byte	.LVL25-1
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 49
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 49
 
 
  2435 018d 76000000 		.4byte	.LVL31
  2436 0191 0100     		.2byte	0x1
  2437 0193 56       		.byte	0x56
  2438 0194 76000000 		.4byte	.LVL31
- 2439 0198 84000000 		.4byte	.LFE116
+ 2439 0198 84000000 		.4byte	.LFE108
  2440 019c 0100     		.2byte	0x1
  2441 019e 51       		.byte	0x51
  2442 019f 00000000 		.4byte	0
@@ -2903,7 +2903,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2454 01be 52       		.byte	0x52
  2455 01bf 9F       		.byte	0x9f
  2456 01c0 76000000 		.4byte	.LVL31
- 2457 01c4 84000000 		.4byte	.LFE116
+ 2457 01c4 84000000 		.4byte	.LFE108
  2458 01c8 0100     		.2byte	0x1
  2459 01ca 52       		.byte	0x52
  2460 01cb 00000000 		.4byte	0
@@ -2921,7 +2921,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2472 01ea 53       		.byte	0x53
  2473 01eb 9F       		.byte	0x9f
  2474 01ec 76000000 		.4byte	.LVL31
- 2475 01f0 84000000 		.4byte	.LFE116
+ 2475 01f0 84000000 		.4byte	.LFE108
  2476 01f4 0100     		.2byte	0x1
  2477 01f6 53       		.byte	0x53
  2478 01f7 00000000 		.4byte	0
@@ -2933,12 +2933,12 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2484 0209 91       		.byte	0x91
  2485 020a 00       		.sleb128 0
  2486 020b 76000000 		.4byte	.LVL31
- 2487 020f 84000000 		.4byte	.LFE116
+ 2487 020f 84000000 		.4byte	.LFE108
  2488 0213 0200     		.2byte	0x2
  2489 0215 91       		.byte	0x91
  2490 0216 00       		.sleb128 0
  2491 0217 00000000 		.4byte	0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 50
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 50
 
 
  2492 021b 00000000 		.4byte	0
@@ -2949,7 +2949,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2497 0229 91       		.byte	0x91
  2498 022a 04       		.sleb128 4
  2499 022b 76000000 		.4byte	.LVL31
- 2500 022f 84000000 		.4byte	.LFE116
+ 2500 022f 84000000 		.4byte	.LFE108
  2501 0233 0200     		.2byte	0x2
  2502 0235 91       		.byte	0x91
  2503 0236 04       		.sleb128 4
@@ -2980,7 +2980,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2528 026d 0100     		.2byte	0x1
  2529 026f 50       		.byte	0x50
  2530 0270 0C000000 		.4byte	.LVL36
- 2531 0274 60000000 		.4byte	.LFE117
+ 2531 0274 60000000 		.4byte	.LFE109
  2532 0278 0100     		.2byte	0x1
  2533 027a 54       		.byte	0x54
  2534 027b 00000000 		.4byte	0
@@ -2991,14 +2991,14 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2539 028b 0100     		.2byte	0x1
  2540 028d 51       		.byte	0x51
  2541 028e 0F000000 		.4byte	.LVL37-1
- 2542 0292 60000000 		.4byte	.LFE117
+ 2542 0292 60000000 		.4byte	.LFE109
  2543 0296 0400     		.2byte	0x4
  2544 0298 F3       		.byte	0xf3
  2545 0299 01       		.uleb128 0x1
  2546 029a 51       		.byte	0x51
  2547 029b 9F       		.byte	0x9f
  2548 029c 00000000 		.4byte	0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 51
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 51
 
 
  2549 02a0 00000000 		.4byte	0
@@ -3008,7 +3008,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2553 02ac 0100     		.2byte	0x1
  2554 02ae 52       		.byte	0x52
  2555 02af 0F000000 		.4byte	.LVL37-1
- 2556 02b3 60000000 		.4byte	.LFE117
+ 2556 02b3 60000000 		.4byte	.LFE109
  2557 02b7 0100     		.2byte	0x1
  2558 02b9 56       		.byte	0x56
  2559 02ba 00000000 		.4byte	0
@@ -3019,7 +3019,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2564 02ca 0100     		.2byte	0x1
  2565 02cc 53       		.byte	0x53
  2566 02cd 0F000000 		.4byte	.LVL37-1
- 2567 02d1 60000000 		.4byte	.LFE117
+ 2567 02d1 60000000 		.4byte	.LFE109
  2568 02d5 0100     		.2byte	0x1
  2569 02d7 57       		.byte	0x57
  2570 02d8 00000000 		.4byte	0
@@ -3049,7 +3049,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2594 030e 0100     		.2byte	0x1
  2595 0310 50       		.byte	0x50
  2596 0311 06000000 		.4byte	.LVL46
- 2597 0315 26000000 		.4byte	.LFE118
+ 2597 0315 26000000 		.4byte	.LFE110
  2598 0319 0100     		.2byte	0x1
  2599 031b 54       		.byte	0x54
  2600 031c 00000000 		.4byte	0
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2603 0324 00000000 		.4byte	.LVL52
  2604 0328 08000000 		.4byte	.LVL53
  2605 032c 0100     		.2byte	0x1
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 52
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 52
 
 
  2606 032e 50       		.byte	0x50
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2660 03bb 53       		.byte	0x53
  2661 03bc 00000000 		.4byte	0
  2662 03c0 00000000 		.4byte	0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 53
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 53
 
 
  2663              	.LLST24:
@@ -3136,63 +3136,63 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2675 000b 00       		.byte	0
  2676 000c 0000     		.2byte	0
  2677 000e 0000     		.2byte	0
- 2678 0010 00000000 		.4byte	.LFB110
- 2679 0014 12000000 		.4byte	.LFE110-.LFB110
- 2680 0018 00000000 		.4byte	.LFB111
- 2681 001c 3E000000 		.4byte	.LFE111-.LFB111
- 2682 0020 00000000 		.4byte	.LFB113
- 2683 0024 3C000000 		.4byte	.LFE113-.LFB113
- 2684 0028 00000000 		.4byte	.LFB112
- 2685 002c 62000000 		.4byte	.LFE112-.LFB112
- 2686 0030 00000000 		.4byte	.LFB114
- 2687 0034 24000000 		.4byte	.LFE114-.LFB114
- 2688 0038 00000000 		.4byte	.LFB115
- 2689 003c 16000000 		.4byte	.LFE115-.LFB115
- 2690 0040 00000000 		.4byte	.LFB116
- 2691 0044 84000000 		.4byte	.LFE116-.LFB116
- 2692 0048 00000000 		.4byte	.LFB117
- 2693 004c 60000000 		.4byte	.LFE117-.LFB117
- 2694 0050 00000000 		.4byte	.LFB118
- 2695 0054 26000000 		.4byte	.LFE118-.LFB118
- 2696 0058 00000000 		.4byte	.LFB119
- 2697 005c 24000000 		.4byte	.LFE119-.LFB119
- 2698 0060 00000000 		.4byte	.LFB120
- 2699 0064 7C000000 		.4byte	.LFE120-.LFB120
+ 2678 0010 00000000 		.4byte	.LFB102
+ 2679 0014 12000000 		.4byte	.LFE102-.LFB102
+ 2680 0018 00000000 		.4byte	.LFB103
+ 2681 001c 3E000000 		.4byte	.LFE103-.LFB103
+ 2682 0020 00000000 		.4byte	.LFB105
+ 2683 0024 3C000000 		.4byte	.LFE105-.LFB105
+ 2684 0028 00000000 		.4byte	.LFB104
+ 2685 002c 62000000 		.4byte	.LFE104-.LFB104
+ 2686 0030 00000000 		.4byte	.LFB106
+ 2687 0034 24000000 		.4byte	.LFE106-.LFB106
+ 2688 0038 00000000 		.4byte	.LFB107
+ 2689 003c 16000000 		.4byte	.LFE107-.LFB107
+ 2690 0040 00000000 		.4byte	.LFB108
+ 2691 0044 84000000 		.4byte	.LFE108-.LFB108
+ 2692 0048 00000000 		.4byte	.LFB109
+ 2693 004c 60000000 		.4byte	.LFE109-.LFB109
+ 2694 0050 00000000 		.4byte	.LFB110
+ 2695 0054 26000000 		.4byte	.LFE110-.LFB110
+ 2696 0058 00000000 		.4byte	.LFB111
+ 2697 005c 24000000 		.4byte	.LFE111-.LFB111
+ 2698 0060 00000000 		.4byte	.LFB112
+ 2699 0064 7C000000 		.4byte	.LFE112-.LFB112
  2700 0068 00000000 		.4byte	0
  2701 006c 00000000 		.4byte	0
  2702              		.section	.debug_ranges,"",%progbits
  2703              	.Ldebug_ranges0:
- 2704 0000 00000000 		.4byte	.LFB110
- 2705 0004 12000000 		.4byte	.LFE110
- 2706 0008 00000000 		.4byte	.LFB111
- 2707 000c 3E000000 		.4byte	.LFE111
- 2708 0010 00000000 		.4byte	.LFB113
- 2709 0014 3C000000 		.4byte	.LFE113
- 2710 0018 00000000 		.4byte	.LFB112
- 2711 001c 62000000 		.4byte	.LFE112
- 2712 0020 00000000 		.4byte	.LFB114
- 2713 0024 24000000 		.4byte	.LFE114
- 2714 0028 00000000 		.4byte	.LFB115
- 2715 002c 16000000 		.4byte	.LFE115
- 2716 0030 00000000 		.4byte	.LFB116
- 2717 0034 84000000 		.4byte	.LFE116
- 2718 0038 00000000 		.4byte	.LFB117
- 2719 003c 60000000 		.4byte	.LFE117
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 54
+ 2704 0000 00000000 		.4byte	.LFB102
+ 2705 0004 12000000 		.4byte	.LFE102
+ 2706 0008 00000000 		.4byte	.LFB103
+ 2707 000c 3E000000 		.4byte	.LFE103
+ 2708 0010 00000000 		.4byte	.LFB105
+ 2709 0014 3C000000 		.4byte	.LFE105
+ 2710 0018 00000000 		.4byte	.LFB104
+ 2711 001c 62000000 		.4byte	.LFE104
+ 2712 0020 00000000 		.4byte	.LFB106
+ 2713 0024 24000000 		.4byte	.LFE106
+ 2714 0028 00000000 		.4byte	.LFB107
+ 2715 002c 16000000 		.4byte	.LFE107
+ 2716 0030 00000000 		.4byte	.LFB108
+ 2717 0034 84000000 		.4byte	.LFE108
+ 2718 0038 00000000 		.4byte	.LFB109
+ 2719 003c 60000000 		.4byte	.LFE109
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 54
 
 
- 2720 0040 00000000 		.4byte	.LFB118
- 2721 0044 26000000 		.4byte	.LFE118
- 2722 0048 00000000 		.4byte	.LFB119
- 2723 004c 24000000 		.4byte	.LFE119
- 2724 0050 00000000 		.4byte	.LFB120
- 2725 0054 7C000000 		.4byte	.LFE120
+ 2720 0040 00000000 		.4byte	.LFB110
+ 2721 0044 26000000 		.4byte	.LFE110
+ 2722 0048 00000000 		.4byte	.LFB111
+ 2723 004c 24000000 		.4byte	.LFE111
+ 2724 0050 00000000 		.4byte	.LFB112
+ 2725 0054 7C000000 		.4byte	.LFE112
  2726 0058 00000000 		.4byte	0
  2727 005c 00000000 		.4byte	0
  2728              		.section	.debug_line,"",%progbits
  2729              	.Ldebug_line0:
- 2730 0000 96030000 		.section	.debug_str,"MS",%progbits,1
- 2730      02004A02 
+ 2730 0000 A1030000 		.section	.debug_str,"MS",%progbits,1
+ 2730      02005502 
  2730      00000201 
  2730      FB0E0D00 
  2730      01010101 
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2749              	.LASF93:
  2750 0075 75617274 		.ascii	"uartRB\000"
  2750      524200
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 55
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 55
 
 
  2751              	.LASF83:
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2776      5F7400
  2777              	.LASF51:
  2778 010f 52435F45 		.ascii	"RC_ERROR_NOT_IMPLEMENTED\000"
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 56
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 56
 
 
  2778      52524F52 
@@ -3312,415 +3312,418 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 1
  2781              	.LASF24:
  2782 0131 45455F54 		.ascii	"EE_TID\000"
  2782      494400
- 2783              	.LASF85:
- 2784 0138 64796E52 		.ascii	"dynRB_flush\000"
- 2784      425F666C 
- 2784      75736800 
- 2785              	.LASF12:
- 2786 0144 75696E74 		.ascii	"uint8_t\000"
- 2786      385F7400 
- 2787              	.LASF49:
- 2788 014c 52435F45 		.ascii	"RC_ERROR_INVALID_STATE\000"
- 2788      52524F52 
- 2788      5F494E56 
- 2788      414C4944 
- 2788      5F535441 
- 2789              	.LASF84:
- 2790 0163 636F6E73 		.ascii	"consumer_id\000"
- 2790      756D6572 
- 2790      5F696400 
- 2791              	.LASF91:
- 2792 016f 45455F49 		.ascii	"EE_IRQ_nesting_level\000"
- 2792      52515F6E 
- 2792      65737469 
- 2792      6E675F6C 
- 2792      6576656C 
- 2793              	.LASF103:
- 2794 0184 55415254 		.ascii	"UART_LOG_PutInt\000"
- 2794      5F4C4F47 
- 2794      5F507574 
- 2794      496E7400 
- 2795              	.LASF88:
- 2796 0194 45455F6F 		.ascii	"EE_oo_IRQ_suspend_status\000"
- 2796      6F5F4952 
- 2796      515F7375 
- 2796      7370656E 
- 2796      645F7374 
- 2797              	.LASF70:
- 2798 01ad 72656164 		.ascii	"readIdx_uart\000"
- 2798      4964785F 
- 2798      75617274 
- 2798      00
- 2799              	.LASF56:
- 2800 01ba 66696C6C 		.ascii	"fillLevel\000"
- 2800      4C657665 
- 2800      6C00
- 2801              	.LASF15:
- 2802 01c4 666C6F61 		.ascii	"float\000"
- 2802      7400
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 57
+ 2783              	.LASF100:
+ 2784 0138 736F7572 		.ascii	"source\\asw\\comms.c\000"
+ 2784      63655C61 
+ 2784      73775C63 
+ 2784      6F6D6D73 
+ 2784      2E6300
+ 2785              	.LASF85:
+ 2786 014b 64796E52 		.ascii	"dynRB_flush\000"
+ 2786      425F666C 
+ 2786      75736800 
+ 2787              	.LASF12:
+ 2788 0157 75696E74 		.ascii	"uint8_t\000"
+ 2788      385F7400 
+ 2789              	.LASF49:
+ 2790 015f 52435F45 		.ascii	"RC_ERROR_INVALID_STATE\000"
+ 2790      52524F52 
+ 2790      5F494E56 
+ 2790      414C4944 
+ 2790      5F535441 
+ 2791              	.LASF84:
+ 2792 0176 636F6E73 		.ascii	"consumer_id\000"
+ 2792      756D6572 
+ 2792      5F696400 
+ 2793              	.LASF91:
+ 2794 0182 45455F49 		.ascii	"EE_IRQ_nesting_level\000"
+ 2794      52515F6E 
+ 2794      65737469 
+ 2794      6E675F6C 
+ 2794      6576656C 
+ 2795              	.LASF103:
+ 2796 0197 55415254 		.ascii	"UART_LOG_PutInt\000"
+ 2796      5F4C4F47 
+ 2796      5F507574 
+ 2796      496E7400 
+ 2797              	.LASF88:
+ 2798 01a7 45455F6F 		.ascii	"EE_oo_IRQ_suspend_status\000"
+ 2798      6F5F4952 
+ 2798      515F7375 
+ 2798      7370656E 
+ 2798      645F7374 
+ 2799              	.LASF70:
+ 2800 01c0 72656164 		.ascii	"readIdx_uart\000"
+ 2800      4964785F 
+ 2800      75617274 
+ 2800      00
+ 2801              	.LASF56:
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 57
 
 
- 2803              	.LASF75:
- 2804 01ca 73747265 		.ascii	"streamRB_read_byte\000"
- 2804      616D5242 
- 2804      5F726561 
- 2804      645F6279 
- 2804      746500
- 2805              	.LASF59:
- 2806 01dd 5446545F 		.ascii	"TFT_ID\000"
- 2806      494400
- 2807              	.LASF9:
- 2808 01e4 6C6F6E67 		.ascii	"long long int\000"
- 2808      206C6F6E 
- 2808      6720696E 
- 2808      7400
- 2809              	.LASF76:
- 2810 01f2 73747265 		.ascii	"streamRB_read_message\000"
- 2810      616D5242 
- 2810      5F726561 
- 2810      645F6D65 
- 2810      73736167 
- 2811              	.LASF45:
- 2812 0208 52435F45 		.ascii	"RC_ERROR_NOT_MATCH\000"
- 2812      52524F52 
- 2812      5F4E4F54 
- 2812      5F4D4154 
- 2812      434800
- 2813              	.LASF50:
- 2814 021b 52435F45 		.ascii	"RC_ERROR_UNKNOWN\000"
+ 2802 01cd 66696C6C 		.ascii	"fillLevel\000"
+ 2802      4C657665 
+ 2802      6C00
+ 2803              	.LASF15:
+ 2804 01d7 666C6F61 		.ascii	"float\000"
+ 2804      7400
+ 2805              	.LASF75:
+ 2806 01dd 73747265 		.ascii	"streamRB_read_byte\000"
+ 2806      616D5242 
+ 2806      5F726561 
+ 2806      645F6279 
+ 2806      746500
+ 2807              	.LASF59:
+ 2808 01f0 5446545F 		.ascii	"TFT_ID\000"
+ 2808      494400
+ 2809              	.LASF9:
+ 2810 01f7 6C6F6E67 		.ascii	"long long int\000"
+ 2810      206C6F6E 
+ 2810      6720696E 
+ 2810      7400
+ 2811              	.LASF76:
+ 2812 0205 73747265 		.ascii	"streamRB_read_message\000"
+ 2812      616D5242 
+ 2812      5F726561 
+ 2812      645F6D65 
+ 2812      73736167 
+ 2813              	.LASF45:
+ 2814 021b 52435F45 		.ascii	"RC_ERROR_NOT_MATCH\000"
  2814      52524F52 
- 2814      5F554E4B 
- 2814      4E4F574E 
- 2814      00
- 2815              	.LASF7:
- 2816 022c 6C6F6E67 		.ascii	"long int\000"
- 2816      20696E74 
+ 2814      5F4E4F54 
+ 2814      5F4D4154 
+ 2814      434800
+ 2815              	.LASF50:
+ 2816 022e 52435F45 		.ascii	"RC_ERROR_UNKNOWN\000"
+ 2816      52524F52 
+ 2816      5F554E4B 
+ 2816      4E4F574E 
  2816      00
- 2817              	.LASF79:
- 2818 0235 64796E52 		.ascii	"dynRB_init\000"
- 2818      425F696E 
- 2818      697400
- 2819              	.LASF80:
- 2820 0240 64796E52 		.ascii	"dynRB_send\000"
- 2820      425F7365 
- 2820      6E6400
- 2821              	.LASF36:
- 2822 024b 52435F45 		.ascii	"RC_ERROR_BUSY\000"
- 2822      52524F52 
- 2822      5F425553 
- 2822      5900
- 2823              	.LASF3:
- 2824 0259 5F5F7569 		.ascii	"__uint8_t\000"
- 2824      6E74385F 
- 2824      7400
- 2825              	.LASF42:
- 2826 0263 52435F45 		.ascii	"RC_ERROR_INVALID\000"
- 2826      52524F52 
- 2826      5F494E56 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 58
+ 2817              	.LASF7:
+ 2818 023f 6C6F6E67 		.ascii	"long int\000"
+ 2818      20696E74 
+ 2818      00
+ 2819              	.LASF79:
+ 2820 0248 64796E52 		.ascii	"dynRB_init\000"
+ 2820      425F696E 
+ 2820      697400
+ 2821              	.LASF80:
+ 2822 0253 64796E52 		.ascii	"dynRB_send\000"
+ 2822      425F7365 
+ 2822      6E6400
+ 2823              	.LASF36:
+ 2824 025e 52435F45 		.ascii	"RC_ERROR_BUSY\000"
+ 2824      52524F52 
+ 2824      5F425553 
+ 2824      5900
+ 2825              	.LASF3:
+ 2826 026c 5F5F7569 		.ascii	"__uint8_t\000"
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 58
 
 
- 2826      414C4944 
- 2826      00
- 2827              	.LASF47:
- 2828 0274 52435F45 		.ascii	"RC_ERROR_BAD_DATA\000"
+ 2826      6E74385F 
+ 2826      7400
+ 2827              	.LASF42:
+ 2828 0276 52435F45 		.ascii	"RC_ERROR_INVALID\000"
  2828      52524F52 
- 2828      5F424144 
- 2828      5F444154 
- 2828      4100
- 2829              	.LASF74:
- 2830 0286 62797465 		.ascii	"byte\000"
- 2830      00
- 2831              	.LASF101:
- 2832 028b 443A5C57 		.ascii	"D:\\WS25\\AMAEOS\\Lab\\Lab3\\Lab 3 Task Description"
- 2832      5332355C 
- 2832      414D4145 
- 2832      4F535C4C 
- 2832      61625C4C 
- 2833 02b9 20616E64 		.ascii	" and Starting Code-20251209\\Lab3.cydsn\\TaskComms_"
- 2833      20537461 
- 2833      7274696E 
- 2833      6720436F 
- 2833      64652D32 
- 2834 02ea 42756666 		.ascii	"Buffer.cydsn\000"
- 2834      65722E63 
- 2834      7964736E 
- 2834      00
- 2835              	.LASF98:
- 2836 02f7 55415254 		.ascii	"UART_LOG_PutString\000"
- 2836      5F4C4F47 
- 2836      5F507574 
- 2836      53747269 
- 2836      6E6700
- 2837              	.LASF18:
- 2838 030a 6C6F6E67 		.ascii	"long double\000"
- 2838      20646F75 
- 2838      626C6500 
- 2839              	.LASF71:
- 2840 0316 44796E50 		.ascii	"DynPayloadRB_t\000"
- 2840      61796C6F 
- 2840      61645242 
- 2840      5F7400
- 2841              	.LASF102:
- 2842 0325 52425F66 		.ascii	"RB_flush_all\000"
- 2842      6C757368 
- 2842      5F616C6C 
- 2842      00
- 2843              	.LASF78:
- 2844 0332 73747265 		.ascii	"streamRB_flush\000"
- 2844      616D5242 
- 2844      5F666C75 
- 2844      736800
- 2845              	.LASF60:
- 2846 0341 55415254 		.ascii	"UART_ID\000"
- 2846      5F494400 
- 2847              	.LASF1:
- 2848 0349 756E7369 		.ascii	"unsigned char\000"
- 2848      676E6564 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 59
+ 2828      5F494E56 
+ 2828      414C4944 
+ 2828      00
+ 2829              	.LASF47:
+ 2830 0287 52435F45 		.ascii	"RC_ERROR_BAD_DATA\000"
+ 2830      52524F52 
+ 2830      5F424144 
+ 2830      5F444154 
+ 2830      4100
+ 2831              	.LASF74:
+ 2832 0299 62797465 		.ascii	"byte\000"
+ 2832      00
+ 2833              	.LASF98:
+ 2834 029e 55415254 		.ascii	"UART_LOG_PutString\000"
+ 2834      5F4C4F47 
+ 2834      5F507574 
+ 2834      53747269 
+ 2834      6E6700
+ 2835              	.LASF18:
+ 2836 02b1 6C6F6E67 		.ascii	"long double\000"
+ 2836      20646F75 
+ 2836      626C6500 
+ 2837              	.LASF71:
+ 2838 02bd 44796E50 		.ascii	"DynPayloadRB_t\000"
+ 2838      61796C6F 
+ 2838      61645242 
+ 2838      5F7400
+ 2839              	.LASF102:
+ 2840 02cc 52425F66 		.ascii	"RB_flush_all\000"
+ 2840      6C757368 
+ 2840      5F616C6C 
+ 2840      00
+ 2841              	.LASF78:
+ 2842 02d9 73747265 		.ascii	"streamRB_flush\000"
+ 2842      616D5242 
+ 2842      5F666C75 
+ 2842      736800
+ 2843              	.LASF60:
+ 2844 02e8 55415254 		.ascii	"UART_ID\000"
+ 2844      5F494400 
+ 2845              	.LASF1:
+ 2846 02f0 756E7369 		.ascii	"unsigned char\000"
+ 2846      676E6564 
+ 2846      20636861 
+ 2846      7200
+ 2847              	.LASF46:
+ 2848 02fe 52435F45 		.ascii	"RC_ERROR_BAD_PARAM\000"
+ 2848      52524F52 
+ 2848      5F424144 
+ 2848      5F504152 
+ 2848      414D00
+ 2849              	.LASF21:
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 59
 
 
- 2848      20636861 
- 2848      7200
- 2849              	.LASF46:
- 2850 0357 52435F45 		.ascii	"RC_ERROR_BAD_PARAM\000"
- 2850      52524F52 
- 2850      5F424144 
- 2850      5F504152 
- 2850      414D00
- 2851              	.LASF21:
- 2852 036a 45455F55 		.ascii	"EE_UINT32\000"
- 2852      494E5433 
- 2852      3200
- 2853              	.LASF0:
- 2854 0374 7369676E 		.ascii	"signed char\000"
- 2854      65642063 
- 2854      68617200 
- 2855              	.LASF57:
- 2856 0380 53747265 		.ascii	"StreamingRB_t\000"
- 2856      616D696E 
- 2856      6752425F 
- 2856      7400
- 2857              	.LASF10:
- 2858 038e 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2858      206C6F6E 
- 2858      6720756E 
- 2858      7369676E 
- 2858      65642069 
- 2859              	.LASF11:
- 2860 03a5 756E7369 		.ascii	"unsigned int\000"
- 2860      676E6564 
- 2860      20696E74 
- 2860      00
- 2861              	.LASF38:
- 2862 03b2 52435F45 		.ascii	"RC_ERROR_OPEN\000"
- 2862      52524F52 
- 2862      5F4F5045 
- 2862      4E00
- 2863              	.LASF13:
- 2864 03c0 75696E74 		.ascii	"uint16_t\000"
- 2864      31365F74 
- 2864      00
- 2865              	.LASF67:
- 2866 03c9 64796E5F 		.ascii	"dyn_payload_t\000"
- 2866      7061796C 
- 2866      6F61645F 
- 2866      7400
- 2867              	.LASF82:
- 2868 03d7 736C6F74 		.ascii	"slot\000"
- 2868      00
- 2869              	.LASF28:
- 2870 03dc 52435F45 		.ascii	"RC_ERROR_NULL\000"
+ 2850 0311 45455F55 		.ascii	"EE_UINT32\000"
+ 2850      494E5433 
+ 2850      3200
+ 2851              	.LASF0:
+ 2852 031b 7369676E 		.ascii	"signed char\000"
+ 2852      65642063 
+ 2852      68617200 
+ 2853              	.LASF57:
+ 2854 0327 53747265 		.ascii	"StreamingRB_t\000"
+ 2854      616D696E 
+ 2854      6752425F 
+ 2854      7400
+ 2855              	.LASF10:
+ 2856 0335 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2856      206C6F6E 
+ 2856      6720756E 
+ 2856      7369676E 
+ 2856      65642069 
+ 2857              	.LASF11:
+ 2858 034c 756E7369 		.ascii	"unsigned int\000"
+ 2858      676E6564 
+ 2858      20696E74 
+ 2858      00
+ 2859              	.LASF38:
+ 2860 0359 52435F45 		.ascii	"RC_ERROR_OPEN\000"
+ 2860      52524F52 
+ 2860      5F4F5045 
+ 2860      4E00
+ 2861              	.LASF13:
+ 2862 0367 75696E74 		.ascii	"uint16_t\000"
+ 2862      31365F74 
+ 2862      00
+ 2863              	.LASF67:
+ 2864 0370 64796E5F 		.ascii	"dyn_payload_t\000"
+ 2864      7061796C 
+ 2864      6F61645F 
+ 2864      7400
+ 2865              	.LASF82:
+ 2866 037e 736C6F74 		.ascii	"slot\000"
+ 2866      00
+ 2867              	.LASF28:
+ 2868 0383 52435F45 		.ascii	"RC_ERROR_NULL\000"
+ 2868      52524F52 
+ 2868      5F4E554C 
+ 2868      4C00
+ 2869              	.LASF35:
+ 2870 0391 52435F45 		.ascii	"RC_ERROR_BUFFER_EMTPY\000"
  2870      52524F52 
- 2870      5F4E554C 
- 2870      4C00
- 2871              	.LASF35:
- 2872 03ea 52435F45 		.ascii	"RC_ERROR_BUFFER_EMTPY\000"
- 2872      52524F52 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 60
+ 2870      5F425546 
+ 2870      4645525F 
+ 2870      454D5450 
+ 2871              	.LASF20:
+ 2872 03a7 45455F49 		.ascii	"EE_INT32\000"
+ 2872      4E543332 
+ 2872      00
+ 2873              	.LASF5:
+ 2874 03b0 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 60
 
 
- 2872      5F425546 
- 2872      4645525F 
- 2872      454D5450 
- 2873              	.LASF20:
- 2874 0400 45455F49 		.ascii	"EE_INT32\000"
- 2874      4E543332 
- 2874      00
- 2875              	.LASF5:
- 2876 0409 73686F72 		.ascii	"short unsigned int\000"
- 2876      7420756E 
- 2876      7369676E 
- 2876      65642069 
- 2876      6E7400
- 2877              	.LASF72:
- 2878 041c 73747265 		.ascii	"streamRB_init\000"
- 2878      616D5242 
- 2878      5F696E69 
- 2878      7400
- 2879              	.LASF99:
- 2880 042a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 2880      43313120 
- 2880      352E342E 
- 2880      31203230 
- 2880      31363036 
- 2881 045d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 2881      20726576 
- 2881      6973696F 
- 2881      6E203233 
- 2881      37373135 
- 2882 0490 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2882      66756E63 
- 2882      74696F6E 
- 2882      2D736563 
- 2882      74696F6E 
- 2883              	.LASF73:
- 2884 04b8 73747265 		.ascii	"streamRB_write\000"
- 2884      616D5242 
- 2884      5F777269 
- 2884      746500
- 2885              	.LASF96:
- 2886 04c7 45455F6F 		.ascii	"EE_oo_GetResource\000"
- 2886      6F5F4765 
- 2886      74526573 
- 2886      6F757263 
- 2886      6500
- 2887              	.LASF34:
- 2888 04d9 52435F45 		.ascii	"RC_ERROR_BUFFER_FULL\000"
- 2888      52524F52 
- 2888      5F425546 
- 2888      4645525F 
- 2888      46554C4C 
- 2889              	.LASF14:
- 2890 04ee 696E7433 		.ascii	"int32_t\000"
- 2890      325F7400 
- 2891              	.LASF61:
- 2892 04f6 64796E5F 		.ascii	"dyn_id_t\000"
- 2892      69645F74 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 61
-
-
+ 2874      7420756E 
+ 2874      7369676E 
+ 2874      65642069 
+ 2874      6E7400
+ 2875              	.LASF72:
+ 2876 03c3 73747265 		.ascii	"streamRB_init\000"
+ 2876      616D5242 
+ 2876      5F696E69 
+ 2876      7400
+ 2877              	.LASF99:
+ 2878 03d1 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2878      43313120 
+ 2878      352E342E 
+ 2878      31203230 
+ 2878      31363036 
+ 2879 0404 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2879      20726576 
+ 2879      6973696F 
+ 2879      6E203233 
+ 2879      37373135 
+ 2880 0437 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2880      66756E63 
+ 2880      74696F6E 
+ 2880      2D736563 
+ 2880      74696F6E 
+ 2881              	.LASF73:
+ 2882 045f 73747265 		.ascii	"streamRB_write\000"
+ 2882      616D5242 
+ 2882      5F777269 
+ 2882      746500
+ 2883              	.LASF96:
+ 2884 046e 45455F6F 		.ascii	"EE_oo_GetResource\000"
+ 2884      6F5F4765 
+ 2884      74526573 
+ 2884      6F757263 
+ 2884      6500
+ 2885              	.LASF34:
+ 2886 0480 52435F45 		.ascii	"RC_ERROR_BUFFER_FULL\000"
+ 2886      52524F52 
+ 2886      5F425546 
+ 2886      4645525F 
+ 2886      46554C4C 
+ 2887              	.LASF14:
+ 2888 0495 696E7433 		.ascii	"int32_t\000"
+ 2888      325F7400 
+ 2889              	.LASF61:
+ 2890 049d 64796E5F 		.ascii	"dyn_id_t\000"
+ 2890      69645F74 
+ 2890      00
+ 2891              	.LASF81:
+ 2892 04a6 64617461 		.ascii	"data\000"
  2892      00
- 2893              	.LASF81:
- 2894 04ff 64617461 		.ascii	"data\000"
- 2894      00
- 2895              	.LASF53:
- 2896 0504 62756666 		.ascii	"buffer\000"
- 2896      657200
- 2897              	.LASF89:
- 2898 050b 45455F41 		.ascii	"EE_ApplicationMode\000"
- 2898      70706C69 
- 2898      63617469 
- 2898      6F6E4D6F 
- 2898      646500
- 2899              	.LASF8:
- 2900 051e 6C6F6E67 		.ascii	"long unsigned int\000"
- 2900      20756E73 
- 2900      69676E65 
- 2900      6420696E 
- 2900      7400
- 2901              	.LASF16:
- 2902 0530 646F7562 		.ascii	"double\000"
- 2902      6C6500
- 2903              	.LASF55:
- 2904 0537 77726974 		.ascii	"writeIdx\000"
- 2904      65496478 
- 2904      00
- 2905              	.LASF39:
- 2906 0540 52435F45 		.ascii	"RC_ERROR_CHECKSUM\000"
- 2906      52524F52 
- 2906      5F434845 
- 2906      434B5355 
- 2906      4D00
- 2907              	.LASF58:
- 2908 0552 4E4F4E45 		.ascii	"NONE_ID\000"
- 2908      5F494400 
- 2909              	.LASF100:
- 2910 055a 636F6D6D 		.ascii	"comms.c\000"
- 2910      732E6300 
+ 2893              	.LASF53:
+ 2894 04ab 62756666 		.ascii	"buffer\000"
+ 2894      657200
+ 2895              	.LASF89:
+ 2896 04b2 45455F41 		.ascii	"EE_ApplicationMode\000"
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 61
+
+
+ 2896      70706C69 
+ 2896      63617469 
+ 2896      6F6E4D6F 
+ 2896      646500
+ 2897              	.LASF8:
+ 2898 04c5 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2898      20756E73 
+ 2898      69676E65 
+ 2898      6420696E 
+ 2898      7400
+ 2899              	.LASF16:
+ 2900 04d7 646F7562 		.ascii	"double\000"
+ 2900      6C6500
+ 2901              	.LASF55:
+ 2902 04de 77726974 		.ascii	"writeIdx\000"
+ 2902      65496478 
+ 2902      00
+ 2903              	.LASF39:
+ 2904 04e7 52435F45 		.ascii	"RC_ERROR_CHECKSUM\000"
+ 2904      52524F52 
+ 2904      5F434845 
+ 2904      434B5355 
+ 2904      4D00
+ 2905              	.LASF58:
+ 2906 04f9 4E4F4E45 		.ascii	"NONE_ID\000"
+ 2906      5F494400 
+ 2907              	.LASF101:
+ 2908 0501 443A5C57 		.ascii	"D:\\WS25\\AMAEOS\\Lab\\Lab3\\Lab 3 Task Description"
+ 2908      5332355C 
+ 2908      414D4145 
+ 2908      4F535C4C 
+ 2908      61625C4C 
+ 2909 052f 20616E64 		.ascii	" and Starting Code-20251209\\Lab3.cydsn\\TaskComms_"
+ 2909      20537461 
+ 2909      7274696E 
+ 2909      6720436F 
+ 2909      64652D32 
+ 2910 0560 42756666 		.ascii	"Buffer.cydsn\000"
+ 2910      65722E63 
+ 2910      7964736E 
+ 2910      00
  2911              	.LASF31:
- 2912 0562 52435F45 		.ascii	"RC_ERROR_RANGE\000"
+ 2912 056d 52435F45 		.ascii	"RC_ERROR_RANGE\000"
  2912      52524F52 
  2912      5F52414E 
  2912      474500
  2913              	.LASF6:
- 2914 0571 5F5F696E 		.ascii	"__int32_t\000"
+ 2914 057c 5F5F696E 		.ascii	"__int32_t\000"
  2914      7433325F 
  2914      7400
  2915              	.LASF54:
- 2916 057b 72656164 		.ascii	"readIdx\000"
+ 2916 0586 72656164 		.ascii	"readIdx\000"
  2916      49647800 
  2917              	.LASF95:
- 2918 0583 45455F6F 		.ascii	"EE_oo_ReleaseResource\000"
+ 2918 058e 45455F6F 		.ascii	"EE_oo_ReleaseResource\000"
  2918      6F5F5265 
  2918      6C656173 
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 62
+
+
  2918      65526573 
  2918      6F757263 
  2919              	.LASF48:
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 62
-
-
- 2920 0599 52435F45 		.ascii	"RC_ERROR_CANCELED\000"
+ 2920 05a4 52435F45 		.ascii	"RC_ERROR_CANCELED\000"
  2920      52524F52 
  2920      5F43414E 
  2920      43454C45 
  2920      4400
  2921              	.LASF63:
- 2922 05ab 7061796C 		.ascii	"payload_len\000"
+ 2922 05b6 7061796C 		.ascii	"payload_len\000"
  2922      6F61645F 
  2922      6C656E00 
  2923              	.LASF68:
- 2924 05b7 736C6F74 		.ascii	"slots\000"
+ 2924 05c2 736C6F74 		.ascii	"slots\000"
  2924      7300
  2925              	.LASF97:
- 2926 05bd 45455F6F 		.ascii	"EE_oo_SetEvent\000"
+ 2926 05c8 45455F6F 		.ascii	"EE_oo_SetEvent\000"
  2926      6F5F5365 
  2926      74457665 
  2926      6E7400
  2927              	.LASF92:
- 2928 05cc 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2928 05d7 49544D5F 		.ascii	"ITM_RxBuffer\000"
  2928      52784275 
  2928      66666572 
  2928      00
  2929              	.LASF27:
- 2930 05d9 52435F45 		.ascii	"RC_ERROR\000"
+ 2930 05e4 52435F45 		.ascii	"RC_ERROR\000"
  2930      52524F52 
  2930      00
  2931              	.LASF30:
- 2932 05e2 52435F45 		.ascii	"RC_ERROR_MEMORY\000"
+ 2932 05ed 52435F45 		.ascii	"RC_ERROR_MEMORY\000"
  2932      52524F52 
  2932      5F4D454D 
  2932      4F525900 
  2933              	.LASF87:
- 2934 05f2 45455F6F 		.ascii	"EE_oo_IRQ_disable_count\000"
+ 2934 05fd 45455F6F 		.ascii	"EE_oo_IRQ_disable_count\000"
  2934      6F5F4952 
  2934      515F6469 
  2934      7361626C 
  2934      655F636F 
  2935              	.LASF69:
- 2936 060a 72656164 		.ascii	"readIdx_tft\000"
+ 2936 0615 72656164 		.ascii	"readIdx_tft\000"
  2936      4964785F 
  2936      74667400 
  2937              	.LASF33:
- 2938 0616 52435F45 		.ascii	"RC_ERROR_UNDERRUN\000"
+ 2938 0621 52435F45 		.ascii	"RC_ERROR_UNDERRUN\000"
  2938      52524F52 
  2938      5F554E44 
  2938      45525255 
  2938      4E00
  2939              	.LASF62:
- 2940 0628 7061796C 		.ascii	"payload\000"
+ 2940 0633 7061796C 		.ascii	"payload\000"
  2940      6F616400 
  2941              	.LASF52:
- 2942 0630 52435F74 		.ascii	"RC_t\000"
+ 2942 063b 52435F74 		.ascii	"RC_t\000"
  2942      00
  2943              	.LASF37:
- 2944 0635 52435F45 		.ascii	"RC_ERROR_TIME_OUT\000"
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccjJQ7hc.s 			page 63
+
+
+ 2944 0640 52435F45 		.ascii	"RC_ERROR_TIME_OUT\000"
  2944      52524F52 
  2944      5F54494D 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\ccxXs3Ca.s 			page 63
-
-
  2944      455F4F55 
  2944      5400
  2945              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

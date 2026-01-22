@@ -11,6 +11,11 @@
  * CONFIDENTIAL AND PROPRIETARY INFORMATION
  * WHICH IS THE PROPERTY OF your company.
  *
+ * NOTE:
+ * 1. No systick timer usage in this project.
+ * 2. Transmit only Decimal values.
+ * 3. Use uart baud rate - 115200.
+ *
  * ========================================
 */
 #include <stdlib.h>
@@ -28,8 +33,8 @@ int main()
     CyGlobalIntEnable; 
     
     /* Configure SysTick to generate a 1 ms tick and enable its interrupt. */
-    EE_systick_set_period(MILLISECONDS_TO_TICKS(1, BCLK__BUS_CLK__HZ));
-    EE_systick_enable_int();
+    //EE_systick_set_period(MILLISECONDS_TO_TICKS(1, BCLK__BUS_CLK__HZ));
+    //EE_systick_enable_int();
     
     /* Start the OSEK/EE operating system in the default application mode. */
     for(;;) 
@@ -56,19 +61,22 @@ TASK(tsk_init)
     TFT_init();
     TFT_setBacklight(100);
     
+    /* Configure system ISRs with OS parameters; must follow driver init. */
+    EE_system_init();
+     
+    /* Start SysTick after vector table has been updated by the OS. */
+    //EE_systick_start();  
+    
     /* Initialize UART streaming RX ring buffer. */
     streamRB_init(&uartRB);
     /* Initialize dynamic payload ring buffer (also acceptable via zero-init). */
     dynRB_init(&sharedRB);
     
+    /* Print banner announcing the Inter-Task Communication demonstration. */
+    UART_LOG_PutString("\r\n===== Inter Task Communication =====\r\n");
+    
     /* Flush all communication buffers to ensure a clean startup state. */
     RB_flush_all();
-    
-    /* Configure system ISRs with OS parameters; must follow driver init. */
-    EE_system_init();
-     
-    /* Start SysTick after vector table has been updated by the OS. */
-    EE_systick_start();  
     
     /* Start cyclic alarms if configured (not shown here). */
 
@@ -95,7 +103,7 @@ TASK(tsk_sender)
     
     uint8_t uart_msg[128];   /**< Local buffer for one decoded UART message. */
     uint16_t msg_len;        /**< Length of the received UART message in bytes. */
-    //UART_LOG_PutString("\r\nC2\n\r");
+
     while (1)
     {
         /* Block until the sender event is set by the UART RX ISR. */
@@ -107,10 +115,9 @@ TASK(tsk_sender)
         {
             /* Extract one complete message terminating at EOM_MARKER. */
             RC_t result = streamRB_read_message(&uartRB, uart_msg, &msg_len);
-            //UART_LOG_PutString("\r\nC3\n\r");
+
             if (result == RC_SUCCESS && msg_len > 0) 
             {
-                //UART_LOG_PutString("\r\nC4\n\r");
                 /* Forward the same message to UART and TFT consumers. */
                 RC_t resultUart = dynRB_send(&sharedRB, uart_msg, msg_len, UART_ID, ev_uart, tsk_uart);   /**< Enqueue for UART forwarding. */
                 RC_t resultTFT  = dynRB_send(&sharedRB, uart_msg, msg_len, TFT_ID,  ev_tft,  tsk_tft);    /**< Enqueue for TFT display. */
@@ -119,13 +126,11 @@ TASK(tsk_sender)
                 if ((resultTFT != RC_SUCCESS) || (resultUart != RC_SUCCESS)) 
                 {
                     dynRB_flush(&sharedRB);
-                    //UART_LOG_PutString("Dynamic buffer flushed!");  
                 } else {
                     __asm("nop"); 
                 }
                 /* Clear streaming buffer after successful processing of message. */
-                streamRB_flush(&uartRB);
-                //UART_LOG_PutString("\r\nC5\n\r");                 
+                streamRB_flush(&uartRB);             
             } else {
                 __asm("nop");
             }
@@ -148,7 +153,7 @@ TASK(tsk_tft)
     
     uint8_t tft_data[128];   /**< Local buffer storing message data for TFT. */
     uint16_t len;            /**< Payload length fetched for TFT. */
-    //UART_LOG_PutString("\r\nC7\n\r");
+
     while (1)
     {
         /* Block until TFT event indicates available payload. */
@@ -157,23 +162,16 @@ TASK(tsk_tft)
         ClearEvent(ev);       
 
         if(ev & ev_tft)
-        {
-            //UART_LOG_PutString("\r\nTFT\n\r");
-            //TFT_print("Task Comms\n");
-            
+        {            
             /* Retrieve next TFT-specific payload from shared ring buffer. */
             if (dynRB_receive(&sharedRB, TFT_ID, tft_data, &len) == RC_SUCCESS) 
             {
-                //UART_LOG_PutString("\r\nC13\n\r");
                 /* Print all values except the terminating EOM marker. */
                 for (uint16_t i = 0; i < (len - 1); i++) // -1 to avoid \0
                 {
-                    //UART_LOG_PutString("\r\nC14\n\r");
                     TFT_setCursor(0 + i * 16, 20);  /**< Place cursor for each integer output. */
                     TFT_printInt(tft_data[i]);
-                    //UART_LOG_PutString("\r\nC15\n\r");
                 }
-                //UART_LOG_PutString("\r\nC16\n\r");
                 /* Flush dynamic buffer so that subsequent messages start cleanly. */
                 dynRB_flush(&sharedRB);    
             } else {
@@ -198,7 +196,7 @@ TASK(tsk_uart)
     
     uint8_t uart_fwd[128];   /**< Local buffer for data to forward via UART. */
     uint16_t len;            /**< Length of data to forward over UART. */
-    //UART_LOG_PutString("\r\nC8\n\r");
+
     while (1)
     {
         /* Block until UART event signals data availability. */
@@ -208,13 +206,11 @@ TASK(tsk_uart)
 
         if(ev & ev_uart)
         {
-            //UART_LOG_PutString("\r\nUART\n\r");
             /* Retrieve next UART-specific payload from shared ring buffer. */
             if (dynRB_receive(&sharedRB, UART_ID, uart_fwd, &len) == RC_SUCCESS) 
             {
-                //UART_LOG_PutString("\r\nC11\n\r");
                 /* Forward all data bytes except EOM marker as formatted integers. */
-                UART_LOG_PutString("\r\n");
+                UART_LOG_PutString("\r\nReceived: ");
                 for (uint16_t i = 0; i < (len - 1); i++) // -1 to avoid \0
                 {
                     UART_LOG_PutInt(uart_fwd[i]);
@@ -261,10 +257,10 @@ TASK(tsk_background)
  * Increments the system counter each millisecond to drive alarms and
  * OS time-related services.
  */
-ISR(systick_handler)
+/*ISR(systick_handler)
 {
     CounterTick(cnt_systick);
-}
+}*/
 
 /**
  * UART RX interrupt service routine (category 2).
@@ -281,15 +277,14 @@ ISR2(isr_uartRX) {
     
     /* Attempt to store the received byte into the streaming buffer. */
     RC_t result = streamRB_write(&uartRB, &rxByte);
-    
+    //UART_LOG_PutString("\r\nC1\n\r");
     if (result == RC_SUCCESS) 
     {
-        //UART_LOG_PutString("\r\nC1\n\r");
         if (rxByte == '\0') 
         {
-            //UART_LOG_PutString("\r\nC6\n\r");
             /* Clear display for a fresh rendering of the new message. */
             TFT_clearScreen();
+            TFT_print("Task Comms\n");
             /* Notify sender task that a complete message is available. */
             SetEvent(tsk_sender, ev_sender);
         } else if (result == RC_ERROR_BUFFER_FULL) {

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 1
 
 
    1              		.syntax unified
@@ -26,7 +26,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
   23              		.thumb_func
   24              		.type	EE_rq2stk_exchange, %function
   25              	EE_rq2stk_exchange:
-  26              	.LFB71:
+  26              	.LFB63:
   27              		.file 1 "Generated_Source\\PSoC5\\ErikaOS_ee_rq_exchg.c"
    1:Generated_Source\PSoC5/ErikaOS_ee_rq_exchg.c **** /* ###*B*###
    2:Generated_Source\PSoC5/ErikaOS_ee_rq_exchg.c ****  * ERIKA Enterprise - a tiny RTOS for small microcontrollers
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
   28:Generated_Source\PSoC5/ErikaOS_ee_rq_exchg.c ****  * exception statement from your version.
   29:Generated_Source\PSoC5/ErikaOS_ee_rq_exchg.c ****  *
   30:Generated_Source\PSoC5/ErikaOS_ee_rq_exchg.c ****  * ERIKA Enterprise is distributed in the hope that it will be
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 2
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 2
 
 
   31:Generated_Source\PSoC5/ErikaOS_ee_rq_exchg.c ****  * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
   37              		.cfi_offset 6, -8
   38              		.cfi_offset 7, -4
   76:Generated_Source\PSoC5/ErikaOS_ee_rq_exchg.c ****   EE_INT8 x;    /* the first non-empty queue */
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 3
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 3
 
 
   77:Generated_Source\PSoC5/ErikaOS_ee_rq_exchg.c ****   EE_TID temp;   /* the TID to be inserted in the top of the stack */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  100:Generated_Source\PSoC5/ErikaOS_ee_rq_exchg.c ****   EE_rq_pairs_next[y] = EE_rq_free;
   70              		.loc 1 100 0
   71 0030 114D     		ldr	r5, .L6+20
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 4
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 4
 
 
   72 0032 2F68     		ldr	r7, [r5]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  112 006c 00000000 		.word	EE_rq_queues_head
  113 0070 00000000 		.word	EE_rq_pairs_tid
  114 0074 00000000 		.word	EE_rq_pairs_next
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 5
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 5
 
 
  115 0078 00000000 		.word	EE_rq_free
@@ -246,7 +246,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  117 0080 00000000 		.word	EE_stkfirst
  118 0084 00000000 		.word	EE_th_next
  119              		.cfi_endproc
- 120              	.LFE71:
+ 120              	.LFE63:
  121              		.size	EE_rq2stk_exchange, .-EE_rq2stk_exchange
  122              		.text
  123              	.Letext0:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  169 004f 02       		.uleb128 0x2
  170 0050 08       		.byte	0x8
  171 0051 05       		.byte	0x5
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 6
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 6
 
 
  172 0052 A0010000 		.4byte	.LASF6
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  226 00c4 03       		.byte	0x3
  227 00c5 54       		.byte	0x54
  228 00c6 9E000000 		.4byte	0x9e
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 7
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 7
 
 
  229 00ca 04       		.uleb128 0x4
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  283 0142 06       		.uleb128 0x6
  284 0143 08       		.byte	0x8
  285 0144 04       		.byte	0x4
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 8
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 8
 
 
  286 0145 7D02     		.2byte	0x27d
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  340 01b8 07       		.uleb128 0x7
  341 01b9 56000000 		.4byte	.LASF34
  342 01bd 04       		.byte	0x4
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 9
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 9
 
 
  343 01be 9802     		.2byte	0x298
@@ -536,9 +536,9 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  395 022e 01       		.byte	0x1
  396 022f 4A       		.byte	0x4a
  397 0230 CA000000 		.4byte	0xca
- 398 0234 00000000 		.4byte	.LFB71
- 399 0238 88000000 		.4byte	.LFE71-.LFB71
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 10
+ 398 0234 00000000 		.4byte	.LFB63
+ 399 0238 88000000 		.4byte	.LFE63-.LFB63
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 10
 
 
  400 023c 01       		.uleb128 0x1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  454 02ad 3B040000 		.4byte	.LASF47
  455 02b1 04       		.byte	0x4
  456 02b2 B3       		.byte	0xb3
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 11
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 11
 
 
  457 02b3 B7020000 		.4byte	0x2b7
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  511 032f 12       		.uleb128 0x12
  512 0330 5A040000 		.4byte	.LASF54
  513 0334 04       		.byte	0x4
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 12
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 12
 
 
  514 0335 2601     		.2byte	0x126
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  568 03b4 36010000 		.4byte	0x136
  569 03b8 12       		.uleb128 0x12
  570 03b9 A6020000 		.4byte	.LASF61
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 13
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 13
 
 
  571 03bd 04       		.byte	0x4
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  625 0439 B4000000 		.4byte	0xb4
  626 043d 0E       		.uleb128 0xe
  627 043e B9030000 		.4byte	.LASF67
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 14
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 14
 
 
  628 0442 07       		.byte	0x7
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  682 001b 0E       		.uleb128 0xe
  683 001c 00       		.byte	0
  684 001d 00       		.byte	0
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 15
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 15
 
 
  685 001e 03       		.uleb128 0x3
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  739 0054 0E       		.uleb128 0xe
  740 0055 3A       		.uleb128 0x3a
  741 0056 0B       		.uleb128 0xb
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 16
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 16
 
 
  742 0057 3B       		.uleb128 0x3b
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  796 008d 3A       		.uleb128 0x3a
  797 008e 0B       		.uleb128 0xb
  798 008f 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 17
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 17
 
 
  799 0090 0B       		.uleb128 0xb
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  853 00c7 3B       		.uleb128 0x3b
  854 00c8 0B       		.uleb128 0xb
  855 00c9 49       		.uleb128 0x49
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 18
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 18
 
 
  856 00ca 13       		.uleb128 0x13
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  910 0004 18000000 		.4byte	.LVL2
  911 0008 0100     		.2byte	0x1
  912 000a 53       		.byte	0x53
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 19
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 19
 
 
  913 000b 18000000 		.4byte	.LVL2
@@ -1113,14 +1113,14 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  942 000b 00       		.byte	0
  943 000c 0000     		.2byte	0
  944 000e 0000     		.2byte	0
- 945 0010 00000000 		.4byte	.LFB71
- 946 0014 88000000 		.4byte	.LFE71-.LFB71
+ 945 0010 00000000 		.4byte	.LFB63
+ 946 0014 88000000 		.4byte	.LFE63-.LFB63
  947 0018 00000000 		.4byte	0
  948 001c 00000000 		.4byte	0
  949              		.section	.debug_ranges,"",%progbits
  950              	.Ldebug_ranges0:
- 951 0000 00000000 		.4byte	.LFB71
- 952 0004 88000000 		.4byte	.LFE71
+ 951 0000 00000000 		.4byte	.LFB63
+ 952 0004 88000000 		.4byte	.LFE63
  953 0008 00000000 		.4byte	0
  954 000c 00000000 		.4byte	0
  955              		.section	.debug_line,"",%progbits
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  961      52454700 
  962              	.LASF24:
  963 000d 7469636B 		.ascii	"ticksperbase\000"
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 20
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 20
 
 
  963      73706572 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  986              	.LASF13:
  987 00e8 45455F55 		.ascii	"EE_UINT32\000"
  987      494E5433 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 21
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 21
 
 
  987      3200
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  1009 01a0 6C6F6E67 		.ascii	"long long int\000"
  1009      206C6F6E 
  1009      6720696E 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 22
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 22
 
 
  1009      7400
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  1031      79735F63 
  1031      65696C69 
  1031      6E6700
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 23
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 23
 
 
  1032              	.LASF21:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  1053      00
  1054              	.LASF50:
  1055 0314 45455F74 		.ascii	"EE_th_rnact\000"
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 24
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 24
 
 
  1055      685F726E 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  1075      4F4F4C00 
  1076              	.LASF51:
  1077 03ea 45455F73 		.ascii	"EE_stkfirst\000"
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 25
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 25
 
 
  1077      746B6669 
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 1
  1098      37373135 
  1099 04d2 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  1099      66756E63 
-ARM GAS  C:\Users\agila\AppData\Local\Temp\cclt5Urn.s 			page 26
+ARM GAS  C:\Users\agila\AppData\Local\Temp\ccoxtvMc.s 			page 26
 
 
  1099      74696F6E 

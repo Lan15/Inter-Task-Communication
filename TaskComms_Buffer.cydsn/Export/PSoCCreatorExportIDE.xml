@@ -117,12 +117,12 @@
       <Folder BuildType="STRICT" Path="D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn">
         <Files Root="D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn">
           <File BuildType="BUILD" Toolchain="">source\asw\main.c</File>
+          <File BuildType="BUILD" Toolchain="">source\asw\comms.c</File>
+          <File BuildType="BUILD" Toolchain="">source\asw\comms.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn">
         <Files Root="D:\WS25\AMAEOS\Lab\Lab3\Lab 3 Task Description and Starting Code-20251209\Lab3.cydsn\TaskComms_Buffer.cydsn">
-          <File BuildType="BUILD" Toolchain="">comms.c</File>
-          <File BuildType="BUILD" Toolchain="">comms.h</File>
           <File BuildType="BUILD" Toolchain="">source\cyapicallbacks.h</File>
         </Files>
       </Folder>
